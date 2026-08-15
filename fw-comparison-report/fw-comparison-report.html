@@ -428,18 +428,18 @@ flowchart LR
   <div class="table-wrap"><table>
     <thead><tr><th class="c">原表状态</th><th class="c">条数</th><th>P3 双重取证结论要点</th></tr></thead>
     <tbody>
-      <tr><td class="c">已支持 / 已交付</td><td class="c">9</td><td>8 条与手册相符；R42 云沙箱手册有联动接口但无自有产品线（见 5.3 判读）</td></tr>
+      <tr><td class="c">已支持 / 已交付</td><td class="c">5</td><td>4 条与手册相符；R42 云沙箱手册有联动接口但无自有产品线（见 5.3 判读）</td></tr>
       <tr><td class="c">部分交付</td><td class="c">1</td><td>R13 国际应用识别：规则库含 Facebook 等 5 项（原表备注），覆盖度待 T1 抽样</td></tr>
-      <tr><td class="c">待交付</td><td class="c">22</td><td>集中在 2026-09 底交付批次（SMTPS 告警/地址组嵌套/代理升级/域名策略等）；交付后需复验</td></tr>
+      <tr><td class="c">待交付</td><td class="c">16</td><td>集中在 2026-09 底交付批次（SMTPS 告警/地址组嵌套/代理升级/域名策略等）；交付后需复验</td></tr>
       <tr><td class="c">待评估</td><td class="c">8</td><td>硬件加速 4 项（R48–R51）+ 虚系统 HA/光衰/IPSec 切换/解密镜像——多为研究院/产线在途评估</td></tr>
       <tr><td class="c">不支持</td><td class="c">1</td><td>R42 云沙箱（手册层面有第三方联动能力）</td></tr>
-      <tr><td class="c">暂停 / 空</td><td class="c">2</td><td>R54 NAT 策略组容量 512 条（规格项待查）；R55 国产/非国产型号（待项目触发评估）</td></tr>
+      <tr><td class="c">暂停 / 空白</td><td class="c">27</td><td>R54 暂停（规格项待查）+ R55 待项目触发评估 + 25 条原表未标注状态（多为常规已具备能力项）</td></tr>
     </tbody>
   </table></div>
 
   <div class="callout warn">
     <div class="t">在途需求判定口径</div>
-    本报告支持度一律按<strong>当前版本手册</strong>判定；"待交付"22 条（多为 2026 年 9 月底批次）的在途状态已在说明列注明，<strong>不与现网能力混淆</strong>。9 月批次交付后应执行一轮复验（回 P3 局部更新）。
+    本报告支持度一律按<strong>当前版本手册</strong>判定；"待交付"16 条（多为 2026 年 9 月底批次）的在途状态已在说明列注明，<strong>不与现网能力混淆</strong>。9 月批次交付后应执行一轮复验（回 P3 局部更新）。
   </div>
 </section>
 
@@ -485,6 +485,7 @@ flowchart LR
   </table></div>
 
   <h3>7.2 质量红线自查（九条）</h3>
+  <div class="callout">本表为撰写自查记录。P6 评审阶段另经程序化核验（<code>p6_review.py</code>，21 项检查含报告数字与底稿数据交叉验证）于 2026-08-15 复核，21/21 全 PASS；核验中发现并整改 6 处证据/备注瑕疵（#5/#36/#60/#104/#107/#110/#113/#116）。</div>
   <div class="table-wrap"><table>
     <thead><tr><th class="c">#</th><th>红线</th><th>自查结果</th></tr></thead>
     <tbody>
