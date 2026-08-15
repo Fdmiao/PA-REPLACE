@@ -1,0 +1,15 @@
+[
+{"no":68,"fp":"IPSec隧道数与组网","topsec":["IPSec","隧道数量","星型","网状"],"pa":["IPSec","site-to-site","隧道"]},
+{"no":69,"fp":"与第三方设备互通","topsec":["互通","兼容性","第三方"],"pa":["互操作性"," interoper","标准 IKE"]},
+{"no":70,"fp":"国密SM2SM3SM4","topsec":["SM2","SM3","SM4","国密"],"pa":["国密","SM4","Suite B"]},
+{"no":71,"fp":"商用密码产品认证","topsec":["商用密码","密码认证"],"pa":["FIPS","认证","密码"]},
+{"no":72,"fp":"SSLVPN并发授权","topsec":["SSL VPN","并发","授权"],"pa":["GlobalProtect","并发用户","许可证"]},
+{"no":73,"fp":"SSLVPN客户端形态","topsec":["SSL VPN","客户端","免插件"],"pa":["GlobalProtect","无客户端","应用程序"]},
+{"no":74,"fp":"SSLVPN认证方式","topsec":["双因素","短信","证书认证"],"pa":["MFA","多重因素","短信"]},
+{"no":75,"fp":"VPN隧道内检测","topsec":["隧道内","解密后","VPN检测"],"pa":["隧道","解密","GlobalProtect"]},
+{"no":76,"fp":"GRE L2TP隧道协议","topsec":["GRE","L2TP","PPTP"],"pa":["GRE","L2TP","隧道接口"]},
+{"no":77,"fp":"隧道备份与DPD","topsec":["DPD","备份隧道","链路备份"],"pa":["DPD","dead peer","监控"]},
+{"no":129,"fp":"SD-WAN","topsec":["SD-WAN","链路质量","智能选路"],"pa":["SD-WAN","路径选择","链路质量"]},
+{"no":130,"fp":"终端合规检查HIP","topsec":["终端检查","合规检查","准入"],"pa":["HIP","主机信息配置文件","合规"]},
+{"no":131,"fp":"抗量子VPN","topsec":["抗量子","后量子"],"pa":["后量子","PQ","混合密钥"]}
+]

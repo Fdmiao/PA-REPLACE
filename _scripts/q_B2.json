@@ -1,0 +1,9 @@
+[
+{"no":28,"fp":"不解密识别（SNI/证书/行为）","topsec":["加密流量","证书识别","不解密"],"pa":["QUIC","不解密","TLS 指纹"]},
+{"no":30,"fp":"入站解密（反向代理）","topsec":["服务器SSL解密","服务器模板","SSL解密"],"pa":["入站检查","Inbound","解密配置文件"]},
+{"no":31,"fp":"证书管理与企业根CA","topsec":["CA管理","证书管理","根证书","证书模板"],"pa":["Certificate Management","证书配置文件","中间证书","OCSP"]},
+{"no":32,"fp":"控制动作（阻断/告警/限速/重置）","topsec":["会话重置","阻断","限速","处理动作"],"pa":["Reset Both","reset-both","操作","Action"]},
+{"no":34,"fp":"AD/LDAP域集成","topsec":["LDAP","AD域","外部认证服务器","域认证"],"pa":["LDAP","User-ID","Active Directory","目录服务器"]},
+{"no":35,"fp":"SSO与认证对接","topsec":["单点登录","SSO","RADIUS","Portal认证"],"pa":["SAML","单点登录","RADIUS","身份验证策略"]},
+{"no":38,"fp":"基于应用的策略与日志联动","topsec":["日志联动","安全事件","日志查看"],"pa":["log forwarding","日志转发","Log Forwarding","ACC"]}
+]

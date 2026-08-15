@@ -1,0 +1,242 @@
+### 68 IPSec隧道数与组网
+-- 天融信:
+  [40] IPSecVPN (ipsec.html): IPSecVPN VPN（Virtual Private Network，虚拟私有网）是近年来随着Internet的广泛应用而迅速发展起来的一种新技术，用以实现在公用网络上构建虚拟专用网络，
+  [10] 静态隧道 (topic4.html): 静态隧道 IPSec VPN静态隧道通过IKE（Internet Key Exchange，因特网密钥交换）自动地进行安全联盟建立与密钥交换而自动建立。本节介绍如何配置静态隧道。 要使NGFW能与其他
+  [9] 工作原理 (toc183414233.html): 报文后进行解析，如果该报文为分片数据报文且防火墙的分片重组功能为开启状态，则重组数据报文，并区分出报文类型（本地报文、广播报文、二层透明转发报文、路由转发报文）；如果接收的数据包为IPSec协议保护的报文，则除以上步骤外，还需进行IPSec解密。 2）会话查询 对于新接收的报文，防火墙将根据报文包含的五元组查询本地会话表，判断该报文是否属于某个已经存在的会话。如果存在
+  [9] 管理服务 (topic177.html): 管理服务 NGFW可以与对端设备建立IPSec VPN隧道的前提条件是，NGFW开放了与对端设备通信的IPSecVPN服务。开放IPSecVPN服务的操作步骤如下： 步骤1 选择 网络管理 > IPSecVPN > 管理服务 
+  [8] 配置IPSec VPN (ipsec-vpn.html): 配置IPSec VPN t 开放IPsec VPN服务 步骤1 选择 网络管理 > IPSec VPN > 管理服务 。 点击【添加】按钮，开放“外网”区域的IPSec VPN服务，如下图所示。
+  [7] IPSecVPN流量 (toc450050589.html): IPSecVPN流量 NGFW支持对通过各个IPSec VPN隧道的数据报文流量进行统计，以列表的形式可展示通过各IPSec VPN隧道的名称、上行速率、下行速率、上行流量、下行流量、总流量
+-- PA:
+  [webhelp p548 score56]  Network（网络）> IPSec Tunnels（IPSec 隧道）: 网络 Network（网络）> IPSec Tunnels（IPSec 隧道） 选择 Network（网络） > IPSec Tunnels（IPSec 隧道）可在防火墙之间建立 IPSec VPN 隧道并对 其进行管理。
+  [webhelp p172 score38]  隧道检测策略中的构建块: 以检测以下明文隧道协议的流量内容： • 通用路由封装 (GRE) • 用户数据通用分组无线服务 (GPRS) 隧道协议 (GTP-U)；仅支持 GTP 的防火墙支持。 • 非加密 IPSec 流量（IPSec 和传输模式 AH IPSec 的 NULL 加密算法） • 虚拟可扩展 LAN (VXLAN) 您可以使用隧道内容检测，对以上类型隧道中的流量和其他明
+  [webhelp p937 score28]  隧道设置选项卡: tect 应用程序更新的最大用户数。 如果达到最大用户数，则拒绝后续用户访问，并显示消息，指示 已达到最大用户数（范围因平台而有所不同，并在字段为空时显 示）。 • Enable IPSec（启用 IPSec）— 选中此选项可使端点通信使用 IPSec 模式，从而使 IPSec 成为主方法，而 SSL-VPN 成为回退方 法。在 IPSec 启用之前，其余选
+  [webhelp p550 score27]  Network（网络）> IPSec Tunnels（IPSec 隧道）: 网络 IPSec 隧道常规设置 说明 小：64、128、256、512、1024、2048 或 4096。默认值为 1024。 • 复制 TOS 标头 — 将封装数据包的内部 IP 标头中的（服务
+  [webhelp p583 score27]  Network（网络）> Network Profiles（网络配置文件）> IPSec Crypto（IPSec 加: 例如 加密电子邮件。如果不良行为者获得了 PPK 机密，他 们就更有可能使用量子计算机和 Shor 算法破解加密密 钥。 IKE 网关重新启动或刷新 • Network（网络）> IPSec Tunnels（IPSec 隧道） 选择 Network（网络） > IPSec Tunnels（IPSec 隧道）可显示隧道状态。在第二个 Status（状 态）列中
+  [webhelp p554 score26]  Network（网络）> GRE Tunnels（GRE 隧道）: alo Alto Networks 防火墙支持终止 GRE 隧道。 您在查找什么内容？ 请参阅： GRE 隧道的构建块 GRE 隧道 如何提供与其他供应商隧道端点的互操作？ 创建 IPSec 隧道时，请选择 Add GRE Encapsulation（添加 GRE 封装）。 了解更多？ GRE 隧道 GRE 隧道 • Network（网络）> GRE Tun
+  [admin p1168 score28]  为 LSVPN 配置 GlobalProtect 网关: ）如果想要保留封装数据包中的服务类型 (ToS) 信息，选中Copy TOS（复制 TOS）。 如果隧道内有多个会话（每个会话使用不同的 TOS 值），复制 TOS 标头会 导致 IPSec 数据包在送达时处于失序状态。 STEP 5 | （可选）启用隧道监控。 隧道监控能使卫星监控其网关隧道连接，以允许它在连接失败时故障转移至备份网关。故障转 移至其他网关
+  [admin p544 score19]  隧道检测日志: 据检测到的一个或多个可疑事件，表示主机可能受到影响，如访问恶意 URL 或 动态 DNS 域。 参考 检测到可以在聚合中用于确定可疑活动的事件；每个事件对于自己并不一定很重 要。 隧道检测日志 隧道检测日志类似于隧道会话的流量日志，用于显示非加密隧道会话的条目。为了防止重复计数， 防火墙只保存流量日志中的内部流，并将隧道会话发送至隧道检测日志。隧道检测日志条
+  [admin p152 score11]  提供对网络选项卡的粒度访问: ）节点或定义网关， 其中包括与对端网关执行 IKE 协议协商必 需的配置信息。 如果将权限状态设置为只读，可以查看当 前配置的 IKE 网关，但不能添加或编辑网 关。 是 是 是 IPSec 加密 控制访问 Network Profiles（网络配置 文件） > IPSec Crypto（IPSec 加密）节 点。如果禁用此权限，管理员将看不到 Networ
+  [admin p654 score11]  隧道检测日志字段: 内部内 容（如为一级隧道）。 父启动时间 (parent_start_time) 父隧道会话开始的年/月/日小时:分钟:秒。 隧道类型 (tunnel) 隧道类型，如 GRE 或 IPSec。 字节数 (bytes) 会话中的字节数。 已发送字节数 (bytes_sent) 客户端到服务器方向的会话字节数。 已接收字节数 (bytes_received) 从
+  [admin p1150 score10]  为 LSVPN 创建接口和区域: 大规模 VPN (LSVPN) STEP 2 | 在承载 GlobalProtect 网关的防火墙上，配置用于终止 GlobalProtect 卫星所建立 VPN 隧道的 逻辑隧道接口。 仅当您计划使用动态路由时，隧道接口上才需要 IP 地址。但是，为隧道接口分配 IP 地址有助于对连通性问题进行故障排除。 确保在 VPN 隧道终止的区域内启用用
+  [admin p1176 score10]  准备卫星加入 LSVPN: 可选）如果只推送特定子网的路由（而非所有路由），在“子网”部分中单击 Add（添 加），并指定要发布的子网路由。 STEP 6 | 保存卫星配置。 1. 单击 OK（确定）以保存 IPSec 隧道设置。 2. 单击 Commit（提交）。 STEP 7 | 如果需要，可提供凭证以允许卫星对门户进行验证。 为了首次向门户进行身份验证，卫星管理员必须提供本地数据
+
+### 69 与第三方设备互通
+-- 天融信:
+  [12] 协同联动 (anquanzhongxinxietongliandong.html): 协同联动 协同联动指：1）防火墙与TA-DB、防病毒网关、WAF、蜜罐、DLP和EDR系统等第三方设备联动，由第三方设备对网络中各种网络行为进行深度检测并将检测分析结果发送给防火墙，防火墙则根据接收的分析结果自动生成黑名单策略对网络中的恶意行为进行封堵；2）防火墙智能分析网络行
+  [3] 三层VXLAN网关 (topic254.html): ）上设置VXLAN分布式三层网关，实现跨网通讯。 l 配置要点 1. 配置VTEP1和VTEP2两台设备通信接口的IP地址和通信路由，实现VTEP1、VTEP2、VTEP3设备网络互通，操作详见 接口 和 路由 。 2. 配置VTEP1和VTEP2设备上的VXLAN网桥，并在VXLAN接口上配置地址作为三层网关使用，操作详见 VXLAN接口 。 3. 配置VTE
+  [3] VXLAN (vxlan.html): 的子网通信；VXLAN三层网关用于VXLAN虚拟网络的跨子网通信以及外部网络的访问。 l VXLAN二层网关应用场景 如下图，不同数据中心都拥有VM，为达到不同数据中心相同网段正常互通。可在NGFW上设置VXLAN二层网关，VXLAN二层网关之间建立VXLAN隧道，通过VXLAN二层网关功能实现同一网段终端用户互通。 l VXLAN三层网关应用场景 如下图，不同
+  [2] 配置第三方Radius认证服务器认证功能 (radius.html): 配置第三方Radius认证服务器认证功能 在防火墙上配置Radius认证服务器前，需在Radius认证服务器中将防火墙设置为允许与其建立连接的设备。已知Radius认证服务器的配置参数如下：
+  [2] 静态路由 (ref485285046.html): 条件，NGFW会根据该路由表项的网关和出接口确定从哪个接口转发报文；如果数据报文同时匹配多条静态路由，NGFW则通过负载分担方式处理报文。 IPv4静态路由用于实现IPv4网络互连互通，IPv6静态路由用于实现IPv6网络互连互通，其主要区别是地址格式不同：配置IPv4静态路由时使用IPv4地址，配置IPv6静态路由时使用IPv6地址。 静态路由表项各字段说明如
+  [2] 黑白名单 (toc490041706.html): 根据策略自动生成。动态黑名单较静态黑名单的一个区别是，动态黑名单具有生效时间，当剩余生效时间为0秒时，NGFW会自动删除动态黑名单。自动生成的动态黑名单来源有两种，1）当NGFW与第三方设备联动工作，第三方联动设备向NGFW通告异常事件时；2）NGFW应用层检测模块检测到的报文命中“加入黑名单”的策略时（如URL过滤、病毒过滤、防代理、EDR、防病毒网关、WAF、
+-- PA:
+  (无命中)
+
+### 70 国密SM2SM3SM4
+-- 天融信:
+  [6] 静态隧道 (topic4.html): 称。 隧道名称最多不能超过（中文13、英文40）个字符，并且不能包含除“-”或“_”之外的特殊字符。 描述 输入静态隧道描述信息。 协议类型 选择隧道使用的协议类型。可选项：国际、国密1.0、国密1.1 说明：选择“国密1.0”和“国密1.1”时，认证方式固定为“数字证书”；“IKE协商模式”固定为“主模式”。 认证方式 认证方式 配置进行隧道协商时的身份认证方
+  [3] CA管理 (ca3.html): c KeyInfrastructurePKI)的核心，CA是负责签发证书、认证证书、管理已颁发证书的机关。PKI模块中内置了本地CA功能，支持创建多个CA，支持签发RSA/ECC/SM2证书，提供证书签发功能，提供已签发证书其生命周期的管理服务。 选择 PKI > CA中心 > CA管理 。 l 根证书管理 PKI支持创建多个CA，根证书管理就是管理每个CA的根证
+  [1] 管理服务 (topic215.html): 信扩展端口 设置Web统信扩展端口。 说明： web通信扩展端口是设备与界面交互数据内部使用的端口号，端口号冲突会导致部分数据交互失败，请慎重修改。 SSL模式 可选项：国际标准、国密标准、自适应。 步骤2 配置完成后，点击【应用】按钮，完成本地服务设置。 步骤3 WEB登录证书 1）点击【生成证书】按钮，弹出提示窗口。 点击【确认】，系统将提示操作成功。 2）
+  [1] 证书请求管理 (topic244.html): 性。 省份、地区、单位、部门、通用名称、电子邮件 设置生成证书的网关设备的其他属性。 域名 配置证书请求域名。 公钥算法 选择加/解密数据包使用的算法类型。可选项：RSA、ECC和SM2。 私钥长度 公钥算法选择为“RSA”时，设置RSA算法私钥长度，单位为bit，长度可选择1024、2048、4096。 公钥参数 公钥算法选择为“ECC”时，设置ECC算法参数。
+-- PA:
+  (无命中)
+
+### 71 商用密码产品认证
+-- 天融信:
+  [1] 管理用户 (ref467487317.html): ；如果绑定的证书未导入到设备中，点击【导入外部证书】后可导入。本地管理员证书的导入，参见 本地证书 。 2）密码和证书认证方式，证书配置方法与单因子证书认证相同，登录认证需同时满足密码认证以及证书认证用户才可以上线。 3）密码和UKey认证方式，UKey是一种通过USB(通用串行总线接口)直接与计算机相连、具有密码验证功能，使用UKey前需要在对应的管理终端上安装相
+  [1] 添加Local服务器 (toc462834527.html): 连通性。 步骤3 配置认证安全策略。 1）勾选本地服务器，点击“认证安全策略”弹窗如下图所示。 各项参数的具体说明如下表所示。 参数 说明 认证方式 单因子 开启单因子认证，可选择密码认证或证书认证。 双因子 开启双因子认证，可选择密码+证书，密码+Ukey，密码+短信。 登录策略 防暴力破解 选择是否开启预防暴力破解功能。 登录验证码 选择是否开启登录验证码功能。
+  [1] 通过浏览器登录 (topic142.html): ，可进入登录界面，登录界面如下图所示。 ² 出厂配置登录界面如上图所示。如果管理员已对系统认证方式进行了修改，登录界面会显示相应认证方式，如下图所示。 步骤2 登录系统认证方式为“密码认证”（出厂配置），此时输入出厂用户名/密码（superman/talent），点击【登录】即可登录系统。为保证系统的安全性，登录系统后管理员可对管理员的认证方式进行修改（操作详见 账
+  [1] 规则集管理 (topic219.html): 参见 日志查看 。 描述 输入对CSRF策略简单的描述信息。 状态 设置是否启用该CSRF规则。 Ø 暴力登录 所谓暴力登录就是攻击者无限次尝试用户名和密码，试图登录网站。如果不对密码认证失败做次数和时间限制，密码肯定会被尝试出来，这样就极大的增加了网站的风险。为了防止对网站使用尝试猜解用户名和密码的攻击，TopWAF对暴力登录做了策略限制，用户可以定义统计周期内用
+  [1] 账号管理 (topic53.html): 如果绑定的证书未导入到设备中，点击【导入外部证书】后可导入。本地管理员证书的导入，参见 本地证书 。 2）密码和证书认证方式，证书配置方法与单因子证书认证相同，登录认证必须同时满足密码认证以及证书认证用户才可以上线。 3）密码和UKey认证方式，UKey是一种通过USB(通用串行总线接口)直接与计算机相连、具有密码验证功能，使用UKey前需要在对应的管理终端上安装相
+-- PA:
+  [webhelp p726 score25]  用户名和密码要求: 设备 Device（设备）> Password Profiles（密码配置文件） • Device（设备）> Password Profiles（密码配置文件） • Panorama > Password Profiles（密码配置文件） 选择 De
+  [webhelp p645 score23]  Device（设备）> Setup（设置）> Management（管理）: 便密码不会长时间使 用。所需密码越强，攻击者破解密码的难度就 越大。请务必使用密码强度最佳实践确保密码 的强度。 最小长度 要求最小密码长度（范围为 1 至 16 个字符）。 在 FIPS-CC 模式下，最短密码长度的范围是 8-16 个字符。 最小大写字母数 要求最少大写字母数（范围为 0 至 16 个字符）。 最小小写字母数 要求最少小写字母数（范围为 
+  [webhelp p646 score13]  Device（设备）> Setup（设置）> Management（管理）: 设备 项目 说明 字符不同的新密码 管理员更改其密码时，字符必须按指定的值而有所不同。 在第一次登录时需要更改密码 选择此选项将在管理员第一次登录防火墙时提示其更改其密 码。 阻止密码重用限制 要求系统根据指定计数
+  [webhelp p1024 score13]  Panorama > Administrators（管理员）: 序列）。 仅使用客户端证书身份验证 (Web) 选中此选项可对 Web 界面访问使用客户端证书身份验证。 如果选择此选项，则无需设置用户名（Name（名称））和 Password（密码）。 密码/确认密码 输入并确认管理员的密码（区分大小写，最多 16 个字符）。为 确保安全，Palo Alto Networks 建议管理员使用小写字母、大写 字母和数字的组
+  [webhelp p728 score11]  Device（设备）> Administrators（管理员）: 义管理员帐户。 要定义 Panorama 管理员，请参阅 Panorama > Managed Devices（受管设备）> Summary（摘要）。 支持以下身份验证选项： • 密码身份验证 — 管理员输入登录用户名和密码。该身份验证不需要证书。可以将其与身份验证 配置文件结合使用，或用于本地数据库身份验证。 • 客户端证书身份验证 (Web) — 该身份
+  [webhelp p797 score11]  Device（设备）> Certificate Management（证书管理）> SCEP: 该名 称用于区分此 SCEP 实例与配置文件中可能已存在的其他实例。 位置 如果系统具备多个虚拟系统，则请为配置文件选择一个位置。此位置 表示可使用 SCEP 配置的位置。 一次性密码(挑战) SCEP 质询 （可选）要让基于 SCEP 的证书生成更安全，您可在公钥基础结构 (PKI) 与门户之间，为各证书请求配置 SCEP 质询-响应机制（一次性 密码 (
+  [admin p734 score23]  关键系统日志消息: 监控 事件 ID 消息 fips-selftest FIPS 模式自检 <description> ..... 成功 fips-selftest FIPS-CC 模式自检 <description> ..... 成功 fips-selfte
+  [admin p1385 score19]  将操作模式更改为 FIPS-CC 模式: 云 VM 系列防火墙或公共云 Panorama 虚拟设备）创建 SSH 密钥并登录到防火墙 或 Panorama。 在 Microsoft Azure 等部分公共云平台上，更改为 FIPS-CC 模式后，您必须要有一个 SSH 密 钥以防止身份验证失败。验证您是否已将防火墙部署为使用 SSH 密钥进行身份验证。尽管您 可以在 Azure 上部署 VM 系列防
+  [admin p1388 score17]  FIPS-CC 安全功能: 认证 FIPS-CC 模式下的串行控制台端口仅作为有限状态输出端口使用；CLI 访问不可用。 引导到 MRT 的硬件和私有云 VM 系列防火墙上的串行控制台端口提供对 MRT 的交互式访问。 引
+  [admin p441 score16]  刷新 HA1 SSH 密钥和配置密钥选项: 高可用性 （可选）设置 SSH 服务器为仅使用 HA1 会话的指定加密密码。 默认情况下，HA1 SSH 允许用于 CLI HA 会话加密的所有受支持的密码。在设置一个或多个密 码时，SSH 服务器仅在连接时通告这些密码。如果 SSH 客户端（HA 对等
+  [admin p1384 score15]  将操作模式更改为 FIPS-CC 模式: -user 登录，并选择部署时与虚拟机关联的 SSH 公钥。 4. 在 MRT 欢迎屏幕，按 Continue（继续）上的 Enter 以访问 MRT 主菜单。 将操作模式更改为 FIPS-CC 模式 以下步骤介绍如何将 Palo Alto Networks 产品的操作模式从正常模式更改为 FIPS-CC 模式。 当设备处于 FIPS-CC 模式时，您将无法
+  [admin p1387 score14]  FIPS-CC 安全功能: 认证 FIPS-CC 安全功能 FIPS-CC 模式启用后，将在所有防火墙和设备上应用以下安全功能： 要登录，浏览器必须与 TLS 1.2（或更高版本）兼容；在 WF-500 设备上，您只能通过
+
+### 72 SSLVPN并发授权
+-- 天融信:
+  [8] 配置策略模板 (ref464832260.html): 击者获取一个有效的SESSION ID（标识符）后，伪装成该合法用户发送大量新建连接请求达到目的服务器拒绝服务的攻击目的。检测到攻击后，支持的防御动作包括源/目的速率限制、源/目的并发限制。 1）检测速率阈值：设置进行防御的阈值。单位：cps；取值范围：1-80000000。 2）检测并发阈值：设置进行防御的阈值。单位：connections；取值范围：1-80
+  [4] 行为分析 (topic.html): 行为分析 行为分析模块会根据已配置的行为分析策略展示被监控对象的实时新建连接数、并发连接数以及流量变化与基准值的浮动情况。关于行为分析策略的配置，请参见 行为分析 。 选择 监控 > 流量统计 > 行为分析 ，进入行为分析展示界面。通过左上角“策略名”按钮选择不同
+  [3] 管理用户 (ref467487317.html): 网络资源前，NGFW需要对其进行认证，认证通过之后，NGFW会进一步检查与该用户相关联的用户访问策略。用户访问策略通过后，对于门户认证用户，NGFW会根据访问控制规则进行授权；对于SSL VPN用户，NGFW会根据SSLVPN模块的ACL管理功能和防火墙的访问控制规则综合判断结果进行授权。 l 添加用户方式 NGFW支持的添加用户方式如下： 1）手动逐条添加：管理员手工逐
+  [3] 连接信息 (toc450050591.html): 目的IP地址、源/目的端口等，这些连接信息均存储于连接表中。由于通过设备的连接众多，而记录连接表会消耗系统内存资源，所以，NGFW对连接表的大小进行了限定，表的大小，或者称之为最大并发连接数，限定了系统同时能够容纳的最大连接数量。 在对最大并发连接数进行自动化管理方面，NGFW为用户提供了两种机制，一种机制是通过连接限制策略限制最大连接数量（配置过程请参见 连接
+  [3] 账号管理 (topic53.html): 权限模板 。 超级管理员可以根据管理员职责范围自定义不同系统配置权限的其他管理员。如果超级管理员在添加管理员时选择管理员类型为“根系统管理员”，这个管理员就是一个全局管理员，可以在授权范围内进行设备的全局配置。创建虚拟系统后，超级管理员可以在添加管理员时选择管理员类型为“虚拟系统管理员”，并为其指定一个已经存在的虚拟系统，创建完成后该管理员即成为该虚拟系统的管理
+  [2] 虚系统 (topic128.html): 能均不可配置，如邻居、DHCP、静态路由、策略路由等。配置为非路由模式的虚拟系统接口只能工作在交换模式和虚拟线模式，不能配置IP地址。 连接配额 设置该虚拟系统下的连接配额（即最大并发连接数），使该虚拟系统的最大并发连接数不超过设定值。取值范围：1024-1600000。 说明： 系统的总连接配额由当前系统的license决定，同时也会根据license决定系统
+-- PA:
+  [webhelp p851 score29]  Device（设备）> Licenses（许可证）: 设备 Device（设备）> Licenses（许可证） 选择 Device（设备） > Licenses（许可证）可在所有防火墙型号上激活许可证。从 Palo Alto Networks 购买订阅后，将收到一个授权代码，用于激活一个
+  [webhelp p966 score24]  管理 GlobalProtect 应用程序软件: GlobalProtect Device（设备） > GlobalProtect Client（GlobalProtect 客户端） 以下主题介绍如何设置和管理 GlobalProtect 应用程序。 您在
+  [webhelp p892 score23]  Network（网络）> GlobalProtect > Portals（门户）: GlobalProtect Network（网络）> GlobalProtect > Portals（门户） 选择 Network（网络） > GlobalProtect > Portals（门户）可设置并
+  [webhelp p912 score20]  GlobalProtect 门户代理应用程序选项卡: GlobalProtect GlobalProtect 应用程序配置设置 说明 GlobalProtect 连接时，允许指向指 定主机/网络的流量 （Windows 和 macOS 10.15.4 或 更高
+  [webhelp p933 score20]  Network（网络）> GlobalProtect > Gateways（网关）: GlobalProtect Network（网络）> GlobalProtect > Gateways（网关） 选择 Network（网络） > GlobalProtect > Gateways（网关）可配
+  [webhelp p905 score18]  GlobalProtect 门户代理应用程序选项卡: GlobalProtect GlobalProtect 门户外部 设置 说明 第三方 VPN 为引导 GlobalProtect 应用程序忽略已选中的第三方 VPN 客户端， 以免 GlobalProtec
+  [admin p76 score22]  激活订阅许可证: 订阅 激活订阅许可证 按照下列步骤，在防火墙上激活新的许可证。 解密镜像功能要求您激活免费许可证才能解锁功能。对于这些功能，您应按照下列步骤以激活免费 许可证以使用解密功能。 STEP 1 | 找到您
+  [admin p167 score16]  提供对设备选项卡的粒度访问: 的最新版本，阅读每个 版本的发行说明并选择要下载和安装的版 本。 如果将此权限状态设置为只读，管理员可 以查看 Software（软件）信息，但不能下 载或安装软件。 是 是 是 GlobalProtect 客 户端 控制访问 GlobalProtect Client（GlobalProtect 客户端）节 点。如果禁用此权限，管理员将看不到 GlobalP
+  [admin p1114 score16]  激活免费许可证以使用解密功能: 解密 激活免费许可证以使用解密功能 解密 SSH 流量 和 SSL 流量（SSL 互联网流量或传往内部服务器的 SSL 流量）时无需提供许可证。 但是，您必须激活免费许可证，以启用 Decryptio
+  [admin p1151 score15]  将服务器证书部署到 GlobalProtect LSVPN 组件: 大规模 VPN (LSVPN) 在 GlobalProtect LSVPN 组件之间启用 SSL GlobalProtect 组件间的所有交互均通过 SSL/TLS 连接实现。因此，在配置每个组件前须生成并/或 安装必要的证书，以便在每个组件
+  [admin p935 score13]  准备部署 App-ID 云引擎: STEP 3 | 在每个将使用 ACE 的防火墙上激活 SaaS 安全内联。激活会在防火墙上启用 ACE。（SaaS 安 全管理员。） Panorama 不需要 SaaS 安全内联许可证即可管理使用 ACE 的防火墙。只有受管防 火墙需要许可证，您必须手动检索许可证，如下一步所示。 将其余步骤交给 PAN-OS 管理员。 STEP 4 | 检索每个防火墙上的
+  [admin p1188 score13]  使用 iBGP 进行高级 LSVPN 配置: 大规模 VPN (LSVPN) STEP 7 | 为 LSVPN 配置 GlobalProtect 门户。 两个数据中心都会通告其路由，但具有不同的路由优先级，以确保主动数据中心为首选网关。 1. 选择 Network（网络） > GlobalProtect > Portals
+
+### 73 SSLVPN客户端形态
+-- 天融信:
+  [13] DHCP服务器 (toc490041617.html): DHCP服务器 NGFW作为DHCP服务器时，可为运行DHCP客户端服务的主机分配网络配置参数，如IP地址、默认网关、DNS及WINS服务器等。NGFW可以指定某个物理接口、VLAN虚接口和聚合端口运行DHCP服务器服务，为该接口所在子网内的主机动
+  [9] 代理模板 (sslxiezaidailimuban.html): 代理模板 代理模板功能添加SSL客户端或SSL服务器的模板，用于NGFW对客户端和服务器端的SSL证书进行认证，解密或重新加密流量，配置代理模板的具体操作如下： l SSL客户端模板 步骤1 选择 安全策略 > 解密 
+  [9] 规则集管理 (topic219.html): 值范围：0-256；默认值：64。 Header名称长度 设置HTTP请求首部名称的最大长度，取值范围：0-512；默认值：512。 Ø 参数限制 参数限制功能可以根据不同的参数对客户端发起的请求进行过滤，对其中的参数进行合法性检查，提高Web应用系统的安全性。激活“参数限制”页签，界面如下图所示。 配置参数限制时，各项参数的具体说明如下图所示。 参数 说明 启用
+  [8] DHCP中继 (toc490041619.html): DHCP中继 DHCP客户端向DHCP服务器获取IP地址、默认网关、DNS等网络配置参数的报文为广播报文，接收响应的报文同样为广播报文。这种将导致当DHCP客户端和DHCP服务器不在同一个子网内（广播域）时，
+  [7] 配置策略模板 (ref464832260.html): 模式：基本模式、高级模式、syncookie源认证。 1）基本模式：即乱序认证，回应乱序报文。防护设备收到SYN报文后，会回应一个包含cookie的错误序列号的ACK报文，真实IP客户端收到后，会终止当前请求，回应一个reset报文，重新发送请求。cookie中包含了TCP流的一些特征，例如五元组、TTL等信息，若IP地址被假冒，很难通过认证。 优点：这种认证方式
+  [6] EDR联动 (edr.html): Ø 当报文的源IP地址命中了“监控范围”，仅当发送该报文的资产在资产列表且状态为在线时，NGFW才会放行该报文，其他情况均阻断。 说明： “监控范围”可满足需求：禁止没有安装EDR客户端的终端或者虽然安装了EDR客户端但当前EDR客户端处于离线状态的终端通过防火墙访问外网。 白名单 支持添加地址对象（主机、范围、子网）和地址组对象，最多添加128个地址对象。 如果
+-- PA:
+  [webhelp p178 score41]  应用程序替代常规选项卡: 策略 Policies（策略）> Application Override（应用程序替 代） 要更改防火墙将网络通信分类到应用程序中的方式，可以指定应用程序替代策略。例如，如果要控 制一个自定义应用程序，则可以按照区域、源和目标地址、端口和协议，使用应用程序替代策
+  [webhelp p218 score37]  应用程序支持的操作: 对象 应用程序支持的操作 说明 启用应用程序 选择已禁用的应用程序，然后 Enable（启用）此应用程序，以便防 火墙根据配置的安全策略管理应用程序。 导入应用程序 若要导入应用程序，请单击导入
+  [webhelp p953 score36]  Network（网络）> GlobalProtect > Clientless Apps（无客户端应用）: GlobalProtect Network（网络）> GlobalProtect > Clientless Apps（无 客户端应用） 选择 Network（网络） > GlobalProtect > Cl
+  [webhelp p966 score36]  管理 GlobalProtect 应用程序软件: GlobalProtect Device（设备） > GlobalProtect Client（GlobalProtect 客户端） 以下主题介绍如何设置和管理 GlobalProtect 应用程序。 您在
+  [webhelp p139 score34]  应用程序和使用情况: 策略 字段 说明 App-ID 的规则，然后稍后将根据基于端口的规则看到的 更多应用程序添加到该 App-ID 规则中。 对于在 New App Viewer（新应用程序查看器）中看到的 应用程序，您可以在发现新应用程序时将新识别的基于云 的应用程序和基于内容的应用程
+  [webhelp p140 score33]  应用程序和使用情况: 策略 字段 说明 • 添加特定查看的应用程序：仅选择根据规则实际看到 的应用程序。（您也可以手动选择容器应用程序和功 能应用程序。） • Application（应用程序）： • 根据规则看到的选定应用程序，以绿色突出显示。
+  [admin p922 score60]  从基于端口迁移至基于 App-ID 安全策略规则: App-ID （默认选中可在容器内添加所有应用程序的 Add Container App（添加容器应用程序）选 项），以帮助防止规则在将来发生中断。 3. 如果想要允许容器内所有应用程序，请让 Add container app（
+  [admin p920 score44]  从基于端口迁移至基于 App-ID 安全策略规则: App-ID 和应用程序依赖关系中添加其他应用程序。例如，要通过选择基于 slack 的应用程序来可克 隆规则： 绿色文本是选中进行克隆的应用程序。容器应用程序（slack）位于灰色行中。斜体列出的应 用
+  [admin p563 score43]  生成 SaaS 应用程序使用情况报告:  PAN-DB 中的恶意软件 URL 列表）存在缺漏。还可能发现这些源会识别您认为安全的流量。为了弥补这两种情况，您可在配置 Botnet 报告时添加查询筛选器。 生成 SaaS 应用程序使用情况报告 SaaS 应用程序使用情况报告（PDF 版）由两部分组成，允许您按风险和约束状态轻松搜索 SaaS 应用程序活动。约束应用程序是指您正式同意在您网络上使用的应
+  [admin p921 score43]  从基于端口迁移至基于 App-ID 安全策略规则: App-ID 个单独应用程序、1 个容器应用程序、和 1 个容器应用程序的相依应用程序从基于端口的规则 中删除，因此，Apps Seen（显示的应用程序）中显示有 13 个应用程序。 与克隆相比，添加应用程序
+  [admin p929 score39]  通过未使用的应用程序识别安全策略规则: 30 days)（流量（字节，30 天）），根据过去 30 天内规则发 现的流量容量进行排序。使用此信息确定规则修改的优先级。例如，您可以优先考虑 Apps Allowed（允许的应用程序）和 Apps Seen（显示的应用程序） 差值最大的规则，以及具有最 长 Days with No New Apps（没有新应用程序的天数）的规则，因为这些规则具有最多数
+  [admin p923 score36]  规则克隆迁移用例：Web 浏览和 SSL 流量: App-ID 应用程序）中使用 Add to This Rule（添加到此规则）、Create Cloned Rule（创建克隆规 则）或 Match Usage（匹配使用情况）转换规则。 1. 在 A
+
+### 74 SSLVPN认证方式
+-- 天融信:
+  [17] 短信 (topic68.html): 短信 NGFW支持通过短信方式进行告警通知。管理员需要提前配置短信相关参数。 具体操作如下： 步骤1 选择 系统管理 > 系统设置 > 短信 ，如下图所示。 步骤2 配置参数。短信网关
+  [14] 告警方式 (topic72.html): 警（发送告警信息到Console控制台） l TP告警（向联动的NGTP设备发送告警） l SNMP T rap 告警（通过发送SNMP TRAP消息到SNMP陷阱主机告警） l 短信告警（通过发送短信告警） l 本地告警（在“告警查看”页签查询） 告警类型关联了告警方式后，告警方式才能生效，告警类型关联告警方式的介绍详见 告警设置 。 配置告警方式的操作步骤如
+  [6] 管理用户 (ref467487317.html): 码允许长度：6-32。 确认密码 必填项，再次输入用户的认证密码。允许长度：6-32。 邮箱 设置用户的邮箱。 认证方式 选择用户认证方式，包括单因子（密码/证书）、双因子（密码+短信、密码+证书/密码+Ukey），认证方式的选择限制取决 于安全策略的配置，详情参见 用户管理 > 认证服务器 > 安全安 全策略 > 认证方式。 1）证书认证方式，需选择已导入的本
+  [5] 账号管理 (topic53.html): 总线接口)直接与计算机相连、具有密码验证功能，使用UKey前需要在对应的管理终端上安装相应的驱动程序，驱动安装成功后才可以识别出UKey。获取驱动请联系天融信销售人员。 4）密码+短信认证，在下方手机号配置项输入需要进行登录验证的手机号码。 证书名称 认证方式包含证书时，需绑定管理员证书。 2）点击【确定】按钮完成管理员的添加。 步骤3 启用管理员。 选中已有管
+  [2] 添加Local服务器 (toc462834527.html): 图所示。 各项参数的具体说明如下表所示。 参数 说明 认证方式 单因子 开启单因子认证，可选择密码认证或证书认证。 双因子 开启双因子认证，可选择密码+证书，密码+Ukey，密码+短信。 登录策略 防暴力破解 选择是否开启预防暴力破解功能。 登录验证码 选择是否开启登录验证码功能。 登录失败重试次数 设置允许用户认证失败的最大次数。超过此设定，账号将被锁定一定时
+  [1] 登录安全策略 (ref465087238.html): 置管理员账号安全保护机制时，各项参数的具体说明如下表所示。 参数 说明 认证方式 单因子/双因子 设置管理员登录 NGFW允许的 认证方式。包括单因子（密码/证书）、双因子（密码+短信、密码+证书/密码+Ukey）。 密码策略 密码复杂度 为适应管理员密码安全性、易用性的不同需求，NGFW提供密码复杂度的设置功能。 设置添加管理员时口令密码的复杂程度。可选项：高
+-- PA:
+  [webhelp p839 score16]  Device（设备）> Server Profiles（服务器配置文件）> Multi Factor Authenti: vice（设备）> Server Profiles（服务器配置文件）> Multi Factor Authentication（多因素身份验证） 使用此页面可配置多因素身份验证 (MFA) 服务器配置文件，以定义防火墙连接到 MFA 服务器的方 式。MFA 可以通过确保攻击者无法访问网络并通过折衷单个身份验证因素以防止恣意妄为（如窃 取登录凭据）来保护最敏感
+  [webhelp p741 score6]  身份验证配置文件: S 或 Panorama Web 界面 的管理员身份验证。尽管您可以配置其他因素，但这些用 例不会执行其他因素。但是，您可以使用 RADIUS 或 SAML 与所有身份验证用例的 MFA 供应商进行集成。 配置使用多因素身份验证 (MFA) 的身份验证配置文件后，必须将其分 配给身份验证执行对象（Objects（对象）> Authentication（身份验
+  [webhelp p921 score4]  GlobalProtect 门户代理应用程序选项卡: indows 安全中心 (WSC) 状态变更后发送 HIP 数据。选 择 Yes（是）（默认）可在 Windows 安全中心 (WSC) 状 态变更后立即发送 HIP 数据。 从 MFA 网关启用入站身份验证提 示 要支持多因素身份验证 (MFA)，GlobalProtect 端 点必须接收并确认从网关入站的 UDP 提示。选择 Yes（是）可使 Globa
+  [webhelp p310 score3]  Objects（对象）> Authentication（身份验证）: 义（请参阅 Device（设备） > Authentication Profile（身份验证配置文件））。对于在配置文件的 Factors（因素）选项卡中定义的多重因素身份验证 (MFA) 质询，防火墙将显示 MFA 登录页面。 PAN-OS Web 界面帮助 11.1 310 ©2024 Palo Alto Networks, Inc.
+  [webhelp p736 score3]  身份验证配置文件:  Location（位置）；其值预定义为共享（防火 墙）或为 Panorama。在保存配置文件后，您无法更改其位置。 身份验证选项卡 调用在因素选项卡中添加的任何多因素身份验证 (MFA) 服务前，防火墙会调用在此选项卡中配 置的身份验证服务 如果防火墙通过 RADIUS（而非供应商 API）与 MFA 供应商集成，则必须为该供 应商配置 RADIUS 服务
+  [webhelp p827 score3]  Device（设备）> Server Profiles（服务器配置文件）> RADIUS:  Shared（共享）时显示。 超时 输入时间间隔（以秒单位），在此之后身份验证请求会超时（范围 为 1–120，默认为 3）。 如果使用 RADIUS 服务器配置文件将防火墙与 MFA 服务进行集成，请输入能够让用户拥有足够的时间 对身份验证质询做出响应的时间间隔。例如，如果 MFA 服务提示输入一次性密码 (OTP)，则用户需要时 间查看其端点设备上的 
+  [admin p236 score16]  配置多重因素身份验证: 身份验证 配置多重因素身份验证 要使用多重因素身份验证 (MFA) 来保护敏感的服务和应用程序，您必须配置身份验证门户以显示 第一个身份验证因素的 Web 表单，并记录身份验证时间戳。防火墙使用时间戳来评估身份验证策 略规则的超时。要启用其他身
+  [admin p229 score14]  SAML: 身份验证 在选择要执行的身份认证因素的数量和类型时，了解策略评估对用户体验的影响至关重要。当用 户请求服务或应用程序时，防火墙应首先评估身份验证策略。如果请求与已启用 MFA 的身份验证 策略规则匹配，则防火墙将显示身份验证门户 Web 表单，以便用户可以对第一个因素进行身份验 证。如果身份验证成功，防火墙会为每个其他因素显示一个 MFA 登录页面。一
+  [admin p258 score12]  采用 Okta 对 MFA 进行验证: 身份验证 STEP 6 | 在源区域，Enable User-ID（启用 User-ID），要求标识用户使用您的 MFA 供应商对质询做 出响应。 STEP 7 | 创建身份验证实施对象以使用 MFA 供应商，并创建身份验证策略规则（请参阅第四步和第五 步中的配置身份验证策略）。 STEP 8 | 
+  [admin p237 score10]  配置多重因素身份验证: 身份验证 其他因素。尽管一些供应商让用户从几个因素中选择一个，但每个 MFA 供应商只提供一个因 素。 1. 选择 Device（设备） > Server Profiles（服务器配置文件） > Multi Factor Authentication（多重
+  [admin p228 score9]  身份验证类型: AML 标识提供商），任何不属于防火墙或 Panorama 的本地身份验证服务都将被视为外部身份验证服务。防火墙和 Panorama 可以集成的服务器类型包 括多重因素身份验证 (MFA)、SAML、Kerberos、TACACS+、RADIUS 和 LDAP。虽然您也可以使 用防火墙和 Panorama 支持的本地身份验证服务，通常会优选外部服务，因为外部
+  [admin p240 score8]  获取 RSA SecurID 访问云身份验证服务详细信息: 身份验证 在 RSA SecurID 和防火墙之间配置 MFA 多重因素身份验证允许您在允许用户访问网络资源之前使用多重因素检验其身份，从而保护公司 资产。要在防火墙和“RSA SecurID 访问云身份验证服务”之间启用多重因素身份验证 (
+
+### 75 VPN隧道内检测
+-- 天融信:
+  [1] WAF (anquancelue_waf.html): 则包含了一些特定CMS存在的攻击特征，如针对phpwind、wordpress、discuz等攻击防护规则。除此以外，NGFW还支持基于SSL解密的代理WAF功能，对SSL解密策略解密后的流量进行WAF检测。 针对黑客攻击手段复杂多变的网络环境，天融信攻防实验室专家常年专注勘察网络攻击行为，一旦发现新的异常攻击行为，立刻研究如何抵御最新攻击，并更新WAF规则库。为
+  [1] IPSecVPN (ipsec.html): 持标准的IKE和IPSec协议，可以与天融信的IPSec VPN以及其他支持IKE标准协议的IPSec VPN设备建立标准的IPSec VPN隧道。此外，NGFW还支持对通过VPN隧道内的网络流量进行访问控制、流量带宽控制及NAT处理，甚至还可对通过VPN隧道的流量进行病毒查杀。 IPSec VPN特点 IPSec（IP Security）协议作为网络层隧道协议，
+  [1] 病毒过滤 (topic11.html): 功能支持的协议主要有HTTP、FTP、POP3、SMTP、IMAP和IM。另外NGFW还支持支持基于SSL解密的代理杀毒，需要同时配置SSL解密策略，才会进入代理杀毒模块，对SSL解密后的流量进行病毒查杀。 在系统的访问控制规则中，管理员可以指定是否对满足这条规则的网络数据进行病毒过滤。当系统的某条规则放行来自某个地址段访问病毒过滤支持的协议服务的数据流通过，并且
+-- PA:
+  [webhelp p916 score33]  GlobalProtect 门户代理应用程序选项卡: 态，则用户无法执行某些任务，如查看 故障排除信息、更改密码、重新发现网络，或执行按需连 接等。但 HIP 通知消息、登录提示和证书对话框会在进 行必要的用户交互时显示。 用户交换机隧道重命名超时（秒） （仅限 Windows） 指定远程用户在使用 Microsoft 远程桌面协议 (RDP) 登录 端点后，必须接受 GlobalProtect 网关对其进行身
+  [webhelp p172 score32]  隧道检测策略中的构建块: 策略 Policies（策略）> Tunnel Inspection（隧道检测） 您可以配置防火墙，以检测以下明文隧道协议的流量内容： • 通用路由封装 (GRE) • 用户数据通用分组无线服务 (GPRS) 隧道协议 (GTP-U)；仅支持 GTP 的
+  [webhelp p910 score29]  GlobalProtect 门户代理应用程序选项卡: 明 自动恢复 VPN 连接超时 输入一个从 0 到 180 的超时值（以分钟为单位），以指 定 GlobalProtect 应用程序在由于网络不稳定或因输入导 致端点状态更改而导致隧道断开连接时所采取的操作；默 认值为 30。 • 0 — 禁用此功能，以便在隧道断开连接 后，GlobalProtect 不会尝试重新建立隧道。 • 1-180 — 启用此功能，
+  [webhelp p937 score29]  隧道设置选项卡: GlobalProtect • 隧道设置选项卡 • 客户端设置选项卡 • 客户端 IP 池选项卡 • 网络服务选项卡 • 连接设置选项卡 • 视频通信选项卡 • HIP 通知选项卡 隧道设置选项卡 • 网络 > Gl
+  [webhelp p548 score28]  Network（网络）> IPSec Tunnels（IPSec 隧道）: 网络 Network（网络）> IPSec Tunnels（IPSec 隧道） 选择 Network（网络） > IPSec Tunnels（IPSec 隧道）可在防火墙之间建立 IPSec VPN 隧道并对 其进行管理。这是 IKE/IPSec VPN 
+  [webhelp p801 score27]  Device（设备）> Certificate Management（证书管理）> SSL Decryption Ex: 设备 SSL 解密排除设置 说明 要将 video-stats.video.google.com 排除在解密范围之外，但不将 video.google.com 排除在解密范围之外，请将 *.*.go
+  [admin p1066 score48]  排除故障并监视解密: 解密 排除故障并监视解密 故障排除工具可提高 TLS 流量的可见性，便于您监控您的解密部署。通过该工具，您可以快速轻 松地诊断并解决解密问题，消除解密部署的薄弱点，修复解密问题，从而改
+  [admin p1067 score45]  解密应用程序命令中心小部件: 解密 • 评估关于以下方面的安全决策：您的员工、客户和合作伙伴确实需要访问的站点，以及在站点 使用弱解密协议或算法时您可以阻止的站点。 目标为解密您可以解密的所有流量（解密最佳实践），
+  [admin p1013 score44]  准备部署解密: 解密 准备部署解密 部署解密最耗时的部分不是配置解密策略和配置文件，而是部署准备：与利益相关者一起决定解密 的流量和不解密的流量，培训用户群有关网站访问变更的信息，开发公钥基础设施 (
+  [admin p1017 score39]  规划分阶段的优先部署: 解密 测量防火墙性能以了解当前可用资源，这有助于您了解是否需要更多的防火墙资源来解密想要解密 的流量。测量防火墙性能还能在部署解密后为性能比较设置基准。 调整防火墙部署规模时，不仅应考
+  [admin p1022 score38]  创建解密策略规则: 解密 至旨在实施 SSL Forward Proxy（SSL 转发代理）解密或 SSL Inbound Inspection（SSL 入站 检查）的解密策略规则时有效。 如果防火墙处于
+  [admin p1021 score36]  创建解密配置文件: 开，请执行配置解密端口镜像。请注意可能会禁止镜像的当地隐私法规，或是控制 您可以镜像的流量类型。解密端口镜像要求解密端口镜像许可证。 STEP 4 | （可选）阻止和控制 SSL 隧道和/或入站流量： 尽管可以选择将解密配置文件用于解密流量，但最佳做法是始终将解密配置文件应 用于策略规则，以保护您的网络，免遭加密威胁。您无法保护自己免受看不到的威 胁。 选择
+
+### 76 GRE L2TP隧道协议
+-- 天融信:
+  [72] GRE隧道 (toc490041625.html): GRE隧道 GRE（Generic Routing Encapsulation，通用路由封装）协议是网络层协议，通过Tunnel（隧道）技术将某些网络层协议（如IP和IPX）的数据报文进
+  [2] ALG (toc490041707.html): rotocol，文件传输协议） l TFTP（Trivial File Transfer Protocol，简单文件传输协议） l SQLNET，一种Oracle 数据库语言 l PPTP（Point-to-Point Tunnling Protocol，点到点隧道协议） l SIP（Session Initiation Protocol，会话发起协议） l H.3
+  [1] PPPoE (pppoe.html): 账号 输入运营商提供的PPPoE拨号的用户名。 密码 输入运营商提供的PPPoE拨号的密码。 接口 在下拉框中选择进行PPPoE拨号的接口，必须选择路由模式的物理接口，且接口不能为GRE接口和bond接口。 说明：接口需要选择连接了运营商网线的接口。 度量值 设置自动添加的缺省路由的度量值。取值范围：1-32766；默认值：1。 MTU MTU,全称为Maximu
+  [1] RIPNG (ripng.html): 图所示。 在设置区域时，各项参数的具体说明如下表所示。 参数 说明 添加类型 必选项，点击下拉箭头选择接口或者网段。 说明： 支持的接口类型有物理接口、Bond、vlan、子接口、GRE接口。 运行网段 必选项，设置属于该区域的网段。 说明： 配置运行RIPNG协议的网段例如:2001::1/64。 2）输入运行RIPNG协议的运行网段或选择接口名称，点击【确定】
+  [1] 网络管理 (toc490041589.html): 理和虚拟路由。 l SSLVPN ：主要介绍如何配置SSLVPN服务。 l 虚拟系统 ：主要介绍配置NGFW的虚系统。 l 虚拟线 ：主要介绍如何配置虚拟线。 l 隧道 ：主要介绍GRE、ISATAP、6to4、6in4、PPPOE隧道技术的配置。 l VXLAN ：主要介绍VXLAN接口、业务接入端、隧道和MAC的配置。 l 链路负载均衡 ：主要介绍NGFW链路
+  [1] OSPFv3 (toc490041608.html): 图所示。 在设置区域时，各项参数的具体说明如下表所示。 参数 说明 接口 在下拉框中选择运行OSPFv3协议的接口。 说明： 支持的接口类型有物理接口、Bond、vlan、子接口、GRE接口。 区域 必选项，设置属于该区域的网段。 说明： 1）每个网段只能属于一个区域，且格式为点分十进制，取值范围在0.0.0.0-255.255.255.255之间。 2）0.0.
+-- PA:
+  [webhelp p554 score27]  Network（网络）> GRE Tunnels（GRE 隧道）: 网络 Network（网络）> GRE Tunnels（GRE 隧道） 通用路由封装(GRE)隧道协议是用于封装有效协议的运营商协议。GRE 数据包本身被封装在传输协 议中（IPv4 或 IPv6）。GRE 隧道将防火
+  [webhelp p420 score6]  Network（网络）> Interfaces（接口）> Tunnel（隧道）: 网络 Network（网络）> Interfaces（接口）> Tunnel（隧 道） 使用以下字段配置隧道接口： 隧道接口设置 配置位置 说明 接口名称 只读的 Interface Name（接口名称）会设置为 tunnel。在相邻 字段中，输入数字后缀 (1-9,999) 以标识接口。 
+  [webhelp p550 score6]  Network（网络）> IPSec Tunnels（IPSec 隧道）: el（隧 道）模式以加密包括标头在内的整个数据包。加密后，会将新的 IP 标头添加到数据包。选择 Transport（传输）模式以仅加密负载 并保留原始 IP 标头。 • Add GRE Encapsulation（添加 GRE 封装）— 选择此选项以添 加 IPSec 隧道中封装的 GRE 标头。防火墙在 IPSec 标头之后生成 GRE 标头，以便与其他
+  [webhelp p172 score4]  隧道检测策略中的构建块: 策略 Policies（策略）> Tunnel Inspection（隧道检测） 您可以配置防火墙，以检测以下明文隧道协议的流量内容： • 通用路由封装 (GRE) • 用户数据通用分组无线服务 (GPRS) 隧道协议 (GTP-U)；仅支持 GTP 的防火墙支持。 • 非加密 IPSec 流量（IPSec 和传输模式 AH IPSec 的
+  [webhelp p549 score4]  Network（网络）> IPSec Tunnels（IPSec 隧道）: 符）。名称区分大小 写，且必须是唯一的。仅可使用字母、数字、空格、连字符和下划 线。 此字段最多只能包含 63 个字符，其中除代理 ID（以冒号字符分隔） 之外，还包括隧道名称。 隧道接口 选择一个现有隧道接口，或单击新建隧道接口。有关创建隧道接口的 信息，请参阅 Network（网络）> Interfaces（接口）> Tunnel（隧 道）。 IPv4 
+  [webhelp p555 score4]  Network（网络）> GRE Tunnels（GRE 隧道）: 网络 GRE 隧道字段 说明 据后，防火墙将以与检查在 TAP 端口上收 到的流量类似的方式检查数据。然后，它 会创建增强应用程序日志 (EAL) 和流量、威 胁、WildFire、URL、数
+  [admin p1149 score5]  为 LSVPN 创建接口和区域: （GlobalProtect 网关） — 需要三个接口：区域中可通过远程卫星访问 的第 3 层接口，信任区域中用于连接到受保护资源的内部接口和用于终止与卫星的 VPN 隧道的 逻辑隧道接口。与其他站点到站点 VPN 解决方案不同，GlobalProtect 网关只需要一个隧道接 口用来与所有远程卫星建立隧道连接（点对多点）。如果计划使用动态路由，则必须为隧道
+  [admin p1181 score5]  高级 LSVPN 配置和动态路由: ，请执行基本 LSVPN 配置和静态路由中的步骤。然后，完成以下工作流 中的步骤扩展配置使用动态路由（而非静态路由）。 STEP 1 | 将 IP 地址添加到每个网关和每颗卫星上的隧道接口配置。 在每个网关和每颗卫星上完成以下步骤： 1. 选择 Network（网络） > Interfaces（接口） > Tunnel（隧道），然后选择为 LSVPN 创 建
+  [admin p1150 score4]  为 LSVPN 创建接口和区域: 大规模 VPN (LSVPN) STEP 2 | 在承载 GlobalProtect 网关的防火墙上，配置用于终止 GlobalProtect 卫星所建立 VPN 隧道的 逻辑隧道接口。 仅当您计划使用动态路由时，隧道接口上才需要 IP 地址。但是，为隧道接口分配 IP 地址有助于对连通性问题进行故障排除。 确保在 VPN 隧道终止的区域内启用用户标识。 1
+  [admin p1174 score4]  准备卫星加入 LSVPN: 物理接口。此接口必须位于允许从本地信任网络之外进行 访问的区域。作为最佳实践，为 VPN 连接创建专用区域以便更好了解和控制发往公司网关的流 量。 STEP 2 | 配置隧道的逻辑隧道接口用来与 GlobalProtect 网关建立 VPN 隧道。 除非您计划使用动态路由，否则无需为隧道接口分配 IP 地址。但是，为隧道接口 分配 IP 地址有助于对连通性问
+  [admin p1136 score3]  为虚拟系统配置 QoS: ysical Interface（物理接口）选项卡中，选择应用到所有 Clear Text（明文）流量的 默认 QoS 配置文件。 （可选）使用 Tunnel Interface（隧道接口）字段将默认 QoS 配置文件应用到所有隧道 流量。 4. （可选）在 Clear Text Traffic（明文流量）选项卡中，为明文流量配置其他 QoS 设置： • 为
+  [admin p1168 score3]  为 LSVPN 配置 GlobalProtect 网关: nel Settings（隧道设 置）。 2. 选中 Tunnel Configuration（隧道配置）复选框以启用隧道。 3. 选择您定义的 Tunnel Interface（隧道接口），以便在执行任务到为 LSVPN 创建接口和 区域时终止 GlobalProtect 卫星建立的 VPN 隧道。 4. （可选）如果想要保留封装数据包中的服务类型 (To
+
+### 77 隧道备份与DPD
+-- 天融信:
+  [17] 链路备份 (toc462834587.html): 链路备份 在NGFW的整个运行期间无法保证设备所有接口都能长时间运作，一些可知或不可知的问题都会造成设备接口无法正常运行。为了预防此类不稳定因素导致业务中断，天融信防火墙提供了“链路备份”
+  [8] 静态隧道 (topic4.html): ： 一条静态隧道可以设置多个IPSEC-SA的安全政策属性。 IPSec-SA存活时间 IPSEC安全联盟的生存时间。 单位：秒；取值范围：1-260000；默认值：28800。 DPD 选择是否启用对端失效检测功能（Dead peer detection），该功能用于检测VPN另一端网关是否失效。 可选项：启用、不启用；默认值：启用。 DPD间隔 配置进行DPD
+  [3] 配置IPSec VPN (ipsec-vpn.html): 相同） 加密算法：3DES 加密算法：3DES ESP校验算法（相同） 校验算法：MD5 校验算法：MD5 安全协议（相同） ESP ESP IPSec-SA存活时间 默认 默认 DPD 开启 开启 DPD间隔 默认 默认 DPD超时时间 默认 默认 ² 防火墙A和防火墙B上表中标注“相同”的参数必须配置一致，否则隧道不能协商成功。 步骤2 点击【确定】按钮完成I
+  [1] 高可用 (toc462834581.html): 冗余备份功能，以确保在NGFW通信线路或设备故障时，也能保障业务网络数据的正常运转，提高设备的可用性，部署方式如下图所示。 高可用性相关配置包括： l 高可用性 l 链路探测 l 链路备份 l 接口联动 l BFD var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf(
+  [1] 策略路由 (toc490041605.html): 色等参数来确定报文的转发路径，可使不同类型的流量分别走不同的链路，达到保证类应用走优质链路，非保证类应用走另外链路的目的。此外，策略路由还可根据其智能选路算法实现多链路的负载均衡和链路备份。 NGFW的策略路由可与入接口绑定（入接口即接收报文的接口），绑定了入接口的策路路由优先级高于没有绑定入接口的策略路由。当一条没有在本设备上建立会话的数据流到来时，会进入路由流程
+  [1] 手工隧道 (topic5.html): 态方式产生，也可以通过用户手工配置的方式建立。手工隧道就是通过手工设置IPSec SA而建立的隧道。 手工隧道的优点： 1）没有IKE协商的过程，开销小，也更简单。 2）不需要启用DPD来实现手工隧道的保活。 手工隧道的缺点： 1）网络管理员需要为每条隧道做详细的配置，且需要两端所在网络的管理员协作才能完成。 2）加密密钥容易泄露，安全性不高。 要使NGFW能与其
+-- PA:
+  [webhelp p439 score16]  静态路由: 的 IP 地址。 • Interface（接口）设置不可为 None（无）；必须选择一个接口 （即便正在使用 DHCP 地址，也不例外）。 路径监视 选中此选项可对静态路由启用路径监控。 失败条件 选择防火墙认为受监控路径停用进而判定静态路由停用所依据的条 件： • Any（任何）— 如果 ICMP 不可访问任一静态路由的受监控目 标，则防火墙会从 RIB 
+  [webhelp p496 score14]  Network（网络） > Routing（路由） > Logical Routers（逻辑路由器）> Static（: 配置文件，以应用于静态路由。默认值是 None (Disable BFD)（无（禁用 BFD））。 路径监视 选择以继续配置路径监视。 启用 针对静态路由 Enable（启用）路径监控。 失败条件 选择防火墙认为受监控路径停用进而判定静态路由停用所依据的条 件： • Any（任何）—（默认）如果 ICMP 不可访问任一静态路由受监 控目标，则防火墙会从 RI
+  [webhelp p4 score13]  Table of Contents: Monitor（监控）> Automated Correlation Engine（自动关联引擎）> Correlated Events（关联事件）..........................
+  [webhelp p322 score13]  Objects（对象）> Packet Broker Profile（数据包代理配置文件）: 链中均匀分配会话。 • Lowest Latency（最低延迟）— 防火墙以最低延迟向安全链 分配更多会话。要使此方法按预期工作，您还必须在 Health Monitor（运行状况监控）选项卡中启用延迟监控和 HTTP 监控。 运行状况监控选项卡 未通过运行状况检查 启用运行状况检查（Path Monitoring（路径监控）、HTTP Monitoring
+  [webhelp p755 score12]  Device（设备）> VM Information Sources（VM 信息源）:  ESXi 服 务器、VMware vCenter 服务器、Amazon Web 服务虚拟私有云 (AWS-VPC) 或 Google Compute Engine (GCE)。 监控作为 VM 系列 NSX 版解决方案一部分的 ESXi 主机时，请使用动态地址组来了 解虚拟环境中的变化，而非使用 VM 信息源。对于 VM 系列 NSX 版解决方案，NSX 
+  [webhelp p868 score11]  服务器监视:  HTTPS 上的 WinRM 从受控服务器 检索安全日志和会话信息。 除定义 Active Directory 身份验证设置以外，配置 PAN-OS 集成 User-ID 代理以监控服 务器和探测客户端的完整流程需要执行附加任务。 服务器监视 • 设备 > 用户标识 > 用户映射 > Palo Alto Networks User-ID 代理设置 > 服务
+  [admin p1276 score17]  监控虚拟环境中的变化: 策略 监控虚拟环境中的变化 要保护应用程序并在不断出现新用户和服务器的环境中阻止威胁，您的安全策略必须敏捷。要变得 敏捷，防火墙必须能了解新的或修改的 IP 地址并在无需在防火墙上进行配置更
+  [admin p1278 score11]  云平台虚拟机上受监控的属性:  2 | 验证连接状态。 验证连接 Status（状态）是否显示为已连接。 如果连接状态为挂起或断开，则检查源是否正常工作，并且防火墙能够访问源。如果您使用 MGT 之外的端口来和监控的源通信，则必须更改服务路由（Device（设备） > Setup（设 置） > Services（服务），单击 Service Route Configuration（服务路
+  [admin p578 score10]  使用外部服务进行监控: 监控 使用外部服务进行监控 使用外部服务监控防火墙，您能够收到有关重要事件的警报，利用专用长期存储将监控信息存档在 系统上，并与第三方安全监控工具集成。以下是使用外部服务的一些常见场景
+  [admin p824 score10]  使用基本身份验证在 HTTPS 上配置 WinRM: on（用户标识） > User Mapping（用 户映射）选项卡中，确认您为进行服务器监视配置的每个服务器的状态均为 Connected（已连接）。 使用 WinRM 配置服务器监控 您可以配置集成有 PAN-OS 的 User-ID 代理，以通过使用 Windows 远程管理 (WinRM) 监控服务 器。在监控服务器事件以映射用户事件到 IP 地址时，
+  [admin p821 score9]  使用 PAN-OS 集成的 User-ID 代理来配置用户映射: User-ID STEP 2 | 定义防火墙将监视的服务器，以收集用户映射信息。 在每个防火墙最多总共 100 个受监控服务器的限制内，您可以为任何单个虚拟系统定义不超过 50 个 Syslog Sender。 要收集需要的所有映射，防火墙必须连接到您的用户登录的所有服务器，以便防火 墙可以监视所有
+  [admin p489 score8]  监控: 监控 为了预防可能出现的问题，并在需要时加快事件响应，防火墙使用可自定义报告和信息报告提供有 关流量和用户模式的情报。利用仪表盘、应用程序命令中心 (ACC)、报告和防火墙日志，您可以
+
+### 129 SD-WAN
+-- 天融信:
+  [4] 策略路由 (toc490041605.html): 址和目的端口、ISP名称、协议、角色等参数来确定报文的转发路径，可使不同类型的流量分别走不同的链路，达到保证类应用走优质链路，非保证类应用走另外链路的目的。此外，策略路由还可根据其智能选路算法实现多链路的负载均衡和链路备份。 NGFW的策略路由可与入接口绑定（入接口即接收报文的接口），绑定了入接口的策路路由优先级高于没有绑定入接口的策略路由。当一条没有在本设备上建立
+  [1] 安全控制管理平台 (topic208.html): 安全控制管理平台 NGFW支持与安全控制管理平台（SD-WAN）联动，管理员可通过集中管理平台管理NGFW，将部署在各个网络区域NGFW的策略配置、隧道配置、运维任务、性能监控、告警监控和报表分析功能集于一体，从最大程度上简化管理员运维难度，
+-- PA:
+  [webhelp p324 score18]  Objects（对象）> SD-WAN Link Management（SD-WAN 链路管理）> Path Qual: 对象 Objects（对象）> SD-WAN Link Management（SD- WAN 链路管理） 创建可应用至 SD-WAN 策略规则中指定应用程序和服务集的配置文件。每种配置文件都可控制 SD-WAN 链路管理各个
+  [webhelp p422 score17]  Network（网络）> Interfaces（接口）> SD-WAN: 网络 Network（网络）> Interfaces（接口）> SD-WAN 如果在 Panorama 中使用自动 VPN 配置，则会为您创建 SD-WAN 接口，在这种情况下，您无需 创建和配置 SD-WAN 虚拟接口。 如果未将自动 VPN 配置用于 
+  [webhelp p1074 score15]  SD-WAN 设备: Panorama Web 界面 Panorama > SD-WAN 下载并安装 Panorama SD-WAN 插件以集中管理、监视和生成报告。通过添加并关联分支到其相 应的中心，配置 SD-WAN 拓扑，并将这些分支和中心设备与适当的区域关联。
+  [webhelp p195 score14]  SD-WAN“General”（常规）选项卡: 策略 Policies（策略）> SD-WAN 添加 SD-WAN 策略以根据每个应用程序配置链路路径管理设置，或是根据您配置的运行状况抖 动、延迟和数据包丢失运行状况指标，为遍历相同链路的一组应用程序配置链路路径管理设置。当
+  [webhelp p365 score12]  第 3 层接口: 通告中最多配置防火墙向收件人发送 的八个 DNS 搜索列表域名（后缀）（按照自上而下列出的顺 序），然后按相同的顺序使用这些地址。从列表中 Delete（删 除）不再需要的后缀。 SD-WAN 接 口状态 若在 IPv4 选项卡上选择了 Enable SD-WAN（启用 SD- WAN），则防火墙会指示 SD-WAN 接口状态：Enabled（已 启用）。如
+  [webhelp p1076 score11]  SD-WAN VPN 集群: Panorama Web 界面 字段 说明 上游 VAT 启用上游 NAT。 SD-WAN 接口 选择为 SD-WAN 配置的接口。 NAT IP 地址类 型 在以下各项中选择一项： • Static IP（静态 IP）— 用于在对其执行 NAT 的设备后面的 SD-W
+  [admin p154 score6]  提供对设备选项卡的粒度访问: 防火墙管理 访问级别 说明 启用 只读 禁用 如果将权限状态设置为只读，可以查看当 前配置的 BFD 配置文件配置，但不能添加 或编辑 BFD 配置文件。 SD-WAN 接口配 置文件 控制对 SD-WAN 接口配置文件节点的访 问。如果禁用此权限，则管理员将看不到 SD-WAN 接口配置文件节点，也无法配置 SD-WAN 接口配置文件。SD-W
+  [admin p597 score6]  流量日志字段: link_switches) 最多包含四个链路翻动条目，每个条目都包括链路名称、链路 标记、链路类型、物理接口、时间戳、读取的字节数、写入的 字节数、链路运行状况和链路翻动原因。 SD-WAN 集群 (sdwan_cluster) SD-WAN 集群的名称。 SD-WAN 设备类型 (sdwan_device_type) 设备类型（中心或分支）。 SD-WA
+  [admin p72 score4]  您可配合防火墙使用的订阅: 持最新状态。此外，IoT Security 还能自动生成用 于控制 IoT 设备流量的策略建议，自动创建用于防火墙策略的 IoT 设备属性。 • IoT Security 入门。 SD-WAN 提供的智能和动态路径选择基于 PAN-OS 软件已交付的行业领 先安全性。SD-WAN 受 Panorama 管理，实施内容包括： • 集中配置管理 • 自动创建 V
+  [admin p148 score4]  提供对对象选项卡的粒度访问: 配置文件。 是 是 是 身份验证 指定管理员是否可以查看、添加或删除身 份验证执行对象。 是 是 是 解密配置文件 指定管理员是否可以查看、添加或删除解 密配置文件。 是 是 是 SD-WAN 链接管 理 指定管理员是否可以添加或删除路径质 量、SaaS 质量、流量分布和纠错配置文 件。 是 否 是 路径质量配置文 件 指定管理员是否可以查看、添加或删除 S
+  [admin p590 score4]  流量日志字段: ，父启动时间，隧道类型，SCTP 关联 ID，SCTP 块，发送的 SCTP 块，接收的 SCTP 块，规 则 UUID，HTTP/2 连接，应用翻动次数，策略 ID，链路交换机，SD-WAN 群集，SD-WAN 设备 类型，SD-WAN 群集类型，SD-WAN 站点，动态用户组名称，XFF 地址，源设备类别，源设备 PAN-OS® 管理员指南 Versio
+  [admin p145 score3]  提供对对象选项卡的粒度访问: 加和/或删 除强制 DoS 保护策略规则。如果您希望管 理员能够查看规则但不能修改，则应将此 权限设置为只读。要防止管理员查看 DoS 保护策略规则库，应禁用此权限。 是 是 是 SD-WAN 启用此权限可让管理员查看、添加和/或删 除 SD-WAN 策略规则。如果您希望管理员 能够查看规则但不能修改，则应将此权限 设置为只读。要防止管理员看到 SD-WAN
+
+### 130 终端合规检查HIP
+-- 天融信:
+  [2] 在线用户 (toc450050592.html): 在线用户 在线用户指通过NGFW系统认证并取得NGFW准入权限的用户，关于用户认证及如何获取准入权限的介绍请参见 用户管理 。在线用户界面显示了当前连接到NGFW用户的详细信息，包括用户名称、IP地址、认证服务器名称、认证类型、登录时间、
+  [1] 资产管理 (anquanzhongxinzichanguanli.html): 主要内容包括： l 总览 ：主要介绍如何查看资产总览界面。 l 资产列表 ：主要介绍如何添加或导入资产，如何开启安全防护等功能。 l 资产发现 ：主要介绍如何配置资产发现方式和资产准入。 l 行为基线 ：主要介绍如何配置资产行为基线。 l 配置实例-漏扫联动上报资产 l 配置实例-EDR联动上报资产 var lastSlashPos = document.URL
+  [1] 规则集管理 (topic219.html): ”开头的字符串，如“/index.htm”； 正则表达式：使用正则表达式表达路径系列。 描述 设置URL例外策略的描述信息。 状态 设置是否启用该URL例外。 是否开启HTTP协议合规检查 设置是否启用HTTP报文协议合规功能。默认为“ ”，表示关闭，点击该按钮将显示“ ”，表示开启。 是否开启请求限制检查 设置是否启用请求限制检查功能。 Ø 请求限制 请求限制是对
+-- PA:
+  [webhelp p955 score32]  Objects（对象）> GlobalProtect > HIP Objects（HIP 对象）: GlobalProtect Objects（对象）> GlobalProtect > HIP Objects（HIP 对 象） 选择 Objects（对象） > GlobalProtect > HIP Objects（HIP 对象）可定义主机信息配置文件 (HIP) 的对
+  [webhelp p964 score27]  Objects（对象）> GlobalProtect > HIP Profiles（HIP 配置文件）: GlobalProtect Objects（对象）> GlobalProtect > HIP Profiles（HIP 配 置文件） 选择 Objects（对象） > GlobalProtect > HIP Profiles（HIP 配置文件）可创建 HIP 配置文件 （
+  [webhelp p925 score17]  GlobalProtect 门户 Agent HIP Data Collection（代理 HIP 数据收集）选项卡:  保留此端口号，以便移动端点的用户不 会在注册期间收到要其使用客户端证书 的提示（其他可能的值为 443、7443 和 8443）。 GlobalProtect 门户 Agent HIP Data Collection（代理 HIP 数据收集）选项卡 • 网络 > GlobalProtect > 门户 > <portal-config> > 代理 > <ag
+  [webhelp p962 score12]  HIP 对象证书选项卡: GlobalProtect 选择 Data Loss Prevention（数据丢失保护）选项卡可配置基于 GlobalProtect 端点是否运行数据 丢失保护软件的 HIP 匹配。 HIP 对象数据丢失保护设置 选择 Data Loss Prevention（数据丢失保护）可启用对主机上数据丢失防护 (DLP) 状态的匹配 （仅限 Windows 主
+  [webhelp p948 score11]  HIP 通知选项卡: 用程 序，则所有请求都会通过隧道（无拆分隧道）进行路由。在这种情况 下，每个互联网请求均会穿过防火墙，到达网络。这种方法可以防止 外部用户访问用户端点，从而获取内部网络访问权限。 HIP 通知选项卡 • 网络 > GlobalProtect > 网关 > <gateway-config> > 代理 > <agent-config> > HIP 通知 选择 H
+  [webhelp p15 score10]  Table of Contents: .........................................................954 Objects（对象）> GlobalProtect > HIP Objects（HIP 对象）....................................955 HIP 对象常规选项卡....................
+  [admin p146 score8]  提供对对象选项卡的粒度访问: 中使用的服务组对象。 是 是 是 标记 指定管理员是否可以查看、添加或删除已 在防火墙上定义的标记。 是 是 是 GlobalProtect 指定管理员是否可以查看、添加或删 除 HIP 对象和配置文件。您可以在 GlobalProtect 级别同时限制访问两种类型 的对象，或通过启用 GlobalProtect 权限和 限制 HIP 对象或 HIP 配置文
+  [admin p161 score8]  提供对设备选项卡的粒度访问: ser-ID 日志。 如果将此权限设置为只读，管理员可以查 看防火墙的 Log Settings（日志设置） > User-ID 设置，但无法添加、编辑或删除 设置。 是 是 是 HIP 匹配 控制访问 Log Settings（日志设置） > HIP Match（HIP 匹配）节点。如果禁用此权 限，管理员将看不到 Log Settings（日志 设置） 
+  [admin p498 score7]  小部件说明: mation（GlobalProtect 主机信息） 显示关于运行 GlobalProtect 代理的主机的状态的信息；主机系统是 GlobalProtect 端点。这些信息来自 HIP 匹配日志中的条目，这些日志 是在 GlobalProtect 应用提交的数据与您在防火墙上定义的 HIP 对象或 HIP 配置文件相匹配时生成的。如果您没有 HIP 匹配日
+  [admin p545 score7]  User-ID 日志: 接。 中 中级通知，例如抗病毒软件包升级。 低 不太严重的通知，例如用户密码更改。 参考 登录/注销、管理员名称或密码更改、任何配置更改以及其他严重性级别未涵盖的 所有其他事件。 HIP 匹配日志 GlobalProtect 主机信息配置文件 (HIP) 匹配可让您收集有关访问您的网络的终端设备安全状态的信 息（例如是否启用了磁盘加密）。防火墙可根据您定义的
+  [admin p633 score7]  HIP 匹配日志字段: 监控 字段名称 说明 源地址 (src) 源用户的 IP 地址。 HIP (matchname) HIP 对象或配置文件的名称。 重复次数 (repeatcnt) HIP 配置文件匹配的次数。 HIP 类型 (matchtype) HIP 字段是代表 
+  [admin p632 score6]  HIP 匹配日志字段: e) 标识用于流量的代理类型。如果使用代理，则显示 Explicit Proxy 或 Transparent Proxy。如果未使用代理，则显示 NonProxyTraffic。 HIP 匹配日志字段 格式：FUTURE_USE，接收时间，序列号，类型，威胁/内容类型，FUTURE_USE，生 成时间，源用户，虚拟系统，计算机名称，操作系统，源地址，HIP，
+
+### 131 抗量子VPN
+-- 天融信:
+  (无命中)
+-- PA:
+  [webhelp p581 score8]  IKE 网关“高级选项”选项卡: 得不到响 应，发送方会关闭并删除 IKE_SA 和 CHILD_SA。发送方会发出另一 个 IKE_SA_INIT，以便从头开始。 IKEv2 高级选项 PQ PPK 选项卡 启用后量子预共享密钥 (PPK) Enable Post-Quantum Pre-Shared Key (PPK)（启用后量子预共享密 钥 (PPK)）— 要使用后量子预共享密钥 (P
+  [webhelp p576 score2]  Network（网络）> Network Profiles（网络配置文件）> IKE Gateways（IKE 网关）: mode（IKEv2 首选模式）。IKEv2 首选模式导致网 关为 IKEv2 进行协商，如果对端也支持 IKEv2，则它们将使用该模 式；否则，网关将回退到 IKEv1。 要配置后量子 IKE VPN，您必须使用 IKEv2 only mode（仅 IKEv2 模式）或 IKEv2 preferred mode（IKEv2 首选模式）。仅 IKEv2 VP
+  [webhelp p579 score1]  IKE 网关“高级选项”选项卡: （网络配置文件）> IKE Gateways（IKE 网关）> Advanced Options（高级选项） 配置高级 IKE 网关设置，例如被动模式和 NAT 遍历、IKEv2 后量子 VPN 和 IKEv1 失效对等检 测。 IKE 网关高级选项 说明 启用被动模式 单击以使防火墙仅响应 IKE 连接，并且从不启动此类连接。 PAN-OS Web 界面帮
+  [admin p1046 score27]  后量子密码检测与控制: 解密 后量子密码检测与控制 在何处可以使用？ 需要提供什么？ • NGFW (Managed by Strata Cloud Manager) • NGFW (Managed by PAN-O
+  [admin p1047 score23]  后量子密码检测与控制: 解密 后量子加密和解密日志 解密日志为协商 PQC 或混合 PQC 算法并匹配“无解密”解密策略规则的会话提供对网络上后量子 加密活动的可见性。符合此条件的会话的解密日志包括密钥交换 (KE)
+  [admin p1048 score6]  后量子密码检测与控制: > Logging and Reporting Settings（日志记录和报告设置） > Log Storage（日志存储）。（配置解密日志记 录提供了更多详细信息。） • 为 PQC 和混合 PQC 算法的内部测试创建排除项或单独的规则。 • 要记录您未解密的流量，请创建一个基于策略的解密排除，或将“不解密”解密配置文件应用于 管理此流量的解密策略规则。
+  [admin p13 score1]  Table of Contents: .....................................................................................1042 后量子密码检测与控制................................................................................
+  [admin p991 score1]  解密: 解密概念 • 准备部署解密 • 确定解密流量 • 配置 SSL 转发代理 • 配置 SSL 入站检查 • 配置 SSH 代理 • 为未加密流量配置服务器证书验证 • 解密排除 • 后量子密码检测与控制 • 阻止私钥导出 • 让用户选择停用 SSL 解密 • 暂时禁用 SSL 解密 • 配置解密端口镜像 • 验证解密 • 排除故障并监视解密 • 激活免费许可证
+  [admin p1081 score1]  解密日志错误、错误索引和位掩码: 套件兼容。如果 需要，请针对导致此问题的防火墙的特定用 例创建新的解密策略规则。 • 修复不完整的证书链. OpenSSL 错误 说明：检测到 OpenSSL 错误。 客户端仅支持后量子算法 说明：TLS 握手失败，因为客户端不支持经典 算法。 相关文档： • 量子安全概念 常规 TLS 协议错误 此消息表示错误不符合上述任何协议错误的条 件。 PAN-OS

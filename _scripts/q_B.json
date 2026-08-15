@@ -1,0 +1,19 @@
+[
+{"no":24,"fp":"应用识别库规模","topsec":["应用识别","应用规则库","应用数"],"pa":["App-ID","应用程序数量","预定义应用程序"]},
+{"no":25,"fp":"识别技术方式","topsec":["特征","识别方式","DPI"],"pa":["应用识别","解码器","signature"]},
+{"no":26,"fp":"自定义应用","topsec":["自定义应用"],"pa":["自定义应用程序","custom application"]},
+{"no":27,"fp":"SaaS/子应用识别","topsec":["SaaS","子应用"],"pa":["SaaS","子分类","saas-security"]},
+{"no":28,"fp":"SSL加密流量识别","topsec":["SSL","加密流量","QUIC"],"pa":["SSL 解密","解密策略","QUIC"]},
+{"no":29,"fp":"SSL解密","topsec":["解密","代理策略","SSL卸载"],"pa":["解密","Decryption","SSL 转发代理"]},
+{"no":30,"fp":"隧道与代理识别","topsec":["隧道","代理识别"],"pa":["隧道","decrypt tunnel","TOR"]},
+{"no":31,"fp":"应用级QoS","topsec":["流量控制","带宽","QOS"],"pa":["QoS","带宽限制","网络 QoS"]},
+{"no":32,"fp":"基于用户的控制","topsec":["用户","角色","流量控制"],"pa":["源用户","用户基于","QoS 用户"]},
+{"no":33,"fp":"每应用/用户带宽管理","topsec":["保证带宽","最大带宽","流控"],"pa":["保证速率","最大速率","QoS 配置文件"]},
+{"no":34,"fp":"应用行为控制","topsec":["文件传输","外发控制","邮件"],"pa":["文件阻断","file-blocking","数据过滤"]},
+{"no":35,"fp":"应用识别库更新","topsec":["规则库升级","应用识别升级"],"pa":["动态更新","Applications 更新"]},
+{"no":36,"fp":"港澳国际应用覆盖","topsec":["Facebook","YouTube","WhatsApp","TikTok"],"pa":["facebook","youtube","whatsapp","tiktok"]},
+{"no":121,"fp":"移动网络协议保护","topsec":["GTP","SCTP"],"pa":["GTP","SCTP","移动网络"]},
+{"no":122,"fp":"网络数据包代理","topsec":["镜像","旁路"],"pa":["数据包代理","Packet Broker"]},
+{"no":123,"fp":"IoT设备识别","topsec":["资产发现","IoT","终端识别"],"pa":["IoT","设备资产清单","Device-ID"]},
+{"no":124,"fp":"解密流量镜像","topsec":["解密镜像","镜像"],"pa":["解密镜像","镜像端口"]}
+]
