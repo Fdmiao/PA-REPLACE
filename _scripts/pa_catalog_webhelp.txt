@@ -1,0 +1,623 @@
+PAN-OS Web 界面帮助 11.1
+  Table of Contents
+  Web 界面基础知识
+    防火墙概述
+    功能与优点
+    最后登录时间及失败登录尝试
+    每日消息
+    任务管理器
+    语言
+    警报
+    提交更改
+    保存待选配置
+    恢复更改
+    锁定配置
+    全局查找
+    威胁详细信息
+    AutoFocus 情报摘要
+    配置表格导出
+    更改启动模式
+  仪表盘
+    指示板小部件
+  ACC
+    ACC 简介
+    ACC 选项卡
+    ACC 小部件
+    ACC 操作
+      使用选项卡和小部件
+      使用过滤器 — 本地过滤器和全局过滤器
+  监视
+    Monitor（监控）> Logs（日志）
+      日志类型
+      日志操作
+    Monitor（监控）> External Logs（外部日志）
+    Monitor（监控）> Automated Correlation Engine（自动关联引擎）
+      Monitor（监控）> Automated Correlation Engine（自动关联引擎）> Correlation Objects（关联对象）
+      Monitor（监控）> Automated Correlation Engine（自动关联引擎）> Correlated Events（关联事件）
+    Monitor（监控）> Packet Capture（数据包捕获）
+      数据包捕获概述
+      构建自定义数据包捕获的块
+      启用威胁数据包捕获
+    监视 > App Scope
+      App Scope 概述
+      App Scope 摘要报告
+      App Scope 更改监控报告
+      App Scope 威胁监控报告
+      App Scope 威胁地图报告
+      App Scope 网络监控报告
+      App Scope 流量地图报告
+    监视 > 会话浏览器
+    Monitor（监控）> Block IP List（阻止 IP 列表）
+      阻止 IP 列表条目
+      查看或删除阻止 IP 列表条目
+    监视 > Botnet
+      Botnet 报告设置
+      Botnet 配置设置
+    监控 > IoT 设备
+      物联网设备 > 摘要
+      oT 设备 > 资产清单
+    Monitor（监控）> PDF Reports（PDF 报告）
+      Monitor（监控）> PDF Reports（PDF 报告）> Manage PDF Summary（管理 PDF 摘要）
+      监视 > PDF 报告 > 用户活动报告
+        添加日志筛选程序
+      Monitor（监控）> PDF Reports（PDF 报告）> SaaS Application Usage（SaaS 应用程序使用）
+      Monitor（监控）> PDF Reports（PDF 报告）> Report Groups（报告组）
+      Monitor（监控）> PDF Reports（PDF 报告）> Email Scheduler（电子邮件调度程序）
+    Monitor（监控）> Manage Custom Reports（管理自定义报告）
+    监测 > 报告
+  策略
+    策略类型
+    移动或克隆策略规则
+    审核注释存档
+      审核注释
+      配置日志（在注释之间）
+      规则更改
+    规则使用点击数查询
+      规则使用点击数查询的设备规则使用情况
+    Policies（策略）> Security（安全）
+      安全策略概述
+      安全策略规则中的构建块
+      创建和管理策略
+      替代或恢复安全策略规则
+      应用程序和使用情况
+      安全策略优化器
+    Policies（策略）> NAT
+      NAT 策略常规选项卡
+      NAT 原始数据包选项卡
+      NAT 转换后数据包选项卡
+      NAT 主动/主动 HA 绑定选项卡
+      NAT Target（NAT 目标）选项卡
+    Policies（策略）> QoS
+    Policies（策略）> Policy Based Forwarding（基于策略的转发）
+      基于策略的转发常规选项卡
+      基于策略的转发源选项卡
+      基于策略的转发目标/应用程序/服务选项卡
+      基于策略的转发转发选项卡
+      Policy Based Forwarding Target（基于策略的转发目标）选项卡
+    Policies（策略）> Decryption（解密）
+      解密常规选项卡
+      解密源选项卡
+      解密目标选项卡
+      解密服务/URL 类别选项卡
+      解密选项选项卡
+      Decryption Target（解密目标）选项卡
+    Policies（策略）> Network Packet Broke（网络数据包代理）
+      网络数据包代理常规选项卡
+      网络数据包代理源选项卡
+      网络数据包代理目标选项卡
+      网络数据包代理应用程序/服务/流量选项卡
+      网络数据包代理路径选择选项卡
+      网络数据包代理策略优化器规则使用情况
+    Policies（策略）> Tunnel Inspection（隧道检测）
+      隧道检测策略中的构建块
+    Policies（策略）> Application Override（应用程序替代）
+      应用程序替代常规选项卡
+      应用程序替代源选项卡
+      应用程序替代目标选项卡
+      应用程序替代协议/应用程序选项卡
+      Application Override Target（应用程序覆盖目标）选项卡
+    Policies（策略）> Authentication（身份验证）
+      身份验证策略规则中的构建块
+      创建和管理身份验证策略
+    Policies（策略）> DoS Protection（DoS 保护）
+      DoS 保护常规选项卡
+      DoS 保护源选项卡
+      DoS 保护目标选项卡
+      DoS 保护选项/保护选项卡
+      DoS Protection Target（DoS 保护目标）选项卡
+    Policies（策略）> SD-WAN
+      SD-WAN“General”（常规）选项卡
+      SD-WAN“Source”（源）选项卡
+      SD-WAN“Destination”（目标）选项卡
+      SD-WAN“Application/Service”（应用程序/服务）选项卡
+      SD-WAN“Path Selection”（路径选择）选项卡
+      SD-WAN“Target”（目标）选项卡
+  对象
+    移动、克隆、替代或恢复对象
+      移动或克隆对象
+      替代或恢复对象
+    Objects（对象）> Addresses（地址）
+    Objects（对象） > Address Groups（地址组）
+    Objects（对象）> Regions（地区）
+    Objects（对象）> Dynamic User Groups（动态用户组）
+    Objects（对象）> Applications（应用程序）
+      应用程序概述
+      应用程序支持的操作
+      定义应用程序
+    Objects（对象）> Application Groups（应用程序组）
+    Objects（对象）> Application Filters（应用程序过滤器）
+    Objects（对象）> Services（服务）
+    Objects（对象）> Services Groups（服务组）
+    Objects（对象）> Tags（标记）
+      创建标记
+      将规则库视为组
+        将组内规则移至不同的规则库或设备组
+        更改所有规则组
+        移动组内所有规则
+        删除组内所有规则
+        克隆组内所有规则
+      管理标记
+    Objects（对象） > Devices（设备）
+    Objects（对象）> External Dynamic Lists（外部动态列表）
+    Objects（对象） > Custom Objects（自定义对象）
+      Objects（对象）> Custom Objects（自定义对象）> Data Patterns（数据模式）
+        数据模式设置
+        正则表达式数据模式的语法
+        正则表达式数据模式示例
+    Objects（对象）> Custom Objects（自定义对象）> Spyware/Vulnerability（间谍软件/漏洞）
+    Objects（对象）> Custom Objects（自定义对象）> URL Category（URL 类别）
+    Objects（对象）> Security Profiles（安全配置文件）
+      安全配置文件中的操作
+    Objects（对象）> Security Profiles（安全配置文件）> Antivirus（防病毒）
+    Objects（对象）> Security Profiles（安全配置文件）> Anti-Spyware Profile（防间谍软件配置文件）
+    Objects（对象）> Security Profiles（安全配置文件）> Vulnerability Protection（漏洞保护）
+    Objects（对象）> Security Profiles（安全配置文件）> URL Filtering（URL 过滤）
+      URL 过滤常规设置
+      URL 过滤类别
+      URL 过滤设置
+      用户凭据检测
+      HTTP 标头插入
+      内联分类
+    Objects（对象）> Security Profiles（安全配置文件）> File Blocking（文件传送阻止）
+    Objects（对象）> Security Profiles（安全配置文件）> WildFire Analysis（WildFire 分析）
+    Objects（对象）> Security Profiles（安全配置文件）> Data Filtering（数据过滤）
+    Objects（对象）> Security Profiles（安全配置文件）> DoS Protection（DoS 保护）
+    Objects（对象）> Security Profiles（安全配置文件）> Mobile Network Protection（移动网络保护）
+    Objects（对象）> Security Profiles（安全配置文件）> SCTP Protection（SCTP 保护）
+    Objects（对象）> Security Profile Groups（安全配置文件组）
+    Objects（对象）> Log Forwarding（日志转发）
+    Objects（对象）> Authentication（身份验证）
+    Objects（对象）> Decryption Profile（解密配置文件）
+      解密配置文件常规设置
+      控制解密流量的设置
+      控制未解密流量的设置
+      控制解密 SSH 流量的设置
+    Objects（对象）> Packet Broker Profile（数据包代理配置文件）
+    Objects（对象）> SD-WAN Link Management（SD-WAN 链路管理）
+      Objects（对象）> SD-WAN Link Management（SD-WAN 链路管理）> Path Quality Profile（路径质量配置文件）
+      Objects（对象）> SD-WAN Link Management（SD-WAN 链路管理）> SaaS Quality Profile（SaaS 质量配置文件）
+      Objects（对象）> SD-WAN Link Management（SD-WAN 链路管理）> Traffic Distribution Profile（流量分发配置文件）
+      Objects（对象）> SD-WAN Link Management（SD-WAN 链路管理）> Error Correction Profile（纠错配置文件）
+    Objects（对象）> Schedules（计划）
+  网络
+    Network（网络）> Interfaces（接口）
+      防火墙接口概述
+      防火墙接口的通用构建块
+      PA-7000 系列防火墙接口的通用构建块
+      旁接接口
+      HA 接口
+      虚拟线路接口
+      虚拟线路子接口
+      PA-7000 系列第 2 层接口
+      PA-7000 系列第 2 层子接口
+      PA-7000 系列第 3 层接口
+      第 3 层接口
+      第 3 层子接口
+      日志卡接口
+      日志卡子接口
+      解密镜像接口
+      聚合以太网 (AE) 接口组
+      聚合以太网 (AE) 接口
+    Network（网络）> Interfaces（接口）> VLAN
+    Network（网络）> Interfaces（接口）> Loopback（回环）
+    Network（网络）> Interfaces（接口）> Tunnel（隧道）
+    Network（网络）> Interfaces（接口）> SD-WAN
+    网络 > 接口 > PoE
+    网络 > 接口 > 蜂窝网络
+    网络 > 接口 > 故障开放
+    Network（网络）> Zones（区域）
+      安全区域概述
+      安全区域的构建块
+    Network（网络）> VLAN
+    Network（网络）> Virtual Wires（虚拟线路）
+    Network（网络）> Virtual Routers（虚拟路由器）
+      虚拟路由器的常规设置
+      静态路由
+      路由重新分发
+      RIP
+        RIP 接口选项卡
+        RIP 计时器选项卡
+        RIP 身份验证配置文件选项卡
+        RIP 导出规则选项卡
+      OSPF
+        OSPF 区域选项卡
+        OSPF 身份验证配置文件选项卡
+        OSPF 导出规则选项卡
+        OSPF 高级选项卡
+      OSPFv3
+        OSPFv3 区域选项卡
+        OSPFv3 身份验证配置文件选项卡
+        OSPFv3 导出规则选项卡
+        OSPFv3 高级选项卡
+      BGP
+        基本 BGP 设置
+        BGP 常规选项卡
+        BGP 高级选项卡
+        BGP 对端组选项卡
+        BGP 导入和导出选项卡
+        BGP 有条件通告选项卡
+        BGP 聚合选项卡
+        BGP 重新分发规则选项卡
+      IP 多播
+        多播集合点选项卡
+        多播接口选项卡
+        多播 SPT 阈值选项卡
+        多播特定源地址空间选项卡
+        多播高级选项卡
+      ECMP
+        ECMP 设置
+      有关虚拟路由器的更多运行时统计数据
+        “路由”选项卡
+        RIP 选项卡
+        BGP 选项卡
+        “多播”选项卡
+        BFD 摘要信息选项卡
+      有关逻辑路由器的更多运行时统计数据
+        逻辑路由器的路由统计数据
+        逻辑路由器的 BGP 统计数据
+    Network（网络） > Routing（路由） > Logical Routers（逻辑路由器）
+      Network（网络） > Routing（路由） > Logical Routers（逻辑路由器）> General（常规）
+      Network（网络） > Routing（路由） > Logical Routers（逻辑路由器）> Static（静态）
+      Network（网络） > Routing（路由） > Logical Routers（逻辑路由器）> OSPF
+      Network（网络） > Routing（路由） > Logical Routers（逻辑路由器）> OSPFv3
+      Network（网络） > Routing（路由） > Logical Routers（逻辑路由器）> RIPv2
+      Network（网络） > Routing（路由） > Logical Routers（逻辑路由器）> BGP
+      Network（网络） > Routing（路由） > Logical Routers（逻辑路由器）> Multicast（组播）
+    Network（网络）> Routing（路由）> Routing Profiles（路由配置文件）
+      Network（网络） > Routing（路由） > Routing Profiles（路由配置文件） > BGP
+      Network（网络） > Routing（路由） > Routing Profiles（路由配置文件） > BFD
+      Network（网络） > Routing（路由） > Routing Profiles（路由配置文件） > OSPF
+      Network（网络） > Routing（路由） > Routing Profiles（路由配置文件） > OSPFv3
+      Network（网络） > Routing（路由） > Routing Profiles（路由配置文件） > RIPv2
+      Network（网络） > Routing（路由） > Routing Profiles（路由配置文件） > Filters（筛选器）
+      Network（网络） > Routing（路由） > Routing Profiles（路由配置文件） > Multicast（组播）
+    Network（网络）> IPSec Tunnels（IPSec 隧道）
+      IPSec VPN 隧道管理
+      IPSec 隧道常规选项卡
+      IPSec 隧道代理 ID 选项卡
+      防火墙中的 IPSec 隧道状态
+      IPSec 隧道重新启动或刷新
+    Network（网络）> GRE Tunnels（GRE 隧道）
+      GRE 隧道
+    Network（网络）> DHCP
+      DHCP 概述
+      DHCP 寻址
+      DHCP 服务器
+      DHCP 中继
+      Dhcp 客户端
+    Network（网络）> DNS Proxy（DNS 代理）
+      DNS 代理概述
+      DNS 代理设置
+      其他 DNS 代理操作
+    网络 > 代理
+    Network（网络）> QoS
+      QoS 接口设置
+      QoS 接口统计信息
+    Network（网络）> LLDP
+      LLDP 概述
+      LLDP 的构建块
+    Network（网络）> Network Profiles（网络配置文件）
+      Network（网络）> Network Profiles（网络配置文件）> GlobalProtect IPSec Crypto（GlobalProtect IPSec 加密）
+      Network（网络）> Network Profiles（网络配置文件）> IKE Gateways（IKE 网关）
+        IKE 网关管理
+        IKE 网关常规选项卡
+        IKE 网关“高级选项”选项卡
+        IKE 网关重新启动或刷新
+      Network（网络）> Network Profiles（网络配置文件）> IPSec Crypto（IPSec 加密）
+      Network（网络）> Network Profiles（网络配置文件）> IKE Crypto（IKE 加密）
+      Network（网络）> Network Profiles（网络配置文件）> Monitor（监控）
+      Network（网络）> Network Profiles（网络配置文件）> Interface Mgmt（接口管理）
+      Network（网络）> Network Profiles（网络配置文件）> Zone Protection（区域保护）
+        区域保护配置文件的构建块
+        Flood 保护
+        侦察保护
+        基于数据包的攻击保护
+          IP 丢弃
+          TCP 丢弃
+          ICMP 丢弃
+          IPv6 丢弃
+          ICMPv6 丢弃
+        协议保护
+        以太网 SGT 保护
+        L3 和 L4 标头检查
+      Network（网络）> Network Profiles（网络配置文件）> QoS
+      Network（网络> Network Profiles（网络配置文件）> LLDP Profile（LLDP 配置文件）
+      Network（网络> Network Profiles（网络配置文件）> BFD Profile（BFD 配置文件）
+        BFD 概述
+        BFD 配置文件的构建块
+          查看 BFD 摘要和详细信息
+      Network（网络）> Network Profiles（网络配置文件）> SD-WAN Interface Profile（SD-WAN 接口配置文件）
+      网络 > MACsec 配置文件 > 网络配置文件
+  设备
+    Device（设备）> Setup（设置）
+    Device（设备）> Setup（设置）> Management（管理）
+    Device（设备）> Setup（设置）> Operations（操作）
+      启用 SNMP 监控
+    Device（设备）> Setup（设置）> HSM
+      硬件安全模块提供商设置
+      HSM 身份验证
+      硬件安全操作
+      硬件安全模块提供商配置和状态
+      硬件安全模块状态
+    Device（设备）> Setup（设置）> Services（服务）
+      配置全局和虚拟系统服务
+      全局服务设置
+      服务路由配置的 IPv4 和 IPv6 支持
+      目标服务路由
+    Device（设备）> Setup（设置）> Interfaces（接口）
+    Device（设备）> Setup（设置）> Telemetry（遥测）
+    Device（设备）> Setup（设置）> Content-ID
+    Device（设备）> Setup（设置）> WildFire
+    Device（设备）> Setup（设置）> Session（会话）
+      会话设置
+      会话超时
+      TCP 设置
+      解密设置：证书撤消检查
+      解密设置：转发代理服务器证书设置
+      解密设置：SSL 解密设置
+      VPN 会话设置
+    Device（设备）> Setup（设置）> ACE
+    Device（设备）> Setup（设置）> DLP
+    Device（设备）> High Availability（高可用性）
+      配置 HA 的重要注意事项
+      HA 常规设置
+      HA 通信
+      HA 链路和路径监视
+      HA 主动/主动配置
+      集群配置
+    Device（设备）> Log Forwarding Card（日志转发卡）
+    Device（设备）> Config Audit（配置审核）
+    Device（设备）> Password Profiles（密码配置文件）
+      用户名和密码要求
+    Device（设备）> Administrators（管理员）
+    Device（设备）> Admin Roles（管理员角色）
+    Device（设备）> Access Domain（访问域）
+    Device（设备）> Authentication Profile（身份验证配置文件）
+      身份验证配置文件
+      来自身份验证配置文件的 SAML 元数据导出
+    Device（设备）> Authentication Sequence（身份验证序列）
+    设备 > IoT 安全 > DHCP 服务器日志提取
+    Device（设备） > Data Redistribution（数据重新分发）
+      Device（设备） > Data Redistribution（数据重新分发）> Agents（代理）
+      Device（设备） > Data Redistribution（数据重新分发）> Clients（客户端）
+      Device（设备） > Data Redistribution（数据重新分发）> Collector Settings（收集器设置）
+      Device（设备） > Data Redistribution（数据重新分发） > Include/Exclude Networks（包括/排除网络）
+    Device（设备） > Device Quarantine（设备隔离）
+    Device（设备）> VM Information Sources（VM 信息源）
+      为 VMware ESXi 或 vCenter 服务器启用 VM 信息源设置
+      为 AWS VPC 启用 VM 信息源设置
+      为 Google Compute Engine 启用 VM 信息源设置
+    Device（设备）> Troubleshooting（故障排除）
+      安全策略匹配
+      QoS 策略匹配
+      身份验证策略匹配
+      解密/SSL 策略匹配
+      NAT 策略匹配
+      基于策略的转发策略匹配
+      DoS 策略匹配
+      路由
+      测试 Wildfire
+      威胁库
+      Ping
+      跟踪路由
+      日志收集器连接性
+      外部动态列表
+      更新服务器
+      测试云日志记录服务状态
+      测试云 GP 服务状态
+    Device（设备）> Virtual Systems（虚拟系统）
+    Device（设备）> Shared Gateways（共享网关）
+    Device（设备）> Certificate Management（证书管理）
+    Device（设备）> Certificate Management（证书管理）> Certificates（证书）
+      管理防火墙和 Panorama 证书
+        管理证书的其他支持操作
+      管理默认可信证书授权机构
+    Device（设备）> Certificate Management（证书管理）> Certificate Profile（证书配置文件）
+    Device（设备）> Certificate Management（证书管理）> OCSP Responder（OCSP 响应者）
+    Device（设备）> Certificate Management（证书管理）> SSL/TLS Service Profile（SSL/TLS 服务配置文件）
+    Device（设备）> Certificate Management（证书管理）> SCEP
+    Device（设备）> Certificate Management（证书管理）> SSL Decryption Exclusion（SSL 解密排除）
+    Device（设备）> Certificate Management（证书管理）> SSH Service Profile（SSH 服务配置文件）
+    Device（设备）> Response Pages（响应页面）
+    Device（设备）> Log Settings（日志设置）
+      选择日志转发目标
+      定义警报设置
+      清除日志
+    Device（设备）> Server Profiles（服务器配置文件）
+    Device（设备）> Server Profiles（服务器配置文件）> SNMP Trap（SNMP 陷阱）
+    Device（设备）> Server Profiles（服务器配置文件）> Syslog
+    Device（设备）> Server Profiles（服务器配置文件）> Email（电子邮件）
+    Device（设备）> Server Profiles（服务器配置文件）> HTTP
+    Device（设备）> Server Profiles（服务器配置文件）> NetFlow
+    Device（设备）> Server Profiles（服务器配置文件）> RADIUS
+    设备 > 服务器配置文件 > SCP
+    Device（设备）> Server Profiles（服务器配置文件）> TACACS+
+    Device（设备）> Server Profiles（服务器配置文件）> LDAP
+    Device（设备）> Server Profiles（服务器配置文件）> Kerberos
+    Device（设备）> Server Profiles（服务器配置文件）> SAML Identity Provider（SAML 标识提供商）
+    Device（设备）> Server Profiles（服务器配置文件）> DNS
+    Device（设备）> Server Profiles（服务器配置文件）> Multi Factor Authentication（多因素身份验证）
+    Device（设备）> Local User Database（本地用户数据库）> Users（用户）
+    Device（设备）> Local User Database（本地用户数据库）> User Groups（用户组）
+    Device（设备）> Scheduled Log Export（计划日志导出）
+    Device（设备）> Software（软件）
+    Device（设备）> Dynamic Updates（动态更新）
+    Device（设备）> Licenses（许可证）
+    Device（设备）> Support（支持）
+    Device（设备）> Master Key and Diagnostics（主密钥和诊断）
+      部署主密钥
+    Device（设备）> Policy Recommendation（策略建议）> IoT（物联网）
+    Device（设备）> Policy（策略）> Recommendation SaaS（建议 SaaS）
+    设备 > 策略建议 > IoT 或 SaaS > 导入策略规则
+  用户标识
+    Device（设备）> User Identification（用户标识）> User Mapping（用户映射）
+      Palo Alto Networks User-ID 代理设置
+        服务器监视账户
+        服务器监视
+        客户端探测
+        缓存
+        Syslog 筛选器
+        忽略用户列表
+      监控服务器
+        配置对受监控服务器的访问权限
+        管理对受监控服务器的访问权限
+      包括或排除用户映射的子网
+    Device（设备）> User Identification（用户标识）> Connection Security（连接安全性）
+    Device（设备）> User Identification（用户标识）> Terminal Server Agents（终端服务器代理）
+    Device（设备）> User Identification（用户标识）> Group Mapping Settings（组映射设置）
+    Device（设备）> User Identification（用户标识）> Trusted Source Address（可信源地址）
+    Device（设备）> User Identification（用户标识） > Authentication Portal Settings（身份验证门户设置）
+    Device（设备）> User Identification（用户标识）> Cloud Identity Engine
+  GlobalProtect
+    Network（网络）> GlobalProtect > Portals（门户）
+      GlobalProtect 门户常规选项卡
+      GlobalProtect 门户身份验证配置选项卡
+      GlobalProtect 门户 Portal Data Collection（门户数据收集）选项卡
+      GlobalProtect 门户代理选项卡
+        GlobalProtect 门户代理身份验证选项卡
+        GlobalProtect 门户 Agent Config Selection Criteria（代理配置选择标准）选项卡
+        GlobalProtect 门户代理内部选项卡
+        GlobalProtect 门户代理外部选项卡
+        GlobalProtect 门户代理应用程序选项卡
+        GlobalProtect 门户 Agent HIP Data Collection（代理 HIP 数据收集）选项卡
+      GlobalProtect 门户无客户端 VPN 选项卡
+      GlobalProtect 门户卫星选项卡
+    Network（网络）> GlobalProtect > Gateways（网关）
+      GlobalProtect 网关常规选项卡
+      GlobalProtect 网关身份验证选项卡
+      GlobalProtect 网关代理选项卡
+        隧道设置选项卡
+        客户端设置选项卡
+        客户端 IP 池选项卡
+        网络服务选项卡
+        连接设置选项卡
+        视频通信选项卡
+        HIP 通知选项卡
+      GlobalProtect 网关卫星选项卡
+    Network（网络） > GlobalProtect > MDM
+    Network（网络）> GlobalProtect > Clientless Apps（无客户端应用）
+    Network（网络）> GlobalProtect > Clientless App Groups（无客户端应用组）
+    Objects（对象）> GlobalProtect > HIP Objects（HIP 对象）
+      HIP 对象常规选项卡
+      HIP 对象移动设备选项卡
+      HIP 对象修补程序管理选项卡
+      HIP 对象防火墙选项卡
+      HIP 对象反恶意软件选项卡
+      HIP 对象磁盘备份选项卡
+      HIP 对象磁盘加密选项卡
+      HIP 对象数据丢失保护选项卡
+      HIP 对象证书选项卡
+      HIP 对象自定义检查选项卡
+    Objects（对象）> GlobalProtect > HIP Profiles（HIP 配置文件）
+    Device（设备） > GlobalProtect Client（GlobalProtect 客户端）
+      管理 GlobalProtect 应用程序软件
+      设置 GlobalProtect 应用程序
+      使用 GlobalProtect 应用程序
+  Panorama Web 界面
+    使用 Panorama Web 界面
+    上下文切换
+    Panorama 提交操作
+    在 Panorama 上定义策略
+    传统模式下 Panorama 虚拟设备的日志存储分区
+    Panorama > Setup（设置）> Interfaces（接口）
+    Panorama > High Availability（高可用性）
+    Panorama > Managed WildFire Clusters（受管 Wildfire 集群）
+      受管 Wildfire 集群任务
+      受管 Wildfire 设备任务
+      受管 Wildfire 信息
+      受管 WildFire 集群和设备管理
+    全景 > 防火墙集群
+      创建和编辑防火墙集群
+      摘要视图
+      监控
+    Panorama > Administrators（管理员）
+    Panorama > Admin Roles（管理员角色）
+    Panorama > Access Domains（访问域）
+    Panorama > Scheduled Config Push（计划配置推送）
+      计划配置推送调度器
+      计划配置推送执行历史记录
+    Panorama > Managed Devices（受管设备）> Summary（摘要）
+      受管防火墙管理
+      受管防火墙信息
+        创建设备变量定义
+      防火墙软件和内容更新
+      防火墙备份
+      Panorama > Device Quarantine（设备隔离）
+      Panorama > Managed Devices（受管设备）> Health（运行状况）
+        Panorama > Managed Devices（受管设备）> Health（运行状况）> All Devices（所有设备）
+        Panorama > Managed Devices（受管设备）> Health（运行状况）> Deviating Devices（偏离设备）
+      Panorama 中的详细设备运行状况
+        管理详细设备视图
+        会话
+        环境
+        接口
+        记录
+        资源
+        高可用性
+    Panorama > Templates（模板）
+      模板
+      模板堆栈
+      Panorama > Templates（模板）> Template Variables（模板变量）
+        创建新的模板变量
+        编辑现有模板变量
+        在设备上创建或编辑变量定义
+    Panorama > Device Groups（设备组）
+    Panorama > Managed Collectors（受管收集器）
+      日志收集器信息
+      日志收集器配置
+        常规日志收集器设置
+        日志收集器身份验证设置
+        日志收集器接口设置
+        日志收集器 RAID 磁盘设置
+        连接安全性
+        通信设置
+      专用日志收集器的软件更新
+    Panorama > Collector Groups（收集器组）
+      收集器组配置
+      收集器组信息
+    Panorama > Plugins（插件）
+    Panorama > SD-WAN
+      SD-WAN 设备
+      SD-WAN VPN 集群
+      SD-WAN 监控
+      SD-WAN 报告
+    Panorama > VMware NSX
+      配置通知组
+      创建服务定义
+      配置对 NSX Manager 的访问权限
+      创建控制规则
+    Panorama > Log Ingestion Profile（日志提取配置文件）
+    Panorama > Log Settings（日志设置）
+    Panorama > Server Profiles（服务器配置文件） > SCP
+    Panorama > Scheduled Config Export（计划配置导出）
+    Panorama > Software（软件）
+      管理 Panorama 软件更新
+      显示 Panorama 软件更新信息
+    Panorama > Device Deployment（设备部署）
+      管理软件和内容更新
+      显示软件和内容更新信息
+      调度动态内容更新
+      从 Panorama 恢复内容版本
+      管理防火墙许可证
+    Panorama > Device Registration Auth Key（设备注册身份验证密钥）
+      添加设备注册身份验证密钥
