@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>攻击者</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="此模块以攻击者视角展示相关威胁详情，管理员可查看攻击者画像、处置威胁。 攻击者模块的相关操作如下。 步骤1	选择 安全中心 &gt; 威胁详情，默认进入“攻击者”页面，如下图所示。 &nbsp;界面默认展示最近1周的威胁统计信息，支持切换“最近1小时/最近1天/最近1周/最近1月”。管理员可以在界面右上角的查询区支持结合攻击者或受害者的IPv4/IPv6地址进行搜索" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic79.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic51.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="anquanzhongxinzichanguanli.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">攻击者</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">此模块以攻击者视角展示相关威胁详情，管理员可查看攻击者画像、处置威胁。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">攻击者模块的相关操作如下。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">安全中心 &gt; 威胁详情</span><span class="f_step">，默认进入“攻击者”页面，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0442" style="margin:0;width:9.9271in;height:3.9479in;border:none" src="clip0442.png"/></p>
+<p class="p_step_content"><span class="f_step_content">界面默认展示最近1周的威胁统计信息，支持切换“最近1小时/最近1天/最近1周/最近1月”。管理员可以在界面右上角的查询区支持结合攻击者或受害者的IPv4/IPv6地址进行搜索。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">查看攻击者画像</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击“攻击者”列数据，弹出“攻击者画像”页面，如下图所示。</span></p>
+<p class="p_step_content"><img alt="clip0443" style="margin:0;width:9.1146in;height:6.2292in;border:none" src="clip0443.png"/></p>
+<p class="p_step_content"><span class="f_step_content">界面默认展示最近1周（点击攻击时间下拉框可选择时间范围，包括：最近1小时、最近1天、最近1周、最近1月，同时，支持自定义时间范围）的攻击者相关信息，包括最近攻击时间、安全事件数和受害者数等；页面下方展示攻击链分析信息，鼠标悬停在对应色块时，可查看时间、攻击阶段和安全事件的详细信息。</span></p>
+<p class="p_step_content"><span class="f_step_content">2）激活“安全事件列表”页签，如下图所示。</span></p>
+<p class="p_step_content"><img alt="clip0444" style="margin:0;width:9.1875in;height:6.3958in;border:none" src="clip0444.png"/></p>
+<p class="p_step_content"><span class="f_step_content">界面展示了该攻击者关联的事件信息，包括受害者、源地址、攻击阶段和攻击时间等，点击对应“事件名称”可跳转至安全事件详情页面。</span></p>
+<p class="p_step_content"><span class="f_step_content">3）激活“受害者列表”页签，如下图所示。</span></p>
+<p class="p_step_content"><img alt="clip0445" style="margin:0;width:9.0938in;height:6.2813in;border:none" src="clip0445.png"/></p>
+<p class="p_step_content"><span class="f_step_content">界面展示了该攻击者关联的受害者信息，包括受害者、源地址、受害者所属地、攻击次数等。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">查看攻击者关联安全事件并进行处置</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击“安全事件数”列数据，弹出“安全事件”页面，如下图所示。</span></p>
+<p class="p_step_content"><img alt="clip0446" style="margin:0;width:11.3229in;height:2.8125in;border:none" src="clip0446.png"/></p>
+<p class="p_step_content"><span class="f_step_content">管理员可以在此界面查看攻击者关联的安全事件信息，包括事件级别、名称、受害者、事件类型、攻击次数和威胁数据来源等。</span></p>
+<p class="p_step_content"><span class="f_step_content">2）点击某安全事件对应“详情”列“查看”，弹出“详情”页面，如下图所示。</span></p>
+<p class="p_step_content"><img alt="clip0447" style="margin:0;width:11.2188in;height:6.5521in;border:none" src="clip0447.png"/></p>
+<p class="p_step_content"><span class="f_step_content">管理员可以在此界面查看安全事件详情并进行处置，处置动作包括：忽略、误报、加入白名单、加入黑名单、修改访问控制、修改防护对象和修改策略模板。说明：当安全事件命中IPS或WAF规则时，系统自动关联规则库中相关原理/危害、安全建议，便于管理员进行分析、处置。</span></p>
+<p class="p_step_content"><span class="f_step_content">点击“查看”可以查看安全事件对应产生的日志，点击“关联分析”可以查看NGFW对该安全事件的关联分析结果，界面如下图所示。（此处还可以还可通过选择攻击者关联、受害者关联进一步查找和汇总攻击事件，为攻击链提供支持，帮助运维人员更好的排查事件误报和定位原因。）</span></p>
+<p class="p_picture"><img alt="clip0448" style="margin:0;width:9.9792in;height:10.3958in;border:none" src="clip0448.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">导出数据</span></td></tr></table></div><p class="p_step_list"><span class="f_step_list">导出指定数据：勾选所需导出数据，点击“导出”并选择“导出选择项”即可。</span></p>
+<p class="p_step_list"><span class="f_step_list">导出当前页数据：点击“导出”并选择“导出当前页”即可。</span></p>
+<p class="p_step_list"><span class="f_step_list">导出全部数据：点击“导出”并选择“导出全部”即可。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

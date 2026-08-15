@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>6in4手动隧道</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="IPv6 in IPv4手动隧道是通过IPv4网络连接两个IPv6孤岛的点对点隧道，主要应用于两个IPv6与IPv4网络的边缘路由设备之间或终端系统与边缘路由设备之间。IPv6 in IPv4手动隧道只需在边缘设备中配置隧道信息，IPv6孤岛间的主机无需进行任何特殊配置即可实现互通。IPv6 in..." />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="6to4.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic64.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="pppoe.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">6in4手动隧道</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">IPv6 in IPv4手动隧道是通过IPv4网络连接两个IPv6孤岛的点对点隧道，主要应用于两个IPv6与IPv4网络的边缘路由设备之间或终端系统与边缘路由设备之间。IPv6 in IPv4手动隧道只需在边缘设备中配置隧道信息，IPv6孤岛间的主机无需进行任何特殊配置即可实现互通。IPv6 in IPv4手动隧道实现机制是在IPv6数据报文前封装IPv4的报头，通过隧道将IPv6报文穿越IPv4网络，实现隔离的IPv6网络能互相通信。报文封装格式如下：</span></p>
+<p class="p_picture"><img alt="network_121" style="margin:0;width:6.7188in;height:1.2917in;border:none" src="network_121.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">IPv6 in IPv4手动隧道与GER连接IPv6孤岛原理相同，除隧道对报文的封装格式不同外，均按照“隧道起点封装--&gt;路由转发--&gt;隧道终点解封装”流程进行，隧道对报文的处理过程如下：</span></p>
+<p class="p_picture"><img alt="network_122" style="margin:0;width:7.5104in;height:3.1354in;border:none" src="network_122.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">（1）IPv6网络中的主机发送IPv6报文，到达隧道的源端；</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">（2）隧道的源端设备根据路由表发现该报文是通过隧道进行转发，将会在IPv6报文前封装上IPv4的报文头（源IP为隧道的“本地地址”，目的地址为隧道的“对端地址”），通过隧道的实际物理接口将报文转发出去；</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">（3）封装报文通过隧道到达隧道的目的端，目的端设备根据报文的目的地址判断是到达本机的报文后，对报文进行解封装；</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">（4）目的端设备根据解封装后的IPv6报文的目的地址将报文进行转发；如果目的地址就是本机，则将IPv6报文转给上层协议处理。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">配置NGFW的IPv6 in IPv4手动隧道的操作如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">网络管理 &gt; 隧道 &gt; 6in4手动隧道</span><span class="f_step">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">添加IPv6 in IPv4手</span><span class="f_zhengwen">动</span><span class="f_step">隧道。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击『添加』，如下图所示。</span></p>
+<p class="p_picture"><img alt="network_118" style="margin:0;width:7.0000in;height:4.3854in;border:none" src="network_118.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9167in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.1875in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，在下拉框选择隧道名称，不同的IPv6 in IPv4手动隧道需选择不同的隧道名称，隧道名称以“manual-”开头。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">出接口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，在下拉框中选择隧道出接口，对于需经该隧道处理的报文从指定隧道出接口转发出去。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">本地地址</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，在下拉框中选择本地接口中用于与IPv6 in IPv4手动隧道对端进行通信的接口IPv4地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">远程地址</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，配置IPv6 in IPv4手动隧道的对端IP地址，需设置隧道对端与本端本地地址可通信的对端接口IP地址。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）IPv6 in IPv4隧道本端的“对端地址”需与对端的“本地地址”一致，否则，隧道将不能建立。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">TTL</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">可选项，设置IPv6 in IPv4手动隧道本端设备与对端设备可经过的最大路由器数目。可选项：继承、自定义。</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">继承：TTL值继承原数据包IP报头中的TTL值。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">自定义：TTL值自定义，取值范围为1-255。</span></p></td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">可选项，输入6IN4隧道简单的描述信息。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成IPv6 in IPv4手动隧道的创建。新添加的IPv6 in IPv4手动隧道会显示在界面上。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4688in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:10.4271in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">IPv6 in IPv4手动隧道创建完成后，会生成一个与隧道名称一致的虚接口。如隧道名称命为manual-0，则虚接口为manual-0。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">配置IPv6 in IPv4隧道虚接口IP地址。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">点击隧道列表“接口属性”列的图标，可在弹出的窗口中配置IPv6 in IPv4隧道虚接口的IP地址（隧道虚接口IP地址要求与隧道对端设备的隧道虚接口在同一个网段）。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">网络管理 &gt; 路由 &gt; 静态路由</span><span class="f_step">，配置IPv6 in IPv4路由。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">如果配置了出接口为IPv6 in IPv4虚接口的路由，匹配该路由的数据报文则需通过指定IPv6 in IPv4隧道传输。关于路由的配置具体请参见 </span><span class="f_link"><a href="ref485285046.html" class="topiclink">静态路由</a></span><span class="f_step_content">。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

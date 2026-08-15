@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>可信CA机构</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="可信CA机构这部分主要存放受信任的CA根证书(通过此CA根证书可以验证该CA机构签发的证书的合法性)，当我们业务上需要验证对方证书合法性时，需要先信任对方证书签发机构的根证书。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc462834535.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic242.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="ca2.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">可信CA机构</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">可信CA机构这部分主要存放受信任的CA根证书(通过此CA根证书可以验证该CA机构签发的证书的合法性)，当我们业务上需要验证对方证书合法性时，需要先信任对方证书签发机构的根证书。</span></p>
+<p class="p_step"><span class="f_step">选择 </span><span class="f_menu">PKI &gt; 证书管理 &gt; 可信CA机构</span><span class="f_zhengwen">。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_step" style="font-weight: bold;">CA证书管理</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">导入可信CA根证书</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击【导入】按钮，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0397" style="margin:0;width:7.6146in;height:3.2813in;border:none" src="clip0397.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在导入CA根证书时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9583in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.7500in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">证书名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置证书名称信息。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">导入文件格式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择导入证书的格式。</span></p>
+<p class="p_table_content"><span class="f_table_content">可选中x.509证书(*.cer、*.crt、*.pem)和PKCS#7证书（*.spc、*.p7b）两种格式。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">证书文件</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，点击“</span><img alt="clip0096" style="margin:0;width:0.2083in;height:0.1979in;border:none" src="clip0096.png"/><span class="f_table_content">”按钮，选择要上传的证书文件。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成</span><span class="f_step">CA根证书的导入</span><span class="f_step_content">。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">查看CA证书信息</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">选中证书，点击“查看”按钮，可查看该证书的详细信息。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">CRL文件管理</span></p><p class="p_zhengwen"><span class="f_zhengwen">CRL为证书作废吊销列表，也称作证书黑名单。CRL文件里包含失效的证书个数、下次CRL生成时间和CA中心私钥的签名。CA机构会周期发布 CRL文件，用户可以定期获取某CA证书CRL，可以通过获取到的CRL来验证该CA签发的证书是否吊销。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">导入CRL文件</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击“CRL设置”栏下方的【设置】按钮，</span><span class="f_step">如下图所示</span><span class="f_step_content">。</span></p>
+<p class="p_picture"><img alt="clip0398" style="margin:0;width:7.5938in;height:2.4688in;border:none" src="clip0398.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）选择“本地”，上传CRL文件，点击【确定】即可。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">查看CRL信息</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">点击“CRL设置”栏下方的【查看】按钮，可</span><span class="f_step">查看CRL详细信息，如下图所示</span><span class="f_step_content">。</span></p>
+<p class="p_picture"><img alt="clip0540" style="margin:0;width:4.1875in;height:3.0313in;border:none" src="clip0540.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">设置HTTP信息</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击“CRL设置”栏下方的【设置】按钮，</span><span class="f_step">如下图所示</span><span class="f_step_content">。</span></p>
+<p class="p_picture"><img alt="clip0399" style="margin:0;width:7.6563in;height:3.0417in;border:none" src="clip0399.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）选择HTTP，填写合法的URL地址，选择下载方式，设置完后点击【确定】即可。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">设置LDAP信息</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击“CRL设置”栏下方的【设置】按钮，</span><span class="f_step">如下图所示</span><span class="f_step_content">。</span></p>
+<p class="p_picture"><img alt="clip0400" style="margin:0;width:7.6146in;height:4.9271in;border:none" src="clip0400.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）选择LDAP，填写服务器IP地址、认证端口、LDAP服务器查询根、属性，选择是否需要服务器认证，需要服务器认证需输入LDAP服务器登录用户名和密码，选择下载方式，设置完后点击【确定】即可。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">OCSP信息管理</span></p><p class="p_zhengwen"><span class="f_zhengwen">OCSP为在线证书状态协议。当用户需要实时查询对方证书是否有效时，可以在可信CA机构管理中找到对方证书签发单位对应的CA根证书，通过配置该根证书的OCSP设置来进行验证。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">设置OCSP信息</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击“</span><span class="f_zhengwen">OCSP</span><span class="f_step_content">设置”栏下方的【修改】按钮，</span><span class="f_step">如下图所示</span><span class="f_step_content">。</span></p>
+<p class="p_picture"><img alt="clip0401" style="margin:0;width:7.5729in;height:1.8854in;border:none" src="clip0401.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）输入合法的URL地址，点击【确定】即可。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">显示OCSP信息</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">点击“</span><span class="f_zhengwen">OCSP</span><span class="f_step_content">设置”栏下方的【查看】按钮，</span><span class="f_step">如下图所示</span><span class="f_step_content">。</span></p>
+<p class="p_picture"><img alt="clip0402" style="margin:0;width:7.5208in;height:1.4583in;border:none" src="clip0402.png"/></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

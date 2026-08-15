@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>网络抓包</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="系统支持对指定的流量进行抓包，为管理员进一步分析网络运行状况提供依据，同时为后续制定更切合实际、更严密的防护策略提供参考。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="wangluozhenduan.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic91111111111.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic61.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">网络抓包</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">系统支持对指定的流量进行抓包，为管理员进一步分析网络运行状况提供依据，同时为后续制定更切合实际、更严密的防护策略提供参考。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">进行网络抓包的具体操作如下。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_step" style="font-weight: bold;">系统管理 &gt; </span><span class="f_menu">网络诊断 &gt; 网络抓包</span><span class="f_step">，如下图所示。</span></td></tr></table></div><p class="p_picture"><span class="f_picture"> <img alt="clip0555" style="margin:0;width:9.6875in;height:4.2813in;border:none" src="clip0555.png"/></span></p>
+<p class="p_step_content"><span class="f_step_content">设置抓包条件时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:top; width:0.9688in; height:0.2188in; background-color:#BFBFBF; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:top; width:3.8750in; height:0.2188in; background-color:#BFBFBF; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9688in; height:0.0938in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">最大可抓包数</span></p>
+</td>
+<td style="vertical-align:middle; width:3.8750in; height:0.0938in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置每个文件捕获的报文数，当捕获的报文数达到配置值，则自动停止抓包功能。取值范围：1-102400。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">默认情况下最多生成10个抓包文件，如果每个文件都达到最大的包数时，则只允许抓取5个文件。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9688in; height:0.0938in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">接口</span></p>
+</td>
+<td style="vertical-align:middle; width:3.8750in; height:0.0938in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置进行在线抓包的接口。any表示不限制接口。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9688in; height:0.0938in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">协议</span></p>
+</td>
+<td style="vertical-align:middle; width:3.8750in; height:0.0938in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置捕获的报文的协议类型，可选项：any、ip、ip6、arp、tcp、udp、icmp、vlan、mpls、pppoed、ah、esp。any表示不限制协议类型。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9688in; height:0.0938in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IP</span></p>
+</td>
+<td style="vertical-align:middle; width:3.8750in; height:0.0938in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置捕获的报文的IP地址。0.0.0.0表示任意IP。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9688in; height:0.0938in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">端口</span></p>
+</td>
+<td style="vertical-align:middle; width:3.8750in; height:0.0938in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置捕获的报文的端口号。端口取值范围：0-65535。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9688in; height:0.0938in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">更多条件</span></p>
+</td>
+<td style="vertical-align:middle; width:3.8750in; height:0.0938in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置用于过滤的正则表达式，如果一个报文满足表达式的条件，则这个报文将会被捕获。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">点击【开始】按钮，启动抓包进程。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">抓包完成后，所抓取的流量信息显示在界面中，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0556" style="margin:0;width:9.8854in;height:2.6458in;border:none" src="clip0556.png"/></p>
+<p class="p_step_content"><span class="f_step_content">如果没有抓到数据包，则会生成一个24B大小的抓包文件，包数为0。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">管理抓包文件。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">选中相关文件，点击“删除”或“导出”即可将对应文件进行删除和导出操作；点击“更多”&gt;“清空”即可清空所有文件。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

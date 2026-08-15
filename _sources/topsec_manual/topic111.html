@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>基线配置</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="基线配置模块可供管理员进行基线基本功能的设置以及动态黑名单/白名单的信息查看。 选择 资源管理 &gt; 安全配置文件 &gt; 数据库安全，激活“数据库基线”下的“基线配置”页签，界面如下图所示。 &nbsp; 界面上方为基线功能设置模块，管理员可以在此处配置基线黑名单的基础信息，相关参数的具体信息如下表所示。 参数 说明 黑名单类型 选择黑名单类型，可选项：PN" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic109.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic103.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic112.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">基线配置</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">基线配置模块可供管理员进行基线基本功能的设置以及动态黑名单/白名单的信息查看。</span></p>
+<p class="p_step"><span class="f_step">选择 </span><span class="f_menu">资源管理 &gt; 安全配置文件 &gt; 数据库安全</span><span class="f_step">，激活“数据库基线”下的“基线配置”页签，界面如下图所示。 </span></p>
+<p class="p_step_content"><img alt="基线功能设置page" style="margin:0;width:17.0208in;height:6.4375in;border:none" src="hmfile_hash_24dafab6.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">界面上方为基线功能设置模块，管理员可以在此处配置基线黑名单的基础信息，相关参数的具体信息如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9583in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.7500in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">黑名单类型</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择黑名单类型，可选项：PNAT/SWITCH。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">PNAT：五元组黑名单；</span></p>
+<p class="p_table_content"><span class="f_table_content">SWITCH：三元组黑名单。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">黑名单老化时间</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置黑名单项的老化时间，超出老化时间的黑名单项会被自动删除。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">黑名单次数限制</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置黑名单次数限制，取值范围：1-30次。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">此处配置的是动态黑名单阈值，即：若一条动作为“阻断”的策略被触发的次数超过此处的限制，那么对应的源/目的IP等五元组或三元组信息将被自动添加进动态黑名单。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">配置完成后，点击【应用】保存黑名单基础配置。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">界面下方为基线动态黑名单/白名单查看区域，管理员可以在此处查看NGFW根据基线策略组处已有配置而生成的动态黑名单/白名单项。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

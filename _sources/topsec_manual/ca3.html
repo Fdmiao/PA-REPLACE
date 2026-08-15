@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>CA管理</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="CA是证书的签发机构，它是公钥基础设施(Public KeyInfrastructurePKI)的核心，CA是负责签发证书、认证证书、管理已颁发证书的机关。PKI模块中内置了本地CA功能，支持创建多个CA，支持签发RSA/ECC/SM2证书，提供证书签发功能，提供已签发证书其生命周期的管理服务。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic244.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="ca2.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic93.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">CA管理</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">CA是证书的签发机构，它是公钥基础设施(Public KeyInfrastructurePKI)的核心，CA是负责签发证书、认证证书、管理已颁发证书的机关。PKI模块中内置了本地CA功能，支持创建多个CA，支持签发RSA/ECC/SM2证书，提供证书签发功能，提供已签发证书其生命周期的管理服务。</span></p>
+<p class="p_step"><span class="f_step">选择 </span><span class="f_menu">PKI &gt; CA中心 &gt; CA管理</span><span class="f_zhengwen">。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">根证书管理</span></p><p class="p_zhengwen"><span class="f_zhengwen">PKI支持创建多个CA，根证书管理就是管理每个CA的根证书，根证书创建意味着CA创建，根证书删除意味着该CA被删除。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">自签根证书</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击【添加</span><span class="f_step">自签根证书</span><span class="f_step_content">】按钮，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0405" style="margin:0;width:7.7604in;height:8.1667in;border:none" src="clip0405.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在添加自签根证书时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9583in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.7500in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">证书名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入自签根证书的名称。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">最多输入33个字符（一个汉字占三个字节；一个字母/数字占一个字节），区分大小写。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">国家</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置根证书的网关设备的国家属性。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">输入两个英文字符。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">省份、地区、单位、部门、通用名称、电子邮件</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置自签根证书的网关设备的属性。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">域名</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置证书请求域名。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">过期时间</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置证书过期时间，最少30天。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">公钥算法</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置加/解密数据包使用的算法类型。</span></p>
+<p class="p_table_content"><span class="f_table_content">可选项：RSA、ECC和SM2。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">私钥长度</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">公钥算法选择为“RSA”时，设置RSA算法私钥长度，单位为bit，长度可选择1024、2048、4096。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">公钥参数</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">公钥算法选择为“ECC”时，设置ECC算法参数。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成</span><span class="f_step">自签根证书的添加</span><span class="f_step_content">。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">导入根证书</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击【</span><span class="f_step">导入</span><span class="f_step_content">】按钮，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0406" style="margin:0;width:7.6771in;height:4.1042in;border:none" src="clip0406.png"/></p>
+<p class="p_step_content" style="text-indent: -0.2917in; margin: 0.0521in 0 0.0521in 0.9167in;"><span class="f_step_content">在导入根证书时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9583in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.7500in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">证书名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入合法的根证书名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">导入文件格式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">可选择对应的证书导入格式。</span></p>
+<p class="p_table_content"><span class="f_table_content">可以导入的证书分为个人信息交互(*.pfx，*.p12)和x.509证书(*.cer,*.crt,*.pem)两种格式。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">证书文件</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，点击“</span><img alt="clip0096" style="margin:0;width:0.2083in;height:0.1979in;border:none" src="clip0096.png"/><span class="f_table_content">”按钮，选择要上传的证书文件。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">私钥文件</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">文件格式选择“x.509证书”时，需单独上传私钥文件，点击“</span><img alt="clip0096" style="margin:0;width:0.2083in;height:0.1979in;border:none" src="clip0096.png"/><span class="f_table_content">”按钮，选择要上传的私钥文件。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">证书文件密码</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">文件格式选择“个人信息交互”时，如PKCS12文件有加密密码，需指定解密密码。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成证书的导入。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">导出根证书</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）选择“根证书”，点击【</span><span class="f_step">导出</span><span class="f_step_content">】按钮，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0407" style="margin:0;width:8.5313in;height:1.5521in;border:none" src="clip0407.png"/></p>
+<p class="p_picture"><img alt="clip0408" style="margin:0;width:7.6354in;height:2.7708in;border:none" src="clip0408.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）选择合适的文件格式，点击【确定】即可。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">CRL管理</span></p><p class="p_zhengwen"><span class="f_zhengwen">CRL(证书作废吊销列表)管理提供了周期性更新CRL文件的功能。用户端将CRL更新到本地，就可以获得最新的已作废证书的序列号、作废原因及作废时间等。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">导出CRL文件</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">选择“CRL”，点击【</span><span class="f_step">导出</span><span class="f_step_content">】按钮，</span><span class="f_step">CRL文件下载至本地主机</span><span class="f_step_content">。</span></p>
+<p class="p_picture"><img alt="clip0409" style="margin:0;width:9.4271in;height:1.5313in;border:none" src="clip0409.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">CRL更新周期</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）选择“CRL”，点击【</span><span class="f_step">更新周期</span><span class="f_step_content">】按钮，</span><span class="f_step">如下图所示</span><span class="f_step_content">。</span></p>
+<p class="p_picture"><img alt="clip0410" style="margin:0;width:9.8750in;height:1.5000in;border:none" src="clip0410.png"/></p>
+<p class="p_picture"><img alt="clip0411" style="margin:0;width:7.6354in;height:2.1146in;border:none" src="clip0411.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）设置更新周期及时间单位（时、天），设置完后点击【确定】即可。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">签发证书管理</span></p><p class="p_zhengwen"><span class="f_zhengwen">已签发证书管理提供证书查询、证书状态查询、证书作废、证书解冻、证书申请、证书续期等功能。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">自签证书</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）选择“签发证书”右侧的复选框，点击【</span><span class="f_step">直接签发证书</span><span class="f_step_content">】按钮，</span><span class="f_step">如下图所示</span><span class="f_step_content">。</span></p>
+<p class="p_picture"><img alt="clip0412" style="margin:0;width:9.0000in;height:1.8958in;border:none" src="clip0412.png"/></p>
+<p class="p_picture"><img alt="clip0413" style="margin:0;width:7.7604in;height:8.7188in;border:none" src="clip0413.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9583in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.7500in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">证书名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入直接签发证书的名称。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">最多输入30个字符（一个汉字占三个字节；一个字母/数字占一个字节），区分大小写。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">国家</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置直接签发证书的网关设备的国家属性。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">输入两个英文字符。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">省份、地区、单位、部门、通用名称、电子邮件</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置直接签发证书的网关设备的属性。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">域名</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置证书请求域名。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">过期时间</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置证时过期的时间，最少30天。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">公钥算法</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置加/解密数据包使用的算法类型。</span></p>
+<p class="p_table_content"><span class="f_table_content">可选项：RSA、ECC和SM2。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">私钥长度</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">公钥算法选择为“RSA”时，设置RSA算法私钥长度，单位为bit，长度可选择1024、2048、4096。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">公钥参数</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">公钥算法选择为“ECC”时，设置ECC算法参数。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">高级用法</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否勾选证书请求高级用法。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">密钥用途</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">秘钥用途可选择数字签名服务、密钥加密、数据加密、抗抵赖服务、密钥协商。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">扩展秘钥用途</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">扩展秘钥用途可选择数字签名服务、密钥加密、数据加密、抗抵赖服务、密钥协商等。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成</span><span class="f_table_content">直接签发证书</span><span class="f_step">的添加</span><span class="f_step_content">。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">签发请求文件</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）选择“签发证书”右侧的复选框，点击【</span><span class="f_step">签发请求文件</span><span class="f_step_content">】按钮，</span><span class="f_step">如下图所示</span><span class="f_step_content">。</span></p>
+<p class="p_picture"><img alt="clip0414" style="margin:0;width:9.0938in;height:1.8542in;border:none" src="clip0414.png"/></p>
+<p class="p_picture"><img alt="clip0415" style="margin:0;width:7.6667in;height:4.0625in;border:none" src="clip0415.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9583in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.7500in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">证书名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入签名证书请求的名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">证书请求文件</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择需要签发的请求文件</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">过期时间</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择截至时间。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">删除证书请求</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否删除证书请求文件。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】</span><span class="f_step">即可</span><span class="f_step_content">。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">显示证书详细信息</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">勾选指定的证书，点击【查看】按钮，</span><span class="f_step">如下图所示</span><span class="f_step_content">。</span></p>
+<p class="p_step_content"><img alt="clip0416" style="margin:0;width:7.7604in;height:12.0104in;border:none" src="clip0416.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">吊销证书</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）勾选需要吊销的证书，点击【吊销】按钮，</span><span class="f_step">如下图所示</span><span class="f_step_content">。</span></p>
+<p class="p_picture"><img alt="clip0417" style="margin:0;width:8.1563in;height:1.6667in;border:none" src="clip0417.png"/></p>
+<p class="p_picture"><img alt="clip0418" style="margin:0;width:7.6458in;height:2.0417in;border:none" src="clip0418.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）选择吊销原因，点击【确定】即可。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤5</span></td><td style="border:none;padding:0"><span class="f_step">导出证书</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）勾选需要导出的证书，点击【导出】按钮，</span><span class="f_step">如下图所示</span><span class="f_step_content">。</span></p>
+<p class="p_picture"><img alt="clip0419" style="margin:0;width:7.5521in;height:3.9271in;border:none" src="clip0419.png"/></p>
+<p class="p_step_content" style="text-indent: -0.2917in; margin: 0.0521in 0 0.0521in 0.9167in;"><span class="f_step_content">2）导出至本地。选择证书格式，点击确定即可。</span></p>
+<p class="p_step_content" style="text-indent: -0.2917in; margin: 0.0521in 0 0.0521in 0.9167in;"><span class="f_step_content">3）导出至USBKEY。选择型号列表、设备列表、容器列表，选择证书用途，点击确定即可。</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 0.0521in 0 0.0521in 0.5938in;"><span class="f_step_content">4）导出至本地证书模块。选择合法证书名称、合法证书站点，选择是否导出私钥，点击确定即可。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤6</span></td><td style="border:none;padding:0"><span class="f_step">续期证书</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">勾选需要续签的证书，点击【续签】按钮，设置续签过期时间，点击确定即可。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤7</span></td><td style="border:none;padding:0"><span class="f_step">解冻证书</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">选中已经吊销的证书，点击【解冻】按钮，点击确定即可。</span></p>
+<p class="p_step_content"><img alt="clip0420" style="margin:0;width:4.6979in;height:1.6979in;border:none" src="clip0420.png"/></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

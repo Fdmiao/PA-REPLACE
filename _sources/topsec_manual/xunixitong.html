@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>虚拟系统</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="虚拟系统（Virtual System）是在一台物理设备上划分出的多台相互独立的逻辑设备。管理员可以从逻辑上将一台防火墙设备划分为多个虚拟系统，每个虚拟系统相当于一台真实的设备，有自己的接口、地址集、用户/组、路由表项以及策略，并可通过虚拟系统管理员进行配置和管理。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="acl.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc490041589.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic128.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">虚拟系统</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">虚拟系统（Virtual System）是在一台物理设备上划分出的多台相互独立的逻辑设备。管理员可以从逻辑上将一台防火墙设备划分为多个虚拟系统，每个虚拟系统相当于一台真实的设备，有自己的接口、地址集、用户/组、路由表项以及策略，并可通过虚拟系统管理员进行配置和管理。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">虚拟系统具有以下特点：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">每个虚拟系统由独立的管理员进行管理，使得多个虚拟系统的管理清晰、简单，适合大规模的组网环境。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">每个虚拟系统拥有独立的配置及路由表项，这使得虚拟系统下的局域网即使使用了相同的地址范围，仍然可以正常进行通信。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">虚拟系统之间的流量相互隔离，安全性高。在需要的时候，虚拟系统之间也可以进行安全互访。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">虚拟系统实现了硬件资源的有效利用，节约了空间、能耗以及管理员的管理成本。</span></p><p class="p_zhengwen"><span class="f_zhengwen">虚拟系统的创建和使用流程为：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">由根系统的超级管理员（superman）创建虚拟系统，并为每个虚拟系统分配接口。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">由根系统的超级管理员（superman）创建虚拟系统管理员。关于虚拟系统管理员的创建具体请参见 <a href="topic3.html" class="topiclink">管理员</a>。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">虚拟系统管理员登录天融信NGFW，配置相应的虚拟系统。虚拟系统管理员登录和配置天融信NGFW的方法和根系统管理员一样。</span></p><div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4583in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.7083in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction"> 数据报文进入NGFW后，NGFW根据接收报文的物理接口/逻辑接口确定处理报文的虚系统。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">主要内容包括：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list"><a href="topic128.html" class="topiclink">虚拟系统</a></span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list"><a href="vsys.html" class="topiclink">虚系统接口</a></span></p>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

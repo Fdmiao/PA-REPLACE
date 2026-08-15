@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>NAT64</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="NAT64是一种IPv6网络访问IPv4网络的过渡技术，通过更改报文的头部地址信息，实现IPv6和IPv4网络的互通。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc398625673.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc450050602.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="dizhizhuanhuannat46.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">NAT64</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">NAT64是一种IPv6网络访问IPv4网络的过渡技术，通过更改报文的头部地址信息，实现IPv6和IPv4网络的互通。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">静态转换</span></p><p class="p_zhengwen"><span class="f_zhengwen">NGFW系统支持配置NAT64静态转换，将特定的IPv4地址和IPv6地址进行互相转换。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">配置NAT64静态转换后，当IPv6网络的主机访问特定IPv6地址经过防火墙时，防火墙会根据静态NAT64策略配置将源IPv6地址转换成定义的源IPv4地址，将目的IPv6地址转换为定义的目的IPv4主机地址转发出去，并生成会话表。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">前缀转换</span></p><p class="p_zhengwen"><span class="f_zhengwen">NAT64前缀转换需要DNS64服务器配合工作，NAT64工作过程如下图所示。</span></p>
+<p class="p_picture"><img alt="anquancelue_nat6401" style="margin:0;width:10.1979in;height:6.2708in;border:none" src="anquancelue_nat6401.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">当IPv6网络中的主机使用域名方式访问IPv4网络中的服务器时，具体流程如下：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）IPv6主机将收到的IPv6地址作为目的发起连接请求，报文经过出口NGFW系统进行转发。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）NGFW系统收到IPv6主机发出的IPv6报文后，发现报文的目的地址中包含特定的NAT64前缀（该前缀在NGFW系统上事先设置），则从IPv6报文的目的地址中提取IPv4地址，作为IPv4报文的目的地址。在此之后，NGFW会从配置的NAT地址池中选择一个地址作为IPv4报文的源地址，并将IPv6报文转换为IPv4报文发送出去，同时生成会话表。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）IPv4服务器收到请求报文后完成响应。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">4）NGFW系统收到IPv4网络中服务器的响应报文后，根据会话表将IPv4报文转换为IPv6报文，然后发送至Host。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">在以上步骤中DNS64和NGFW系统均使用NAT64前缀，通过NAT前缀进行IPv4和IPv6地址转换；NGFW系统通过判断IPv6报文的目的地址中是否包含NAT64前缀来决定是否对IPv6报文进行NAT64处理，NAT64前缀长度为32、40、48、56、64或96。根据前缀长度不同，IPv4地址嵌入IPv6地址时，嵌入的位置也不同，具体位置如下图所示。</span></p>
+<p class="p_picture"><img alt="anquancelue_nat6402" style="margin:0;width:7.1771in;height:2.9583in;border:none" src="anquancelue_nat6402.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">其中上图中的保留位U和后缀，NGFW系统不进行处理。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">在没有指定转换后的目的地址对象的时候，NAT64按照前缀转换的转换型式进行转换，此时要求转换前的地址对象必须配置为合法前缀（前缀长度必须为32、40、48、56、64、96），前缀直接决定目标网络，需要用户指定，否则将无法确定目标网络。在NGFW中，支持添加NAT64前缀地址对象。用户在创建前缀转换NAT64规则时，可在目的地址处选择创建的NAT64前缀地址对象。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">下面介绍如何配置NAT64规则。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">安全策略 &gt; 地址转换 &gt; NAT64</span><span class="f_step">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">点击“</span><img alt="tubiaotianjia" style="margin:0;width:0.8646in;height:0.3021in;border:none" src="tubiaotianjia.png"/><span class="f_step">”，选择“NAT64前缀转换”页签，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0213" style="margin:0;width:7.0729in;height:9.9167in;border:none" src="clip0213.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在添加NAT64规则时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.5625in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:6.4688in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项。不能输入!@#$%^&amp;+=1?1&lt;&gt;&#39;~空格，少于128字节。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">状态</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">状态可选项：启用、禁用。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入该规则的描述信息，不能输入&lt;&gt;\，少于128字节。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源地址</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的源地址应满足的条件，源地址可以选择普通的IPV4地址对象，也可以选择IVI前缀对象。</span></p>
+<p class="p_table_content"><span class="f_table_content">点击“+”选择已设置好的地址对象，或者点击『添加』，新建地址对象，关于地址对象的配置请参见 <a href="toc448912165.html" class="topiclink">地址</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源端口</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的源端口应满足的条件。点击“+”选择已设置好的服务对象，或者点击『添加』，新建服务对象，关于服务对象的配置请参见 <a href="toc448912172.html" class="topiclink">服务</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源区域</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的源区域应满足的条件。点击“+”选择已设置好的区域对象，或者点击『添加』，新建区域对象，关于区域对象的配置请参见 <a href="toc462736629.html" class="topiclink">区域</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源VLAN</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的源VLAN应满足的条件。点击“+”选择已设置好的VLAN对象，或者点击『添加』，新建VLAN对象，关于VLAN对象的配置请参见 <a href="ref487724000.html" class="topiclink">VLAN</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源角色</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的角色应满足的条件。点击“+”选择已设置好的角色对象，或者点击『添加』，新建角色对象，关于角色对象的配置请参见 <a href="topic75.html" class="topiclink">角色</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的地址</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的目的地址应当匹配的条件。点击“+”选择已设置好的NAT64前缀地址对象或IPv6地址对象，或者点击『添加』，新建地址对象，关于地址对象的配置请参见 <a href="toc448912165.html" class="topiclink">地址</a>。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：NAT64中目的地址对象仅支持配置前缀长度为32、40、48、56、64或96的NAT64前缀地址对象；当“模式”参数为“前缀转换”时，转换后的目的地址会根据此处配置的不同前缀的目的地址对象提取IPv4地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的端口</span></p>
+</td>
+<td style="vertical-align:top; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的目的端口应满足的条件。点击“+”选择已设置好的服务对象，或者点击『添加』，新建服务对象，关于服务对象的配置请参见 <a href="toc448912172.html" class="topiclink">服务</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源地址转换</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">可选项。选择转换后的主机地址、地址范围对象或地址组对象。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）选择主机地址对象时，表示将源地址固定映射为某一合法IP地址；</span></p>
+<p class="p_table_content"><span class="f_table_content">2）选择地址范围对象时，表示将源地址动态映射为某一地址范围的地址；</span></p>
+<p class="p_table_content"><span class="f_table_content">3）选择地址组对象时，表示将源地址动态映射为某一地址组的地址；</span></p>
+<p class="p_table_content"><span class="f_table_content">4）若转换前源地址选择了IVI前缀地址，则此项不必选；若转换前源地址未选择地址对象或选择了非IVI前缀地址对象，则此项必选，且只可选IPv4地址对象。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">Sticky NAT</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">地址粘性开关。启动后，相同源IP的数据包经过地址转换后为其转换的源IP地址相同。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：若转换前源地址选择了IVI前缀地址，则无该项配置；若转换前源地址未选择地址对象或选择了非IVI前缀地址对象，则此项默认开启。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; height:1.4063in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源端口转换方式</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; height:1.4063in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">下拉框选项包括：优先使用原始源端口、随机转换源端口、不转换源端口。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">优先使用原始源端口：首先尝试使用源端口，如果源端口被占用，则转换为其他未被占用的端口。</span></p>
+<p class="p_table_content"><span class="f_table_content">随机转换源端口：随机转换源端口，转换后的源端口由系统内部确定。</span></p>
+<p class="p_table_content"><span class="f_table_content">不转换源端口：不转换源端口。</span></p>
+<p class="p_table_content"><span class="f_table_content">另：若转换前源地址选择了IVI前缀地址，则无该项配置；若转换前源地址未选择地址对象或选择了非IVI前缀地址对象，则此项可选。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的地址转换为</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置转换后的主机地址对象。关于地址对象的配置请参见 <a href="toc448912165.html" class="topiclink">地址</a>。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">转换前目的地址为普通IPv6时，该项为必填项。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的端口转换为</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文转换后的服务。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_Normal" style="line-height: 1.20; margin: 0.0521in 0 0.0521in 0.5938in;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">点击【确定】按钮完成NAT64规则的配置。</span></td></tr></table></div>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

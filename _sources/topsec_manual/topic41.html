@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>案例一（双机热备部署）</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="用户网络 &nbsp; 基本需求 网络规划 总行中心网两台防火墙以双机热备模式工作，两防火墙均以feth2口为心跳口，由心跳线连接用来同步配置信息及状态信息。 需求 1）主墙与备墙以feth2口为心跳口，由心跳线连接用来协商状态及配置信息。 2）部门1只允许访问中心网络WEB服务器A，部门2只允许访问中心网络WEB服务器B，且只有认证用户才可访问中心网" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic30.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic30.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic117.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">案例一（双机热备部署）</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen_B" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_B">用户网络</span></p><p class="p_picture"><img alt="NGFW20~1_img109" style="margin:0;width:8.9688in;height:12.4271in;border:none" src="hmfile_hash_7cbaaac7.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen_B" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_B">基本需求</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list">网络规划</span></p><p class="p_zhengwen"><span class="f_zhengwen">总行中心网两台防火墙以双机热备模式工作，两防火墙均以feth2口为心跳口，由心跳线连接用来同步配置信息及状态信息。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list">需求</span></p><p class="p_zhengwen"><span class="f_zhengwen">1）主墙与备墙以feth2口为心跳口，由心跳线连接用来协商状态及配置信息。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）部门1只允许访问中心网络WEB服务器A，部门2只允许访问中心网络WEB服务器B，且只有认证用户才可访问中心网络WEB服务器A和WEB服务器B。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）中心网络用户（真实IP：10.0.0.6）访问分支WEB服务器（真实IP：192.168.16.11），总行中心网络用户显示IP地址为11.11.11.11，内网WEB服务器显示IP地址为12.12.12.12。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">4）管理员可通过管理主机浏览近一个月内分支机构网络各认证用户访问中心网络的日志记录。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">5）通过SNMP检测链路状态和流量。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">6）CGI用户以门户方式在通过第三方服务器（Radius Server,192.168.83.234，认证端口UDP1812）进行身份认证。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list">IP规划</span></p><p class="p_zhengwen"><span class="f_zhengwen">IP规划如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.2292in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.7917in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">设备/区域</span></p>
+</th>
+<th style="vertical-align:middle; width:1.8750in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">IP规划</span></p>
+</th>
+<th style="vertical-align:middle; width:0.8854in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">设备/区域</span></p>
+</th>
+<th style="vertical-align:middle; width:1.8021in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">IP规划</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.7917in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">主墙</span></p>
+</td>
+<td style="vertical-align:middle; width:1.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">feth0：10.0.2.2/24（管理口）</span></p>
+<p class="p_table_content"><span class="f_table_content">feth1：10.0.1.1/24</span></p>
+<p class="p_table_content"><span class="f_table_content">feth2：10.1.1.1/30（心跳口）</span></p>
+<p class="p_table_content"><span class="f_table_content">feth3：202.96.10.10/24</span></p>
+<p class="p_table_content"><span class="f_table_content">feth4：192.168.83.1/24</span></p>
+</td>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">总行中心网络</span></p>
+</td>
+<td style="vertical-align:middle; width:1.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户：10.0.0.0/24</span></p>
+<p class="p_table_content"><span class="f_table_content">WEB服务器A：10.0.0.10</span></p>
+<p class="p_table_content"><span class="f_table_content">WEB服务器B：10.0.0.11</span></p>
+<p class="p_table_content"><span class="f_table_content">管理主机：10.0.0.13</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7917in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备墙</span></p>
+</td>
+<td style="vertical-align:middle; width:1.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">feth0：10.0.3.3/24（管理口）</span></p>
+<p class="p_table_content"><span class="f_table_content">feth1：10.0.1.1/24</span></p>
+<p class="p_table_content"><span class="f_table_content">feth2：10.1.1.2/30（心跳口）</span></p>
+<p class="p_table_content"><span class="f_table_content">feth3：202.96.10.10</span></p>
+<p class="p_table_content"><span class="f_table_content">feth4：192.168.83.1/24</span></p>
+</td>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">分支部门1</span></p>
+</td>
+<td style="vertical-align:middle; width:1.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户：192.168.16.0/24</span></p>
+<p class="p_table_content"><span class="f_table_content">WEB服务器：192.168.16.11</span></p>
+<p class="p_table_content"><span class="f_table_content">公网IP地址：200.0.0.10-200.0.0.13</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7917in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">总行DMZ区</span></p>
+</td>
+<td style="vertical-align:middle; width:1.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">数据库服务器：</span></p>
+<p class="p_table_content"><span class="f_table_content">192.168.83.230</span></p>
+<p class="p_table_content"><span class="f_table_content">日志服务器：</span></p>
+<p class="p_table_content"><span class="f_table_content">192.168.83.231</span></p>
+<p class="p_table_content"><span class="f_table_content">Radius服务器：</span></p>
+<p class="p_table_content"><span class="f_table_content">192.168.83.234</span></p>
+<p class="p_table_content"><span class="f_table_content">SNMP陷阱主机：192.168.83.232</span></p>
+</td>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">分支部门2</span></p>
+</td>
+<td style="vertical-align:middle; width:1.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户：192.168.20.0/24</span></p>
+<p class="p_table_content"><span class="f_table_content">WEB服务器：192.168.20.13</span></p>
+<p class="p_table_content"><span class="f_table_content">公网IP地址：201.0.0.10-201.0.0.13</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen_B" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_B">配置要点</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list">配置静态路由，保障防火墙与其他网络设备可通信。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list">配置访问控制规则，控制分支部门1和部门2对总行WEB服务器的访问。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list">配置双向NAT规则，使中心网络用户（10.0.0.6）可直接通过分支WEB服务器的私网IP地址192.168.16.11访问WEB服务器。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list">配置Radius认证服务器，通过Radius认证服务器验证访问防火墙的用户。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list">配置日志记录条件，使防火墙能记录“认证用户”类型的日志。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list">配置SNMP管理主机，检测防火墙的链路状态和流量。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list">配置总行主墙和备墙的双机热备功能。</span></p><p class="p_zhengwen_list"><span class="f_zhengwen_list">&nbsp;</span></p>
+<p class="p_zhengwen_B" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_B">配置步骤</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list"><a href="topic117.html" class="topiclink">配置主墙</a></span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list"><a href="topic118.html" class="topiclink">配置备墙</a></span></p>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

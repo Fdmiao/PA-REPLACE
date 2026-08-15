@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>配置双机热备功能</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="步骤1	选择 系统管理 &gt; 高可用 &gt; 高可用性。 在“全局配置”页签中，点击“”图标，配置模式选择“主备模式”，配置本端、对端心跳口地址，如下图所示。 &nbsp;点击【应用】按钮完成全局配置。 步骤2	配置工作模式和监控组 1）设置备墙的角色为“备”，并将feth1、feth3、feth4设置为管理组的监控接口，如下图所示。 &nbsp;2）可根据需求配置链路" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic122.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic118.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic42.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">配置双机热备功能</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">系统管理 &gt; 高可用 &gt; 高可用性</span><span class="f_step">。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">在“全局配置”页签中，点击“</span><img src="embim1.png" style="width:0.3333in; height: 0.3021in; margin:0.0104in; border:none" alt=""><span class="f_step_content">”图标，配置模式选择“主备模式”，配置本端、对端心跳口地址，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0593" style="margin:0;width:6.6042in;height:2.9896in;border:none" src="clip0593.png"/></p>
+<p class="p_step_content"><span class="f_step_content">点击【应用】按钮完成全局配置。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in -0.0208in;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-family: ??ì?; font-weight: bold;">步骤</span><span class="f_step" style="font-weight: bold;">2</span></td><td style="border:none;padding:0"><span class="f_step">配置工作模式和监控组</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）设置备墙的角色为“备”，并将feth1、feth3、feth4设置为管理组的监控接口，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0594" style="margin:0;width:8.8021in;height:8.7604in;border:none" src="clip0594.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）可根据需求配置链路绑定、BFD绑定，配置完成后点击【确定】按钮。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in -0.0208in;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-family: ??ì?; font-weight: bold;">步骤</span><span class="f_step" style="font-weight: bold;">3</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">系统管理</span><span class="f_step"> &gt; </span><span class="f_menu">高可用性 </span><span class="f_step">&gt; </span><span class="f_menu">高可用性，</span><span class="f_menu" style="font-weight: normal;">激活“状态”页签</span><span class="f_step">。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">监控组点击“开启”，功能状态变为“开启”，则已启动防火墙的双机热备功能。</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen" style="font-weight: bold;">验证</span></p><p class="p_zhengwen"><span class="f_zhengwen">1）部门1用户可以访问WEB服务器A，不能访问WEB服务器B；部门2用户可以访问WEB服务器B，不能访问WEB服务器A。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）将主墙接口启用，将备墙接口禁用，分支部门用户可正常访问总行WEB服务器；将主墙接口禁用，并将备墙的接口启用，分支部门用户仍然可正常访问总行WEB服务器。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）中心网络用户访问WEB服务器，可隐藏真实IP地址。</span></p>
+<p class="p_step_content"><span class="f_step_content">选择 </span><span class="f_step_content" style="font-weight: bold;">安全策略 &gt; 地址转换</span><span class="f_step_content">，可以查看到匹配双向NAT规则的连接数。选择 监控 &gt; 连接信息，可查看NAT地址转换连接表，显示了数据报文隐藏的真实IP地址以及数据包对外的IP地址。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">4）管理员可查看分支用户向防火墙认证及访问中心网络的日志信息。</span></p>
+<p class="p_step_content"><span class="f_step_content">选择 </span><span class="f_step_content" style="font-weight: bold;">监控 &gt; 日志查看</span><span class="f_step_content">，选择日志类型为“用户行为日志”，可查看用户认证的日志内容。</span></p>
+<p class="p_step"><span class="f_step">5）认证服务器与防火墙连接成功。</span></p>
+<p class="p_step_content"><span class="f_step_content">以下是测试认证服务器radius01是否成功作为防火墙第三方认证服务器的示例。</span></p>
+<p class="p_step_content"><span class="f_step_content">TopsecOS#user auth server test name radius01 test-username cgi02 test-passwd 111111</span></p>
+<p class="p_step_content"><span class="f_step_content">测试结果显示“服务器测试失败，请检查配置”，则表示防火墙与认证服务器还没有连接成功，如果执行该命令后无该提示，表示防火墙与认证服务器连接成功。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">6）CGI用户可通过第三方Radius认证服务器向NGFW认证（门户访问地址格式：https://x.x.x.x:1025/portal/门户后缀/）。</span></p>
+<p class="p_step_content"><span class="f_step_content">在浏览器中https://202.96.10.10:1025/portal/portal_234/（注意地址最后的“/”不能省略），进入门户认证界面，输入认证用户名及其密码，点击【认证】按钮，显示“用户登录成功”，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0595" style="margin:0;width:7.6979in;height:4.9375in;border:none" src="clip0595.png"/></p>
+<p class="p_step_content"><span class="f_step_content">同时，登录Radius认证服务器，通过“认证成功日志”显示界面，可查看到认证成功用户信息。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">7）SNMP管理主机可获取防火墙接口链路流量信息，SNMP陷阱主机可获取防火墙的Trap消息。</span></p>
+<p class="p_step_content"><span class="f_step_content">（以HP OpenView软件为例）点击报警按钮，可查看防火墙向陷阱主机发送的Trap消息，如下图所示。</span></p>
+<p style="margin: 0.0521in 0 0.0521in 0.6042in;"><img alt="clip0596" style="margin:0;width:6.6563in;height:3.0938in;border:none" src="clip0596.png"/></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

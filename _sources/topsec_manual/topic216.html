@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>远程备份</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="NGFW支持通过手动或自动的方式备份配置文件到FTP服务器、SFTP服务器。 手动备份 步骤1	选择 系统管理 &gt; 配置维护 &gt; 远程备份，激活“手动备份”，如下图所示。 &nbsp;在添加手动备份时，各项参数的具体说明如下表所示。 参数 说明 备份内容 备份内容可选择实时备份、整机备份或部分备份。 部分备份类型 备份内容选择“部分备份”时，需选择" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc462834560.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc483382798.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic217.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">远程备份</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">NGFW支持通过手动或自动的方式备份配置文件到FTP服务器、SFTP服务器。</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen">手动备份</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_zhengwen">选择 </span><span class="f_menu">系统管理</span><span class="f_menu" style="font-family: 'Times New Roman',Times,Georgia,serif;"> </span><span class="f_zhengwen">&gt; </span><span class="f_zhengwen" style="font-weight: bold;">配置</span><span class="f_menu">维护</span><span class="f_zhengwen"> &gt; </span><span class="f_menu">远程备份</span><span class="f_zhengwen">，激活“手动备份”，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0315" style="margin:0;width:7.7500in;height:6.5938in;border:none" src="clip0315.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在添加手动备份时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.3958in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.3125in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份内容</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份内容可选择实时备份、整机备份或部分备份。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">部分备份类型</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份内容选择“部分备份”时，需选择部分备份的类型，可选择基础对象</span><span class="f_step_content">（即 <a href="toc490041635.html" class="topiclink">资源管理</a> 章节的<a href="toc448912165.html" class="topiclink">地址</a>、<a href="toc448912172.html" class="topiclink">服务</a>、<a href="toc462736629.html" class="topiclink">区域</a>、<a href="topic2.html" class="topiclink">地区</a>、<a href="toc448912183.html" class="topiclink">域名</a>、<a href="toc448912175.html" class="topiclink">应用</a>和<a href="toc448912168.html" class="topiclink">时间</a> 对象）和</span><span class="f_table_content">NAT策略。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份类型</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择备份文件传输的类型。可选择明文或密文。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份文件名称规则</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份文件名称规则，可添加备份时间和关键字。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份文件名称编码</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份文件名称编码。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">需根据远程服务器系统类型进行配置,通常Linux系统默认编码格式为UTF-8,Windows系统默认编码格式为GBK。编码格式不匹配,会导致生成的文件名称显示乱码。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">远程备份到</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择配置文件备份的服务器。可选择</span><span class="f_zhengwen">FTP服务器、SFTP服务器。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器地址</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份服务器的地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">指定备份路径</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份配置文件在该服务器的指定备份路径。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户名</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置服务器的登录用户名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">密码</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置服务器登录密码。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_zhengwen">配置完成后，点击【确定】保存当前配置，点击【开始备份】则开始进行配置文件备份。</span></td></tr></table></div><p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen">自动备份</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_zhengwen">选择 </span><span class="f_menu">系统管理</span><span class="f_menu" style="font-family: 'Times New Roman',Times,Georgia,serif;"> </span><span class="f_zhengwen">&gt; </span><span class="f_zhengwen" style="font-weight: bold;">配置</span><span class="f_menu">维护</span><span class="f_zhengwen"> &gt; </span><span class="f_menu">远程备份</span><span class="f_zhengwen">，激活“自动备份”，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0316" style="margin:0;width:7.7396in;height:8.7500in;border:none" src="clip0316.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在添加自动备份时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.3958in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.3125in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份状态</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否开启配置文件自动备份功能。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份周期</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置配置文件自动备份周期。可选择每日或每周自动备份。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">生效时间</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份周期选择“每周”时，设置每周的生效时间，可选择星期一至星期日的任意一天。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">时间</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置自动备份时间信息。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置变化检测</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否开启配置变化检查功能。</span></p>
+<p class="p_table_content"><span class="f_table_content">如开启配置变化检查，只有配置发生变化才会按照备份周期进行备份，否则不进行备份。如关闭配置变化检查，无论配置是否发生变化，都会按照备份周期进行备份。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份内容</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份内容可选择实时备份、整机备份或部分备份。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">部分备份类型</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份内容选择“部分备份”时，需选择部分备份的类型，可选择基层对象</span><span class="f_step_content">（即 <a href="toc490041635.html" class="topiclink">资源管理</a> 章节的<a href="toc448912165.html" class="topiclink">地址</a>、<a href="toc448912172.html" class="topiclink">服务</a>、<a href="toc462736629.html" class="topiclink">区域</a>、<a href="topic2.html" class="topiclink">地区</a>、<a href="toc448912183.html" class="topiclink">域名</a>、<a href="toc448912175.html" class="topiclink">应用</a>和<a href="toc448912168.html" class="topiclink">时间</a> 对象）和</span><span class="f_table_content">NAT策略。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份类型</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择备份文件传输的类型。可选择明文或密文。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份文件名称规则</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份文件名称规则，可添加备份时间和关键字。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份文件名称编码</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份文件名称编码。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">需根据远程服务器系统类型进行配置,通常Linux系统默认编码格式为UTF-8,Windows系统默认编码格式为GBK。编码格式不匹配,会导致生成的文件名称显示乱码。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">远程备份到</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择配置文件备份的服务器。可选择</span><span class="f_zhengwen">FTP服务器、SFTP服务器。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器地址</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份服务器的地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">指定备份路径</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份配置文件在该服务器的指定备份路径。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户名</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置服务器的登录用户名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">密码</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置服务器登录密码。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_zhengwen">配置完成后，点击【确定】保存自动备份配置。</span></td></tr></table></div>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

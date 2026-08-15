@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>原理简介</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="包过滤的处理过程是先获取需要转发数据包的报文头信息，然后和访问控制规则进行比较，根据比较的结果对数据包进行转发或者丢弃。但由于包过滤只能基于IP地址、端口号等判断流量是否允许通过防火墙，所以无法准确识别流量的应用信息。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc462736651.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc462736651.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="ref396393596.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">原理简介</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">包过滤的处理过程是先获取需要转发数据包的报文头信息，然后和访问控制规则进行比较，根据比较的结果对数据包进行转发或者丢弃。但由于包过滤只能基于IP地址、端口号等判断流量是否允许通过防火墙，所以无法准确识别流量的应用信息。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">随着防火墙的发展，访问控制越来越精确，NGFW也实现了基于应用、用户和内容的多维度精确的访问控制。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">在访问策略中，</span><span class="f_zhengwen_B">策略源</span><span class="f_zhengwen">定义了报文的来源，此处可以限制报文的来源地址（主机、范围、子网、MAC地址）、地区、源区域、源端口和对应的角色对象；当报文的源地址符合策略源的定义范围，则被认为满足策略源约束条件。</span><span class="f_zhengwen_B">策略目的</span><span class="f_zhengwen">定义了报文的目的地，此处可以限制报文的目的地址（主机、范围、子网）/地区、目的区域（或VLAN）和域名。除此以外，</span><span class="f_zhengwen_B">策略服务</span><span class="f_zhengwen">限制了报文采用的网络协议或特定端口号，</span><span class="f_zhengwen_B">策略应用</span><span class="f_zhengwen">定义了报文包含的应用程序，</span><span class="f_zhengwen_B">访问控制</span><span class="f_zhengwen">定义了NGFW对满足策略的报文所采取的处理方式，支持的操作包括放行（允许通过）、禁止（丢弃该包）、认证（对报文进行Web认证）和收集（放行报文并对报文文件进行取证），</span><span class="f_zhengwen_B">访问时间</span><span class="f_zhengwen_B" style="font-weight: normal;">指定了</span><span class="f_zhengwen">在哪一天或哪一时段访问策略有效。为了匹配日益发展的IPv6网络，保护IPv6网络环境安全，NGFW还支持IPv6扩展头的访问控制（逐跳扩展头|目的扩展头|路由扩展头）。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">一个报文和某一条访问策略匹配指的是：报文的源地址包含于策略源定义、报文目的地址包含于策略目的，以及报文端口包含于策略服务，如果定义了访问时间，则报文的接收时间也必须满足策略访问时间约束。只有当一个报文</span><span class="f_zhengwen_B">完全</span><span class="f_zhengwen">符合策略中所规定的所有条件时，这条策略才匹配该报文。NGFW基于已配置的各类资源对象创建访问策略，访问控制规则的配置主要包括规则组添加、规则管理等内容。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

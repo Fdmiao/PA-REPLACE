@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>NAT46</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="NAT46转换可用于IPv4网络访问IPv6网络的地址转换。NAT46功能采用了有状态网络地址与协议转换技术和无状态网络地址与协议转换技术两种方式。有状态转换和无状态转换的区别点在源地址转换时是否需维护 IPv6/IPv4转换状态。NAT46用来支持IPv4网络侧的用户发起访问IPv6网络侧的资源的功能。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="anquancelue_nat_nat64.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc450050602.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="toc450050608.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">NAT46</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">NAT46转换可用于IPv4网络访问IPv6网络的地址转换。NAT46功能采用了有状态网络地址与协议转换技术和无状态网络地址与协议转换技术两种方式。有状态转换和无状态转换的区别点在源地址转换时是否需维护 IPv6/IPv4转换状态。NAT46用来支持IPv4网络侧的用户发起访问IPv6网络侧的资源的功能。</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen">有状态转换：源地址采用动态地址池的方式随机选取转换后的源地址。</span></p><p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen">无状态转换：源地址采用普通前缀转换和IVI前缀转换，IPv4与IPv6地址是一一对应的映射关系，通过某种映射算法唯一确定，同一个用户在任何时间转换的结果都是一样的，转换器不需要记录任何转换状态，仅需要维护映射算法即可。</span></p><p class="p_zhengwen"><span class="f_zhengwen">NAT46源转换方式根据源地址转换算法分为动态转换算法、IVI前缀源转换算法和普通前缀源转换算法。动态转换算法为在转换后的地址池中随即选择一个IPv6地址替换报文中的源IPv4地址；NAT64前缀转换算法为根据报文中的源IPv4地址以及策略中配置的NAT64前缀地址对象共同计算出转换后的源IPv6地址；普通前缀转换算法为根据报文中的源IPv4地址以及策略中配置的普通前缀地址对象共同计算出转换后的源IPv6地址。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">NAT46目的转换方式根据目的地址转换算法分为普通目的转换算法、负载均衡算法、IVI前缀转换算法和普通前缀转换算法。普通目的转换算法为根据策略配置(转换后的目的参数)主机IPv6地址替换报文中的目的IPv4地址；负载均衡算法为根据策略配置的负载均衡对象(转换后的目的参数)以及对象中指定的选址算法计算出对应的IPv6地址替换报文中的目的IPv4 地址；IVI前缀转换算法为根据报文中的目的IPv4地址以及策略中配置的NAT64前缀地址对象共同计算出转换后的目的IPv6地址；普通前缀转换算法为根据报文中的目的IPv4地址以及策略中配置的普通前缀地址对象共同计算出转换后的目的IPv6地址。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">配置NAT46的具体操作如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">安全策略 &gt; 地址转换 &gt; NAT46</span><span class="f_step">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">点击“</span><img alt="tubiaotianjia" style="margin:0;width:0.8646in;height:0.3021in;border:none" src="tubiaotianjia.png"/><span class="f_step">”，选择</span><span class="f_table_content">地址转换的模式，可选项：普通转换、IVI前缀转换、普通前缀转换。不同的模式需要配置的内容不同，</span><span class="f_step">如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0214" style="margin:0;width:7.0417in;height:9.9063in;border:none" src="clip0214.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在添加NAT46规则时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th colspan="2"  style="vertical-align:middle; width:1.5625in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:6.4688in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项。不能输入!@#$%^&amp;+=1?1&lt;&gt;&#39;~空格，少于128字节。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">状态</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">状态可选项：启用、禁用。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入该规则的描述信息，不能输入&lt;&gt;\，少于128字节。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="5"  style="vertical-align:middle; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源</span></p>
+</td>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">地址</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的源地址应满足的条件。点击“+”按钮选择已设置好的地址对象，或者点击『添加』，新建地址对象，关于地址对象的配置请参见 <a href="toc448912165.html" class="topiclink">地址</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">区域</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的源区域应满足的条件。点击“+”按钮选择已设置好的区域对象，或者点击『添加』，新建区域对象，关于区域对象的配置请参见 <a href="toc462736629.html" class="topiclink">区域</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">端口</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的源端口应满足的条件。点击“+”按钮选择已设置好的服务对象，或者点击『添加』，新建服务或服务组，关于服务对象的配置请参见 <a href="toc448912172.html" class="topiclink">服务</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">VLAN</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的源VLAN应满足的条件。点击“+”选择已设置好的VLAN对象，或者点击『添加』，新建VLAN对象，关于VLAN对象的配置请参见 <a href="ref487724000.html" class="topiclink">VLAN</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">角色</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的角色应满足的条件。点击“+”选择已设置好的角色对象，或者点击『添加』，新建角色对象，关于角色对象的配置请参见 <a href="topic75.html" class="topiclink">角色</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="2"  style="vertical-align:middle; width:0.6875in; padding:0; border:solid thin #000000;"><p class="p_Normal"><span class="f_table_content">目的</span></p>
+</td>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">地址</span></p>
+</td>
+<td style="vertical-align:top; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的目的地址应当匹配的条件。点击“+”按钮选择已设置好的地址对象，或者点击『添加』，新建地址或地址组，关于地址对象的配置请参见 <a href="toc448912165.html" class="topiclink">地址</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">端口</span></p>
+</td>
+<td style="vertical-align:top; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的目的端口应满足的条件。点击“+”按钮选择已设置好的服务对象，或者点击『添加』，新建服务对象，关于服务对象的配置请参见 <a href="toc448912172.html" class="topiclink">服务</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="5"  style="vertical-align:middle; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置</span></p>
+</td>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源地址转换</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置转换后的源地址，点击下拉框可选择已配置地址、地址组、普通前缀、NAT64前缀，或者点击『添加』，新建地址对象，关于地址对象的配置具体请参见 <a href="toc448912165.html" class="topiclink">地址</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">Sticky NAT</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">地址粘性开关。启动后，相同源IP的数据包经过地址转换后为其转换的源IP地址相同。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：若转换前源地址选择了IVI前缀地址，则无该项配置；若转换前源地址未选择地址对象或选择了非IVI前缀地址对象，则此项默认开启。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源端口转换方式</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">下拉框选项包括：优先使用原始源端口、随机转换源端口、不转换源端口。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">优先使用原始源端口：首先尝试使用源端口，如果源端口被占用，则转换为其他未被占用的端口。</span></p>
+<p class="p_table_content"><span class="f_table_content">随机转换源端口：随机转换源端口，转换后的源端口由系统内部确定。</span></p>
+<p class="p_table_content"><span class="f_table_content">不做转换源端口：不转换源端口。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的地址转换为</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">根据选择的转换模式不同，转换后的目的地址不同。</span></p>
+<p class="p_table_content"><span class="f_table_content">当转换模式选择“普通转换”时，可设置转换后的主机地址对象或者负载均衡组对象。关于地址对象的配置请参见 <a href="toc448912165.html" class="topiclink">地址</a>，关于负载均衡组的配置具体请参见 <a href="toc448912182.html" class="topiclink">负载均衡</a>。</span></p>
+<p class="p_table_content"><span class="f_table_content">当转换模式选择“IVI前缀转换”时，可设置IVI前缀地址对象，关于IVI前缀地址对象的配置请参见 <a href="topic182.html" class="topiclink">前缀地址</a>。</span></p>
+<p class="p_table_content"><span class="f_table_content">当转换模式选择“普通前缀转换”时，可设置普通前缀地址对象，关于I普通前缀地址对象的配置请参见 <a href="topic182.html" class="topiclink">前缀地址</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8542in; height:1.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的端口转换为</span></p>
+</td>
+<td style="vertical-align:middle; width:6.4688in; height:1.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置转换后的服务端口，可以选择系统预定义的服务或用户自定义的服务。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">当目的地址转换规则仅需要做目的地址转换时，该参数可不做配置。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_Normal" style="line-height: 1.20; margin: 0.0521in 0 0.0521in 0.5938in;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">点击【确定】按钮完成NAT46规则的配置。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">其他。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">选择NAT规则，点击“<img alt="bianjiicon" style="margin:0;width:0.8125in;height:0.3021in;border:none" src="bianjiicon.png"/>”，可进行内容的修改；点击“</span><img alt="tubiaoshanchu" style="margin:0;width:0.8125in;height:0.3125in;border:none" src="tubiaoshanchu.png"/><span class="f_step_content">”，可删除该规则；点击“<img alt="yidongicon" style="margin:0;width:0.5104in;height:0.2500in;border:none" src="yidongicon.png"/>”，弹出“移动策略”窗口，设置将当前规则移动到已存在规则之前或之后；点击“</span><img alt="kelongicon" style="margin:0;width:0.7604in;height:0.2708in;border:none" src="kelongicon.png"/><span class="f_step_content">”，可复制该规则；勾选“显示统计”，界面显示该规则匹配的次数。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

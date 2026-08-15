@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>弱口令</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="当报文命中被访问控制规则引用的高级威胁防护策略，如果该高级防护策略启用了“弱口令检测”功能，NGFW检测telnet/ftp/smtp/pop3/imap/rlogin等明文协议的内网流量，对于登录成功的情况，判断所用口令是否符合弱口令判断标准，如果符合，进行记录并进行后续的展示。其中，高级威胁防护引擎判定弱口令有两种标准：弱口令规则、弱口令字典。满足弱口令" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic204.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="gaojiweixiefanghu.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="anquancelue_waf.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">弱口令</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">当报文命中被访问控制规则引用的高级威胁防护策略，如果该高级防护策略启用了“弱口令检测”功能，NGFW检测telnet/ftp/smtp/pop3/imap/rlogin等明文协议的内网流量，对于登录成功的情况，判断所用口令是否符合弱口令判断标准，如果符合，进行记录并进行后续的展示。其中，高级威胁防护引擎判定弱口令有两种标准：弱口令规则、弱口令字典。满足弱口令规则或者弱口令字典中的任意一种，判定为弱口令。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">弱口令规则和弱口令字典的配置，以及查看弱口令检测结果的操作步骤如下：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">选择 </span><span class="f_menu">资源管理 &gt; 安全配置文件 &gt; 高级威胁防护</span><span class="f_zhengwen">，激活“弱口令”页签。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">配置弱口令规则。</span></p><p class="p_zhengwen"><span class="f_zhengwen">点击“弱口令规则”，可配置弱口令规则，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0027" style="margin:0;width:7.2813in;height:2.4792in;border:none" src="clip0027.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">各项参数的说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.4792in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.2292in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">类型个数</span></p>
+<p class="p_table_content"><span class="f_table_content">弱口令长度</span></p>
+</td>
+<td style="vertical-align:middle; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">“类型个数”和“弱口令长度”共同判定口令是否为弱口令。仅当口令字符类型个数大于“类型个数”参数设置值，且口令长度大于“弱口令长度”设置值，该口令不是弱口令；否则，该口令为弱口令。</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">两种类型字符：包含数字、大小字母、小写字母、特殊字符中的任意两种。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">三种类型字符：包含数字、大小字母、小写字母、特殊字符中的任意三种。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">四种类型字符：包含字符类型包含数字、大小字母、小写字母、特殊字符。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">弱口令长度：指定弱口令最大长度，取值范围：0-64，默认值：8。</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step"><span class="f_step">&nbsp;</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">配置弱口令字典。</span></p><p class="p_zhengwen"><span class="f_zhengwen">点击“弱口令字典”，弹出“弱口令字典”窗口，在弱口令字典配置窗口中，点击“添加”，可逐个添加弱口令；点击“导入”可批量导入弱口令。</span></p>
+<p class="p_picture"><img alt="clip0128" style="margin:0;width:9.9479in;height:4.7500in;border:none" src="clip0128.png"/></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">查询弱口令检测结果。</span></p><p class="p_zhengwen"><span class="f_zhengwen">1）在界面最上方搜索条件配置区域设置检测出弱口令的时间范围、存在弱口令的服务器地址，点击【查询】可搜索满足条件的弱口令检测结果信息。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）点击弱口令检测结果列表左上角的“导出-&gt;导出选择项/导出当前页/导出全部”，可导出相应检测结果信息。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）点击【重置】可重置查询条件。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

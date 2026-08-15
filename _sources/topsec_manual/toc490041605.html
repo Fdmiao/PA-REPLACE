@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>策略路由</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="策略路由可针对具体的应用流量进行选路，能根据源地址和源端口、目的地址和目的端口、ISP名称、协议、角色等参数来确定报文的转发路径，可使不同类型的流量分别走不同的链路，达到保证类应用走优质链路，非保证类应用走另外链路的目的。此外，策略路由还可根据其智能选路算法实现多链路的负载均衡和链路备份。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="ref485285046.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="ref487714854.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="toc490041606.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">策略路由</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">策略路由可针对具体的应用流量进行选路，能根据源地址和源端口、目的地址和目的端口、ISP名称、协议、角色等参数来确定报文的转发路径，可使不同类型的流量分别走不同的链路，达到保证类应用走优质链路，非保证类应用走另外链路的目的。此外，策略路由还可根据其智能选路算法实现多链路的负载均衡和链路备份。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">NGFW的策略路由可与入接口绑定（入接口即接收报文的接口），绑定了入接口的策路路由优先级高于没有绑定入接口的策略路由。当一条没有在本设备上建立会话的数据流到来时，会进入路由流程进行选路，策略路由查找过程如下： </span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">①如果入接口绑定了策略路由，报文将匹配绑定了该入接口的策略路由的各个路由项，匹配成功则根据策略路由规则转发报文；匹配失败，则匹配当前系统中的没有绑定入接口的策略路由。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">②如果入接口没有绑定策略路由，匹配当前系统中的没有绑定入接口的策略路由。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">如果匹配的策略路由项中包含多条nexthop信息，则使用metric优先级最高的一条，如果优先级最高的nexthop有多条，则基于策略路由的多径选路算法选择nexthop。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">本节介绍策略路由的相关配置：包括策略路由的添加、删除、清空操作，以及通过移动来改变策略路由中路由条目的默认排列顺序。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">网络管理 &gt; 路由 &gt; 策略路由</span><span class="f_step">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">点击『添加』，打开“添加”对话框。如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="network_15" style="margin:0;width:8.8750in;height:10.1146in;border:none" src="network_15.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在添加策略路由时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.8750in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.8333in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">绑定到</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">绑定策略路由的入接口。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">绑定了入接口的策路路由优先级高于没有绑定入接口的策略路由。绑定了入接口的策略路由只能用于从该接口进入NGFW的报文进行路由选路。没有绑定入接口的策略路由可用于从NGFW任意接口进入的报文进行路由选路。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">策略名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置策略路由的名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源地址/网段/范围</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用来标识IP包的源地址或源网络。注意填写源地址转换前的IP及掩码，也就是真实的子网地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的地址/网段/范围</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用来标识IP包的目的地址或目的网络。需要填写目的地址转换后的真实地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源端口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">标识数据包的源端口的范围。如果为单个端口，则只填写起始端口即可；默认为所有端口。端口范围为0-65535。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的端口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">标识数据包的目的端口的范围，如果为单个端口，则只填写起始端口即可；默认为所有端口。端口范围为0-65535。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">ISP名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">通过下拉框选择数据包匹配的ISP协议。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">策略路由同时指定了“目的地址”和ISP运营商时，数据流的目的地址需要匹配两者的交集才能使用该策略路由，可实现允许部分流量访问ISP运营商的功能。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">协议</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">通过下拉框选择数据包匹配的协议。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">应用组</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">通过下拉框选择应用组。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">角色</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">通过下拉框选择角色。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置策略路由的优先级，值越小，优先级越高。取值范围0-256。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：存在两条及以上到相同目的网络但优先级不同的策略路由时，优先级高的策略路由将成为当前的最优路由。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">下一跳</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">指定数据报文转发报文的网关、出接口、权重、链路探测ID。</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">网关：该路由的网关地址，通常为下一跳路由器的入口IP地址。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">出接口：数据报文从NGFW转发到别的设备的出接口。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">权重：设置该策略路由的权重值。取值范围为1-256。当到达同一个网络的多条策略路由度量值相同时，“智能选路算法”参数选择加权哈希、最小带宽利用率或者加权轮询，权重值影响选路。1）加权哈希算法：按照权重进行哈希选路；2）最小带宽利用率：与实时的接口带宽速率和权重都有关，根据接口是否设置带宽阈值决定是否使用此接口进行转发，否则使用加权哈希算法进行选路；3）加权轮询算法：按照权重进行均衡的选路。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">链路探测ID：设置路由使用的链路探测规则的ID，关于链路探测的配置具体请参见 <a href="ref487627830.html" class="topiclink">链路探测</a>。</span></p></td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">智能选路算法</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择智能选路算法。可选项：加权哈希、最小带宽利用率、TTL最大优先、最小延迟优先、加权轮询。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step"><span class="f_step">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">点击【确定】按钮完成策略路由的创建。</span></td></tr></table></div>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

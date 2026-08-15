@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>状态</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="状态模块用于展示本机当前高可用功能的运行状态、工作模式、监控角色等信息。同时支持执行安全策略同步、整机配置同步、管理员配置同步、实时配置同步、运行比较等操作。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc462834583.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc462834583.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic15.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">状态</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">状态模块用于展示本机当前高可用功能的运行状态、工作模式、监控角色等信息。同时支持执行安全策略同步、整机配置同步、管理员配置同步、实时配置同步、运行比较等操作。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">系统管理 &gt; 高可用 &gt; 高可用性，</span><span class="f_menu" style="font-weight: normal;">激活“状态”页签，如下图所示</span><span class="f_step" style="font-weight: bold;">。</span></td></tr></table></div><p class="p_picture"><img alt="clip0573" style="margin:0;width:9.1250in;height:7.6667in;border:none" src="clip0573.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">查看运行状态</span></td></tr></table></div><p class="p_step_content"><span class="f_step">展示本机高可用功能启用/关闭状态，工作模式（</span><span class="f_step_content">主备模式、连接保护模式、负载均衡模式、集群模式</span><span class="f_step">），本机</span><span class="f_step_content">工作状态的通信接口。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">监控组</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">展示本机监控角色、运行状态、优先级、是否开启主动抢占功能、虚拟ID等信息。</span></p>
+<p class="p_step_content"><span class="f_step_content">点击【开启】按钮，可启动NGFW的高可用功能，点击【停止】按钮，可关闭NGFW的高可用功能。工作模式、心跳口、监控角色、虚拟ID等相关配置参见 <a href="topic15.html" class="topiclink">配置</a>。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">操作</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">NGFW的高可用功能开启之后，才可进行以下配置。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.5833in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.5313in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.1771in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">运行配置比较</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击“立即比较”，可选择系统及对端地址，进行运行配置对比。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1771in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">运行配置查看</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击“查看”可查看运行配置对比结果。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1771in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">存盘配置比较</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击“立即比较”，可选择系统及对端地址，进行存盘配置对比。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1771in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">存盘配置查看</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击“查看”可查看存盘配置对比结果。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1771in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">安全策略实时同步</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否开启实时配置开关，开启后，本机配置将实时同步至对端设备。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1771in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">管理员配置同步</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否开启管理员相关信息的管理员配置开关。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1771in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">对端管理</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击“管理”，可管理对端信息。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1771in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">安全策略同步</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击“立即同步”可将本机的策略配置（网络、虚拟系统、管理员和HA配置除外）信息同步到对端机。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1771in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">整机配置同步</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击“立即同步”可将本机的策略信息和除HA之外的所有的配置信息同步到对端机上。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1771in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">监控组切换</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">在“立即切换”可手动切换数据流通过主/备设备。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1771in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">监控组切换信息</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击“查看”，可查看监控组切换信息。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

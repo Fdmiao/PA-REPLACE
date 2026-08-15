@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>添加Radius服务器</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="配置Radius服务器的具体操作如下： 步骤1	选择 用户管理 &gt; 认证服务器。 步骤2	添加Radius服务器 1）点击“添加”，选择添加“Radius服务器”，弹窗如下图所示。 &nbsp;各项参数的具体说明如下表所示。 参数 &nbsp;说明 基本配置 服务器名称 必填项，设置Radius服务器的名称。此处只能输入字母、数字，不能全为数字，且最大输入" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc462834527.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc462834526.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="ref467487846.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">添加Radius服务器</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">配置Radius服务器的具体操作如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">用户管理 &gt; 认证服务器</span><span class="f_step">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">添加</span><span class="f_step_content">Radius服务器</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击“添加”，选择添加“Radius服务器”，弹窗如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0379" style="margin:0;width:6.8750in;height:11.9167in;border:none" src="clip0379.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th colspan="2"  style="vertical-align:middle; width:2.4583in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:6.5938in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="8"  style="vertical-align:middle; height:0.1354in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">基本配置</span></p>
+</td>
+<td style="vertical-align:middle; width:0.8333in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器名称</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置Radius服务器的名称。此处</span><span class="f_step">只能输入字母、数字，不能全为数字，且最大输入长度为31个字符（区分大小写）。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器地址</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置Radius服务器的IP地址（支持IP4和IPV6），例如：192.168.1.1。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器端口</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置认证服务器的监听认证请求的服务端口。取值为1-65535的整数，默认值为1812。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">认证方式</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置Radius服务器的认证方法，可选项：PAP和CHAP。默认PAP认证方式。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">共享密钥</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置Radius服务器端的共享密钥。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">CMCC Portal2</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否开启CMCC Portal2认证功能，开启CMCC Portal2需要配置Portal服务器设置。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">门户后缀</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">不开启CMCC Portal2认证，可设置门户后缀。</span><span class="f_step_content">门户后缀是用户进行身份认证的门户认证网站URL地址的一部分，门户认证网站的URL地址是“https://服务器地址:端口/portal/门户后缀/”。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">重定向地址</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">不开启CMCC Portal2认证，可设置重定向地址。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="8"  style="vertical-align:middle; height:0.0208in; padding:0; border:solid thin #000000;"><p class="p_Normal"><span class="f_table_content">Portal服务器设置</span></p>
+</td>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器地址</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_step">输入Portal服务器IP地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">端口</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">NGFW与</span><span class="f_step">Portal服务器进行portal认证的端口。默认端口：50100。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">侦听端口</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置</span><span class="f_step">Portal</span><span class="f_table_content">服务器监听端口，与portal服务器的端口一致。取值为1-65535的整数，默认值为2000。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">共享密钥</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入</span><span class="f_step">Portal服务器的共享秘钥。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器探测</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否开启</span><span class="f_step">Portal服务器</span><span class="f_table_content">连通性探测功能。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">探测周期</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">开启</span><span class="f_step">Portal服务器</span><span class="f_table_content">连通性探测功能，可设置探测周期。取值范围：30-65535，单位：秒，默认值为60。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">探测重试次数</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">开启</span><span class="f_step">Portal服务器</span><span class="f_table_content">连通性探测功能，可设置探测失败的最大重试次数。取值范围：1-255，单位：次，默认值为3。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器状态</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">显示探测结果。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="6"  style="vertical-align:middle; width:0.5208in; height:0.0417in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">&nbsp;</span></p>
+<p class="p_table_content"><span class="f_table_content">高级配置</span></p>
+</td>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">自动添加用户</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置认证成功后是否自动将此用户添加至该服务器中。开启表示自动添加，不开启表示不自动添加。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">应答超时时间</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置Radius服务器的超时时间。为判断某个服务器是否失效，NGFW会向服务器周期性地发送请求报文，如果在超时时间内未得到服务器发回的应答，需重传请求报文。单位为秒，取值范围为1-180的整数，默认值为5。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">认证重试次数</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置NGFW向服务器发送认证请求失败时，可以重试的次数。单位为次；取值范围为1-10的整数，默认值为3。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户属性字符集</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置该Radius服务器返回的自定义属性的值的格式。可选项为GBK和UTF-8，默认值为UTF-8。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户属性分隔符</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置当Radius服务器的一个属性值被分隔成多个时，每个值之间的分隔符号。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">属性值分隔符只针对资源、ACL、组，范围：1-15字符。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">连通性测试</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击【开始测试】按钮，可测试NGFW与服务器的连通性。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_step_content"><span class="f_step_content">2）参数设置完成后，点击【确定】按钮完成Radius认证服务器的添加。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">连通性测试</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">勾选Radius服务器，点击“</span><span class="f_step">连通性测试</span><span class="f_step_content">”可检测该服务器与</span><span class="f_table_content">NGFW的连通性。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><a name="anquancelue" class="hmanchor"></a><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step_content">配置认证安全策略。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）勾选Radius服务器，点击“认证安全策略”弹窗如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0380" style="margin:0;width:8.7604in;height:4.9896in;border:none" src="clip0380.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置Radius服务器认证属性时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.2604in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:3.9583in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">允许多点登录</span></p>
+</td>
+<td style="vertical-align:middle; width:3.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否允许同一用户账号在不同地址同时进行登录。勾选“否”，表示不允许多点登录。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">最大登录地点数</span></p>
+</td>
+<td style="vertical-align:middle; width:3.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">勾选“是”，需设置最大登录地点数，取值范围为1-1024。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">允许登录地址范围</span></p>
+</td>
+<td style="vertical-align:middle; width:3.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置允许登录的地址范围，用户登录的主机IP只能在设定范围内才能正常登录。NGFW默认不对用户使用的IP地址进行限制。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">允许认证时间范围</span></p>
+</td>
+<td style="vertical-align:middle; width:3.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置允许登录的时间范围，用户只能在设定的时间范围内认证。默认不对用户的允许认证时间进行限制。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">登录验证码</span></p>
+</td>
+<td style="vertical-align:middle; width:3.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否开启登录验证码。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step">2）点击【确定】完服务器</span><span class="f_step_content">认证安全策略的配置。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">用户认证。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）在浏览器地址栏中输入门户登录地址，格式为“https://服务器地址:端口/portal/门户后缀/”（结尾“/”不能省略），例如：https://172.18.7.36:1025/portal/suffix/。进入门户界面，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0145" style="margin:0;width:7.6458in;height:5.6771in;border:none" src="clip0145.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）输入用户的用户名、密码和验证码，点击【认证】按钮，NGFW即可对该用户进行身份认证。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4583in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img4" style="margin:0;width:0.4583in;height:0.4583in;border:none" src="hmfile_hash_2747f8f3.png"/></p>
+</td>
+<td style="vertical-align:middle; width:10.4375in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_zhengwen_list">配置用户信息，关于用户信息的配置具体请参见 <a href="toc462834515.html" class="topiclink">用户管理</a>。</span></p><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_zhengwen_list">配置认证服务器，关于认证服务器的配置具体请参见 <a href="toc462834526.html" class="topiclink">认证服务器</a>。</span></p><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">在登录虚拟门户前需开放认证门户服务具体参见 <a href="topic193.html" class="topiclink">认证管理</a>。</span></p></td>
+</tr>
+</table>
+</div>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

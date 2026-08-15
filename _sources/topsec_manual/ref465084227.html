@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>日志服务器配置</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="系统日志可保存在本地缓存或硬盘中，当本地存储的日志数量越来越多，本地存储区大小有限导致设备存储不够时，可考虑将记录的日志传送到日志服务器上，NGFW支持的日志服务器包括：SYSLOG日志服务器、WELF日志服务器、TP日志服务器、TAL服日志务器，具体配置如下：" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic212.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc462834573.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="ref465087405.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">日志服务器配置</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">系统日志可保存在本地缓存或硬盘中，当本地存储的日志数量越来越多，本地存储区大小有限导致设备存储不够时，可考虑将记录的日志传送到日志服务器上，NGFW</span><span class="f_step">支持的日志服务器包括：SYSLOG日志服务器、WELF日志服务器、TP日志服务器、TAL服日志务器，具体配置如下：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">配置日志服务器的步骤如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">系统管理 &gt; 日志配置 &gt; </span><span class="f_step" style="font-weight: bold;">日志服务器配置</span><span class="f_step">。</span></td></tr></table></div><p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_step">SYSLOG日志服务器</span></p><p class="p_picture"><img alt="clip0355" style="margin:0;width:7.2917in;height:7.4583in;border:none" src="clip0355.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在配置日志服务器时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:90%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:top; width:0.6771in; height:0.2396in; background-color:#D9D9D9; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:top; width:4.1354in; height:0.2396in; background-color:#D9D9D9; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.6771in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器地址</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，设置日志服务器的IP地址，可输入IPv4或IPv6地址。一个服务器地址文本框输入一个IP地址，点击“+”可新增文本框。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.6771in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器端口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，设置日志服务器接收日志的服务端口。取值范围：1-65535。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">日志服务器端口必须和设备日志服务器配置页面所指定的端口一致。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.6771in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">指定源IP</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否勾选指定源IP。选择“是”时，可设置IPv4源地址和IPv6源地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.6771in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">传输协议</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，设置NGFW传输日志至日志服务器中所使用的协议，可选项：TCP、UDP。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.6771in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">编码格式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，设置NGFW传输日志至日志服务器中所使用的编码格式，可选项：GB2312、UTF-8。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.6771in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">时间设置</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置日志显示时间。可选择本地时间、UTC时间。UTC时间为协调世界时，又称世界统一时间。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.6771in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">日志语言</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置日志语言。可选择：中文、英文。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.6771in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">日志快转</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否开启日志快速转发功能。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.6771in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">外发测试</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击</span><img alt="clip0356" style="margin:0;width:0.7292in;height:0.2708in;border:none" src="clip0356.png"/><span class="f_table_content">按钮，可对外发数据进行测试。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">外发测试日志，若传输协议使用UDP，无法保证目标服务器能收到日志。开启快转时无法进行外发测试。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">配置完成后点击【确定】即可生效。</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_step">WELF日志服务器</span></p><p class="p_picture"><img alt="clip0357" style="margin:0;width:7.0313in;height:5.2292in;border:none" src="clip0357.png"/></p>
+<p class="p_picture"><span class="f_step">WELF服务器配置与SYSLOG日志服务器类似，具体配置请参考SYSLOG日志服务器。</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_step">TAL日志服务器</span></p><p class="p_picture"><img alt="clip0358" style="margin:0;width:7.3125in;height:4.2917in;border:none" src="clip0358.png"/></p>
+<p class="p_picture"><span class="f_step">TAL日志服务器配置与SYSLOG日志服务器类似，具体配置请参考SYSLOG日志服务器。其中，</span><span class="f_table_content">合并传输是将不同类型的日志合并传输。</span></p>
+<p class="p_step_content"><span class="f_step_content">点击【确定】按钮完成日志服务器的配置。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

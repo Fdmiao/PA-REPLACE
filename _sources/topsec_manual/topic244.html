@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>证书请求管理</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="证书请求文件(CSR文件，是Cerificate SigningRequest的英文缩写)，也就是证书申请者在申请数字证书时由CSP(加密服务提供者)在生成私钥的同时也生成证书请求文件CSR，证书申请者只需要把CSR文件提交给证书颁发机构后，证书颁发机构使用其根证书私钥签名就生成了证书公钥文件。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="ca2.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="ca2.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="ca3.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">证书请求管理</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">证书请求文件(CSR文件，是Cerificate SigningRequest的英文缩写)，也就是证书申请者在申请数字证书时由CSP(加密服务提供者)在生成私钥的同时也生成证书请求文件CSR，证书申请者只需要把CSR文件提交给证书颁发机构后，证书颁发机构使用其根证书私钥签名就生成了证书公钥文件。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">PKI支持对请求文件(CSR)进行管理，包括查看、导入、导出、生成、删除、清空操作，同时支持本地CA对请求文件进行签发。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">PKI &gt; CA中心 &gt; 证书请求管理</span><span class="f_zhengwen">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">生成证书请求文件</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击【</span><span class="f_step">生成证书请求</span><span class="f_step_content">】按钮，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0403" style="margin:0;width:7.7604in;height:9.0521in;border:none" src="clip0403.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在生成证书请求时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9583in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.7500in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">证书名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置生成证书的名称。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">最多输入33个字符（一个汉字占三个字节；一个字母/数字占一个字节），区分大小写。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">国家</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择生成证书的网关设备的国家属性。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">省份、地区、单位、部门、通用名称、电子邮件</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置生成证书的网关设备的其他属性。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">域名</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置证书请求域名。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">公钥算法</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择加/解密数据包使用的算法类型。可选项：RSA、ECC和SM2。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">私钥长度</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">公钥算法选择为“RSA”时，设置RSA算法私钥长度，单位为bit，长度可选择1024、2048、4096。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">公钥参数</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">公钥算法选择为“ECC”时，设置ECC算法参数。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">高级用法</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否勾选证书请求高级用法。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">密钥用途</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">秘钥用途可选择数字签名服务、密钥加密、数据加密、抗抵赖服务、密钥协商。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">扩展秘钥用途</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">扩展秘钥用途可选择数字签名服务、密钥加密、数据加密、抗抵赖服务、密钥协商等。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成</span><span class="f_step">证书请求的配置</span><span class="f_step_content">。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">导入证书请求文件</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击【</span><span class="f_step">导入证书请求</span><span class="f_step_content">】按钮，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0404" style="margin:0;width:7.5000in;height:2.6667in;border:none" src="clip0404.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在导入证书请求时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9583in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.7500in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">请求文件名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入合法的请求文件名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">文件</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击“</span><img alt="clip0096" style="margin:0;width:0.2083in;height:0.1979in;border:none" src="clip0096.png"/><span class="f_table_content">”按钮，选择要上传的证书请求文件。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成</span><span class="f_step">证书请求的上传</span><span class="f_step_content">。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">导出证书请求文件</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">选中证书请求文件，点击“导出”按钮，可将申请的证书文件下载至本地主机，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0541" style="margin:0;width:7.5521in;height:2.5625in;border:none" src="clip0541.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤5</span></td><td style="border:none;padding:0"><span class="f_step">查看证书请求文件</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">选中证书请求文件，点击“查看”按钮，可查看该证书的详细信息。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ISATAP隧道</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="ISATAP (Intra-Site Automatic Tunnel Address..." />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc490041625.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic64.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="6to4.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">ISATAP隧道</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">ISATAP (Intra-Site Automatic Tunnel Address Protocol)，是一种主机到主机、主机到路由器或路由器到主机的点到多点自动隧道技术（同一个隧道源端，可对应多个隧道目的端）。它为IPv6主机之间提供了跨越IPv4内部网络的互连，可以实现IPv4网络中的IPv6节点间的通信。一般来说，一条隧道需要有一个起点一个终点，而ISATAP隧道只需指定隧道起点，隧道另外一端会根据主机访问IPv6节点的需求自动加入。ISATAP隧道部署起来非常简单，不需要用户对现有网络做大规模的变更及设备升级，仅在当前网络中增加部署一台ISATAP路由设备，即可实现主机跨越IPv4网络访问IPv6资源时自动建立ISATAP隧道，通过ISATAP隧道访问IPv6资源。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">ISATAP隧道的地址有特定的格式：</span></p>
+<p class="p_picture"><img alt="ISATAP格式" style="margin:0;width:7.0625in;height:1.2813in;border:none" src="hmfile_hash_2be41b2a.png"/></p>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">主机64位前缀通过向ISATAP路由设备发送请求而获得，ISATAP路由设备使用分配的IPv6前缀</span></p><p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">0200:5EFE由IENA规定</span></p><p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">w.x.y.z是单播IPv4地址，它嵌入到IPv6地址的最后32位，ISATAP隧道终点的加入根据该IPv4地址获取，具体为私网地址还是公网地址，由ISATAP隧道两端间的网络是私有网络还是公有网络决定</span></p><p class="p_zhengwen_B"><span class="f_zhengwen_B">工作原理：</span></p>
+<p class="p_picture"><img alt="network_134" style="margin:0;width:8.5521in;height:3.4063in;border:none" src="network_134.png"/><span class="f_picture"> </span></p>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">PC支持V4/V6双栈，FW(ISATAP路由设备)可部署在网络中任何位置，但PC和FW要求IPv4网络连通。</span></p><p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">在FW中配置ISATAP隧道，指定建立隧道的接口IPv4地址，此处假设为2.2.2.2(地址主要用于与隧道对端通信)。隧道创建后路由器会产生一个ISATAP隧道接口，并在接口上生成一个ipv6的本地链路地址 FE80::0200:5EFE:202:202。</span></p><p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">在主机PC_A中进行ISATAP隧道的配置：指定ISATAP路由设备(FW)的IPv4地址，启用ISATAP隧道,配置接口ipv4地址假设为1.1.1.1，</span><span class="f_zhengwen">配置完成后同样生成一个ISATAP隧道接口，并生成本地链路地址FE80::0200:5EFE:101:101。</span></p><p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">在FW(ISATAP路由设备)的ISATAP接口中配置IPv6单播地址，其前缀为1::/64，后64位为0200:5EFE:202:202，配置完成后开启无状态自动配置服务（操作详见 <a href="toc490041624.html" class="topiclink">RADAD</a>），以便FW能通告地址前缀1::/64，用于ISATAP主机自动生成自身的全局IPv6地址。</span></p><p class="p_zhengwen"><span class="f_zhengwen">（1）双栈主机PC_A发送RS(Router Solicitation)请求IPv6前缀。因PC_A与FW之间为IPv4网络，此时需要进行IPv6 in IPv4封装，将报文发送给FW。</span></p>
+<p class="p_picture"><img alt="network_135" style="margin:0;width:6.2708in;height:1.2708in;border:none" src="network_135.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">（2）FW响应RA(Router Advertisement)。因FW与PC_A之间为IPv4网络，此时需要进行IPv6 in IPv4封装，为PC_A响应IPv6网络前缀。</span></p>
+<p class="p_table"><img alt="network_136" style="margin:0;width:6.1042in;height:1.2500in;border:none" src="network_136.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">（3）PC_A获取全局IPv6地址。PC_A接收到FW响应的RA后，可获取前缀为1::/64，根据ISATAP地址生成规则，可获取全局IPv6地址1::0200:5EFE:0101:0101。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">（4）PC_A访问PC_B。当PC_A主机与使用ipv6地址2::2/64的PC_B主机通信时，它会使用生成的全局ipv6地址1::0200:5EFE:0101:0101/64作为源地址，目的地址为目的主机使用的2::2/64，报文进入ISATAP隧道的处理流程后，在IPv6报文头前添加一层IPv4报文头的封装，封装的源地址为本端使用的ipv4地址1.1.1.1，目的地址为FW(ISATAP路由设备)的ipv4地址2.2.2.2，最后将封装的报文通过IPv4网络发送给FW。</span></p>
+<p class="p_picture"><img alt="network_137" style="margin:0;width:6.4063in;height:1.3333in;border:none" src="network_137.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">（5）报文到达FW(ISATAP路由设备)后，FW发现目的地址是自己，解封装，去除外层的IPv4封装，根据报文中的IPv6地址信息将数据报文转发到PC_B，PC_B收到报文后进行响应，响应与请求处理流程相似，不再赘述。</span></p>
+<p class="p_zhengwen_B"><span class="f_zhengwen_B">配置步骤：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">主机配置ISATAP隧道</span></p><p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">以Win7为例：</span></p><div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.1458in 0.6042in;"><table style="width:7.2917in; background-color:#e8e8e8; border:none; border-spacing:0;">
+<thead>
+<tr>
+<th style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 0 0 0 0;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.20; margin: 0 0 0 0;"><span class="f_CLI_parameter">netsh&gt;</span><span class="f_CLI_action">int</span></p>
+<p style="line-height: 1.20; margin: 0 0 0 0;"><span class="f_CLI_parameter">netsh&gt;interface&gt;</span><span class="f_CLI_action">ipv6</span></p>
+<p style="line-height: 1.20; margin: 0 0 0 0;"><span class="f_CLI_parameter">netsh&gt;interface&gt;ipv6&gt;</span><span class="f_CLI_action">isatap</span></p>
+<p style="line-height: 1.20; margin: 0 0 0 0;"><span class="f_CLI_parameter">netsh&gt;interface&gt;ipv6&gt;isatap&gt;</span><span class="f_CLI_action">set router </span><span class="f_CLI_parameter_I">2.2.2.2</span><span class="f_CLI_action"> &nbsp; &nbsp; </span><span class="f_CLI_parameter"> &nbsp; </span><span class="f_zhengwen">/*2.2.2.2为ISATAP路由设备(NGFW)IP地址*/</span></p>
+<p style="line-height: 1.20; margin: 0 0 0 0;"><span class="f_CLI_parameter">netsh&gt;interface&gt;ipv6&gt;isatap&gt;</span><span class="f_CLI_action">set state enabled</span></p>
+<p style="line-height: 1.20; margin: 0 0 0 0;"><span class="f_CLI_parameter">netsh&gt;interface&gt;ipv6&gt;isatap&gt;</span><span class="f_CLI_action">exit</span></p>
+<p style="line-height: 1.20; margin: 0 0 0 0;"><span style="color: #000000;">&nbsp;</span></p>
+</th>
+</tr>
+</thead>
+</table>
+</div>
+<p style="line-height: 1.20; margin: 0 0 0 0;"><span style="color: #000000;">&nbsp;</span></p>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">以Linux为例：</span></p><div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.1458in 0.6042in;"><table style="width:7.2917in; background-color:#e8e8e8; border:none; border-spacing:0;">
+<thead>
+<tr>
+<th style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 0 0 0 0;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.20; margin: 0 0 0 0;"><span class="f_CLI_action">isatapd</span><span class="f_CLI_parameter"> </span><span class="f_CLI_action">-n</span><span class="f_CLI_parameter"> </span><span class="f_CLI_parameter_I">tunnel0</span><span class="f_CLI_parameter"> </span><span class="f_CLI_action">-l</span><span class="f_CLI_parameter"> </span><span class="f_CLI_parameter_I">eth1</span><span class="f_CLI_parameter"> </span><span class="f_CLI_action">-r </span><span class="f_CLI_parameter_I">2.2.2.2</span><span class="f_CLI_parameter"> </span><span class="f_CLI_action">–d</span></p>
+<p style="line-height: 1.20; margin: 0 0 0 0;"><span style="color: #000000;">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">参数说明：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">-n：隧道名称</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">-l：发送接口名称</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">-r：isatap路由器的ipv4地址</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">-d：后台运行</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+</th>
+</tr>
+</thead>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">NGFW配置ISATAP隧道</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">网络管理 &gt; 隧道 &gt; ISATAP隧道</span><span class="f_step">，进入ISATAP隧道配置界面。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">添加ISATAP隧道。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击『添加』，弹出界面如下图所示。</span></p>
+<p class="p_picture"><img alt="network_116" style="margin:0;width:7.0000in;height:3.9167in;border:none" src="network_116.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9167in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.1875in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">在下拉框选择隧道名称，不同的ISATAP隧道需选择不同的隧道名称，隧道名称以“isatap-”开头，例如“isatap-0”。最多支持128条ISATAP隧道。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">出接口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">在下拉框中选择隧道出接口，对于需经该隧道处理的报文从指定隧道出接口转发出去。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">本地地址</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置与隧道对端可通信的本端接口地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">TTL</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置ISATAP隧道本端设备与对端设备可经过的最大路由器数目。可选项：继承、自定义。</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">继承：TTL值继承原数据包IP报头中的TTL值。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">自定义：TTL值自定义，取值范围为1-255。</span></p></td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入ISATAP隧道简单的描述信息。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成ISATAP隧道的创建。新添加的ISATAP隧道会显示在界面上，如下图所示。</span></p>
+<p class="p_picture"><img alt="add_img39" style="margin:0;width:16.8750in;height:1.1042in;border:none" src="add_img39.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4479in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:10.4479in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">ISATAP隧道创建完成后，会生成一个与隧道名称一致的ISATAP虚接口。如隧道名称命为isatap-0，则ISATAP虚接口为isatap-0。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">勾选ISATAP隧道列表，点击列表上方的“编辑”，在弹出的界面中配置隧道接口IPv6地址，地址格式需遵循ISATAP地址格式要求。</span></td></tr></table></div><p class="p_picture"><img alt="network_141" style="margin:0;width:6.0729in;height:4.2292in;border:none" src="network_141.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">系统管理 &gt; 本地服务 &gt; RADVD</span><span class="f_step">，进入RADVD配置界面，</span><span class="f_step_content">配置IPv6地址前缀，并开启RADVD功能开关，操作详见 <a href="toc490041624.html" class="topiclink">RADVD</a>。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤5</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">网络管理 &gt; 路由 &gt; 静态路由</span><span class="f_step">，进入静态路由配置界面，配置ISATAP隧道路由。</span></td></tr></table></div><p class="p_picture"><img alt="add_img40" style="margin:0;width:5.9792in;height:5.8958in;border:none" src="add_img40.png"/></p>
+<p class="p_step_content"><span class="f_step_content">主机通过ISATAP隧道访问IPv6资源的数据报文到NGFW中时，NGFW发现目的IPv4地址为自己，解除封装，然后根据报文里面的IPv6地址将报文发送到真正的目的端。响应报文经过NGFW时，NGFW会根据ISATAP隧道路由，将响应通过指定的ISATAP隧道传输，关于ISATAP隧道路由的配置具体请参见 </span><span class="f_link"><a href="ref485285046.html" class="topiclink">静态路由</a></span><span class="f_step_content">。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

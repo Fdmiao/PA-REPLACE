@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>防代理</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="防代理功能利用回环机制防止网络用户通过代理主机实现攻击、避免计费、发起反动言论等非法行为。正常情况下，IP主机发送报文时，会为IP报文头部“identification”字段赋值（“identification”字段占16位，最大值为65535），后续再次发送报文时，会依次递增为报文头部“identification”字段赋值，待发送的IP报文的“ident" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic240.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic17123321.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic101.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">防代理</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">防代理功能利用回环机制防止网络用户通过代理主机实现攻击、避免计费、发起反动言论等非法行为。正常情况下，IP主机发送报文时，会为IP报文头部“identification”字段赋值（“identification”字段占16位，最大值为65535），后续再次发送报文时，会依次递增为报文头部“identification”字段赋值，待发送的IP报文的“identification”字段值为65535时，IP报文的“identification”字段便重新从0开始赋值，此机制称为回环机制。NGFW的防代理功能借助此回环机制确认数据报文源主机是否为代理主机，因为在短期内，如果源主机发送的报文产生了回环，则表明该主机短期内发送了大量数据报文，已成为代理主机。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">代理主机具体判定方式及NGFW防代理的方式为：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0;"><span class="f_zhengwen_list" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">1)</span><span class="f_zhengwen_list">ACL规则启用防代理功能时（关于ACL规则启用防代理功能的操作请参见 <a href="toc462736651.html" class="topiclink">访问控制</a>），NGFW对匹配该ACL的报文进行防代理检测：对于同一个源IP主机发送的报文，如果前一个数据报文的报文头部“identification”字段值比当前数据报文大且大于防代理策略设置的“允许发生回环的最小序列号间隔”值，那么就认为该源IP主机发送的报文产生一次回环，记录下当前时间T1。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0;"><span class="f_zhengwen_list" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">2)</span><span class="f_zhengwen_list">如果该源IP主机发送的报文再次产生回环，记录该次回环时间T2，两次回环时间的差值（T2-T1）小于防代理策略设置的“允许发生回环的最小时间间隔”值，此时该源IP主机即被判断为代理主机。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0;"><span class="f_zhengwen_list" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">3)</span><span class="f_zhengwen_list">根据防代理策略对代理主机进行处理，处理动作包括：产生告警/放行代理主机发送的报文/将代理主机的IP地址加入动态黑名单阻止代理主机发送的报文通过NGFW。</span></p><p class="p_zhengwen"><span class="f_zhengwen">配置防代理策略的具体操作步骤如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">资源管理 &gt; 安全配置文件 &gt; 防代理</span><span class="f_step">，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="policy_antiproxy_01" style="margin:0;width:9.3750in;height:2.6042in;border:none" src="policy_antiproxy_01.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:2.2708in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:6.7813in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:2.2708in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">动态黑名单被禁用时间</span></p>
+</td>
+<td style="vertical-align:middle; width:6.7813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置代理主机的IP加入动态黑名单后，禁止代理主机发送的报文通过NGFW的时间段，单位：秒；取值范围：1-86400；默认值：3600。超过该时间后，NGFW会将主机IP地址自动从动态黑名单中删除。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：该参数仅在启用“动态黑名单”开关时有效。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.2708in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">允许发生回环的最小时间间隔</span></p>
+</td>
+<td style="vertical-align:middle; width:6.7813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">防代理检测时，通过两次回环发生的时间间隔，作为判定是否代理上网的依据；如果时间间隔大于该参数设置的值则认为没有代理上网，小于该参数设置的值则认为出现了代理上网。单位：秒；取值范围：1-60；默认值：10</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">本参数与“允许发生回环的最小序列号间隔”共同决定是否出现了代理上网。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.2708in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">允许发生回环的最大标识间隔</span></p>
+</td>
+<td style="vertical-align:middle; width:6.7813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">防代理检测时，通过同一个源IP主机前后发送报文</span><span class="f_zhengwen">“identification”字段值的差值，判定是否发生了回环。如果前一个数据报文的报文头部“identification”字段值比当前数据报文大且大于本参数设置的值，那么就认为该源IP主机发送的报文产生了一次路由回环。</span></p>
+<p class="p_table_content"><span class="f_zhengwen">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">本参数与“允许发生回环的最小时间间隔”共同决定是否出现了代理上网。如果IP主机发送的报文发生两次回环时间差小于“允许发生回环的最小时间间隔”参数设置的值，则表示出现了代理上网。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.2708in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">告警</span></p>
+</td>
+<td style="vertical-align:middle; width:6.7813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置检测到代理上网时是否告警。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">启用该开关且配置告警事件为“访问控制”的告警后，NGFW检测到代理上网时才会触发告警。关于告警规则的配置具体请参见 <a href="ref465087405.html" class="topiclink">告警</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.2708in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">动态黑名单</span></p>
+</td>
+<td style="vertical-align:middle; width:6.7813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">检测到代理上网时，是否将代理主机的IP地址加入动态黑名单（查看已加入动态黑名单中代理主机的IP地址请参见 <a href="toc490041706.html" class="topiclink">黑名单</a>）。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）在没有开启“告警”和“动态黑名单”开关的情况下，NGFW会放行代理主机上网行为，且不会产生告警。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）在只开启“告警”开关的情况下，发现代理上网行为时NGFW会产生告警，但是数据会被放行；下次代理主机发送的数据报文通过NGFW的时候，继续检查，若又发现代理上网行为，则继续放行报文并告警。</span></p>
+<p class="p_table_content"><span class="f_table_content">3）在开启“加入黑名单”开关的情况下发现代理上网行为，NGFW会将代理主机IP加入动态黑名单，并删除代理主机当前与NGFW建立的所有连接，再添加一条告警日志（如果“告警”开关开启）。在“动态黑名单被禁用时间”内，从代理主机发来的任何数据报文都无法通过，也不会再产生告警（不管告警开关是否打开）。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">参数设置完后，点击【应用】按钮使配置生效。</span></td></tr></table></div>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>流量管理</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="流量管理是指NGFW基于应用、用户、源安全区域、目的安全区域、源地址、目的地址、服务、时间段和通道优先级等流量基础信息对通过的流量进行管理和控制。在NGFW上部署流量控制功能，可以帮助网络管理员合理分配带宽资源，从而提升网络运营质量。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="peizhidns64.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topicoperatoranquancelue.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="toc399440500.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">流量管理</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">流量管理是指NGFW基于应用、用户、源安全区域、目的安全区域、源地址、目的地址、服务、时间段和通道优先级等流量基础信息对通过的流量进行管理和控制。在NGFW上部署流量控制功能，可以帮助网络管理员合理分配带宽资源，从而提升网络运营质量。</span></p>
+<p class="p_zhengwen_B"><span class="f_zhengwen_B">虚拟链路</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">虚拟链路一般指区域到区域之间通信的链路，关于区域的配置具体请参见 <a href="toc462736629.html" class="topiclink">区域</a>。虚拟链路通过接口对来划分，该设置在NGFW设备全局有效。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">虚拟链路可以将运营商网络的通信和内部局域网的通信区分开来，分别当作不同的流量管理。虚拟链路上可以配置区域间总的流量管理策略，比如区域间上行或者下行带宽，流量管理策略根据配置的带宽大小进行细分的策略，保证带宽的利用率等。</span></p>
+<p class="p_zhengwen_B"><span class="f_zhengwen_B">虚拟通道</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">虚拟通道是在虚拟链路的基础上对流量的进一步细化管理单位，可以基于网络连接的应用、用户、源IP地址、目的IP地址、服务、时间段，对数据流设置细粒度的带宽管理策略。虚拟通道上还可以配置虚拟子通道对流量进行进一步的细化管理。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">在虚拟通道及其虚拟子通道上，可以设置通道的限制带宽、保证带宽、每IP限速、每用户限速、优先级等功能。虚拟通道ID在NGFW设备全局有效。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">保证带宽：保证网络中关键业务所需的带宽；当网络拥堵时，保证带宽能够保护关键业务不受影响。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">限制带宽：虚拟通道最大带宽，通道总的流量不得超过限制带宽。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">优先级：虚拟通道可以设置高、中和低三个优先级；当通道拥塞时，设备将根据队列优先级的高低顺序进行调度。只有高优先级队列中的报文全部调度完毕后，低优先级队列才进入调度；如果多个通道的优先级相同，则按照通道由上到下顺序进行调度，通道顺序可进行调整。</span></p><p class="p_zhengwen_B"><span class="f_zhengwen_B">白名单</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">虚拟通道上支持白名单功能，当匹配虚拟通道白名单指定的IP地址和应用时，可不进行流量策略匹配，直接进行转发。</span></p>
+<p class="p_zhengwen_B"><span class="f_zhengwen_B">处理流程</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">流量进入NGFW后的流量控制功能实现过程如下图所示。</span></p>
+<p class="p_picture"><img alt="liuliangkongzhi_01" style="margin:0;width:7.8438in;height:3.0104in;border:none" src="liuliangkongzhi_01.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">实现处理流程如下：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）流量从入接口进入时，如果匹配白名单策略，将不进行流量控制策略匹配操作直接从出接口转发；不匹配白名单策略则进行虚拟链路流量策略匹配。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）流量匹配虚拟链路策略后，会经过虚拟链路的分流后进入相应的虚拟通道和虚拟子通道进行处理。</span></p>
+<p class="p_zhengwen" style="margin: 0.0521in 0 0.0521in 0.2708in;"><span class="f_zhengwen">虚拟通道和虚拟子通道的处理包括：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.3958in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">丢弃超过预先定义的最大带宽的流量。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.3958in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">标记流量的优先级，作为后续队列调度的依据。</span></p><p class="p_zhengwen"><span class="f_zhengwen">3）流量从出接口发送时，会进一步受接口带宽的限制；如果流量大于接口带宽，将根据标记的优先级对流量进行队列调度，保证高优先级的报文被优先发送。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

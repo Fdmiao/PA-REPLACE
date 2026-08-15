@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>聚合接口</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="链路聚合功能，是将多个物理接口聚合成一个逻辑上的聚合组。在聚合组中，被捆绑在一起的物理接口称为成员接口，聚合所形成的逻辑接口称为聚合接口。物理接口加入聚合组后，工作模式为BOND模式。需要说明的是：防火墙接口工作在bond模式时，与防火墙bond接口组相连的对端设备的接口也需工作在bond模式下，且防火墙bond接口组中各接口与对端设备bond接口组中各接口" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc490041596.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="ref487722721.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic179.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">聚合接口</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">链路聚合功能，是将多个物理接口聚合成一个逻辑上的聚合组。在聚合组中，被捆绑在一起的物理接口称为成员接口，聚合所形成的逻辑接口称为聚合接口。物理接口加入聚合组后，工作模式为BOND模式。</span><span class="f_zhengwen_B">需要说明的是：</span><span class="f_zhengwen">防火墙接口工作在bond模式时，与防火墙bond接口组相连的对端设备的接口也需工作在bond模式下，且防火墙bond接口组中各接口与对端设备bond接口组中各接口的连接形式为端对端连接，如下图所示。</span></p>
+<p class="p_picture"><img alt="network_41" style="margin:0;width:7.0833in;height:1.8021in;border:none" src="network_41.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">链路聚合有如下优点：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">聚合接口性能接近各个物理接口的性能总和，大大提高端口间的通信速度。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">配置链路聚合功能时，无需重新布线，直接使用现有网络中的设备，减少网络维护工作。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">聚合组内部的物理链路共同完成数据收发任务并相互备份，只要还存在能正常工作的链路，整个聚合组就不会失效，从而提高链路的可靠性。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">聚合组内的成员接口可随时加入或者离开聚合组，管理员可根据实际需求灵活配置。</span></p><p class="p_zhengwen"><span class="f_zhengwen">NGFW支持手工方式链路聚合，手工链路聚合需要手工将物理接口加入到聚合组中，所有的物理接口均处于转发状态，聚合组通过预先设置的负载均衡算法分担链路流量到聚合组中的不同链路，实现链路的负载均衡。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">NGFW通过采用不同的负载分担算法选择报文的发送接口，保证具有相同属性的报文能够从同一接口发送，可以灵活地实现对聚合组内业务流量的负载分担。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">用户可以指定系统按照报文中携带的端口号、IP地址、MAC地址等信息之一或其组合来选择所采用的负载分担模式。NGFW支持的负载分担算法包括：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">src-mac：根据源MAC地址均衡，即对发送的报文的源MAC地址进行哈希计算，根据计算结果选择数据转发接口。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">dst-mac：根据目的MAC地址均衡，即对发送的报文的目的MAC地址进行哈希计算，根据计算结果选择数据转发接口。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">src-dst-mac：根据源和目的MAC地址组合均衡，即对发送的报文的源和目的MAC地址进行哈希计算，根据计算结果选择数据转发接口。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">src-ip：根据源IP地址均衡，即对发送的报文的源IP地址进行哈希计算，根据计算结果选择数据转发接口。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">dst-ip：根据目的IP地址均衡，即对发送的报文的目的IP地址进行哈希计算，根据计算结果选择数据转发接口。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">src-dst-ip：根据源和目的IP地址组合均衡，即对发送的报文的源和目的IP地址进行哈希计算，根据计算结果选择数据转发接口。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">src-port：根据源TCP/UDP端口地址均衡，即对发送的报文的源端口进行哈希计算，根据计算结果选择数据转发接口。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">dst-port：根据目的TCP/UDP端口地址均衡，即对发送的报文的目的端口进行哈希计算，根据计算结果选择数据转发接口。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">src-dst-port：根据源和目的TCP/UDP端口地址均衡，即对发送的报文的源和目的端口进行哈希计算，根据计算结果选择数据转发接口。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">quinary：根据五元组均衡，即根据源地址、目的地址、源端口、目的端口和IP协议类型进行哈希计算，根据计算结果选择数据转发接口。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">per-packet：根据发送端口进行轮流均衡，即在发送数据时进行轮询，依次使用从第一个到最后一个可用的成员接口。</span></p><p class="p_zhengwen"><span class="f_zhengwen">NGFW支持8个聚合组，每个聚合组最多支持8个成员接口。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4688in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.6250in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">在NGFW上，只有路由工作模式的物理接口可以加入到聚合接口中，不支持VLAN虚接口或子接口等其他逻辑接口加入聚合接口中。</span></p><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">一个物理接口只能属于一个聚合接口。</span></p><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">聚合接口内的物理接口必须具备相同的属性，如相同的速度、单双工模式等。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">网络管理 &gt; 接口 &gt; 聚合接口</span><span class="f_step">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">添加新的聚合接口。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击『添加』，添加新的聚合接口，界面如下图所示。</span></p>
+<p class="p_picture"><img alt="network_09" style="margin:0;width:8.9063in;height:6.5313in;border:none" src="network_09.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在添加聚合接口时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.7292in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.3854in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.7292in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">ID</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3854in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">显示聚合接口的ID号，ID号根据添加聚合接口时序，自动生成。聚合接口命名为bond＋ID号，例如此处显示为“0”，则新添加的bond端口为“bond0”。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7292in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">负载算法</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3854in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置负载均衡算法，根据计算结果，选择聚合组内不同的物理接口转发流量。可选项：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）根据源mac地址均衡：对发送报文的源MAC地址进行哈希计算。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）根据目的mac地址均衡：对发送报文的目的MAC地址进行哈希计算。</span></p>
+<p class="p_table_content"><span class="f_table_content">3）根据源和目的mac地址组合均衡：表示对发送报文的源和目的MAC地址进行哈希计算。</span></p>
+<p class="p_table_content"><span class="f_table_content">4）根据源IP地址均衡：对发送报文的源IP地址进行哈希计算。</span></p>
+<p class="p_table_content"><span class="f_table_content">5）根据目的IP地址均衡：对发送报文的目的IP地址进行哈希计算。</span></p>
+<p class="p_table_content"><span class="f_table_content">6）根据源和目的IP地址组合均衡：对发送报文的源和目的IP地址进行哈希计算。</span></p>
+<p class="p_table_content"><span class="f_table_content">7）根据源TCP/UDP端口均衡：对发送报文的源端口进行哈希计算。</span></p>
+<p class="p_table_content"><span class="f_table_content">8）根据目的TCP/UDP端口均衡：对发送报文的目的端口进行哈希计算。</span></p>
+<p class="p_table_content"><span class="f_table_content">9）根据源和目的TCP/UDP端口组合均衡：对发送报文的源和目的端口进行哈希计算。</span></p>
+<p class="p_table_content"><span class="f_table_content">10）根据五元组均衡：对发送报文的源地址、目的地址、源端口、目的端口和IP协议类型进行哈希计算。</span></p>
+<p class="p_table_content"><span class="f_table_content">11）根据发送端口的轮流均衡：发送报文时进行轮询，依次使用从第一个到最后一个可用的成员接口。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7292in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">工作模式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3854in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择接口的模式，可选项：静态LACP模式、手工模式。</span></p>
+<p class="p_table_content"><span class="f_table_content">1）静态LACP模式：利用LACP协议进行聚合参数协商、确定活动接口和非活动接口的链路聚合方式。该模式下，聚合链路的建立、成员接口的加入依旧需要手工配置，但由LACP协议协商确定活动接口和非活动接口，只有活动接口分担流量。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）手工模式：聚合链路的建立、成员接口的加入完全由手工来配置。该模式下所有活动链路都参与数据的转发。如果某条活动链路故障，链路聚合组自动在剩余的活动链路中分担流量。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7292in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">物理接口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择将哪些物理接口加入到该聚合接口中。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<p class="p_step_content"><span class="f_step_content">2）参数设置完成后，点击【确定】按钮完成聚合链路添加，新添加的逻辑端口将显示在界面中。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">设置聚合接口属性。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">选中聚合接口列表，点击列表上方的『编辑』，可以设置聚合接口的基本信息、BOND属性和高级信息。</span></p>
+<p class="p_step_content"><span class="f_step_content">关于属性参数的解释具体请参见 <a href="topic8.html" class="topiclink">物理接口</a>。加入链路聚合的接口其“接口模式”显示为“SLAVE”。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4688in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.6250in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">当物理接口加入聚合接口后，不能直接对该物理接口再进行接口的工作模式、MTU值、MSS值配置，只能启用/禁用接口、修改接口双工模式和速率。聚合接口的工作模式、MTU、MSS等参数的设置需通过配置聚合接口进行设置。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

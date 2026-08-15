@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>用户证书</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="用户证书用于用户的身份验证，用户证书的导入、查看等操作如下： 导入证书前需导入CA根证书，通过证书认证登录时，此CA根证书可以验证该CA机构签发的证书的合法性。CA根证书的导入参见 可信CA机构。 步骤1	选择 PKI &gt; 证书管理 &gt; 本地证书，激活“用户证书”页签。 步骤2	导入用户证书 1）点击【导入】按钮，如下图所示。 &nbsp;在导入用户证书时" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic246.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic243.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="toc462834535.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">用户证书</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">用户证书用于用户的身份验证，用户证书的导入、查看等操作如下：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">导入证书前需导入CA根证书，通过证书认证登录时，此CA根证书可以验证该CA机构签发的证书的合法性。CA根证书的导入参见 <a href="ca.html" class="topiclink">可信CA机构</a>。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">PKI &gt; 证书管理 &gt; 本地证书，</span><span class="f_menu" style="font-weight: normal;">激活“用户证书”页签</span><span class="f_zhengwen">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">导入用户证书</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击【导入】按钮，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0395" style="margin:0;width:7.6354in;height:4.1354in;border:none" src="clip0395.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在导入用户证书时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9583in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.7500in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">证书名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入合法的证书名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">导入方式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择导入方式，可选项为本地导入和USBKEY。</span></p>
+<p class="p_table_content"><span class="f_table_content">USBKEY导入证书，首先需要将龙脉USBKEY插入到PC端，被检测到后方可导入。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">导入文件格式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户证书导入方式选择“本地”时，可选择对应的证书导入格式。</span></p>
+<p class="p_table_content"><span class="f_table_content">可以导入的证书分为个人信息交互(*.pfx，*.p12)和x.509证书(*.cer,*.crt,*.pem)两种格式。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">证书文件</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，点击“</span><img alt="clip0096" style="margin:0;width:0.2083in;height:0.1979in;border:none" src="clip0096.png"/><span class="f_table_content">”按钮，选择要上传的证书文件。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">私钥文件</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">文件格式选择“x.509证书”时，需单独上传私钥文件，点击“</span><img alt="clip0096" style="margin:0;width:0.2083in;height:0.1979in;border:none" src="clip0096.png"/><span class="f_table_content">”按钮，选择要上传的私钥文件。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">证书文件密码</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">文件格式选择“个人信息交互”时，如PKCS12文件有加密密码，需指定解密密码。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">USBKEY类型列表</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">系统证书导入方式选择“USBKEY”时，选择型号列表。USBKEY型号支持K5、GM3000、GM3000PSCS、K7、TF五种款型。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">USBKEY设备列表</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择USBKEY设备列表。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">USBKEY容器列表</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择USBKEY容器列表。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">证书用途</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择证书用途，可选择加密证书和签名证书。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成证书的导入。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">选中证书，点击“查看”按钮，可查看该证书的详细信息。</span></td></tr></table></div>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>IDS联动</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="IDS联动技术基于IDBP（Intrusion Detection and Blocking..." />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic18.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topicoperatoranquancelue.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="toc490041707.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">IDS联动</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">IDS联动技术基于IDBP（Intrusion Detection and Blocking Protocol，入侵检测与阻断）协议，通过IDS（入侵检测系统）探测器与NGFW有机联动，以实现积极主动抵御异常流量。一台防火墙可同时联动多台IDS类设备；当IDS设备与防火墙联动时，IDS探测器会实时监视网络活动、当捕捉到可疑的网络攻击活动时，IDS设备会根据该入侵或可疑活动的性质，发送通知报文给防火墙，再由防火墙阻断与之有关的网络地址的通信连接。总之，配置IDS联动可以将入侵检测系统的实时反应能力与防火墙的静态访问控制能力结合起来，生成一种基于网络活动的动态安全防护策略，达到对网络的安全防护。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">启用联动功能时，NGFW和IDS设备均需进行相应配置，关于IDS设备有关防火墙联动的配置请参见IDS设备用户手册。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">在NGFW中配置IDS联动的具体操作如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">联动服务设置。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）选择 </span><span class="f_menu">安全策略 &gt; IDS联动</span><span class="f_step_content">。</span></p>
+<p class="p_step_content"><span class="f_step_content">2）激活“服务设置”页签，如下图所示。</span></p>
+<p class="p_step_content"><img alt="clip0261" style="margin:0;width:8.9479in;height:2.9688in;border:none" src="clip0261.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。 &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9167in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.1875in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">访问控制</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择访问控制类型。可选择：管理口开放、精细控制。</span></p>
+<p class="p_table_content"><span class="f_table_content">管理口开放，IDS联动服务配置管理口后，由任意地址发出从管理口进入，均可访问。管理口是指本地服务对管理区域MANAGE_AREA开放，请确保MANAGE_AREA接口配置无误。</span></p>
+<p class="p_table_content"><span class="f_table_content">精细控制，是指执行配置多条策略，并由策略决定IDS联动服务的权限，配置后限制从指定地址发出指定接口进入才可访问。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">精细控制</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入策略名称（不可重复），区域对象（报文的入接口）、地址对象（报文的源IP地址），设置每秒建立连接最大数，取值范围：0-65535，0表示不作限制。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">区域MANAGE_AREA表示管理域，地址IPv4_ANY表示所有IPv4地址，地址IPv6_ANY表示所有IPv6地址，地址GROUP_ADDRESS_ANY表示所有IP地址。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">设置IDS联动设备地址。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）激活“联动配置”页签，点击『添加』，弹出“添加”窗口，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0262" style="margin:0;width:6.8542in;height:3.0104in;border:none" src="clip0262.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9167in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.1875in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，填写该IDS联动配置项的名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IDS地址</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置IDS设备的IPv4地址，格式为A.B.C.D。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">防火墙地址</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置NGFW设备与对端设备进行联动通信的接口IPv4地址，格式为A.B.C.D。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 0 0.2500in;"><span style="color: #000000;">&nbsp;</span></p>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成配置。</span></p>
+<p class="p_step_content"><span class="f_step_content">配置联动设备地址后，NGFW会自动生成一个16位的共享密钥（用于IDS和NGFW之间的身份认证），同时生成一个包含该共享密钥、NGFW设备地址和IDS设备地址的key文件，文件名格式为：TOS.IDS [x.x.x.x].key，其中，“x.x.x.x”为IDS设备地址。通过点击图中操作列的“</span><img alt="NGFW20~1_img385" style="margin:0;width:0.2083in;height:0.2188in;border:none" src="hmfile_hash_9ffdfc57.png"/><span class="f_step_content">”图标，可以将key文件下载到本地。</span><span class="f_zhengwen_B">说明：</span><span class="f_step_content">在部分检测设备中配置联动功能时需使用该Key文件中的共享密钥。如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0263" style="margin:0;width:9.0625in;height:1.4375in;border:none" src="clip0263.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">查看联动状态。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">在成功配置IDS联动后，激活“联动状态”页签可以查看动态生成的IDS联动策略，策略显示了已经阻断的通信连接信息，包括阻断的源IP、目的IP、源端口、目的端口、协议类型、生存时间，界面如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0264" style="margin:0;width:9.6354in;height:1.3125in;border:none" src="clip0264.png"/></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

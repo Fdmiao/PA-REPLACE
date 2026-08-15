@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>BGP</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="BGP(边界网关协议)是一种外部网关协议，主要用于控制路由的传播和选择最佳路由。发送BGP消息的路由器称为BGP发言者，它接收或产生新的路由信息，并发布给其他BGP发言者。当BGP发言者收到来自其它自治系统的新路由时，如果该路由比当前已知路由更优，或者当前还没有该路由，它就把这条路由发布给自治系统内所有其他的BGP发言者。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="ospf.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc490041607.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="rip.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">BGP</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">BGP(边界网关协议)是一种外部网关协议，主要用于控制路由的传播和选择最佳路由。发送BGP消息的路由器称为BGP发言者，它接收或产生新的路由信息，并发布给其他BGP发言者。当BGP发言者收到来自其它自治系统的新路由时，如果该路由比当前已知路由更优，或者当前还没有该路由，它就把这条路由发布给自治系统内所有其他的BGP发言者。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">相互交换消息的BGP发言者之间互称对等体，若干相关的对等体可以构成对等体组。BGP功能分为BGP4和BGP4+两部分，BGP4相当于IPv4版本，BGP4+是对IPv6的拓展，但不是真正的v6版本。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">启动或停止BGP服务。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）选择 </span><span class="f_menu">网络管理 &gt; 路由 &gt; 动态路由</span><span class="f_step_content">。激活“BGP”标签页。如下图所示。</span></p>
+<p class="p_picture"><img alt="network_50" style="margin:0;width:14.3854in;height:5.8854in;border:none" src="network_50.png"/><span class="f_picture"> </span></p>
+<p class="p_step_content"><span class="f_step_content">2）点击【启动】按钮便可启动BGP进程。只有启动了BGP进程，才可以设置BGP协议的相关参数。</span></p>
+<p class="p_step_content"><span class="f_step_content">3）点击【停止】按钮即可停止BGP进程运行。</span></p>
+<p class="p_step_content"><span class="f_step_content">4）点击【</span><span style="font-family: 宋体;">查看设置】</span><span class="f_step_content">按钮，弹出查看界面，可以查看BGP路由协议的配置、邻居、接口以及转发表信息。</span></p>
+<p class="p_step_content"><span class="f_step_content">5）点击【清空配置】按钮可以清空BGP配置信息，进程开启或关闭都可以清空配置信息。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">设置路由ID。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">在“Router-ID”文本框中输入标识路由器身份的route-id，再点击【应用】按钮使设置生效。该项为必配项，因为route-id用于在OSPF协议中标识路由器，必须由管理员手动指定；route-id在网络中不可以重名，取值范围为0.0.0.1-255.255.255.255。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">路由重发布。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击</span><span style="font-family: 宋体;">『设置』</span><span class="f_step_content">按钮，弹出重发布信息设置页面，如下图所示。</span></p>
+<p class="p_picture"><img alt="network_51" style="margin:0;width:6.3229in;height:5.6146in;border:none" src="network_51.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置BGP路由重发布时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.1979in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.5104in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IPv4/IPv6直连度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">表示允许将直连路由信息引入到BGP路由中作为外部路由信息，并可在其后的文本框中设置路由引入后的metric值。取值范围：0-4294967295。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IPv4/IPv6静态度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">表示允许将静态的路由信息引入到BGP路由中，并可在其后的文本框中设置路由引入后的metric值。取值范围：0-4294967295。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">OSPF度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">表示允许将OSPF的路由信息引入到BGP路由中，并可在其后的文本框中设置路由引入后的metric值。取值范围：0-4294967295。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">RIP度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">表示允许将RIP的路由信息引入到BGP路由中，并可在其后的文本框中设置路由引入后的metric值。取值范围：0-4294967295。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">OSPFv3度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">表示允许将OSPFv3的路由信息引入到BGP路由中，并可在其后的文本框中设置路由引入后的metric值。取值范围：0-4294967295。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">RIPNG度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">表示允许将RIPNG的路由信息引入到BGP路由中，并可在其后的文本框中设置路由引入后的metric值。取值范围：0-4294967295。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成BGP重发布度量值的配置，点击【取消】按钮撤销本次操作。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">邻居配置。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">在某些非广播网络上，比如X.25、帧中继网络上，可以通过指定邻居IP地址的方式让BGP发送单播地址报文。对应设备接口都是以太网接口的广播网络时，也可以使用单播向指定的邻居发送路由更新信息。</span></p>
+<p class="p_step_content"><span class="f_step_content">1）在“邻居配置”页签处点击“『添加』”，进入“添加”界面，如下图所示。</span></p>
+<p class="p_picture"><img alt="network_52" style="margin:0;width:6.3021in;height:4.2188in;border:none" src="network_52.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）设置BGP邻居的IP地址、自治系统号、MD5认证密钥和本地地址，并确认是否启用修改路由下一跳和宣告缺省路由，点击【确定】按钮完成BGP邻居的添加。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤5</span></td><td style="border:none;padding:0"><span class="f_step">网络配置。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">由于运行BGP动态路由协议的设备需主动或根据邻居发送的路由请求消息通告其自身的路由信息，BGP任务启动后必须指定其工作网段。BGP只在其指定网段的接口上运行，对于不在指定网段上的接口既不接收BGP路由响应消息，也不发送BGP路由请求消息，即不在指定网段上的接口不会运行BGP协议。</span></p>
+<p class="p_step_content"><span class="f_step_content">1）在“网络配置”页签处点击『添加』，进入“添加”界面，如下图所示。</span></p>
+<p class="p_picture"><img alt="network_53" style="margin:0;width:6.3021in;height:1.8646in;border:none" src="network_53.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）输入允许运行BGP协议的网段IP地址和掩码，点击【确定】按钮，完成设置。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>资产发现</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="管理员可以在资产发现模块配置主动/被动资产发现策略的相关参数。 主动资产发现：主动扫描某个网段内的所有资产； 被动资产发现：被动检测全网/指定地址范围的流量，发现资产。 关于资产扫描模块的相关操作如下： 步骤1	选择 安全中心 &gt; 资产管理 &gt; 资产发现。 &nbsp;步骤2	主动资产发现。 &nbsp;配置扫描任务相关参数，各项参数的具体说明如下表所示。 参" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic80.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="anquanzhongxinzichanguanli.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic98.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">资产发现</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">管理员可以在资产发现模块配置主动/被动资产发现策略的相关参数。</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span><span class="f_zhengwen">主动资产发现：主动扫描某个网段内的所有资产；</span></p><p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span><span class="f_zhengwen">被动资产发现：被动检测全网/指定地址范围的流量，发现资产。</span></p><p class="p_zhengwen"><span class="f_zhengwen">关于资产扫描模块的相关操作如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">安全中心 &gt; 资产管理 &gt; 资产发现</span><span class="f_step">。</span></td></tr></table></div><p class="p_picture"><img alt="clip0464" style="margin:0;width:9.5208in;height:6.8021in;border:none" src="clip0464.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">主动资产发现。</span></td></tr></table></div><p class="p_picture"><img alt="clip0465" style="margin:0;width:8.5625in;height:2.2292in;border:none" src="clip0465.png"/></p>
+<p class="p_step_content"><span class="f_step_content">配置扫描任务相关参数，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:90%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.1979in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.5104in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">扫描超时时间</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置扫描超时时间，超过该时间后系统自动停止扫描任务。取值范围：10-1440，单位：分，默认为30分，0表示永不超时。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IP地址范围</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置扫描范围，支持单个IP、IP范围和IP网段格式。</span></p>
+<p class="p_table_content"><span class="f_table_content">示例：</span></p>
+<p class="p_table_content"><span class="f_table_content">单个IP：1.1.1.1。</span></p>
+<p class="p_table_content"><span class="f_table_content">IP范围：1.1.1.0-255。且起始IP小于结束IP。</span></p>
+<p class="p_table_content"><span class="f_table_content">IP网段：1.1.1.0/24。且仅支持“24-32”网段范围。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：每行一条数据，最多支持6条，且数据之间使用回车分隔。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">模式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置扫描模式，可选项包括：快速扫描和自定义扫描。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">快速扫描：快速扫描包含端口范围为1-1024以及nmap-services列出的端口（查看方式在/root/.nmap/nmap-services）</span></p>
+<p class="p_table_content"><span class="f_table_content">自定义扫描：管理员可自定义扫描端口。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">端口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">当设置为“自定义扫描”时，需设置扫描端口信息，支持配置单个端口、端口范围。</span></p>
+<p class="p_table_content"><span class="f_table_content">示例：</span></p>
+<p class="p_table_content"><span class="f_table_content">单个端口：224。仅支持“0-65535”端口范围。</span></p>
+<p class="p_table_content"><span class="f_table_content">端口范围：0-65535。且起始端口小于结束端口。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：每行一条数据，最多支持6条，且数据之间使用回车分隔。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">配置完成后，点击【应用】应用当前资产扫描配置。在右侧可查看上次扫描时间及上次扫描资产数量，点击【开始扫描】可启动资产扫描任务。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:90%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4896in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img3" style="margin:0;width:0.4583in;height:0.4063in;border:none" src="hmfile_hash_5bb5ff1e.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.6354in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">开始新的扫描任务后，新的扫描结果加入资产列表中；已加入的资产信息不会被覆盖或删除。</span></p></td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">被动资产发现。</span></td></tr></table></div><p class="p_picture"><img alt="clip0466" style="margin:0;width:8.8646in;height:2.4792in;border:none" src="clip0466.png"/></p>
+<p class="p_step_content"><span class="f_step_content">配置被动资产发现时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:90%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.1979in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.5104in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">识别范围</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置被动资产识别范围，可选项：全流量识别、自定义识别范围。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明： </span></p>
+<p class="p_table_content"><span class="f_table_content">选择“全流量识别”时，NGFW会识别所有的A/B/C类地址；选择“自定义识别范围”时，需要配置IP地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IP</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">当“识别范围”配置为“自定义识别范围”时需要配置。配置扫描范围，支持单个IP、IP范围和IP网段格式。</span></p>
+<p class="p_table_content"><span class="f_table_content">示例：</span></p>
+<p class="p_table_content"><span class="f_table_content">单个IP：1.1.1.1。</span></p>
+<p class="p_table_content"><span class="f_table_content">IP范围：1.1.1.0-255。且起始IP小于结束IP。</span></p>
+<p class="p_table_content"><span class="f_table_content">IP网段：1.1.1.0/24。且仅支持“24-32”网段范围。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：每行一条数据，最多支持6条，且数据之间使用回车分隔。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">识别更新周期</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置被动识别更新的间隔周期，取值范围：24-72小时。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">配置完成后，点击【应用】应用当前资产扫描配置。在右侧可查看上次被动资产数量，点击【开始识别】可启动资产扫描任务。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4479in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:10.4479in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.3333in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">被动资产发现依赖于“资产发现”特征库，没有购买此特征库服务时，该功能不生效。</span></p></td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">其他配置</span></td></tr></table></div><p class="p_picture"><img alt="clip0467" style="margin:0;width:6.8958in;height:3.3333in;border:none" src="clip0467.png"/></p>
+<p class="p_step_content"><span class="f_step_content">“资产网络行为检测”模块可以控制是否记录控制关系以及是否启用代理检测，开启两项功能后可以查看对应的记录；“EDR联动”模块可以选择是否开启EDR服务器联动；“漏扫联动”处可以选择是否开启漏扫联动。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

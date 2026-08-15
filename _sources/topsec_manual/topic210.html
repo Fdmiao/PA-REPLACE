@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>认证策略</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="认证策略是NGFW针对管理员身份进行认证、管理的安全模块。不仅能够本地认证认，还可以向外部认证服务器转发管理员的认证请求。外部身份认证需要配置NGFW与外部认证服务器的连接，保证连通性。当管理员发起认证请求时，NGFW会将管理员的身份信息转发到对应的认证服务器进行认证，认证成功的管理员会与某一角色绑定，即实现授权，从而进行基于角色的访问控制。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="ref465087238.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic3.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic211.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">认证策略</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">认证策略是</span><span class="f_table_content">NGFW</span><span class="f_zhengwen">针对管理员身份进行认证、管理的安全模块。不仅能够本地认证认，还可以向外部认证服务器转发管理员的认证请求。外部身份认证需要配置</span><span class="f_table_content">NGFW</span><span class="f_zhengwen">与外部认证服务器的连接，保证连通性。当管理员发起认证请求时，</span><span class="f_table_content">NGFW</span><span class="f_zhengwen">会将管理员的身份信息转发到对应的认证服务器进行认证，认证成功的管理员会与某一角色绑定，即实现授权，从而进行基于角色的访问控制。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">配置认证策略的操作步骤如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span style="font-family: 宋体; font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">系统管理 &gt; 管理员 &gt; 认证策略</span><span class="f_step">，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0347" style="margin:0;width:7.8333in;height:4.9271in;border:none" src="clip0347.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th colspan="2"  style="vertical-align:middle; width:1.6458in; height:0.2396in; background-color:#D8D8D8; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:6.2083in; height:0.2396in; background-color:#D8D8D8; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.6458in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">认证策略</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择认证策略。支持本地认证和外部认证。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.6458in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">外部认证失败转本地认证</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否勾选外部认证失败转本地认证。勾选后，则当外部认证失败时，进行本地认证。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.6458in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">外部认证服务器</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择需要进行外部认证的服务器。支持：Radius服务器、Tacacs服务器、Ldap服务器。</span></p>
+<p class="p_table_content"><span class="f_table_content">Tacacs服务器、Ldap服务器配置参数参见 <a href="toc462834526.html" class="topiclink">认证服务器</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="4"  style="vertical-align:middle; width:0.6146in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">Radius服务器</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器地址</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置Radius服务器地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器端口</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置认证服务器的监听认证请求的服务端口。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">认证方式</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置Radius认证协议的认证方法。</span></p>
+<p class="p_table_content"><span class="f_table_content">可选项：PAP、CHAP。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">共享秘钥</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置Radius认证服务器端的共享密钥。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="9"  style="vertical-align:middle; height:0.0417in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">Ladp服务器</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器地址</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置Ldap服务器的IP地址。点分十进制格式，例如：192.168.1.1。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器端口</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置Ldap服务器的监听认证请求的服务端口。取值为1-65535的整数，默认值为389。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器认证</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否开启服务器认证功能。开启后需设置服务器用户名和密码。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">Ladp服务器类型</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择该Ladp服务器的类型。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">Ldap是一个开放的协议，不同的公司有不同的实现方法，因此需要选择Ldap服务器的类型。可选项为MS-AD、SUN ONE、NOVELL和other（分别表示微软公司的AD服务器、SUN ONE公司的Ldap服务器、NOVELL公司的Ldap服务器和其他公司的Ldap服务器）。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器DN</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项。配置该Ldap服务器的域名。此处需要输入域名分解格式（不同厂家的Ldap服务器需要设置不同的关键字。例如：假设AD服务器域名为“sina.com”则此处应输入“dc=sina, dc=com”。）</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">在Ldap服务器上可以通过“我的电脑”右键菜单的 </span><span class="f_menu">属性 &gt; 计算机名</span><span class="f_table_content"> 来查看服务器所在的域。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户属性</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置一个属性的值作为Ldap服务器上用户名属性，也可选择自定义。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户组属性</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置一个属性的值作为Ldap服务器上用户所关联的用户组。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户树层级</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置用户树层级，可选择SUBTREE或ONE LEVEL。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户过滤条件</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置Ldap用户过滤条件。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="4"  style="vertical-align:middle; height:0.0417in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">Tacacs服务器</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器地址</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项。配置Tacacs服务器的IP地址。点分十进制格式，例如：192.168.1.1。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器端口</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置Tacacs服务器的监听认证请求的服务端口。取值为1-65535的整数，默认值为49。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">认证方法</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置Tacacs认证协议的认证方法。可选项：PAP和CHAP，默认值为PAP。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0729in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">预共享密钥</span></p>
+</td>
+<td style="vertical-align:middle; width:6.2083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项。配置Tacacs服务器端的共享密钥。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span style="font-family: 宋体; font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">配置完成后点击【确定】完成配置</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span style="font-family: 宋体; font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">点击【连通性测试】可测试与外部认证服务器是否可达。</span></td></tr></table></div>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

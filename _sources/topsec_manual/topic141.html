@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>配置高可用</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="步骤1	集群部署 1）选择 系统管理 &gt; 高可用性 &gt; 高可用性，激活“配置”页签，配置模式点击“”图标，选择“集群模式”，配置心跳口和本端IP地址，如下图所示。 &nbsp;按照如下列表中所示配置高可用性全局配置。 设备名称 FWA FWB FWC 心跳口 feth10 feth10 feth10 本端IP 10.0.0.1 10.0.0" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic16.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic245.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="vpn.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">配置高可用</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">集群部署</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）选择 </span><span class="f_step_content" style="font-weight: bold;">系统管理 &gt; 高可用性 &gt; 高可用性</span><span class="f_step_content">，激活“配置”页签，配置模式点击“<img alt="clip0520" style="margin:0;width:0.2396in;height:0.2708in;border:none" src="clip0520.png"/>”图标，选择“集群模式”，配置心跳口和本端IP地址，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0519" style="margin:0;width:7.5000in;height:3.1979in;border:none" src="clip0519.png"/></p>
+<p class="p_step_content"><span class="f_step_content">按照如下列表中所示配置高可用性全局配置。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.8958in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">设备名称</span></p>
+</th>
+<th style="vertical-align:middle; width:2.5208in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000; border-left:none;"><p class="p_table_header"><span class="f_table_header">FWA</span></p>
+</th>
+<th style="vertical-align:top; width:3.2396in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000; border-left:none;"><p class="p_table_header"><span class="f_table_header">FWB</span></p>
+</th>
+<th style="vertical-align:top; width:4.3542in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000; border-left:none;"><p class="p_table_header"><span class="f_table_header">FWC</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">心跳口</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5208in; height:0.1875in; padding:0; border:solid thin #000000; border-left:none;"><p class="p_table_content"><span class="f_table_content">feth10</span></p>
+</td>
+<td style="vertical-align:middle; width:3.2396in; height:0.1875in; padding:0; border:solid thin #000000; border-left:none;"><p class="p_table_content"><span class="f_table_content">feth10</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3542in; height:0.1875in; padding:0; border:solid thin #000000; border-left:none;"><p class="p_table_content"><span class="f_table_content">feth10</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; height:0.1875in; padding:0; border:solid thin #000000; border-top:none;"><p class="p_table_content"><span class="f_table_content">本端IP</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5208in; height:0.1875in; padding:0; border:solid thin #000000; border-top:none; border-left:none;"><p class="p_table_content"><span class="f_table_content">10.0.0.1</span></p>
+</td>
+<td style="vertical-align:middle; width:3.2396in; height:0.1875in; padding:0; border:solid thin #000000; border-top:none; border-left:none;"><p class="p_table_content"><span class="f_table_content">10.0.0.2</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3542in; height:0.1875in; padding:0; border:solid thin #000000; border-top:none; border-left:none;"><p class="p_table_content"><span class="f_table_content">10.0.0.3</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; height:0.1875in; padding:0; border:solid thin #000000; border-top:none;"><p class="p_table_content"><span class="f_table_content">链路探测</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5208in; height:0.1875in; padding:0; border:solid thin #000000; border-top:none; border-left:none;"><p class="p_table_content"><span class="f_table_content">开启</span></p>
+</td>
+<td style="vertical-align:middle; width:3.2396in; height:0.1875in; padding:0; border:solid thin #000000; border-top:none; border-left:none;"><p class="p_table_content"><span class="f_table_content">开启</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3542in; height:0.1875in; padding:0; border:solid thin #000000; border-top:none; border-left:none;"><p class="p_table_content"><span class="f_table_content">开启</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; height:0.1875in; padding:0; border:solid thin #000000; border-top:none;"><p class="p_table_content"><span class="f_table_content">负载均衡</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5208in; height:0.1875in; padding:0; border:solid thin #000000; border-top:none; border-left:none;"><p class="p_table_content"><span class="f_table_content">开启</span></p>
+</td>
+<td style="vertical-align:middle; width:3.2396in; height:0.1875in; padding:0; border:solid thin #000000; border-top:none; border-left:none;"><p class="p_table_content"><span class="f_table_content">开启</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3542in; height:0.1875in; padding:0; border:solid thin #000000; border-top:none; border-left:none;"><p class="p_table_content"><span class="f_table_content">开启</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮，完成高心跳口和本地IP配置。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_zhengwen_list">配置监控组</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）配置监控组</span></p>
+<p class="p_picture"><img alt="clip0621" style="margin:0;width:11.1042in;height:15.8958in;border:none" src="clip0621.png"/></p>
+<p class="p_step_content"><span class="f_step_content">按照如下列表中所示配置管理组。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.7083in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">设备名称</span></p>
+</th>
+<th style="vertical-align:middle; width:1.2500in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">FWA</span></p>
+</th>
+<th style="vertical-align:top; width:1.2500in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">FWB</span></p>
+</th>
+<th style="vertical-align:top; width:1.2500in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">FWC</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.7083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">角色优先级</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">1</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">2</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">3</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">虚拟ID</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">1</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">1</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">1</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">负载均衡算法</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">根据集群节点轮流均衡</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">根据集群节点轮流均衡</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">根据集群节点轮流均衡</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">抢占（默认开启，在“状态”页配置）</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">是</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">是</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">是</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">抢占延迟</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">10</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">10</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">10</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">所有接口</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">feth1、feth2</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">feth1、feth2</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2500in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">feth1、feth2</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">其中，角色优先级，用于主备的选举。</span></p>
+<p class="p_step_content"><span class="f_step_content">2）可根据需求配置链路绑定、BFD绑定，配置完成后点击【确定】按钮。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">启用高可用</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）选择 </span><span class="f_step_content" style="font-weight: bold;">系统管理 &gt; 高可用 &gt; 高可用性</span><span class="f_step_content">，激活“状态”页签。</span></p>
+<p class="p_step_content"><span class="f_step_content">2）点击“开启”，功能状态变为“开启”，则已启动防火墙的高可用功能。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5729in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4479in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.6667in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">B和C防火墙类似，需要主要以下几点：</span></p><p class="p_instruction"><span class="f_instruction">1）“配置”页中设置监控组信息时，虚拟ID与对端保持一致；</span></p>
+<p class="p_instruction"><span class="f_instruction">2）监控组接口名和同步地址要与对端保持一致。</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>业务接入端</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="VXLAN业务接入端VSAP（VXLAN service access port）是VXLAN业务接入的抽象接口，它用于接入端的报文识别，为了分辨出一个报文所属的VXLAN而设计的。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="vxlan2.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="vxlan.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic176.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">业务接入端</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">VXLAN业务接入端VSAP（VXLAN service access port）是VXLAN业务接入的抽象接口，它用于接入端的报文识别，为了分辨出一个报文所属的VXLAN而设计的。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">NGFW的VXLAN业务接入支持基于报文流封装接入方式，通过在VSAP上配置不同的流封装类型以实现不同的接口接入不同的数据报文，将VSAP关联广播域（VXLAN网桥）后，可实现数据报文通过VXLAN转发。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">配置业务接入端的操作步骤如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">网络管理 &gt; VXLAN &gt; 业务接入端</span><span class="f_step">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">点击“添加”，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="add_img51" style="margin:0;width:7.0208in;height:3.1563in;border:none" src="add_img51.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9479in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:6.1042in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9479in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">VNI</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1042in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">在下拉框中选择VXLAN接口，有关VXLAN接口的配置详见 <a href="vxlan2.html" class="topiclink">VXLAN接口</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9479in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">接入接口</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1042in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">在下拉框中选择业务接入接口。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：接入接口需工作在交换模式。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9479in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">匹配规则</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1042in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">在下拉框中选择业务接入匹配规则，可选项：all、untag、dot1q、qinq。</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">all：允许接口接收所有报文进入指定VXLAN，不区分报文中是否带VLAN Tag。不论是对原始报文进行VXLAN封装，还是解封装VXLAN报文，该类型接口都不会对原始报文进行任何VLAN Tag处理，包括添加、替换或剥离。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">untag：该类型接口只接收不带VLAN tag的报文。1）该类型接口在对原始报文进行VXLAN封装时，不会为其添加任何VLAN Tag；2）在解封装VXLAN报文时，如果其内层报文带有VLAN Tag，则将其VLAN Tag剥离（对于Qinq报文，只剥离其外层VLAN tag）后再转发。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">dot1q：对于带有一层VLAN Tag的报文，该类型接口只接收与指定VLAN Tag匹配的报文；对于带有两层VLAN Tag的报文，该类型接口只接受外层VLAN Tag与指定VLAN Tag匹配的报文。1）该类型接口在对原始报文进行VXLAN封装时，会剥离最外层的VLAN Tag；在解封装VXLAN报文时，会添加指定的VLAN Tag后再转发。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">qinq：该类型接口只接收带双层VLAN Tag的报文。1）该类型接口在对原始报文进行VXLAN封装时，会剥离所有的VLAN Tag；2）在解封装VXLAN报文时，会添加指定的双层VLAN Tag后再转发。</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step"><span class="f_step">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">参数设置完成后，点击【确定】保存配置。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4375in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img3" style="margin:0;width:0.4479in;height:0.3958in;border:none" src="hmfile_hash_5bb5ff1e.png"/></p>
+</td>
+<td style="vertical-align:middle; width:10.4583in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">基于报文流封装接入以匹配规则的方式存在，不需要创建真实的二层子接口，匹配规则有all、untag、dot1q、qinq四种，他们有下面的配置约束</span></p><p class="p_instruction" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0.1771in;"><span class="f_instruction" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">1.</span><span class="f_instruction">如果接口上配置了一条all类型的匹配规则，就不能再配置其他任何的匹配规则了。</span></p><p class="p_instruction" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0.1771in;"><span class="f_instruction" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">2.</span><span class="f_instruction">到不同VXLAN的多条all规则不能指定在同一个接口上，比如配置了“all到VNI1000”，就不能再配置“all到VNI2000”。</span></p><p class="p_instruction" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0.1771in;"><span class="f_instruction" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">3.</span><span class="f_instruction">到同一个VXLAN的untag和dot1q类型匹配规则可以指定在同一个接口上，这两种规则是“或”的关系。</span></p><p class="p_instruction" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0.1771in;"><span class="f_instruction" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">4.</span><span class="f_instruction">到同一个VXLAN的多条untag类型匹配规则不允许指定在同一个接口上，因为这样相当于重复的配置，没有意义。</span></p><p class="p_instruction" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0.1771in;"><span class="f_instruction" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">5.</span><span class="f_instruction">到不同VXLAN的多条untag规则不能指定到同一个接口上，因为这样配置就不能判定untag的报文到底匹配哪个VXLAN。。</span></p><p class="p_instruction" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0.1771in;"><span class="f_instruction" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">6.</span><span class="f_instruction">到不同VXLAN的多条dot1q规则也可以指定到同一个接口上，但是这些dot1q规则的tagid不能相同。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_step"><span class="f_step">&nbsp;</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

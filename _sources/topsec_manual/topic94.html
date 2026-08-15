@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>探针</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="随着计算机和通信技术的迅速发展，计算机网络的应用越来越广泛，其规模越来越庞大，多层面的网络安全威胁和安全风险也在不断增加，网络病毒、Dos/DDos攻击等构成的威胁和损失越来越大，网络攻击行为向着分布化、规模化、复杂化等趋势发展。虽然所有的攻击行为都会在网络或者系统中留有痕迹，但这样的痕迹都分散在各个系统中，形成一个个的信息孤岛，造成攻击事件日志信息独立分散" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic218.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc490041729.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="toc490041708.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">探针</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">随着计算机和通信技术的迅速发展，计算机网络的应用越来越广泛，其规模越来越庞大，多层面的网络安全威胁和安全风险也在不断增加，网络病毒、Dos/DDos攻击等构成的威胁和损失越来越大，网络攻击行为向着分布化、规模化、复杂化等趋势发展。虽然所有的攻击行为都会在网络或者系统中留有痕迹，但这样的痕迹都分散在各个系统中，形成一个个的信息孤岛，造成攻击事件日志信息独立分散，可研判性、可信度比较低、无法确认攻击事件。攻击事件都是在发生后，数据在网络上广为流传后企业才会发现曾经有过这个攻击事件，但具体的时间、形式等信息都难以察觉。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">为应对以上问题，NGFW内置探针模块，通过将采集的特定信息上报给态势感知平台，由态势感知平台以全网视角综合分析威胁事件，提升对威胁事件的响应速度。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">NGFW的探针功能分为流量探针和威胁探针两大类：流量探针可以采集NGFW的原始流量和连接模块的日志信息，威胁探针可以采集WAF、IPS、僵木蠕模块的报文留存信息和各安全引擎的日志信息。NGFW会将采集到的日志信息解析、转换后，按照标准的日志格式通过TCP或者UDP协议上报给态势感知平台，态势感知平台再对这些日志信息进行深度分析处理，根据分析结果来调整网络环境中安全设备的安全策略。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">系统管理 &gt; 探针</span><span class="f_step">，界面如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0375" style="margin:0;width:8.5000in;height:7.9688in;border:none" src="clip0375.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在配置探针时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th colspan="2"  style="vertical-align:middle; width:0.8958in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.8125in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"  style="vertical-align:middle; width:0.8958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">态势感知服务器配置</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器地址</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，配置态感服务器的地址，支持配置IPv4/6地址。点击【探测】可探测防火墙与配置的服务器地址是否网络可达。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">本机标识</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入本机与态感平台联动时使用的IP地址，支持配置IPv4/6地址。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="9"  style="vertical-align:middle; width:0.8958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">信息上报设置</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">威胁信息选项</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击复选框，在弹出窗口中选择需要向态感平台上传的威胁类别日志，支持配置多个。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">流量信息选项</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否同时向态感平台上传所选的威胁类型的日志流量信息。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器端口（以下皆为高级配置）</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择态势感知服务器的端口，支持输入1-65535的整数，默认514。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">传输协议</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，设置NGFW上报信息至态感平台中所使用的协议，可选项：TCP、UDP。默认使用UDP协议。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">传输类型</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，设置NGFW上报信息的格式，可选项：syslog、welf。默认使用syslog格式。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">编码方式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置上报信息的编码方式。可选项：UTF8、GB2312，默认使用UTF8编码方式。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">外发时间</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置上报信息的时间参照标准。可选项：UTC、本地时间。默认使用本地之间。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">合并传输</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否将不同类型的信息合并传输。</span></p>
+<p class="p_table_content"><span class="f_table_content">1.未勾选合并传输时，每产生一条日志就往外发送一个连接。</span></p>
+<p class="p_table_content"><span class="f_table_content">2.勾选合并传输时，将多条日志合并后发起连接进行传输，每次最大传输1400字节，合并时不会截断日志。举例：3条日志长度为1300字节，4条日志长度为1450字节，将按照1300发送，则不会合并第四条日志。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">加密方式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否将上报信息加密传输，可选项：不加密、TLS。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">当“传输协议”设置为“UDP”时，不支持TLS加密。</span></p>
+<p class="p_table_content"><span class="f_table_content">使用HTTPS协议加密，目前仅支持TLS1.3。同样，服务器也需要这样配置才能解密。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="6"  style="vertical-align:middle; width:0.8958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">取证上报设置</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">威胁取证/取证选项</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否开启威胁取证功能；开启后，需要配置对应的取证类别，可选项：WAF应用防护、入侵防御、僵木蠕防御。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：选中某个取证选项时，需要保证对应的“威胁信息选项”也被选中，才能正常向态感平台上传取证信息。同时，保证对应威胁策略取证开关处于“开启”状态。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">流量采集</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否开启流量采集功能，开启后需要采集策略。流量采集是根据配置的采集策略抓取防火墙上的数据包，将PCAP包上传到态感服务器。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">流量采集项</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置流量采集项。点击“添加”，在弹出窗口中配置流量源的基本信息和采集比例后，点击【确定】，即视为成功添加。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">传输方式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择取证文件上报的传输方式，可选项：FTP/SFTP。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户名</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置传输认证时使用的用户名。支持1-63字节长度，可输入@#_-,0-9,字母。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">密码</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置传输时与用户名匹配的密码。</span></p>
+<p class="p_table_content"><span class="f_table_content">支持8-32字节长度，密码至少包含大写字母、小写字母、数字和特殊符号中的三种，特殊符号：`~!@#$%^&amp;*()-_=+[]{};:&quot;&#39;,\|&lt;&gt;/.?和空格。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">参数配置完成后，点击【应用】完成探针的配置。</span></td></tr></table></div>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

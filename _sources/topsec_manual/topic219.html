@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>规则集管理</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="配置WAF规则集的具体操作如下： 步骤1	选择 资源管理 &gt; 安全配置文件 &gt; WAF ，激活“规则集管理”页签。 步骤2	添加规则集。 1）点击“添加”，弹出“添加”对话框，在对话框中配置规则名称并选择策略模板，如下图所示。 &nbsp;配置完成后，点击【确定】，界面中出现一条新的WAF规则集，如下图所示。 &nbsp;步骤3	配置应用防护规则。 1）点击规则" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="anquancelue_waf.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="anquancelue_waf.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic220.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">规则集管理</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">配置WAF规则集的具体操作如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">资源管理 &gt; 安全配置文件 &gt; WAF </span><span class="f_step">，激活“规则集管理”页签。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">添加规则集。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击“添加”，弹出“添加”对话框，在对话框中配置规则名称并选择策略模板，如下图所示。</span></p>
+<p class="p_picture"><img alt="anquancelue-waf02" style="margin:0;width:6.3125in;height:2.3854in;border:none" src="anquancelue-waf02.png"/></p>
+<p class="p_step_content"><span class="f_step_content">配置完成后，点击【确定】，界面中出现一条新的WAF规则集，如下图所示。</span></p>
+<p class="p_picture"><img alt="anquancelue-waf03" style="margin:0;width:15.7188in;height:1.3542in;border:none" src="anquancelue-waf03.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">配置应用防护规则。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击规则集“应用防护”列中的【规则配置】，弹出界面如下图所示。</span></p>
+<p class="p_picture"><img alt="anquancelue-waf04" style="margin:0;width:9.9375in;height:6.6667in;border:none" src="anquancelue-waf04.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置规则集时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.1979in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.5104in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">规则分类</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">在下拉框中选择规则集的规则分类，可选项：内建规则、核心规则、应用规则。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">攻击类型</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">规则分类设置为“规则分类”时可设置攻击类型。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">规则配置</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">勾选攻击类型前的复选框，选择攻击防御类型；点击“状态”列开关设置是否启用相应规则；点击“操作”列的“<img alt="caozuoicon" style="margin:0;width:0.1875in;height:0.1875in;border:none" src="caozuoicon.png"/>”，在弹出的“查看”对话框中，启用规则然后设置防御动作。可选防御动作包括：</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">告警：继续匹配下一条规则，判断对该访问请求进行的动作，访问请求记录到攻击日志中。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">继续：继续匹配下一条规则，判断对该访问请求进行的动作，访问请求不记录到攻击日志中。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">放行：允许本次访问请求，忽略后续的所有的规则，并将访问请求记录到攻击日志中。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">拒绝：拒绝本次访问请求，将访问记录到攻击日志中。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">拒绝不记录日志：拒绝本次访问请求，访问请求不记录到日志中。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">临时跳转：由本次请求页面临时跳转到新的页面中，将访问请求记录到攻击日志中，再次接收到访问请求时，继续访问当前请求页面。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">永久跳转：由本次请求页面临时跳转到新的页面中，将访问请求记录到攻击日志中，再次接收到访问请求时，将访问新的页面。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">错误页面：返回错误页面并记录攻击日志，关于错误页面的配置具体请参见 <a href="topic222.html" class="topiclink">登录页面</a>。</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_picture"><span class="f_picture">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">配置功能防护</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击规则集“功能防护”列中的蓝色按钮，弹出界面如下图所示。</span></p>
+<p class="p_picture"><img alt="配置功能防护" style="margin:0;width:7.4375in;height:4.6250in;border:none" src="hmfile_hash_a3adb067.png"/></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4688in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.6563in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">功能防护页面的每个子页面的开关配置是独立的，无需多次点击【确定】按钮保存单个界面内的配置。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">应用隐藏</span></p><p class="p_step_content"><span class="f_step_content">NGFW支持替换错误页面，从而进行返回码隐藏。当服务器返回配置的返回码时，NGFW会将其替换为配置后的错误页面，以此来防止返回码造成的信息泄露；此处需配置替换错误界面的种类（4xx，5xx），界面如下图所示：</span></p>
+<p class="p_step_content"><img alt="配置应用隐藏" style="margin:0;width:7.8854in;height:5.1771in;border:none" src="hmfile_hash_c94f3678.png"/></p>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">URL例外</span></p><p class="p_step_content"><span class="f_step_content">URL例外用于对特定的URL单独配置防护策略，而不使用安全策略中的默认值。激活“URL例外”页签，界面如下图所示。管理员可以在当前界面启用/关闭URL例外功能，也可以对已配置的URL例外项进行管理。</span></p>
+<p class="p_step_content"><img alt="配置URL例外" style="margin:0;width:7.8854in;height:5.1563in;border:none" src="hmfile_hash_5371ab9b.png"/></p>
+<p class="p_step_content"><span class="f_step_content">点击“添加”，在弹出界面中配置URL例外项，界面如下图所示。</span></p>
+<p class="p_step_content"><img alt="添加URL例外项" style="margin:0;width:7.5938in;height:5.3229in;border:none" src="hmfile_hash_8758cad0.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在配置URL例外项时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:90%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:top; width:1.1042in; background-color:#C0C0C0; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:top; width:3.8542in; background-color:#C0C0C0; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">描述</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.1042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:3.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，配置当前URL例外项的名称。最多可输入9个中文字符，最多可输入29个英文字符。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">URL路径匹配方法</span></p>
+</td>
+<td style="vertical-align:middle; width:3.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置URL地址的类型。可选项：字符串、正则。</span></p>
+<p class="p_table_content"><span class="f_table_content">字符串类型：URL指通过单个字符串来描述一个URL路径；</span></p>
+<p class="p_table_content"><span class="f_table_content">正则类型：URL指通过单个字符串来描述一系列符合某个语法规则的URl路径。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">URL路径</span></p>
+</td>
+<td style="vertical-align:middle; width:3.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置NGFW所保护的某个网站地址。</span></p>
+<p class="p_table_content"><span class="f_table_content">字符串格式：以单斜线“/”开头的字符串，如“/index.htm”；</span></p>
+<p class="p_table_content"><span class="f_table_content">正则表达式：使用正则表达式表达路径系列。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:3.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置URL例外策略的描述信息。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">状态</span></p>
+</td>
+<td style="vertical-align:middle; width:3.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否启用该URL例外。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">是否开启HTTP协议合规检查 &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+</td>
+<td style="vertical-align:middle; width:3.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否启用HTTP报文协议合规功能。默认为“</span><img alt="开关关闭icon" style="margin:0;width:0.3438in;height:0.2292in;border:none" src="hmfile_hash_3643a0cb.png"/><span class="f_table_content">”，表示关闭，点击该按钮将显示“</span><img alt="kaiguanon" style="margin:0;width:0.2917in;height:0.1771in;border:none" src="kaiguanon.png"/><span class="f_table_content">”，表示开启。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">是否开启请求限制检查</span></p>
+</td>
+<td style="vertical-align:middle; width:3.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否启用请求限制检查功能。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">请求限制</span></p><p class="p_step_content"><span class="f_step_content">请求限制是对HTTP头部的各个字段做合规性的限制。激活“请求限制”页签，界面如下图所示。</span></p>
+<p class="p_picture"><img alt="配置请求限制" style="margin:0;width:7.8542in;height:6.5104in;border:none" src="hmfile_hash_de309b19.png"/></p>
+<p class="p_step_content"><span class="f_step_content">配置请求限制时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:90%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:2.0625in; height:0.2396in; background-color:#D8D8D8; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:11.9063in; height:0.2396in; background-color:#D8D8D8; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:2.0625in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">启用</span></p>
+</td>
+<td style="vertical-align:middle; width:11.9063in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否启用HTTP报文协议合规功能。默认为“</span><img alt="开关关闭icon" style="margin:0;width:0.3438in;height:0.2292in;border:none" src="hmfile_hash_3643a0cb.png"/><span class="f_table_content">”，表示关闭，点击该按钮将显示“</span><img alt="kaiguanon" style="margin:0;width:0.2917in;height:0.1771in;border:none" src="kaiguanon.png"/><span class="f_table_content">”，表示开启。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.0625in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">请求头长度</span></p>
+</td>
+<td style="vertical-align:middle; width:11.9063in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置HTTP请求报文中起始行和首部的最大长度，单位：字节；取值范围：0-8192；默认值：8192。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.0625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">请求报文主体</span></p>
+</td>
+<td style="vertical-align:middle; width:11.9063in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置HTTP请求报文主体的最大长度，单位：字节；取值范围：0-1048576000；默认值：10485760。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.0625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">Body长度</span></p>
+</td>
+<td style="vertical-align:middle; width:11.9063in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">当HTTP请求报文中无 Content_Length参数时，可使用该参数限制报文主体的最大长度，单位：字节；取值范围：0-1048576000；默认值：10485760。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.0625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">请求行长度</span></p>
+</td>
+<td style="vertical-align:middle; width:11.9063in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置HTTP报文请求行的最大长度，单位：字节；取值范围：0-4096；默认值：4096。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.0625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">Header行长度</span></p>
+</td>
+<td style="vertical-align:middle; width:11.9063in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置HTTP请求首部每行“名称：取值”的最大长度，单位：字节；取值范围：0-4096；默认值：4096。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.0625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">Cookies个数</span></p>
+</td>
+<td style="vertical-align:middle; width:11.9063in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置保存的最大Cookies个数，取值范围：0-256；默认值：64。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.0625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">Header头个数</span></p>
+</td>
+<td style="vertical-align:middle; width:11.9063in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置HTTP请求首部“名称：取值”最大个数，取值范围：0-256；默认值：64。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.0625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">Header名称长度</span></p>
+</td>
+<td style="vertical-align:middle; width:11.9063in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置HTTP请求首部名称的最大长度，取值范围：0-512；默认值：512。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">参数限制</span></p><p class="p_step_content"><span class="f_step_content">参数限制功能可以根据不同的参数对客户端发起的请求进行过滤，对其中的参数进行合法性检查，提高Web应用系统的安全性。激活“参数限制”页签，界面如下图所示。</span></p>
+<p class="p_picture"><img alt="配置参数限制" style="margin:0;width:7.3229in;height:4.6042in;border:none" src="hmfile_hash_2e634a7d.png"/></p>
+<p class="p_step_content"><span class="f_step_content">配置参数限制时，各项参数的具体说明如下图所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:90%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.5938in; height:0.2396in; background-color:#D8D8D8; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:3.6458in; height:0.2396in; background-color:#D8D8D8; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.5938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">启用</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否启用参数限制策略。默认为“</span><img alt="开关关闭icon" style="margin:0;width:0.3438in;height:0.2292in;border:none" src="hmfile_hash_3643a0cb.png"/><span class="f_table_content">”，表示关闭，点击该按钮将显示“</span><img alt="kaiguanon" style="margin:0;width:0.2917in;height:0.1771in;border:none" src="kaiguanon.png"/><span class="f_table_content">”，表示开启。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">最大参数个数</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置用户提交表单参数的最大个数。取值范围：0-512；默认值：32。0表示不限制。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">最大参数长度</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置用户提交的每个表单参数的最大长度，单位：字节；取值范围：0-10240字节；默认值：2048。0表示不限制。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">最大表单数据长度</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置用户提交的每个表单数据POST请求主体的最大长度，单位：字节；取值范围：0-32768字节；默认值：16384。0表示不限制。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">允许的请求头方法</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择允许的请求头方法。在下拉框中选择请求头方法，支持多选。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">允许的请求body类型</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置请求报文中允许的文件类型，支持Mime类型，输入值后点击【添加】按钮完成设置。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">防爬虫</span></p><p class="p_step_content"><span class="f_step_content">NGFW提供抵御恶意机器人访问其所保护Web服务器的爬虫防御功能。激活“防爬虫”页签，界面如下图所示。</span></p>
+<p class="p_picture"><img alt="配置防爬虫" style="margin:0;width:7.8854in;height:3.6042in;border:none" src="hmfile_hash_a3e863d9.png"/></p>
+<p class="p_step_content"><span class="f_step_content">配置防爬虫时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:90%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.5938in; height:0.2396in; background-color:#D8D8D8; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:3.6458in; height:0.2396in; background-color:#D8D8D8; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.5938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">启用</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否启用防爬虫策略。默认为“</span><img alt="开关关闭icon" style="margin:0;width:0.3438in;height:0.2292in;border:none" src="hmfile_hash_3643a0cb.png"/><span class="f_table_content">”，表示关闭，点击该按钮将显示“</span><img alt="kaiguanon" style="margin:0;width:0.2917in;height:0.1771in;border:none" src="kaiguanon.png"/><span class="f_table_content">”，表示开启。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">爬虫组</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择已定义的爬虫组，或者在下拉列表中点击『新建』创建新的爬虫组。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">动作</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置NGFW对User-Agent字段命中爬虫组的HTTP请求报文执行的操作。可选项：告警、拒绝、拒绝不记录日志、临时跳转、永久跳转、错误页面。</span></p>
+<p class="p_table_content"><span class="f_table_content">1）告警：生成报警信息，并继续匹配后续策略确认是否放行该HTTP请求报文。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）拒绝：拒绝HTTP请求报文并记录日志。</span></p>
+<p class="p_table_content"><span class="f_table_content">3）拒绝不记录日志：拒绝HTTP请求报文但不记录日志。</span></p>
+<p class="p_table_content"><span class="f_table_content">4）临时跳转：重定向并记录日志，将HTTP访问请求重定向到其它特定网站，但新的HTTP访问请求发起时仍旧访问原网站。</span></p>
+<p class="p_table_content"><span class="f_table_content">5）永久跳转：重定向并记录日志，将HTTP访问请求重定向到其它特定网站，新的HTTP访问请求发起时，直接访问重定向之后的网站。</span></p>
+<p class="p_table_content"><span class="f_table_content">6）错误页面：返回错误页面并记录日志。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明： </span></p>
+<p class="p_table_content"><span class="f_table_content">HTTP请求报文命中爬虫防护策略产生的报警和日志信息均显示在“监控&gt;日志查看&gt;WAF攻击日志”界面，关于策略日志的查看具体请参见 <a href="rizhichakan.html" class="topiclink">日志查看</a>。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">防盗链</span></p><p class="p_step_content"><span class="f_step_content">防盗链是防止第三方通过一些技术手段绕过本站的资源展示页面，盗用本站的资源，让绕开本站资源展示页面的资源链接失效的技术。开启防盗链功能后，因为屏蔽了那些盗链的间接资源请求，从而可以大大减轻服务器及带宽的压力。激活“防盗链”页签，界面如下图所示。</span></p>
+<p class="p_picture"><img alt="配置防盗链" style="margin:0;width:7.8438in;height:6.6146in;border:none" src="hmfile_hash_bf8fc586.png"/></p>
+<p class="p_step_content"><span class="f_step_content">配置防盗链时，需要配置如下表两个方面。</span></p>
+<div style="text-align: left; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:90%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:top; width:1.1667in; background-color:#C0C0C0; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:top; width:4.0729in; background-color:#C0C0C0; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">允许访问的站点</span></p>
+</td>
+<td style="vertical-align:middle; width:4.0729in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">添加允许访问的站点host地址，NGFW将不对该站点进行防盗链防护。点击【添加】按钮，在弹出窗口中配置允许访问的站点。站点的地址格式支持普通形式（可含有通配符“*”），正则表达式形式（以“~”起始的正则表达式字符串）。</span></p>
+<p class="p_table_content"><span class="f_table_content">例如：</span></p>
+<p class="p_table_content"><span class="f_table_content">“www.baidu.com”，表示允许来自百度地址的访问；</span></p>
+<p class="p_table_content"><span class="f_table_content">“*.baidu.com”表示运行来自百度所有域名的访问；</span></p>
+<p class="p_table_content"><span class="f_table_content"><a href="https://www.baidu.com" class="weblink">https://www.baidu.com</a> 表示只允许来自百度https安全站点的访问；</span></p>
+<p class="p_table_content"><span class="f_table_content">“www\.(google|baidu)\.com”，正则表达式形式，表示允许来自www.google.com或<a href="http://www.baidu.com" class="weblink">www.baidu.com</a>站点的访问。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">忽略保护的URI路径</span></p>
+</td>
+<td style="vertical-align:middle; width:4.0729in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">添加忽略保护的URI地址，不对该地址进行防盗链保护。点击【添加】按钮，在弹出窗口中配置允许访问的站点。站点的地址格式支持普通形式（可含有通配符“*”），正则表达式形式（以“~”起始的正则表达式字符串）。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">CSRF</span></p><p class="p_step_content"><span class="f_step_content">CSRF（Cross-site request forgery，跨站请求伪造）攻击，指攻击者利用网站对合法用户的网页浏览器的信任，劫持用户当前已登录的Web应用程序的会话，迫使用户浏览器将伪造的HTTP请求（包括该用户的会话Cookie和其他认证信息）发送到已登录的Web应用程序，执行非用户本意的操作。NGFW支持CSRF攻击防护。</span></p>
+<p class="p_step_content"><span class="f_step_content">激活“CSRF”页签，再点击“添加”，界面如下图所示。</span></p>
+<p class="p_step_content"><img alt="添加CSRF" style="margin:0;width:7.8542in;height:6.2083in;border:none" src="hmfile_hash_de42d3d7.png"/></p>
+<p class="p_step_content"><span class="f_step_content">配置CSRF时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:2.9792in; background-color:#C0C0C0; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; background-color:#C0C0C0; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">描述</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">URL路径匹配方法</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置URL地址的类型。可选项：字符串、正则；默认值：字符串。</span></p>
+<p class="p_table_content"><span class="f_table_content">字符串类型URL指通过单个字符串来描述一个URL路径；</span></p>
+<p class="p_table_content"><span class="f_table_content">正则类型URL指通过单个字符串来描述一系列符合某个语法规则的URL路径。 </span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">URL路径</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置NGFW保护的URL路径。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">请求方法</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置客户端向Web服务器获取资源的方式，可选项：GET、POST、GET|POST；默认值：GET。</span></p>
+<p class="p_table_content"><span class="f_table_content">“GET”用于客户端从服务器获取某个资源；</span></p>
+<p class="p_table_content"><span class="f_table_content">“POST”用于客户端向服务器发送表单数据；</span></p>
+<p class="p_table_content"><span class="f_table_content">“GET|POST”表示包括GET和POST。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">站点匹配方法</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置NGFW检查用户字段的方法，可选项：字符串、正则；默认值：字符串。</span></p>
+<p class="p_table_content"><span class="f_table_content">“字符串”指CSRF策略与HTTP请求报头中的站点字段值完全相同，HTTP请求报文才命中该策略；</span></p>
+<p class="p_table_content"><span class="f_table_content">“正则”指HTTP请求报头中的字段符合“Referer正则”定义的规则，则HTTP请求报文命中该策略。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">站点</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置基准站点值。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">动作</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置CSRF策略与HTTP请求报头的Referer/Token字段值不匹配时，NGFW对该HTTP请求报文所执行的操作。可选项：告警、拒绝、拒绝不记录、临时跳转、永久跳转、错误页面。</span></p>
+<p class="p_table_content"><span class="f_table_content">1）告警：生成报警信息，并继续匹配后续策略确认是否放行该HTTP请求报文。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）拒绝：拒绝HTTP请求报文并记录日志。</span></p>
+<p class="p_table_content"><span class="f_table_content">3）拒绝不记录：拒绝HTTP请求报文但不记录日志。</span></p>
+<p class="p_table_content"><span class="f_table_content">4）临时跳转：重定向并记录日志，将HTTP访问请求重定向到其它特定网站，但新的HTTP访问请求发起时仍旧访问原网站。</span></p>
+<p class="p_table_content"><span class="f_table_content">5）永久跳转：重定向并记录日志，将HTTP访问请求重定向到其它特定网站，新的HTTP访问请求发起时，直接访问重定向之后的网站。</span></p>
+<p class="p_table_content"><span class="f_table_content">6）错误页面：返回错误页面并记录日志。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">HTTP请求报文命中CSRF防护策略产生的报警和日志信息均显示在“监控&gt;日志查看&gt;WAF攻击日志”，关于攻击日志的查看具体请参见 <a href="rizhichakan.html" class="topiclink">日志查看</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入对CSRF策略简单的描述信息。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">状态</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否启用该CSRF规则。</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">暴力登录</span></p><p class="p_step_content"><span class="f_step_content">所谓暴力登录就是攻击者无限次尝试用户名和密码，试图登录网站。如果不对密码认证失败做次数和时间限制，密码肯定会被尝试出来，这样就极大的增加了网站的风险。为了防止对网站使用尝试猜解用户名和密码的攻击，TopWAF对暴力登录做了策略限制，用户可以定义统计周期内用户名和密码的失败次数，以限制暴力登录攻击，提高网站的安全性。</span></p>
+<p class="p_step_content"><span class="f_step_content">激活“暴力登录”页签，界面如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0029" style="margin:0;width:7.7292in;height:9.5625in;border:none" src="clip0029.png"/></p>
+<p class="p_step_content"><span class="f_step_content">配置暴力登录规则时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:2.9792in; background-color:#C0C0C0; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; background-color:#C0C0C0; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">描述</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">启用</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否启用暴力登录防护功能。只有启用暴力登录防护策略才能在安全策略中生效。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">统计周期</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置统计用户登录信息的周期。范围：1-100；单位：分钟。默认值：5。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">每个用户失败次数</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置周期内允许用户登录失败的尝试次数，范围：0-500，0代表不限制，默认值：5。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">相同密码失败次数</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">周期内允许所有用户使用相同密码登录失败的尝试次数，在登录页面认证方式为digest时不可用，范围0-500，0代表不限制，默认值：5。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">相同IP登录次数</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">周期内允许所有同一IP密码登录失败的尝试次数，范围0-500，0代表不限制。默认值：50。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">最大哈希桶节点数</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置最大哈希桶数。当网站流量较大时，增大此值可达到更好的防护效果，范围1000-20000。</span><span style="font-family: 宋体;">默认值：3000。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">是否阻断客户端IP</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否启用客户端IP阻断功能。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">阻断客户端时间周期</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">阻断有暴力破解行为客户端的时间。单位：分钟；取值范围：0-1440；0代表永久封禁。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">网站每秒连接次数</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_Comment">网站每秒允许的连接次数，</span><span class="f_table_content">取值范围：0-1000,0代表不限制。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">动作</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置TopWAF对暴力登录动作执行的操作。可选项：告警、拒绝、拒绝不记日志、临时跳转、永久跳转、错误页面。</span></p>
+<p class="p_table_content"><span class="f_table_content">1）告警：生成报警信息，并继续匹配后续策略确认是否放行该HTTP请求报文。暴力登录动作设置为告警时，阻断客户端IP功能不会生效。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）拒绝：拒绝HTTP请求报文并记录日志。</span></p>
+<p class="p_table_content"><span class="f_table_content">3）拒绝不记录日志：拒绝HTTP请求报文但不记录日志。</span></p>
+<p class="p_table_content"><span class="f_table_content">4）临时跳转：重定向并记录日志，表示将HTTP访问请求重定向到其它特定网站，但新的HTTP访问请求发起时仍旧访问原网站。</span></p>
+<p class="p_table_content"><span class="f_table_content">5）永久跳转：重定向并记录日志，表示将HTTP访问请求重定向到其它特定网站，新的HTTP访问请求发起时，直接访问重定向之后的网站。</span></p>
+<p class="p_table_content"><span class="f_table_content">6）错误页面：返回错误页面并记录攻击日志，关于错误页面的配置具体请参见 <a href="topic222.html" class="topiclink">登录页面</a>。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">HTTP请求报文命中暴力登录防护策略产生的报警和日志信息均显示在“监控&gt;日志查看&gt;WAF攻击日志”菜单，关于攻击日志的查看具体请参见 <a href="rizhichakan.html" class="topiclink">日志查看</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">跳转页面</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">处理动作设置为“临时跳转”、“永久跳转”时，该参数有效。</span></p>
+<p class="p_table_content"><span class="f_table_content">“动作”参数设置为临时跳转/永久跳转时，设置重定向的目标URL地址，例如http://www.topsec.com.cn。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.9792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">登录页面</span></p>
+</td>
+<td style="vertical-align:middle; width:10.1458in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">处理动作设置为“错误页面”时，该参数有效，设置已定义的错误页面，关于错误页面的定义具体请参见 <a href="topic222.html" class="topiclink">登录页面</a>。</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤5</span></td><td style="border:none;padding:0"><span class="f_step">搜索规则集，搜索已添加的WAF规则集。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击“</span><img alt="guizesousuoicon" style="margin:0;width:1.0104in;height:0.2917in;border:none" src="guizesousuoicon.png"/><span class="f_step_content">”，弹出“规则搜索”对话框，如下图所示。</span></p>
+<p class="p_picture"><img alt="anquancelue-waf08" style="margin:0;width:6.3229in;height:3.8750in;border:none" src="anquancelue-waf08.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）填写关键字，点击【确定】按钮，完成规则集搜索。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

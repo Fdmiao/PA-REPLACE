@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>DNS客户端</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="TCP/IP协议使用IP地址实现网络的连接和通信，而IP地址由点分十进制组成，对用户而言，记住众多网络主机对应的IP地址难度非常大。针对此问题，专门设计了域名（一种字符串形式的主机命名机制）以及DNS（Domain Name..." />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc462834567.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc46283454401.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic206.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">DNS客户端</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">TCP/IP协议使用IP地址实现网络的连接和通信，而IP地址由点分十进制组成，对用户而言，记住众多网络主机对应的IP地址难度非常大。针对此问题，专门设计了域名（一种字符串形式的主机命名机制）以及DNS（Domain Name System，域名系统），其中DNS提供域名与IP地址间的查询机制，自动实现域名地址与IP地址的映射，用户只需知道某网络服务的域名而无需知道其IP地址即可访问该网络服务。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">为在Internet中通过域名唯一标识某台主机，并为网络服务指定一个有意义的名字，方便用户记忆，域名采用树形结构的命名方案。每个申请Internet域名的国家都需向NIC（Network Information Center，网络信息中心）注册一个顶级域名，NIC将顶级域名的管理权分配给指定的管理机构，这些管理机构再对其被授权管理的域继续进行划分，以此下去，便形成层次结构的域名体系，域名树形结构如下图所示。</span></p>
+<p class="p_picture"><img alt="system_56" style="margin:0;width:7.8021in;height:3.1146in;border:none" src="system_56.png"/></p>
+<p style="line-height: 1.20; margin: 0 0 0 0.2500in;"><span style="color: #000000;">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">域名级别包括根域、顶级域名、二级域名、三级域名等等，不同级别的域名用点号分隔，级别最低的域名写在最左边，级别最高的域名则写在最右边。域名体系的层次结构说明如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.0938in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">域名级别</span></p>
+</th>
+<th style="vertical-align:middle; width:4.6146in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.0938in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">根域</span></p>
+</td>
+<td style="vertical-align:middle; width:4.6146in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">根域用点号（.）表示，以点号结尾的域名为完全合格域名。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0938in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">顶级域名</span></p>
+</td>
+<td style="vertical-align:middle; width:4.6146in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">包括国际顶级域名和国内顶级域名。</span></p>
+<p class="p_table_content"><span class="f_table_content">举例：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）cn：供中国使用；us：供美国使用；jp：供日本使用。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）net：供网络提供商使用；com：供商业组织使用；edu：供教育机构使用；gov：供政府机构使用；org：供非商业非盈利单位使用；mil：供军事机构使用。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0938in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">二级域名</span></p>
+</td>
+<td style="vertical-align:middle; width:4.6146in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">顶级域名之下的域名。由字母、数字和连接符（-）组成，各级域名之间用实点（.）连接。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0938in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">……</span></p>
+</td>
+<td style="vertical-align:middle; width:4.6146in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">……</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">DNS域名系统采用C/S架构，传输层协议为TCP或UDP，服务器端口号53，DNS服务器负责域名解析，DNS客户端提出查询请求。NGFW在系统中作为DNS Client，当其通过域名访问网络资源时，通过向DNS服务器发送域名解析请求，获取域名对应的IP地址，进而通过IP地址访问具体的网络服务。NGFW访问 </span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"><a href="http://www.topsec.com.cn" class="weblink">www.topsec.com.cn</a> </span><span class="f_zhengwen">时，DNS域名解析完整过程如下图：</span></p>
+<p class="p_picture"><img alt="system_57" style="margin:0;width:7.0938in;height:4.9583in;border:none" src="system_57.png"/></p>
+<p style="line-height: 1.20; margin: 0 0 0 0.2500in;"><span style="color: #000000;">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">NGFW首先向本地首选DNS服务器发起域名解析请求，如果本地首选DNS服务器进行域名解析失败，则向本地备选DNS服务器发起域名解析请求。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">本地DNS服务器接收域名请求后的处理流程如下：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）本地DNS服务器进行域名解析，查询其缓存表；如果查找到域名对应的IP地址，本地DNS服务器向NGFW返回该域名对应的IP地址，否则向根域服务器发起请求报文。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）根域服务器收到请求报文，查询其映射表项，然后向本地DNS服务器返回指向.cn服务器的IP地址；本地DNS服务器获取.cn服务器IP地址后，向.cn服务器发起域名请求。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）流程同2）逐级查询，直到查询到最后一个域名服务器topsec.com.cn，最后一个域名服务器将域名</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"><a href="http://www.topsec.com.cn" class="weblink">www.topsec.com.cn</a></span><span class="f_zhengwen">对应的IP返回给本地DNS服务器。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">4）本地DNS服务器接收到</span><span class="f_zhengwen" style="font-family: 'Times New Roman',Times,Georgia,serif;">.</span><span class="f_zhengwen">topsec.com.cn服务器解析成功的响应报文，将域名与IP地址的映射关系缓存至本地，并将域名解析结果发送给NGFW。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">下面介绍NGFW作为DNS客户端时，如何配置其本地DNS服务器。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_step" style="font-weight: bold;">系统管理 &gt; </span><span class="f_menu">系统设置 &gt; DNS客户端</span><span class="f_step">，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0279" style="margin:0;width:7.3646in;height:2.9063in;border:none" src="clip0279.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">配置DNS服务器。在“首选DNS服务器”文本框中输入优先级最高的DNS服务器的IP地址；如果有备用的DNS服务器，则在“备选DNS1”/“备选DNS2”文本框中输入其IP地址。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">点击【应用】按钮完成DNS服务器的配置；点击【重置】按钮则恢复系统出厂配置。</span></td></tr></table></div><p class="p_table_content" style="line-height: 1.20; margin: 0 0 0 0;"><span class="f_table_content">&nbsp;</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

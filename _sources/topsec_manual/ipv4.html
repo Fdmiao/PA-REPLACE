@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>IPv4组播</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="NGFW支持PIM组播（Protocol Independent Multicasting，协议无关组播），PIM作为一种IP网络中的组播路由协议，以单播路由作为支撑，自动构建组播转发表（S,G），将网络中的组播数据流发送到有组播数据请求的组成员所连接的组播设备上。PIM组播有PIM-SM和PIM-DM两种模式：" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic6.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic6.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="ipv6.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">IPv4组播</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">NGFW支持PIM组播（Protocol Independent Multicasting，协议无关组播），PIM作为一种IP网络中的组播路由协议，以单播路由作为支撑，自动构建组播转发表（S,G），将网络中的组播数据流发送到有组播数据请求的组成员所连接的组播设备上。PIM组播有PIM-SM和PIM-DM两种模式：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">PIM_SM（协议无关组播_稀疏模式）：一般应用于组播组成员分布相对分散、范围较广的大中型网络，使用“拉（Pull）模式”传送组播。该模式下会假设所有主机不需要接收组播数据，组播源只向明确提出需要组播数据的主机发送。实现组播转发的核心技术是构造并维护共享树，选取根节点，通过组播源、根节点、连接接收者的路由器，从共享树切换到最短路径树，最终构建组播源到接收者的最短路径树。PIM_SM较PIM_DM能够以更经济的方式构建组播转发的最短路径树。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">PIM_DM（协议无关组播_密集模式）：一般应用于组播成员较为集中、且数量较多的小型网络，采用“扩散-剪枝”方式构建最短路径树传输组播。该模式下会假设网络中的每个子网都存在组播组成员，组播数据首先扩散到网络中的所有节点，然后对没有组播接收者的分支进行剪枝，被剪枝的节点提供超时机制，可以周期性地恢复成转发状态，为减少被剪枝分支恢复转发状态所需时间，支持嫁接机制主动恢复接收者的分支。</span></p><p class="p_zhengwen"><span class="f_zhengwen">NGFW通过组播转发表（S,G），决定转发或丢弃收到的组播包。组播转发表项包括：源地址/网络、组播地址、入接口、出接口。NGFW的组播转发表项包括动态组播转发表项和静态组播转发表项，动态组播转发表项通过PIM协议自动学习、更新，静态组播转发表项由管理员手工添加而成，不随网络状态变化而改变，静态组播转发表项优先级高于动态组播转发表项。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">NGFW接收到从某个源地址发送过来的组播包后，检查组播转发表，组播转发表无匹配项，丢弃组播；转发表有匹配项，根据不同的查找结果处理报文。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">匹配静态组播转发表项</span></p><p class="p_zhengwen"><span class="f_zhengwen">如果报文实际来源接口与静态组播路由表项匹配，就根据路由转发表项的“出接口”转发组播报文；否则，丢弃组播报文。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">匹配动态组播转发表项。</span></p><p class="p_zhengwen"><span class="f_zhengwen">如果组播报文实际来源接口与组播转发表项匹配，就根据转发表项的“出接口”转发组播报文；否则，进行RPF检查。RPF检查若通过，则修改动态组播转发表项的“入接口”，然后根据修改后的转发表项的“出接口”转发组播报文；如果未通过，丢弃组播报文。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">另外，NGFW除了通过组播转发表决定是否转发组播外，为了缩小组播的传输范围也支持三种组播定界功能，以此限定组播的传输范围（接口组播定界的配置详见 <a href="ref487722721.html" class="topiclink">接口</a> 的属性配置），包括：</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen">组播定界TTL阈值</span></p><p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen">组播定界Scope-ID（仅用于IPv6组播）</span></p><p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen">组播定界IP地址</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list" style="font-weight: bold;">配置NGFW动态组播路由</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">将接口加入组播进程</span></td></tr></table></div><div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.1458in 0.6042in;"><table style="width:7.2917in; background-color:#e8e8e8; border:none; border-spacing:0;">
+<thead>
+<tr>
+<th style="vertical-align:top; padding:0; border:none"><p class="p_zhengwen"><span class="f_zhengwen">进入NGFW的CLI界面，将接口加入组播进程：</span></p>
+<p class="p_CLI_paragraph"><span class="f_CLI_action">#network pimd_dev add</span><span class="f_CLI_parameter_I"> feth1,feth2</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">/*feth1,feth2为NGFW路由模式接口，多个接口间使用逗号分隔*/</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">/*开启PIM后，防火墙默认开启IGMP功能，版本为IGMPv2。*/</span></p>
+</th>
+</tr>
+</thead>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">设置组播模式并开启组播功能。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击组播转发表项列表上方『PIMD』，弹出界面如下图所示。</span></p>
+<p class="p_picture"><img alt="network_139" style="margin:0;width:8.8958in;height:5.9896in;border:none" src="network_139.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）选择PIM组播模式，然后开启状态开关以及白名单（白名单指支持PIM协议的接口），点击【确定】按钮。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list" style="font-weight: bold;">配置NGFW静态组播路由</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择</span><span class="f_step" style="color: #0070c0;"> </span><span class="f_menu">网络管理 &gt; 路由 &gt; 组播</span><span class="f_step">，默认激活“IPv4组播”页签，进入IPv4组播路由配置界面。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">配置组播静态转发表项。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击组播转发表项列表上方【添加】，弹出如下图所示的界面。</span></p>
+<p class="p_picture"><img alt="network_140" style="margin:0;width:8.0625in;height:5.6042in;border:none" src="network_140.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.9583in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:6.9271in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">组播源地址</span></p>
+</td>
+<td style="vertical-align:middle; width:6.9271in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，指定组播的源地址，格式：IPv4网络地址/子网长度。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">组播组地址</span></p>
+</td>
+<td style="vertical-align:middle; width:6.9271in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置组播组的IP地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">入接口</span></p>
+</td>
+<td style="vertical-align:middle; width:6.9271in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">如果指定源主机发送的组播包从该指定入接口进入NGFW，NGFW会根据出接口转发组播包；否则，NGFW会直接丢弃该组播包，不向外转发该组播包。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.9583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">出接口</span></p>
+</td>
+<td style="vertical-align:middle; width:6.9271in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择NGFW转发组播包的出接口。出接口与入接口不能配置相同的接口。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）参数设置完成后，点击【确定】按钮。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

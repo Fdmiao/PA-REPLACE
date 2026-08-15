@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>邻居管理</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="ARP ARP（Address Resolution..." />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic178.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="ref487714854.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="ref487724355.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">邻居管理</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen_B"><span class="f_classify">ARP</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">ARP（Address Resolution Protocol，地址解析协议）是根据IP地址获取MAC地址的TCP/IP协议。以太网设备在发送数据包前需封装第二层报头（包含MAC地址）和第三层报头（包含IP地址），封装数据包中MAC地址的依据为ARP表。以太网设备封装数据包时通过查询ARP表确定MAC地址。如果ARP表中存在目的IP地址对应的MAC地址，直接封装数据包；否则，则通过ARP协议根据已知目的IP地址解析出IP地址对应的MAC地址，再进行封装数据包。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">主机根据ARP协议获取目的IP地址对应的MAC地址时，根据目的地址与主机是否处于同一个网段，处理方式不同（以PC A向PC D发送数据报文为例）。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">目的地址与主机处于同一个子网。</span></p><p class="p_zhengwen"><span class="f_zhengwen">1）PC A在ARP表中查找到PC D表项，直接利用其中的MAC地址对IP报文进行数据帧封装，发送给PC D。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）PC A在ARP表中未查找到PC D表项，ARP工作过程如下图所示。</span></p>
+<p class="p_picture"><img alt="network_47" style="margin:0;width:6.1979in;height:3.7188in;border:none" src="network_47.png"/></p>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">PC A以广播方式发送一个ARP请求报文。该报文的源IP地址和源MAC地址为PC A的IP地址和MAC地址，目的IP地址为PC D的IP地址、目的MAC地址为全F。</span></p><p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">处于同一广播域内的所有设备均可接收到该ARP请求报文，并将自己的IP地址与报文中的目的IP地址比较，若不同则丢弃报文，不做任何应答。</span></p><p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">PC D发现请求报文中IP地址与自身的IP地址相同，于是将ARP请求报文中的源IP地址和源MAC地址的映射关系存入自己的ARP表中，发送ARP响应报文给PC A。ARP响应报文以单播方式发送，其中包含PC D的MAC地址。</span></p><p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">PC A收到ARP响应报文后，在ARP表中加入PC D的MAC地址用于后续的报文转发，并将IP报文进行数据帧封装，发送给PC D。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">目的地址与主机处于不同子网</span></p><p class="p_zhengwen"><span class="f_zhengwen">PC A广播ARP请求报文，由网关进行应答，发送ARP响应报文给PC A。PC A则将网关的MAC地址写入对应目的地址的该ARP表项。之后，PC A则会根据网关的MAC对数据进行封装。</span></p>
+<p class="p_zhengwen_B"><span class="f_classify">ND</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">IPv6协议扩大了地址空间，使得网络节点只需要知道链路层地址及本地网络的子网前缀，就能够通过无状态或有状态自动配置得到唯一的IPv6地址而成为网络的一部分。同时，IPv6还支持网络节点的移动性。这些功能都是通过邻居发现协议（NDP，Neighbor Discovery Protocol）来实现的，同一个子网内所有主机与路由器之间的交互也都是通过邻居发现协议来实现的。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">邻居发现协议是IPv6协议的关键组成部分，协议包括路由器请求（RS，Router Solicitation）、路由器通告（RA，Router Advertisement）、邻居请求（NS，Neighbor Solicitation）、邻居通告（NA，Neighbor Advertisement）和重定向5种类型的IPv6控制信息报文（ICMPv6，Internet Control Management Protocol Version 6），实现了在IPv4中的地址解析协议（ARP）、控制报文协议（ICMP）中的路由器发现协议和重定向协议的所有功能，并具有邻居不可达检测机制。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">路由器请求报文：主机启动后，向路由设备发出路由器请求，路由设备则会以路由器通告报文响应。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">路由器通告报文：路由设备周期性的发布路由器通告报文，或者响应主机的路由器请求，其中包括前缀和一些标志位的信息。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">邻居请求报文：IPv6节点发送邻居请求报文，请求邻居的链路层地址，检查邻居是否可达，也可以验证邻居的地址是否是唯一的。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">邻居通告报文：邻居通告报文是IPv6节点对邻居请求报文的响应，或者IPv6节点在链路层变化时也可以主动发送邻居通告报文。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">重定向报文（Redirect）报文：路由设备通过发送重定向报文，通知链路上报文的发送节点，网络中存在更优的转发数据报文的路由设备。节点接收到重定向报文后，修改本地路由表项，选择最优路径转发。</span></p><p class="p_zhengwen"><span class="f_zhengwen">邻居发现协议由邻居表实现，邻居表记录了主机IPv6地址和MAC地址的映射关系，主要用来完成与IPv4中的地址解析协议（ARP）相同的功能。当NGFW发送数据报文时，会查看邻居表，如果目的IP地址已经在邻居表中，则根据邻居表中该IP地址对应的MAC地址封装数据报文；否则，NGFW需发送组播报文以获取目的主机的MAC地址来封装数据报文。</span></p>
+<p class="p_picture"><img alt="邻居topo" style="margin:0;width:4.4688in;height:2.8646in;border:none" src="hmfile_hash_c3b64a87.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">如上图所示，以NGFW A为例，NGFW A获取NGFW B的MAC地址的邻居地址解析过程如下。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）NGFW A通过组播方式发送NS消息。其中NS消息的源地址是NGFW A的IPv6地址，目的地址是被请求节点NGFW B的组播地址；除此以外，NS消息中还包含了NGFW A的MAC地址。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）NGFW B收到NS消息后，判断报文的目的地址是否为自己的IPv6地址对应的被请求设备组播地址。如果是，则NGFW B可以学习到NGFW A的MAC地址，并以单播方式发送NA消息，其中包含了自身的MAC地址。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）NGFW A收到NGFW B发送的NA消息，获得NGFW B的MAC地址。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

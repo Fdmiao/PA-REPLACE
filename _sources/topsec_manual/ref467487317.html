@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>管理用户</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="用户经过NGFW访问网络资源前，NGFW需要对其进行认证，认证通过之后，NGFW会进一步检查与该用户相关联的用户访问策略。用户访问策略通过后，对于门户认证用户，NGFW会根据访问控制规则进行授权；对于SSL VPN用户，NGFW会根据SSLVPN模块的ACL管理功能和防火墙的访问控制规则综合判断结果进行授权。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc462834524.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc462834515.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="ref483380791.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">管理用户</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">用户经过NGFW访问网络资源前，NGFW需要对其进行认证，认证通过之后，NGFW会进一步检查与该用户相关联的用户访问策略。用户访问策略通过后，对于门户认证用户，NGFW会根据访问控制规则进行授权；对于SSL VPN用户，NGFW会根据SSLVPN模块的ACL管理功能和防火墙的访问控制规则综合判断结果进行授权。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">添加用户方式</span></p><p class="p_zhengwen_list"><span class="f_zhengwen_list">NGFW支持的添加用户方式如下：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）手动逐条添加：管理员手工逐条添加用户，一次只能添加一个用户。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）自动添加：NGFW通过扫描网络中指定IP地址范围内的用户，自动将其添加至NGFW中，此方式中添加的用户名通过计算机名标识。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）导入用户：将用户信息按照模板写入TXT或CSV文件中，再将TXT或CSV文件导入到系统中。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">4）外部认证服务器同步：开启外部认证服务器的“自动添加用户到本地”功能（请参见 <a href="toc462834526.html" class="topiclink">认证服务器</a>）。外部认证服务器与NGFW认证成功后，可将认证服务器中用户同步至NGFW中，另外，对于ldap认证服务器，还支持通过点击指定ldap认证服务器的“同步”图标实现将LDAP用户同步至NGFW中。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">用户认证方式</span></p><p class="p_zhengwen_list"><span class="f_zhengwen_list">NGFW支持的添加用户方式如下：</span></p>
+<p class="p_zhengwen_list"><span class="f_zhengwen_list">1）门户认证：支持本地认证、外部认证。</span></p>
+<p class="p_zhengwen_list"><span class="f_zhengwen_list">2）SSLVPN认证：支持本地认证、外部认证。</span></p>
+<p class="p_zhengwen_list"><span class="f_zhengwen_list">在NGFW本地维护用户的具体操作如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">用户管理 &gt; 用户配置</span><span class="f_step">。界面左侧为用户组管理界面，右侧为用户管理界面，整体界面如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0389" style="margin:0;width:9.1875in;height:1.8021in;border:none" src="clip0389.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">添加用户。</span></td></tr></table></div><p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">手工添加</span></p><p class="p_step_content"><span class="f_step_content">1）点击用户管理界面的“添加”选择“手动添加”，弹出添加用户窗口，界面如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0390" style="margin:0;width:8.9063in;height:10.1458in;border:none" src="clip0390.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在添加用户时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5729in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th colspan="2"  style="vertical-align:middle; width:3.6146in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:10.2917in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="9"  style="vertical-align:middle; height:0.1146in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">基本信息</span></p>
+</td>
+<td style="vertical-align:middle; width:2.1354in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户名</span></p>
+</td>
+<td style="vertical-align:middle; width:10.2917in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项。设置用户的名称，支持汉字、字母、数字、-、_，不支持空格和特殊字符（!@#$%^&amp;*(),/?;:’”），最多支持31个字节（一个汉字占三个字节；一个字母/数字占一个字节），区分大小写。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.1354in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">所属用户组</span></p>
+</td>
+<td style="vertical-align:middle; width:10.2917in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">可选项。设置用户所属的用户组，默认属于根用户组“/”。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.1354in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">密码</span></p>
+</td>
+<td style="vertical-align:middle; width:10.2917in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_Normal"><span class="f_table_content">必填项，输入用户的认证密码允许长度：6-32。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.1354in; padding:0; border:solid thin #000000;"><p class="p_Normal"><span class="f_table_content">确认密码</span></p>
+</td>
+<td style="vertical-align:middle; width:10.2917in; height:0.0104in; padding:0; border:solid thin #000000;"><p class="p_Normal"><span class="f_table_content">必填项，再次输入用户的认证密码。允许长度：6-32。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.1354in; padding:0; border:solid thin #000000;"><p class="p_Normal"><span class="f_table_content">邮箱</span></p>
+</td>
+<td style="vertical-align:middle; width:10.2917in; height:0.0104in; padding:0; border:solid thin #000000;"><p class="p_Normal"><span class="f_table_content">设置用户的邮箱。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.1354in; padding:0; border:solid thin #000000;"><p class="p_Normal"><span class="f_table_content">认证方式</span></p>
+</td>
+<td style="vertical-align:middle; width:10.2917in; height:0.0104in; padding:0; border:solid thin #000000;"><p class="p_Normal"><span class="f_table_content">选择用户认证方式，包括单因子（密码/证书）、双因子（密码+短信、密码+证书/密码+Ukey），认证方式的选择限制取决</span><span class="f_table_content">于安全策略的配置，详情参见 </span><span class="f_table_content" style="font-weight: bold;">用户管理 &gt; 认证服务器 &gt; 安全安</span><span class="f_table_content" style="font-weight: bold;">全策略 &gt; 认证方式。</span></p>
+<p class="p_table_content"><span class="f_table_content">1）证书认证方式，需选择已导入的本地证书进行绑定；如果绑定的证书未导入到设备中，点击【导入外部证书】后可导入。本地管理员证书的导入，参见 <a href="topic243.html" class="topiclink">本地证书</a>。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）密码和证书认证方式，证书配置方法与单因子证书认证相同，登录认证需同时满足密码认证以及证书认证用户才可以上线。</span></p>
+<p class="p_table_content"><span class="f_table_content">3）密码和UKey认证方式，UKey是一种通过USB(通用串行总线接口)直接与计算机相连、具有密码验证功能，使用UKey前需要在对应的管理终端上安装相应的驱动程序，驱动安装成功后才可以识别出UKey。获取驱动请联系天融信销售人员。</span></p>
+<p class="p_table_content"><span class="f_table_content">4）密码+短信认证，在下方手机号配置项输入需要进行登录验证的手机号码。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.1354in; padding:0; border:solid thin #000000;"><p class="p_Normal"><span class="f_table_content">状态</span></p>
+</td>
+<td style="vertical-align:middle; width:10.2917in; height:0.0104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置启用/禁用当前用户账户。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.1354in; padding:0; border:solid thin #000000;"><p class="p_Normal"><span class="f_table_content">账号过期时间</span></p>
+</td>
+<td style="vertical-align:middle; width:10.2917in; height:0.0104in; padding:0; border:solid thin #000000;"><p class="p_Normal"><span class="f_table_content">设置用户的账号过期时间。勾选“过期时间”后，需要设置具体时间。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.1354in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:10.2917in; height:0.0104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">可选项。设置用户的描述信息，最多支持255个字符。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="2"  style="vertical-align:middle; width:1.2188in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户访问策略</span></p>
+</td>
+<td style="vertical-align:middle; width:2.1354in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">允许登录地址</span></p>
+</td>
+<td style="vertical-align:middle; width:10.2917in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置允许用户登录的地址范围。用户登录的主机IP只能在设定范围内才能正常登录。默认不对用户使用的IP地址进行限制。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.1354in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">允许认证时间范围</span></p>
+</td>
+<td style="vertical-align:middle; width:10.2917in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置允许用户认证的时间范围。用户只能在设定的时间范围内认证。默认不对用户的允许认证时间进行限制。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）参数设置完成后，点击【确定】按钮即可完成用户的添加。</span></p>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">自动添加用户</span></p><div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4896in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.6042in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">自动添加的用户由主机名标识用户；如需对用户的网络行为进行控制，管理员后续还需对用户属性（如允许登录IP地址、允许认证时间、认证服务器等）进行修改，工作量较大且不易辨别，建议管理员尽量不采用该方式批量添加用户。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<p class="p_step_content"><span class="f_step_content">1）点击“添加”选择“扫描添加”，弹出窗口界面如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0391" style="margin:0;width:6.8646in;height:4.2083in;border:none" src="clip0391.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5729in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.8854in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.8229in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">起始地址</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置扫描用户的起始主机IP地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">结束地址</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置扫描用户的结束主机IP地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">所属用户组</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置NGFW自动扫描出的用户添加到哪个用户组中。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">缺省密码</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置扫描用户的缺省密码。当扫描到的用户无密码时，该缺省密码将作为用户的默认密码。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户状态</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否启用用户扫描。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）参数设置完成后，点击【确定】按钮完成用户的添加。</span></p>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">导入用户</span></p><p class="p_step_content"><span class="f_step_content">1）点击“导入”，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0392" style="margin:0;width:6.9271in;height:4.1667in;border:none" src="clip0392.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5729in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.1667in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:3.9479in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择导入格式</span></p>
+</td>
+<td style="vertical-align:middle; width:3.9479in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择导入用户配置文件的格式。可选项为：TXT和CSV两种。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">点击“下载格式模板”可以下载对应的TXT或CSV格式的模板。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择导入文件</span></p>
+</td>
+<td style="vertical-align:middle; width:3.9479in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，点击【浏览】按钮，在本地主机中选择待导入的文件。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">同名用户处理策略</span></p>
+</td>
+<td style="vertical-align:middle; width:3.9479in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置待导入用户与NGFW上已有用户同名时的处理方式，可选项：替换、忽略。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">替换：导入同名用户时，导入的用户替换NGFW上已配置的用户。</span></p>
+<p class="p_table_content"><span class="f_table_content">忽略：导入同名用户时，保留NGFW上已配置用户，忽略本用户的导入。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">缺省密码</span></p>
+</td>
+<td style="vertical-align:middle; width:3.9479in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置导入用户的缺省密码。当导入用户无密码时，该缺省密码将作为用户的默认密码。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）参数设置完成后，点击【确定】按钮即可完成用户导入。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">启用/禁用用户。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">添加的用户默认状态为启用，勾选多个用户，点击“启用/禁用”可执行对应操作。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

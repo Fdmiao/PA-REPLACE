@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>配置访问控制策略</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="配置访问控制策略的具体操作如下： 在配置访问控制策略之前，需要先进行如下两个步骤： 配置对象属性（可选）。关于对象属性的配置具体请参见 资源管理。 配置安全引擎策略（可选）。关于安全引擎相关策略的配置具体请参见 安全配置文件 。 步骤1	选择 安全策略 &gt; 访问控制 &gt; 访问控制，进入访问控制界面，如下图所示。 &nbsp;界面显示已添加访问控制策略和策略" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="ref396393596.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="ref396393596.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="toc450050601.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">配置访问控制策略</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">配置访问控制策略的具体操作如下：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">在配置访问控制策略之前，需要先进行如下两个步骤：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">配置对象属性（可选）。关于对象属性的配置具体请参见 <a href="toc490041635.html" class="topiclink">资源管理</a>。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">配置安全引擎策略（可选）。关于安全引擎相关策略的配置具体请参见 <a href="topic17123321.html" class="topiclink">安全配置文件</a> 。</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">安全策略 &gt; 访问控制 &gt; 访问控制</span><span class="f_step">，进入访问控制界面，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0186" style="margin:0;width:9.6563in;height:3.1563in;border:none" src="clip0186.png"/></p>
+<p class="p_step_content"><span class="f_step_content">界面显示已添加访问控制策略和策略组的基本内容，如策略ID，策略参数（地址、区域、以及引用的安全引擎）等；点击界面右上角的“</span><img alt="clip0187" style="margin:0;width:0.2813in;height:0.2813in;border:none" src="clip0187.png"/><span class="f_step_content">”，可展开自定义字段窗口，配置策略列表展示的关键字字段。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">添加访问控制策略。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击“添加”右侧的下拉框，选择“添加策略”，弹出“添加策略”窗口，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0188" style="margin:0;width:9.9063in;height:8.8333in;border:none" src="clip0188.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置访问控制规则时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th colspan="2"  style="vertical-align:middle; width:0.9167in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.8021in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="5"  style="vertical-align:middle; width:0.3542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">基本信息</span></p>
+</td>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">克隆模板</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择要克隆的模板。已添加的访问控制策略可作为克隆模板，方便管理员快捷操作。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置访问控制规则的名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置对该访问控制规则的必要描述信息。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">策略组</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置该条策略从属的策略组。NGFW内置了默认策略组，管理员也可以根据管理需求新建策略组。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">状态</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">切换开关状态以设置是否启动该访问控制规则。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设定发起连接的源应当匹配的条件，从而实现基于条件对报文进行访问控制。如果不指定，表示任何源信息均匹配该规则。可设定的选项包括：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）源地址/地区：配置地址资源对象，从而限定报文的源IP地址。另外，此处还可选择地区对象限定IP的归属地或定义MAC地址对象对源MAC地址过滤。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）源区域：选择区域资源限定报文的来源区域。</span></p>
+<p class="p_table_content"><span class="f_table_content">3）源端口：通过端口号配置服务资源。</span></p>
+<p class="p_table_content"><span class="f_table_content">4）角色：选择角色对象。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）多个选项设定的条件之间是“与”的关系，即数据包的源信息在匹配规则的时候必须都要匹配上选择的选项，规则才能生效；</span></p>
+<p class="p_table_content"><span class="f_table_content">2）每一选项均可选择多个对象，多个对象之间是“或”的关系，即只要满足其中一个对象即可；</span></p>
+<p class="p_table_content"><span class="f_table_content">3）当没有设置地址对象时，默认表示任意地址；</span></p>
+<p class="p_table_content"><span class="f_table_content">4）角色是用户的集合，管理员可以根据用户间的联系将若干用户分为一个用户组，并与角色关联。</span></p>
+<p class="p_table_content"><span class="f_table_content">相关参数的设置具体请参见 <a href="toc462736629.html" class="topiclink">区域</a>、<a href="toc448912165.html" class="topiclink">地址</a>、<a href="topic2.html" class="topiclink">地区</a>、<a href="toc448912172.html" class="topiclink">服务</a> 和 <a href="topic75.html" class="topiclink">角色</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设定连接目的应当匹配的条件，从而实现基于条件对报文进行访问控制。当设定多项时，必须同时满足各个条件才匹配该规则；如果不指定，表示任何目的信息均匹配该规则。可设定的选项包括：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）原始目的地址：配置地址资源对象，从而对NAT转换之前的目的地址进行访问控制规则匹配。为了防止原始目的地址在进行DNAT后无法被检测识别，在对数据包的原始目的地址进行访问控制时需要设置该项。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）目的地址/地区：配置地址资源对象，限定报文的目的IP地址，可选择地区对象限定IP的归属地。</span></p>
+<p class="p_table_content"><span class="f_table_content">3）目的区域：选择区域资源限定报文的目的区域。</span></p>
+<p class="p_table_content"><span class="f_table_content">4）域名：选择已定义的域名，限定报文访问的域名名称。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）多个选项设定的条件之间是“与”的关系，即数据包的目的信息在匹配规则的时候必须都要匹配上选择的选项，规则才能生效；</span></p>
+<p class="p_table_content"><span class="f_table_content">2）每一选项均可选择多个对象，即多个对象之间是“或”的关系，只要满足其中一个对象即可；</span></p>
+<p class="p_table_content"><span class="f_table_content">3）当没有设置地址对象时，默认表示任意地址。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="3"  style="vertical-align:middle; width:0.3542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">其他</span></p>
+</td>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择服务对象，从而对数据报文的协议和目的端口号进行限定。关于服务的介绍和设置具体请参见 <a href="toc448912172.html" class="topiclink">服务</a>。</span></p>
+<p class="p_table_content"><span class="f_table_content">如果此处没有配置任何服务，则系统默认为不对协议和端口号进行限定。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">时间</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置该访问控制规则生效的时间段。如果没有选择时间段对象则表示所有时间。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">应用组</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置匹配该访问控制规则的应用组。关于应用的介绍和设置具体请参见 <a href="toc448912175.html" class="topiclink">应用</a>。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">如果应用程序具有多项功能，则此处可以选择整个应用程序或个别功能。如果选择整个应用程序，则所有功能均将包含，而且在将来该应用程序添加功能后会自动更新应用程序定义。应用组只勾选应用类型时，访问控制策略引用后，此策略对应用不生效；应用组必须勾选具体应用或协议时被访问控制引用方可生效。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="2"  style="vertical-align:middle; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">动作</span></p>
+</td>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">动作</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置对于匹配规则的数据报文采取的操作。可选项：放行、阻断、认证，收集。</span></p>
+<p class="p_table_content"><span class="f_table_content">当选择“放行”时，表示放行匹配规则的数据报文。</span></p>
+<p class="p_table_content"><span class="f_table_content">当选择“阻断”时，表示阻断匹配规则的数据报文。</span></p>
+<p class="p_table_content"><span class="f_table_content">当选择“认证”时，表示对符合条件的数据报文进行额外的Web认证。</span></p>
+<p class="p_table_content"><span class="f_table_content">当选择“收集”时，表示对符合匹配规则的数据报文进行收集。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">门户</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">当“动作”为认证时，该参数为必选项。配置用户Web认证的门户地址。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">安全引擎</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择或勾选不同的安全引擎即可与访问控制策略关联。关于各类安全引擎的配置具体请参见 <a href="topic17123321.html" class="topiclink">安全配置文件</a></span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="8"  style="vertical-align:middle; width:0.3542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">高级信息</span></p>
+</td>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">统计</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否开启该策略统计开关，选择“</span><img alt="clip0189" style="margin:0;width:0.3958in;height:0.2500in;border:none" src="clip0189.png"/><span class="f_table_content">”则可以显示该策略的匹配情况。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">最大活动会话数</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">“统计”开关开启后，该参数可配置。设置限制当前设备上命中该条访问控制规则的连接数量。取值范围：0-最大值（最大值为NGFW设备支持的最大并发连接数，该参数最大值受license控制）。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">长连接</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否开启该长连接开关，默认为关闭。选择“</span><img alt="clip0189" style="margin:0;width:0.3958in;height:0.2500in;border:none" src="clip0189.png"/><span class="f_table_content">”需要配置长连接时长阈值，取值范围：1-2160小时，默认为48小时。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">一般来说，NGFW对通信空闲一定时间的连接将自动断开，从而提高安全性和释放通信资源。但是，某些应用所建立的连接需要长时期保持，例如ATM机器必须和处理中心的服务器一直保持着连接，那么此时就必须将此类连接设置为长连接，从而保证相应的服务正常进行。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">策略日志</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置当数据报文匹配该访问控制规则后，是否记录日志。选择“</span><img alt="clip0189" style="margin:0;width:0.3958in;height:0.2500in;border:none" src="clip0189.png"/><span class="f_table_content">”后开启访问控制的策略日志记录开关。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">连接日志</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否记录连接日志。选择“</span><img alt="clip0189" style="margin:0;width:0.3958in;height:0.2500in;border:none" src="clip0189.png"/><span class="f_table_content">”后开启记录连接日志开关。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IPv6逐跳扩展头</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">逐跳扩展头位于IPv6头之后，包含数据包到达目的地过程中经过的每个节点的检查项。</span></p>
+<p class="p_table_content"><span class="f_table_content">开启该项开关后，该条访问控制规则只匹配包含IPv6逐跳扩展头的数据报文。提高NGFW对数据包的处理能力。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IPv6目的地扩展头</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的地扩展头包含只能由最终目的地节点所处理的选项。目前，NGFW只定义了填充选项，将报文头填充为64位边界。</span></p>
+<p class="p_table_content"><span class="f_table_content">开启该项开关后，该条访问控制策略只匹配包含IPv6目的地扩展头的数据报文。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IPv6路由扩展头</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">路由扩展头指明了数据包在到达目的地过程中将经过的特殊的节点，包含了各节点的地址列表。</span></p>
+<p class="p_table_content"><span class="f_table_content">开启该项开关后，该条访问控制规则只匹配包含IPv6路由扩展头的数据报文。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4271in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:10.4688in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">数据包的源信息和目的信息在匹配访问控制规则时必须匹配上选择的所有选项，规则才能生效。</span></p><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">管理员可配置访问控制策略数量受license控制。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成该条访问控制规则的添加。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">在界面上方的文本框中输入资源对象参数和源/目的IP地址等（点击“</span><img alt="展开icon" style="margin:0;width:0.7813in;height:0.1979in;border:none" src="hmfile_hash_072c8928.png"/><span class="f_step">”可展开完整查询界面），再点击【查询】按钮，匹配的访问控制策略信息显示在弹窗中。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">选择访问控制规则，点击“</span><img alt="clip0191" style="margin:0;width:0.7396in;height:0.2917in;border:none" src="clip0191.png"/><span class="f_step">”，可进行策略内容的修改。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤5</span></td><td style="border:none;padding:0"><span class="f_step">选择访问控制规则，点击“</span><img alt="clip0192" style="margin:0;width:0.7292in;height:0.2917in;border:none" src="clip0192.png"/><span class="f_step">”，弹出“移动策略”窗口，设置将当前规则移动到已存在规则之前或之后。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤6</span></td><td style="border:none;padding:0"><span class="f_step">启动/禁用访问控制策略。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">在已有访问控制策略的“状态”列中，点击图标，弹出确定启用/禁用当前策略的提示对话框，点击【确定】修改策略的启用状态。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤7</span></td><td style="border:none;padding:0"><span class="f_step">选中策略表中的策略，点击“插入”，可在当前位置插入一条访问控制策略。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤8</span></td><td style="border:none;padding:0"><span class="f_step">点击“日志开关”可以开启所有规则的日志开关。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤9</span></td><td style="border:none;padding:0"><span class="f_step">点击“更多”“流量可达性分析”，可以在弹出窗口中通过配置待分析参数控制界面显示对应参数内容的访问策略，弹出窗口界面如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0193" style="margin:0;width:6.2500in;height:4.7500in;border:none" src="clip0193.png"/></p>
+<p class="p_step_content"><span class="f_step_content">配置参数后点击【开始分析】，系统会对参数进行智能分析，符合分析结果的参数展示在策略列表中；管理员也可以在配置完成参数后直接点击【添加策略】，会跳转至策略添加界面。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤10</span></td><td style="border:none;padding:0"><span class="f_step">点击“更多”“访问记录”，可在弹出界面中控制是否开启访问记录开关以及查看访问记录，界面如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0194" style="margin:0;width:9.9063in;height:3.2917in;border:none" src="clip0194.png"/></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

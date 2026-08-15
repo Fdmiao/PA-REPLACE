@@ -1,0 +1,302 @@
+/* Text Styles */
+hr { color: #000000 }
+body, table, tr, th /* Normal */
+{
+ font-size: 10pt;
+ font-family: Arial,Helvetica,sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.f_classify /* classify */
+{
+ font-size: 12pt;
+ font-family: 宋体;
+ font-weight: bold;
+}
+span.f_CLI_action /* CLI_action */
+{
+ font-family: 'Times New Roman',Times,Georgia,serif;
+ font-weight: bold;
+}
+span.f_CLI_instruction /* CLI_instruction */
+{
+ font-family: ??ì?;
+ font-weight: bold;
+}
+span.f_CLI_paragraph /* CLI_paragraph */
+{
+ font-family: 'Times New Roman',Times,Georgia,serif;
+}
+span.f_CLI_parameter /* CLI_parameter */
+{
+ font-family: 'Times New Roman',Times,Georgia,serif;
+}
+span.f_CLI_parameter_I /* CLI_parameter_I */
+{
+ font-family: 'Times New Roman',Times,Georgia,serif;
+ font-style: italic;
+}
+span.f_CLI_zhengwen /* CLI_zhengwen */
+{
+ font-family: 宋体;
+}
+span.f_CodeExample /* Code Example */
+{
+ font-size: 8pt;
+ font-family: 'Courier New',Courier,monospace;
+}
+span.f_Comment /* Comment */
+{
+}
+span.f_Heading1 /* Heading1 */
+{
+ font-size: 16pt;
+ font-weight: bold;
+}
+span.f_ImageCaption /* Image Caption */
+{
+ font-size: 8pt;
+ font-weight: bold;
+}
+span.f_instruction /* instruction */
+{
+ font-family: 宋体;
+}
+span.f_label /* label */
+{
+ font-family: 宋体;
+}
+span.f_link /* link */
+{
+ font-size: 9pt;
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.f_menu /* menu */
+{
+ font-family: 宋体;
+ font-weight: bold;
+}
+span.f_Notes /* Notes */
+{
+}
+span.f_picture /* picture */
+{
+}
+span.f_step /* step */
+{
+ font-family: 宋体;
+}
+span.f_step_content /* step_content */
+{
+ font-family: 宋体;
+}
+span.f_step_list /* step_list */
+{
+ font-family: 宋体;
+}
+span.f_table /* table */
+{
+ color: #ffffff;
+}
+span.f_table_content /* table_content */
+{
+ font-family: 宋体;
+}
+span.f_table_header /* table_header */
+{
+ font-family: 宋体;
+}
+span.f_zhengwen /* zhengwen */
+{
+ font-family: 宋体;
+}
+span.f_zhengwen_B /* zhengwen_B */
+{
+ font-family: 宋体;
+ font-weight: bold;
+}
+span.f_zhengwen_list /* zhengwen_list */
+{
+ font-family: 宋体;
+}
+/* Paragraph styles */
+p, p.p_Normal, div.p_Normal, li.p_Normal /* Normal */
+{
+ text-align: left;
+ text-indent: 0;
+ line-height: 1.80;
+ padding: 0 0 0 0;
+ margin: 0.0521in 0 0.0521in 0.0521in;
+}
+.p_classify /* classify */
+{
+ font-size: 12pt;
+ text-indent: -0.1979in;
+ margin: 0.0521in 0 0.0521in 0.1979in;
+}
+.p_CLI_action /* CLI_action */
+{
+ font-size: 10pt;
+ margin: 0.0521in 0 0.0521in 0;
+}
+.p_CLI_instruction /* CLI_instruction */
+{
+ font-size: 10pt;
+ margin: 0.0521in 0 0.0521in 0;
+}
+.p_CLI_paragraph /* CLI_paragraph */
+{
+ font-size: 10pt;
+}
+.p_CLI_zhengwen /* CLI_zhengwen */
+{
+ font-size: 10pt;
+ margin: 0.0521in 0 0.0521in 0.6042in;
+}
+.p_CodeExample /* Code Example */
+{
+ font-size: 8pt;
+ line-height: 1.0;
+ white-space: nowrap;
+ page-break-inside: avoid;
+ margin: 0 0 0 0;
+}
+.p_Comment /* Comment */
+{
+ font-size: 10pt;
+}
+.p_Heading1 /* Heading1 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: left;
+ text-indent: 0;
+ line-height: 1.80;
+ padding: 0 0 0 0;
+ margin: 0.0521in 0 0.0521in 0.0521in;
+}
+.p_ImageCaption /* Image Caption */
+{
+ font-size: 8pt;
+}
+.p_instruction /* instruction */
+{
+ font-size: 10pt;
+ text-indent: -0.1667in;
+ line-height: 1.20;
+ margin: 0.0521in 0 0.0521in 0.3438in;
+}
+.p_label /* label */
+{
+ font-size: 10pt;
+ margin: 0.0521in 0 0.0521in 0;
+}
+.p_Notes /* Notes */
+{
+ font-size: 10pt;
+}
+.p_picture /* picture */
+{
+ font-size: 10pt;
+ margin: 0.0521in 0 0.1458in 0.6042in;
+}
+.p_step /* step */
+{
+ font-size: 10pt;
+ text-indent: -0.6042in;
+ margin: 0.0521in 0 0.0521in 0.6042in;
+}
+.p_step_content /* step_content */
+{
+ font-size: 10pt;
+ margin: 0.0521in 0 0.0521in 0.6042in;
+}
+.p_step_list /* step_list */
+{
+ font-size: 10pt;
+ text-indent: -0.1979in;
+ margin: 0.0521in 0 0.0521in 0.8021in;
+}
+.p_table /* table */
+{
+ font-size: 10pt;
+ line-height: 1.20;
+ margin: 0.0521in 0 0.0521in 0.6042in;
+}
+.p_table_content /* table_content */
+{
+ font-size: 10pt;
+}
+.p_table_header /* table_header */
+{
+ font-size: 10pt;
+ line-height: 1.20;
+}
+.p_zhengwen /* zhengwen */
+{
+ font-size: 10pt;
+ margin: 0.0521in 0 0.0521in 0;
+}
+.p_zhengwen_B /* zhengwen_B */
+{
+ font-size: 10pt;
+ margin: 0.0521in 0 0.0833in 0;
+}
+.p_zhengwen_list /* zhengwen_list */
+{
+ font-size: 10pt;
+ text-indent: -0.1979in;
+ margin: 0.0521in 0 0.0521in 0.1979in;
+}
+/* Table styles */
+div.hmrotate90  { display:inline-block; -webkit-writing-mode: vertical-rl; -ms-writing-mode: tb-rl; writing-mode: vertical-rl; }
+div.hmrotate270 { display:inline-block; -webkit-writing-mode: vertical-rl; -ms-writing-mode: tb-rl; writing-mode: vertical-rl; transform: rotate(180deg); }
+
+
+
+#hmpopupdiv /* used for javascript text popups */
+{
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  background-color: #FFFFFF;
+  padding: 6px;
+  border:1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888;
+}
+
+#hmlightbox /* image lightbox */
+{
+  border: none;
+  padding: 8px;
+  background: #FFF;
+  font-size: 110%;
+  font-weight: bold;
+  color: #777;
+  box-shadow: 5px 5px 5px #888;
+}
+
+a.dropdown-toggle /* dropdown toggle caption */
+{
+  cursor: pointer;
+}
+a.inline-toggle /* inline toggle caption */
+{
+  cursor: pointer;
+}
+img.dropdown-toggle-icon /* toggle icon */
+{
+  cursor: pointer;
+}
+/* CSS for responsive image maps */
+
+.hmImageMap a.hmHotspotRect { display:block; position:absolute; border: 1px solid transparent; background:#000; opacity:0.01; filter:alpha(opacity=1)  }
+.hmImageMap a.hmHotspotEllipse { display:block; position:absolute; border-radius:50%; border: 1px solid transparent; background:#000; opacity:0.01; filter:alpha(opacity=1) }
+.hmImageMap:hover a.hmHotspotRect {opacity:0.3; filter:alpha(opacity=30); }
+.hmImageMap:hover a.hmHotspotEllipse { opacity:0.3; filter:alpha(opacity=30); }
+a.hmHotspotRect:hover { border:1px solid #000; background:#FFF; opacity:0.3; filter:alpha(opacity=30) }
+a.hmHotspotEllipse:hover { border:1px solid #000; background:#FFF; opacity:0.3; filter:alpha(opacity=30) }

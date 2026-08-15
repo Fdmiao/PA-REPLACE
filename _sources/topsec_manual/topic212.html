@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>日志存储管理</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="NGFW支持设置日志存储容量上限及远程备份。具体操作如下： 存储设置 选择 系统管理 &gt; 日志管理&gt; 日志存储管理，激活“存储设置”页签，如下图所示。 &nbsp;各项参数的具体说明如下表所示。 参数 &nbsp;说明 存储策略管理 每类型日志容量上限 设置占每类日志预置容量的百分比。默认每种日志类型的日志容量为2048M。 &nbsp;达到容量上限后 当容量达" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc490041759.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc462834573.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="ref465084227.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">日志存储管理</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">NGFW</span><span class="f_step">支持设置日志存储容量上限及远程备份。具体操作如下：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">存储设置</span></p><p class="p_step"><span class="f_step">选择 </span><span class="f_menu">系统管理 &gt; 日志管理&gt; 日志存储管理</span><span class="f_step">，激活“存储设置”页签，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0353" style="margin:0;width:7.0938in;height:3.3333in;border:none" src="clip0353.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:90%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th colspan="2"  style="vertical-align:middle; width:2.7292in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:8.7708in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="6"  style="vertical-align:middle; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">存储策略管理</span></p>
+</td>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">每类型日志容量上限</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置占每类日志预置容量的百分比。默认每种日志类型的日志容量为2048M。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">达到容量上限后</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">当容量达到设置上限百分比后选择自动覆盖之前的日志或停止存储日志。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">远程备份</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">勾选远程备份，需要进行以下配置。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份周期</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份周期，可选择每日备份或每周备份。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">生效时间</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择每周备份，需设置指定备份周期。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">时间</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份当天的具体时间精确的时分秒。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="7"  style="vertical-align:middle; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份的日志属性设置</span></p>
+</td>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">日志文件类型</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份日志文件类型，可选择：CSV、TXT。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">日志编码格式</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份日志编码格式。可选择：GB2312、UTF-8。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">日志时间显示为</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份日志显示时间。可选择本地时间、UTC时间。UTC时间为协调世界时，又称世界统一时间。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份后清空</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份后是否清空系统日志。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份语言</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份日志的语言。可选择：中文、英文。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">加密</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">勾选加密。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">秘钥</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份日志属性的加密秘钥。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="3"  style="vertical-align:middle; width:1.0729in; height:0.1771in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">备份到FTP服务器设置</span></p>
+</td>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器地址</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置备份日志服务器地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户名</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">当选择备份日志服务器类型为ftp服务器时，需设置服务器的用户名。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6250in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">密码</span></p>
+</td>
+<td style="vertical-align:middle; width:8.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">当选择备份日志服务器类型为ftp服务器时，需设置服务器的密码。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">配置完成，点击【确定】即可生效。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">按天导出</span></p><p class="p_step"><span class="f_step">选择 </span><span class="f_menu">系统管理 &gt; 日志管理&gt; 日志存储管理</span><span class="f_step">，激活“按天导出”页签。</span></p>
+<p class="p_step_content"><span class="f_step_content">1）点击【按天生成日志文件】，日志信息将展示在下方日志列表中，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0354" style="margin:0;width:10.2917in;height:2.1458in;border:none" src="clip0354.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）勾选指定日志，点击【删除/导出】按钮，可执行对应操作。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

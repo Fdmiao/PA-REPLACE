@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>手工隧道</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="IPSec的基础是安全联盟（SA），它是两个通信实体经协商建立起来的一种协定。SA可以采用前面所述的密钥交换的动态方式产生，也可以通过用户手工配置的方式建立。手工隧道就是通过手工设置IPSec SA而建立的隧道。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic4.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="ipsec.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic67.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">手工隧道</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">IPSec的基础是安全联盟（SA），它是两个通信实体经协商建立起来的一种协定。SA可以采用前面所述的密钥交换的动态方式产生，也可以通过用户手工配置的方式建立。手工隧道就是通过手工设置IPSec SA而建立的隧道。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">手工隧道的优点：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）没有IKE协商的过程，开销小，也更简单。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）不需要启用DPD来实现手工隧道的保活。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">手工隧道的缺点：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）网络管理员需要为每条隧道做详细的配置，且需要两端所在网络的管理员协作才能完成。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）加密密钥容易泄露，安全性不高。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">要使NGFW能与其他网关设备成功建立IPSec VPN隧道，NGFW需先执行如下步骤：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">开放用于物理接口所属区域的IPSecVPN服务，请参见 <a href="topic177.html" class="topiclink">服务管理</a>。</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">网络管理 &gt; IPSecVPN &gt; 手工隧道</span><span class="f_step">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">添加手工隧道。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击“添加”，弹出“添加手工隧道”窗口，如下图所示。</span></p>
+<p class="p_picture"><img alt="network_79" style="margin:0;width:7.5104in;height:9.6979in;border:none" src="network_79.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置手工隧道时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.3958in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.3125in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">隧道名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置手工隧道的名称。</span></p>
+<p class="p_table_content"><span class="f_table_content">隧道名称最多不能超过127个字符，并且不能包含除“-”或“_”之外的特殊字符。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">本地地址</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，配置手工隧道本端的IP地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">入SPI</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，配置进入端的安全参数索引（Security Parameter Index，SPI），从而标识IP报文所对应的安全关联。该参数由一个32位二进制数字组成。取值范围：4096-65535，建议从40961开始取值，因为4096-40960范围内的值通常会在自动建立隧道时被使用。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">对端地址</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项。配置手工隧道对端的IP地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">出SPI</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，配置出端的安全参数索引（Security Parameter Index，SPI），用来标识IP报文所对应的安全关联。它由一个32位二进制数字组成。取值范围：4096-65535，建议从40961开始取值，因为4096-40960范围内的值通常会在自动建立隧道时被使用。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">原始加密密钥</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，配置用于加密的原始密钥，需要手工隧道两端填写一致，且它的填写格式受参数“由原始密钥派生加密密钥”的影响。</span></p>
+<p class="p_table_content"><span class="f_table_content">1）如果勾选了“由原始密钥派生加密密钥”，则“加密密钥”可填写长度在128位以内的字符串，可包括大小写英文字母及数字。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）如果没有勾选“由原始密钥派生加密密钥”，则“加密密钥”必须填写十六进制数，长度与参数“加密算法”中所选算法的长度保持一致。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">加密算法</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用于生成加密密钥的算法，需要与手工隧道对端的填写一致。</span></p>
+<p class="p_table_content"><span class="f_table_content">可选项：DES、3DES、AES128、AES192、AES256、NULL。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">由原始密钥派生加密密钥</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否根据上面所选择的加密算法使用原始加密密钥生成加密密钥。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">原始认证密钥</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，填写用于认证的密钥，需要与手工隧道对端的填写一致，且它的格式受参数“由原始密钥派生认证密钥”的影响。</span></p>
+<p class="p_table_content"><span class="f_table_content">1）如果勾选“由原始密钥派生认证密钥”，则“认证密钥”可填写长度在128位以内的字符串，内容可以包括大小写英文字母及数字。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）如果没有勾选“由原始密钥派生认证密钥”，则“认证密钥”必须填写十六进制数，长度需要与参数“校验算法”中所选算法的长度保持一致。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">认证算法</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置用于生成认证密钥的算法，需要手工隧道两端填写一致。</span></p>
+<p class="p_table_content"><span class="f_table_content">可选项：MD5，SHA-1。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">由原始密钥派生认证密钥</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否根据上面所选择的校验算法使用原始认证密钥生成认证密钥。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">本地子网/掩码</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，配置手工隧道保护的本地子网IP地址/掩码。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）建立IPv4手工隧道，本地子网格式为：x.x.x.x/(0-32)；建立IPv6手工隧道，格式为 x:x:x:x:x:x:x:x/(0-128)。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）本地子网与对方子网的数据报文通信时，通过该手工隧道对数据报文进行保护。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">对方子网/掩码</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，配置手工隧道保护的对端网关的子网IP地址/掩码。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）建立IPv4手工隧道，格式：x.x.x.x/(0-32)；建立IPv6手工隧道，格式x:x:x:x:x:x:x:x/(0-128)。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）本地子网与对方子网的数据报文通信时，通过该手工隧道对数据报文进行保护。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">安全协议</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择IP数据包的保护方式，可选项：ESP、AH。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）“ESP”和“AH”至少选中一项。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）使用“AH”时不支持NAT穿越。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">NAT穿越</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否支持NAT穿越。如果手工隧道采用AH安全协议，不支持NAT穿越。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）（可选）点击【恢复默认】按钮，配置的参数恢复系统出厂配置。点击【确定】按钮完成IPSec手工隧道的添加。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

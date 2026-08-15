@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>RIPNG</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="RIPNG（RIP Next Generation）是基于IPv6的RIP协议，是为了解决RIP协议与IPv6的兼容性问题。RIPNG的度量同样也是基于跳数的，其支持的最大跳数是15，跳数为16的网络将被认为不可达。RIPING是基于UDP的协议，使用端口号521发送和接受数据报，其更新组播地址为FF02::9/8。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc490041608.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc490041607.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="luyouceshi.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">RIPNG</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">RIPNG（RIP Next Generation）是基于IPv6的RIP协议，是为了解决RIP协议与IPv6的兼容性问题。RIPNG的度量同样也是基于跳数的，其支持的最大跳数是15，跳数为16的网络将被认为不可达。RIPING是基于UDP的协议，使用端口号521发送和接受数据报，其更新组播地址为FF02::9/8。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">每台运行RIPNG的路由器都管理着本地路由数据库，包括到达网络中所有可达目的地址的路由项。这些路由项包括下列信息：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">目的地址：主机或网络的IPv6地址；</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">下一跳地址：要到达目的地址路由器所通过的下一个路由器地址；</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">接口：转发IP报文所通过的接口；</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">开销：到达目的地址所经过的跳数，取值范围0-16；</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">定时器：从上次更改路由项到现在的时长。如果更改路由项，定时器将重置为0；</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">路由标记：用来将内部路由协议与外部路由协议区别开来的标签。</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">启动或停止RIPNG服务</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）选择 </span><span class="f_menu">网络管理 &gt; 路由 &gt; 动态路由</span><span class="f_step_content">，激活“RIPNG”页签，如下图所示。</span></p>
+<p class="p_picture"><img alt="network_98" style="margin:0;width:12.1146in;height:6.3021in;border:none" src="network_98.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）点击【启动】按钮，可以启动RIPNG进程。启动了RIPNG进程后即可设置RIPNG协议的相关参数。</span></p>
+<p class="p_step_content"><span class="f_step_content">3）点击【停止】按钮，可以停止运行RIPNG进程。</span></p>
+<p class="p_step_content"><span class="f_step_content">4）点击【</span><span style="font-family: 宋体;">查看设置】</span><span class="f_step_content">按钮，弹出查看界面，可以查看RIPNG路由协议的配置和路由信息。</span></p>
+<p class="p_step_content"><span class="f_step_content">5）点击【清空配置】按钮，可以清空RIPNG配置信息；进程开启或关闭时均可清空配置信息。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">路由重发布</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击</span><span style="font-family: 宋体;">『设置』</span><span class="f_step_content">按钮，弹出重发布信息配置页面，如下图所示。</span></p>
+<p class="p_picture"><img alt="network_99" style="margin:0;width:6.3125in;height:3.9896in;border:none" src="network_99.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置RIPNG路由重发布时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.1979in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.5104in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">直连度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">表示允许将直连路由信息引入到RIP路由中作为外部路由信息，并可在其后的文本框中设置路由引入后的metric值。取值范围：1-16。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">静态度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">表示允许将静态的路由信息引入到RIP路由中，并可在其后的文本框中设置路由引入后的metric值。取值范围：1-16。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">BGP度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">表示允许将BGP的路由信息引入到RIP路由中，并可在其后的文本框中设置路由引入后的metric值。取值范围：1-16。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">OSPFV3度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">表示允许将OSPFV3的路由信息引入到RIP路由中，并可在其后的文本框中设置路由引入后的metric值。取值范围：1-16。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">缺省度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置引入其他类型路由后的默认的metric值，取值范围：1-16。系统默认缺省处度量值为1。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_Normal" style="line-height: 1.20; margin: 0.0521in 0 0.0521in 0.5938in;">&nbsp;</p>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成RIPNG路由重发布度量值的设置，点击【取消】按钮撤销本次操作。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">网络配置。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）在“网络配置”页签处点击『添加』，进入“添加”界面，如下图所示。</span></p>
+<p class="p_picture"><img alt="network_100" style="margin:0;width:6.3021in;height:2.3542in;border:none" src="network_100.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置区域时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.1979in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.5104in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">添加类型</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，点击下拉箭头选择接口或者网段。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">支持的接口类型有物理接口、Bond、vlan、子接口、GRE接口。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">运行网段</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，设置属于该区域的网段。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">配置运行RIPNG协议的网段例如:2001::1/64。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_Normal" style="line-height: 1.20; margin: 0.0521in 0 0.0521in 0.5938in;">&nbsp;</p>
+<p class="p_step_content"><span class="f_step_content">2）输入运行RIPNG协议的运行网段或选择接口名称，点击【确定】按钮，完成设置。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">删除网段。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">选中配置的网段，点击【删除】按钮可删除配置的网段。一次可以选择多个网段。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

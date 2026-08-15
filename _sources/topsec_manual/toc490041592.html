@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>配置接口基本信息</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="NGFW的接口支持五种工作模式：路由模式、交换模式、listening模式、虚拟线模式和聚合模式，默认情况下，所有接口均工作在路由模式下。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic8.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic8.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic187.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">配置接口基本信息</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">NGFW的接口支持五种工作模式：路由模式、交换模式、listening模式、虚拟线模式和聚合模式，默认情况下，所有接口均工作在路由模式下。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">配置接口基本信息的操作步骤如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">网络管理 &gt; 接口 &gt; 物理接口</span><span class="f_step">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">选中某接口所在行，点击列表上方的『编辑』，弹出“编辑”窗口，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="network_01" style="margin:0;width:8.4167in;height:6.4479in;border:none" src="network_01.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">设置接口基本属性。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">在设置基本属性时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.8854in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.7708in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">显示接口名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">状态</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7708in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否启用接口，点击状态开关可切换接口状态（启用/禁用）。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">模式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7708in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设定接口工作在路由模式、交换模式、监听模式、虚拟线模式、聚合模式。接口默认工作在路由模式。当该接口加入到聚合组后时，“模式”参数会显示为“SLAVE”且不可编辑。关于聚合组的配置具体请参见 <a href="toc490041599.html" class="topiclink">配置聚合接口</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7708in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入对该接口的简要描述。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">设置接口工作模式相关参数。</span></td></tr></table></div><p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">路由模式</span></p><p class="p_step_content"><span class="f_step_content">当在“基本信息”处设置接口工作在“路由”模式时，配置界面如上图所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.8229in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.2917in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">路由回源</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2917in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">路由回源功能是指在特定业务需求下，确保数据包的响应能够通过接收该数据包的同一接口发送。这样做可以保持数据流的一致性，即数据包的来源和目的地之间的通信始终通过同一个接口进行。</span></p>
+<p class="p_table_content"><span class="f_table_content" style="font-weight: bold;">操作步骤：</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0.0521in;"><span class="f_table_content" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">1.</span><span class="f_table_content">配置静态路由：需要为目标地址配置一条“出接口”为该接口的静态路由。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0.0521in;"><span class="f_table_content" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">2.</span><span class="f_table_content">启用路由回源：在接收数据包的接口上启用路由回源功能。这样，当该接口收到正向数据包时，任何从该地址返回的响应数据包都将通过这个接口发送出去。</span></p><p class="p_table_content"><span class="f_table_content" style="font-weight: bold;">前提条件：</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span><span class="f_table_content">必须已经存在一条以该接口为出口的静态路由。</span></p><p class="p_table_content"><span class="f_table_content" style="font-weight: bold;">效果：</span></p>
+<p class="p_table_content"><span class="f_table_content">启用此功能后，所有通过指定接口进入的数据流，其反向数据流也将通过同一接口转发，从而保证了数据通信的连贯性和效率。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">免费ARP发送</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2917in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否开启接口周期性发送免费ARP。启用免费ARP发送功能，可在该接口上预防ARP欺骗攻击。开启免费ARP功能，可设置接口发送免费arp的时间间隔，取值范围：1-1800，单位为秒。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">带宽使用量实时计算</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2917in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">带宽使用量实时计算功能用于多径路由时的报文选路。</span></p>
+<p class="p_table_content"><span class="f_table_content">当接口开启了这个功能后，需要指定一个带宽阈值，系统会实时计算该接口的带宽使用情况。当报文进行多径路由选路时，会计算开启了该功能的路径（出接口）的实时带宽使用量是否超出了带宽阈值，如果该路径没有超出带宽阈值，则这条路径为可参与选路路径，反之为不可参与选路路径。未开启该功能的路径，默认为可参与选路路径。然后，按照WCMP策略在这些可参与选路的路径中选择一条路径进行报文转发。当所有路径的实时带宽使用量都超出了带宽阈值时，系统会认为这些路径都是可选路径，并直接使用WCMP策略进行多径路由选路。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">带宽阈值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2917in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">开启带宽使用量实时计算功能后需配置该参数。</span></p>
+<p class="p_table_content"><span class="f_table_content">设置接口支持的最大带宽，取值范围：1-40000MB。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">带宽过载保护比</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2917in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">开启带宽使用量实时计算功能后需配置该参数。</span></p>
+<p class="p_table_content"><span class="f_table_content">设置NGFW启动接口带宽过载保护机制的带宽使用率。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">路由反向过滤</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2917in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">路由反向过滤功能允许在转发数据包时进行额外的路由检查，提网络的安全性和数据包的正确转发率。该功能通过两次路由查询来实现：</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0.0521in;"><span class="f_table_content" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">1.</span><span class="f_table_content">首次路由查询： 根据数据包的目的地址进行常规路由查询。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0.0521in;"><span class="f_table_content" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">2.</span><span class="f_table_content">第二次路由查询： 在首次查询成功后，根据数据包的源地址或入接口进行第二次查询。</span></p><p class="p_table_content"><span class="f_table_content" style="font-weight: bold;">功能开启与报文处理：</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span><span class="f_table_content">两次查询均成功： 如果两次路由查询都成功，数据包将根据首次查询的结果进行转发。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span><span class="f_table_content">首次查询失败： 如果首次查询失败，将不会进行第二次查询，数据包将被丢弃。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span><span class="f_table_content">第二次查询失败： 如果首次查询成功但第二次查询失败，数据包同样会被丢弃。</span></p><p class="p_table_content"><span class="f_table_content" style="font-weight: bold;">模式选择：</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span><span class="f_table_content">严格模式： 需要根据源地址和入接口进行路由查询。启用此模式前，必须先启用接口的路由回源功能。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Symbol';font-style:normal;color:#000000;text-decoration:none;">&#183;</span><span class="f_table_content">宽松模式： 仅根据源地址进行路由查询，无需路由回源功能。</span></p><p class="p_table_content"><span class="f_table_content" style="font-weight: bold;">操作限制：</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0.0521in;"><span class="f_table_content" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">1.</span><span class="f_table_content">开启/关闭顺序： 严格模式下，必须先开启接口的路由回源功能，然后才能开启路由反向过滤功能。关闭时，需先关闭严格模式的路由反向过滤功能，才能关闭路由回源功能。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0.0521in;"><span class="f_table_content" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">2.</span><span class="f_table_content">接口设置： 应在接收数据包的接口上开启路由反向过滤功能，以确保在转发数据包时进行路由反向过滤。</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">交换模式</span></p><p class="p_step_content"><span class="f_step_content">当在“基本信息”处设置接口工作在“交换”模式时，配置界面如下图所示。</span></p>
+<p class="p_picture"><img alt="network_97" style="margin:0;width:8.1563in;height:6.2708in;border:none" src="network_97.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置接口交换模式参数时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th colspan="2"  style="vertical-align:middle; width:1.2396in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.4688in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">类型</span></p>
+</td>
+<td style="vertical-align:middle; width:4.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置该交换接口的类型。可选项：access和trunk。</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">access模式：该交换接口只允许一个VLAN通过。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">trunk模式：该交换接口可以允许多个VLAN通过。</span></p></td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.6146in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">类型=access</span></p>
+</td>
+<td style="vertical-align:middle; width:0.6146in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">VLAN ID</span></p>
+</td>
+<td style="vertical-align:middle; width:4.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置该access接口允许哪个VLAN ID的报文通过，取值范围为1-4094。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="2"  style="vertical-align:middle; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">类型=trunk</span></p>
+</td>
+<td style="vertical-align:middle; width:0.6146in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">Allowed VLAN</span></p>
+</td>
+<td style="vertical-align:middle; width:4.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置该Trunk接口允许哪些VLAN ID的报文通过。VLAN值的取值范围：1-4094。</span></p>
+<p class="p_table_content"><span class="f_table_content">格式举例：</span></p>
+<p class="p_table_content"><span class="f_table_content">1-10表示属于VLAN1到VLAN 10；</span></p>
+<p class="p_table_content"><span class="f_table_content">1，10表示属于VLAN1和VLAN10。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.6146in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">NATIVE VLAN</span></p>
+</td>
+<td style="vertical-align:middle; width:4.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置NGFW的NATIVE VLAN。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">QinQ封装</span></p>
+</td>
+<td style="vertical-align:middle; width:4.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否进行QinQ封装。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">VLAN VPN封装协议号</span></p>
+</td>
+<td style="vertical-align:middle; width:4.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置QinQ功能使用的协议类型，数值类型，十六进制形式，默认为8100。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">为了实现不同厂商的设备互通，接口QinQ外层VLAN Tag的协议类型应该配置为和该接口连接的设备能够识别的协议类型。VLAN VPN封装协议号一般只在网络侧接口配置，用于指定运营商采用的协议类型。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">监听模式</span></p><p class="p_step_content"><span class="f_step_content">当接口基本信息的“模式”参数设置为“监听”后，其工作模式为“监听”。</span></p>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">虚拟线模式</span></p><p class="p_step_content"><span class="f_step_content">当接口基本信息的“模式”参数设置为“虚拟线”后，其工作模式为“虚拟线”。此时，需要设置虚拟线的对端接口。设置完成后对端接口的工作模式自动设置为虚拟线模式。</span></p>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_list">SLAVE模式</span></p><p class="p_step_content"><span class="f_step_content">当工作在路由模式的物理接口加入到聚合接口后，其工作模式为“SLAVE”，关于聚合接口的配置具体请参见 <a href="toc490041599.html" class="topiclink">聚合接口</a>。</span></p>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤5</span></td><td style="border:none;padding:0"><span class="f_step">设置完成后，点击【确定】按钮完成接口基本信息的设置。</span></td></tr></table></div>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

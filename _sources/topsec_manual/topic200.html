@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>规则集管理</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="入侵防御规则集用来描述网络中存在的攻击行为的特征，NGFW通过将数据流和入侵防御规则进行匹配来检测和防范攻击。如果某个数据流匹配了某个防御规则时，设备会按照该防御规则的动作来处理数据流。每个防御规则都有缺省的动作（阻断或者告警）。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic10.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic10.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic201.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">规则集管理</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">入侵防御规则集用来描述网络中存在的攻击行为的特征，NGFW通过将数据流和入侵防御规则进行匹配来检测和防范攻击。如果某个数据流匹配了某个防御规则时，设备会按照该防御规则的动作来处理数据流。每个防御规则都有缺省的动作（阻断或者告警）。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">阻断：指丢弃符合防御规则的报文，并记录日志。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">告警：指对符合防御规则的报文放行，但记录日志。</span></p><p class="p_zhengwen"><span class="f_zhengwen">天融信的入侵防御攻击检测规则库包含了所有的系统攻击检测规则，管理员可以根据具体的需求选择系统攻击检测规则，并为其选择相应的处理方式以配置攻击检测规则集。NGFW已经预定义了入侵防御规则集，并提供规则库的定期更新，提高防御性能。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">配置入侵防御规则集的具体操作如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">资源管理 &gt; 安全配置文件 &gt; 入侵防御 </span><span class="f_step">，激活“规则集管理”页签。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">添加规则集。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">添加规则集有两种方式，一种是不基于任何规则集新增；一种是基于已添加的规则集克隆规则集。</span></p>
+<p class="p_step_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_content">不基于任何规则集新增</span></p><p class="p_step_content"><span class="f_step_content">1）点击“添加”，弹出“添加规则集”对话框，如下图所示。</span></p>
+<p class="p_picture"><img alt="policy_ips_02" style="margin:0;width:9.9792in;height:5.7917in;border:none" src="policy_ips_02.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置规则集时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.1979in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.5104in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置攻击检测规则集名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置攻击检测规则集的描述信息。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">规则配置</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; height:0.2604in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置攻击检测规则集。</span></p>
+<p class="p_table_content"><span class="f_table_content">1）在分类方式下拉列表中选择攻击分类。可选项：攻击类型、风险等级、流行程度、操作系统和精选。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）勾选分类方式名称前的复选框，选择攻击防御类型，并在动作处的单选按钮选择对攻击类型的防御动作，可选项：告警、阻断和默认动作。</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">告警：对匹配到规则的报文放行且记录日志。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">阻断：对匹配到规则的报文丢弃且记录日志。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">默认动作：规则库中所有规则都有默认动作（告警或者阻断），“规则配置”的“动作”参数设置为“默认动作”，表示不对规则库中默认动作进行修改，按照规则库中不同规则的默认动作进行攻击防御。</span></p><p class="p_table_content"><span class="f_table_content">3）记录报文：开启后，匹配到该规则的报文都会记录报文</span><span class="f_Comment">，查看记录的报文请前往 <a href="rizhichakan.html" class="topiclink">日志查看</a></span><span class="f_table_content">。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）设置完成后，点击【确定】按钮，完成规则集添加。</span></p>
+<p class="p_step_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_content">基于已添加的规则集克隆规则集</span></p><p class="p_step_content"><span class="f_step_content">1）选择已添加的规则集，点击“</span><img alt="kelongicon" style="margin:0;width:0.7604in;height:0.2708in;border:none" src="kelongicon.png"/><span class="f_step_content">”，弹出“克隆规则集”对话框，如下图所示。</span></p>
+<p class="p_picture"><img alt="policy_ips_04" style="margin:0;width:6.3438in;height:1.8646in;border:none" src="policy_ips_04.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）填写新的攻击检测规则集名称。点击【确定】按钮，完成攻击检测规则集复制。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4479in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:10.4479in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">克隆的规则集的配置与克隆源规则集的配置完全相同。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">修改已添加规则集的子规则配置。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）选择需要修改的规则集，弹出“编辑规则集”对话框，如下图所示。</span></p>
+<p class="p_picture"><img alt="policy_ips_03" style="margin:0;width:9.9063in;height:5.7917in;border:none" src="policy_ips_03.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）点击需要修改的规则集所在行“操作”列的“</span><img alt="变编辑icon" style="margin:0;width:0.1875in;height:0.1875in;border:none" src="hmfile_hash_35ae0004.png"/><span class="f_step_content">”，在弹出窗口中修改规则集子规则的动作以及报文记录状态，界面如下图所示。</span></p>
+<p class="p_picture"><img alt="入侵防御子规则page" style="margin:0;width:9.4063in;height:5.2396in;border:none" src="hmfile_hash_1fe11ab2.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">维护规则集。</span></td></tr></table></div><p class="p_step_list"><span class="f_step_list">点击“</span><img alt="gengduoicon" style="margin:0;width:0.8438in;height:0.3229in;border:none" src="gengduoicon.png"/><span class="f_step_list">”下滑到“清空”可清空规则集；点击“</span><img alt="guizesousuoicon" style="margin:0;width:1.0104in;height:0.2917in;border:none" src="guizesousuoicon.png"/><span class="f_step_list">”可搜索规则集，如下图所示。</span></p>
+<p class="p_picture"><img alt="ruqinfangyusousuo" style="margin:0;width:6.3542in;height:3.8438in;border:none" src="ruqinfangyusousuo.png"/></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4479in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.6771in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">入侵防御默认规则集不允许编辑、删除、清空，可以被克隆。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

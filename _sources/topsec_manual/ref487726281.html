@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>数据过滤</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="公司员工办公时使用外网的频率越来越高，例如通过Internet搜索资料、收发邮件等，可能产生如下问题：" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic78.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic17123321.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="ref487726325.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">数据过滤</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">公司员工办公时使用外网的频率越来越高，例如通过Internet搜索资料、收发邮件等，可能产生如下问题：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）不经意的上传公司内部文件，导致泄漏公司机密信息；</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）浏览、发布、传输违规信息，对公司造成不好的影响甚至带来法律风险；</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）搜索与工作无关的内容，导致工作效率下降。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">基于此，NGFW提供了数据过滤功能，防止机密信息的泄露及违规信息的传输，既能保证员工正常访问Internet，又可以对员工接收和发送的信息内容进行过滤。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">数据过滤是一种基于关键字过滤的安全机制，对通过防火墙的应用内容进行过滤，可对应用协议中包含的关键字进行过滤。针对基于不同协议的应用，设备过滤的内容不同，具体说明如下表所示：</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.8125in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">应用</span></p>
+</th>
+<th style="vertical-align:middle; width:3.5938in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">过滤内容</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.8125in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">基于HTTP协议的应用</span></p>
+</td>
+<td style="vertical-align:middle; width:3.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">用户浏览网页的内容、使用HTTP协议下载文件。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8125in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">基于SMTP协议的应用</span></p>
+</td>
+<td style="vertical-align:middle; width:3.5938in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">发送的邮件的标题、正文和附件名称，并支持发送者和接收者信息的过滤。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8125in; height:0.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">基于POP3协议的应用</span></p>
+</td>
+<td style="vertical-align:middle; width:3.5938in; height:0.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">接收的邮件的标题、正文和附件名称，并支持发送者和接收者信息的过滤。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8125in; height:0.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">基于FTP协议的应用</span></p>
+</td>
+<td style="vertical-align:middle; width:3.5938in; height:0.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">对上传和下载文件的名称进行过滤，对FTP命令进行过滤。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8125in; height:0.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">基于TELNET协议的应用</span></p>
+</td>
+<td style="vertical-align:middle; width:3.5938in; height:0.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">关键字。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">当通过设备的数据报文匹配一条访问控制策略，策略的动作为允许且引用了数据过滤策略时，该数据报文需要进行数据过滤检测。具体处理流程为：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）设备对数据报文的协议进行检测，识别出报文的内容。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">此时如果识别出报文协议，NGFW会根据不同协议的限定字段进一步识别不同字段的报文内容。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）设备将数据报文的内容属性与数据过滤策略的关键字组进行匹配。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">如果所有条件都匹配，则此内容成功匹配该策略；如果其中有一个条件不匹配，则继续执行下一条策略，以此类推。如果所有数据过滤策略都不匹配，则设备会允许此条报文通过。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）如果数据报文的内容成功匹配一条数据过滤策略，则设备对报文内容进行关键字检测，检测内容中是否存在数据过滤策略定义的关键字。如果识别出关键字，则设备会执行响应动作；否则，设备允许该报文通过。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">数据过滤策略决定了对哪些协议及字段进行过滤；定义数据过滤策略时引用关键字组，NGFW即可对通过设备传输的不同协议的内容进行过滤。当数据报文匹配关键字组中的具体关键字时，按照关键字的权限进行处理。通过配置数据过滤策略，并且在访问控制规则中引用该策略，NGFW可以实现对应用层的检测和控制。关于访问控制规则的设置具体请参见 <a href="ref396393596.html" class="topiclink">配置访问控制规则</a>。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">在配置数据过滤策略之前，需要先进行关键字组的配置，关于关键字组的设置具体请参见 <a href="ref467487077.html" class="topiclink">关键字组</a>。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">资源管理 &gt; 安全配置文件 &gt; 数据过滤</span><span class="f_step">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">点击“添加”，弹出“添加数据过滤”窗口，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="shujuguolv_01" style="margin:0;width:7.8438in;height:5.7396in;border:none" src="shujuguolv_01.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置数据过滤规则时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.7083in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.5208in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.7083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5208in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，设置数据过滤规则的名称。名称必须是唯一的，当配置安全策略时，名称会出现在“数据过滤”的参数选择列表中。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5208in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置数据过滤策略的具体说明信息。合理填写描述信息有助于管理员正确理解数据过滤策略的功能。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7083in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">规则</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5208in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置数据过滤的规则。详见<a href="ref487726281.html#buzhou3" class="topiclink">步骤3</a>。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><a name="buzhou3" class="hmanchor"></a><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">点击“规则”界面的“添加规则”，弹出“添加规则”窗口，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="shujuguolv_02" style="margin:0;width:6.3229in;height:3.3854in;border:none" src="shujuguolv_02.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在添加规则时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.4792in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.2292in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.4792in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">协议</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2292in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，设置规则的应用协议类型。可选项：HTTP、FTP、TELNET、SMTP、POP3。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4792in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">字段</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2292in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，设置对满足规则的数据报文进行上传还是下载。</span></p>
+<p class="p_table_content"><span class="f_table_content">当“协议”选择为HTTP时，可选项：上行数据、下行数据。</span></p>
+<p class="p_table_content"><span class="f_table_content">当“协议”选择为FTP时，可选项：上行数据、下行数据、命令。</span></p>
+<p class="p_table_content"><span class="f_table_content">当“协议”选择为TELNET时，可选项：none。</span></p>
+<p class="p_table_content"><span class="f_table_content">当“协议”选择为SMTP或POP3时，可选项：发件人、收件人、抄送人、主题、正文、附件。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4792in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">组名</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2292in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，设置关联的关键字组，关于关键字组的配置具体请参见 <a href="ref467487077.html" class="topiclink">关键字组</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4792in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">动作</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2292in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，配置规则的执行动作。可选项：放行、阻断、告警。</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">放行：表示当识别出关键字后，允许内容传输并记录日志。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">阻断：表示当识别出关键字后，阻断内容传输并记录日志。在用户看来则是无法显示网页、上传或下载文件失败、邮件发送或接收失败。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">告警：表示当识别出关键字后，记录日志但不阻断内容传输。</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">点击【确定】按钮完成数据过滤规则的添加。</span></td></tr></table></div>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

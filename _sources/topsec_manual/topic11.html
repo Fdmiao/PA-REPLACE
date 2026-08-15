@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>病毒过滤</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="病毒是一种恶意代码，可感染或附着在应用程序或文件中，通过邮件或文件共享等协议进行传播；病毒会消耗主机资源、控制主机权限并占用网络带宽，还可能对主机硬件造成破坏，从而威胁用户主机和网络的安全。一旦进入网络内部，病毒就会很快地在网络环境中传播，造成整个网络的阻塞，甚至瘫痪；网络病毒已被公认为网络安全的最主要威胁之一。为了解决这一问题，NGFW配置了病毒过滤功能，" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic85.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic17123321.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="gaojiweixiefanghu.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">病毒过滤</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">病毒是一种恶意代码，可感染或附着在应用程序或文件中，通过邮件或文件共享等协议进行传播；病毒会消耗主机资源、控制主机权限并占用网络带宽，还可能对主机硬件造成破坏，从而威胁用户主机和网络的安全。一旦进入网络内部，病毒就会很快地在网络环境中传播，造成整个网络的阻塞，甚至瘫痪；网络病毒已被公认为网络安全的最主要威胁之一。为了解决这一问题，NGFW配置了病毒过滤功能，防止病毒文件通过网关设备进入受保护网络。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">病毒过滤是对应用层数据的过滤，能够对通过HTTP/FTP传输的文件、使用SMTP/POP3协议传送的邮件附件以及通过即时通讯软件向用户发送的恶意文件进行准确识别，并可根据文件扩展名选择过滤的附件类型，对识别出的病毒文件按照预定义的响应措施做出相应处理，使病毒文件在进入受保护网络之前即被干预处理。同时，病毒过滤功能支持自定义配置，管理员可以根据企业网络的具体使用情况来配置各种协议的病毒过滤策略。NGFW的病毒过滤功能支持的协议主要有HTTP、FTP、POP3、SMTP、IMAP和IM。另外NGFW还支持支持基于SSL解密的代理杀毒，需要同时配置SSL解密策略，才会进入代理杀毒模块，对SSL解密后的流量进行病毒查杀。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">在系统的访问控制规则中，管理员可以指定是否对满足这条规则的网络数据进行病毒过滤。当系统的某条规则放行来自某个地址段访问病毒过滤支持的协议服务的数据流通过，并且启动了病毒过滤引擎时，就会截取该数据流，并按照该协议过滤策略调用杀毒引擎对传输的网络文件进行病毒过滤。关于访问控制规则的设置具体请参见 <a href="ref396393596.html" class="topiclink">配置访问控制规则</a>。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">病毒过滤的处理流程分为三步：检测入口，病毒检测和响应处理，具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.8438in; height:0.2396in; background-color:#D7D7D7; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">步骤</span></p>
+</th>
+<th style="vertical-align:middle; width:4.7917in; height:0.2396in; background-color:#D7D7D7; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8438in; height:0.5000in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">检测入口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7917in; height:0.5000in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">判断目标：文件是否需要做病毒检测。</span></p>
+<p class="p_table_content"><span class="f_table_content">判断条件：传输文件的应用类型；传输文件的协议类型和文件传输方向。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8438in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">病毒检测</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7917in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">判断目标：文件中是否包含病毒。</span></p>
+<p class="p_table_content"><span class="f_table_content">判断条件：文件扫描结果；病毒特征库。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8438in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">响应处理</span></p>
+</td>
+<td style="vertical-align:middle; width:4.7917in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">判断目标：如何处理病毒文件。</span></p>
+<p class="p_table_content"><span class="f_table_content">判断条件：协议中定义的响应动作。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">具体流程如下图所示。</span></p>
+<p class="p_picture"><img alt="policy_av_01" style="margin:0;width:5.4375in;height:6.2396in;border:none" src="policy_av_01.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">资源管理 &gt; 安全配置文件 &gt; 病毒过滤</span><span class="f_step">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">点击“添加”，弹出“添加病毒过滤”窗口，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0148" style="margin:0;width:6.2500in;height:5.5000in;border:none" src="clip0148.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置病毒过滤规则时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9063in; height:0.2396in; background-color:#D7D7D7; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.1771in; height:0.2396in; background-color:#D7D7D7; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9063in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1771in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置病毒过滤规则的名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9063in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1771in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置病毒过滤规则的具体说明。描述信息可以方便管理员区分不同的病毒过滤规则的功能。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9063in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">HTTP</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1771in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">超文本传输协议。设置基于HTTP协议的病毒过滤规则的执行方向和动作。方向可选项：双向、上传、下载，动作可选项：删除、记录，默认选项：删除。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9063in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">SMTP</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1771in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">简单邮件传输协议。设置基于SMTP协议的病毒过滤规则的执行方向和动作。文件传输方向可选项：上传，响应动作可选项：删除、记录，默认选项：删除。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9063in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">POP3</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1771in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">邮件协议的第3个版本。设置基于POP3协议的病毒过滤规则的执行方向和动作。文件传输方向可选项：下载，响应动作可选项：记录。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9063in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IMAP</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1771in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">邮件协议。设置基于IMAP协议的病毒过滤规则的执行方向和动作。文件传输方向可选项：下载，响应动作可选项：删除、记录，默认选项：删除。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9063in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">FTP</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1771in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">文件传输协议。设置基于FTP协议的病毒过滤规则的执行方向和动作。文件传输方向可选项：双向、上传、下载，响应动作可选项：删除、记录，默认选项：删除。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9063in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IM</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1771in; height:0.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">即时通讯协议。设置基于IM协议的病毒过滤规则的执行方向和动作。文件传输方向可选项：双向、上传、下载，响应动作可选项：删除、记录，默认选项：删除。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4688in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.6250in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">文件传输方向：双向、上传和下载指文件的传输方向，是NGFW判断文件是否需要做病毒过滤检测的重要依据。其中，“上传”指文件从客户端向服务器发送，“下载”指文件从服务器向客户端发送。</span></p><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">响应动作包括：删除、记录。“删除”是指删除带病毒的文件；“记录”是指对该文件不做任何处理，只是记录日志。关于病毒日志的查看请参见 <a href="rizhichakan.html" class="topiclink">日志查看</a>。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">点击【确定】按钮完成病毒过滤规则的添加。病毒过滤规则配置完成后，点击“操作”列的“编辑”可以修改规则，点击“删除”可删除规则。勾选规则，点击列表左上角的“编辑/克隆/删除/更多-清空”，可修改/复制/删除/清空病毒过滤规则。</span></td></tr></table></div>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

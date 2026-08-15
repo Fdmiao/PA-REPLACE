@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>配置对象</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="步骤1	添加地址对象 1）选择 资源管理 &gt; 地址 &gt; 地址，激活“地址”页签。 2）点击『添加』，弹出添加地址对象窗口。 &nbsp;3）地址对象的配置如下表所示。 名称 类型 地址 FTP服务器 主机 192.168.30.15 FTP服务器v6 主机 2002:aaa6::5 DNS服务器 主机 192.168.30.12 DN" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic130.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic43.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic132.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">配置对象</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">添加地址对象</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）选择 </span><span class="f_menu">资源管理 &gt;</span><span class="f_step_content"> </span><span class="f_menu">地址 &gt; 地址</span><span class="f_step_content">，激活“地址”页签。</span></p>
+<p class="p_step_content"><span class="f_step_content">2）点击『添加』，弹出添加地址对象窗口。</span></p>
+<p class="p_picture"><img alt="clip0608" style="margin:0;width:6.2708in;height:5.5208in;border:none" src="clip0608.png"/></p>
+<p class="p_step_content"><span class="f_step_content">3）地址对象的配置如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.5104in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">名称</span></p>
+</th>
+<th style="vertical-align:middle; width:1.0833in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">类型</span></p>
+</th>
+<th style="vertical-align:middle; width:2.5625in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">地址</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">FTP服务器</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">主机</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">192.168.30.15</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">FTP服务器v6</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">主机</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">2002:aaa6::5</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">DNS服务器</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">主机</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">192.168.30.12</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">DNS服务器v6</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">主机</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">2002:aaa6::3</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">WEB服务器</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">主机</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">192.168.30.11</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">WEB服务器v6</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">主机</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">2002:aaa6::2</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">任意地址</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">范围</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">0.0.0.0-255.255.255.255</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">任意地址v6</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">范围</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">::-ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">学生宿舍</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">子网</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">192.168.16.0/24</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">学生宿舍v6</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">子网</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">2002:aaa1::0/64</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">教学楼</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">子网</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">192.168.20.0/24</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">教学楼v6</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">子网</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">2002:aaa2::0/64</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">图书馆</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">子网</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">192.168.25.0/24</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">图书馆v6</span></p>
+</td>
+<td style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">子网</span></p>
+</td>
+<td style="vertical-align:middle; width:2.5625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">2002:aaa3::0/64</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">4）点击【确定】按钮完成地址对象的添加。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">添加区域对象</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）选择 </span><span class="f_menu">资源管理 &gt; 区域</span><span class="f_step_content">。</span></p>
+<p class="p_step_content"><span class="f_step_content">2）点击“添加”，弹出添加区域对象窗口。</span></p>
+<p class="p_picture"><img alt="clip0609" style="margin:0;width:7.8333in;height:6.3021in;border:none" src="clip0609.png"/></p>
+<p class="p_step_content"><span class="f_step_content">3）区域对象的配置如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:2.2813in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">区域名称</span></p>
+</th>
+<th style="vertical-align:middle; width:2.8750in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">接口</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:2.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">电信</span></p>
+</td>
+<td style="vertical-align:middle; width:2.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">feth1</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.2813in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">CERNET</span></p>
+</td>
+<td style="vertical-align:middle; width:2.8750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">feth0</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_step_content"><span class="f_step_content">4）点击【确定】按钮完成区域对象的添加。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>DNS Doctoring</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="DNS Doctoring记录了域名对应的内网IP地址和公网IP地址。配置DNS Doctoring后，不需要管理员进行额外复杂的网络配置（如DNAT），内外网用户可通过域名直接访问内网资源。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc490041630.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="dns4.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="toc483382798.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">DNS Doctoring</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">DNS Doctoring记录了域名对应的内网IP地址和公网IP地址。配置DNS Doctoring后，不需要管理员进行额外复杂的网络配置（如DNAT），内外网用户可通过域名直接访问内网资源。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">NGFW防护的内网用户通过域名访问内网资源服务器时，NGFW通过DNS Doctoring记录为用户解析域名对应的内网IP地址，最终实现内网用户直接使用内网IP访问内网资源；外网用户使用公网IP地址访问内网资源服务器时，NGFW通过DNS Doctoring记录将用户的目的公网地址直接转换为对应的内网IP地址，最终实现外网用户获取到内网资源。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">此外，当内网中有多台服务器对外提供相同服务时，通过配置多条DNS Doctoring（同一域名对应不同的内网服务器真实IP地址），可实现内网资源服务器的负载均衡。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择</span><span class="f_menu" style="font-family: 'Times New Roman',Times,Georgia,serif;"> </span><span class="f_menu">本地服务 &gt; DNS &gt; DNS Doctoring</span><span class="f_menu" style="font-weight: normal;">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">点击『添加』，弹出窗口界面如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0305" style="margin:0;width:7.5833in;height:4.6042in;border:none" src="clip0305.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在配置DNS Doctoring时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:top; width:0.9375in; height:0.2396in; background-color:#D9D9D9; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:top; width:4.4792in; height:0.2396in; background-color:#D9D9D9; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:top; width:0.9375in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:top; width:4.4792in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，填写该DNS Doctoring项的名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:0.9375in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">域名</span></p>
+</td>
+<td style="vertical-align:top; width:4.4792in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置域名。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:0.9375in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">外网地址</span></p>
+</td>
+<td style="vertical-align:top; width:4.4792in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，配置该域名对应的公网IP地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:0.9375in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">内网地址</span></p>
+</td>
+<td style="vertical-align:top; width:4.4792in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，配置该域名对应的私网IP地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:0.9375in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">状态</span></p>
+</td>
+<td style="vertical-align:top; width:4.4792in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置该DNS Doctoring记录的状态。</span><img alt="clip0306" style="margin:0;width:0.4271in;height:0.2708in;border:none" src="clip0306.png"/><span class="f_table_content">表示生效，</span><img alt="clip0307" style="margin:0;width:0.4792in;height:0.2292in;border:none" src="clip0307.png"/><span class="f_table_content">表示不生效。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4583in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.6354in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">N个内网资源服务器共同使用一个域名对外提供服务时，只需添加N个域名相同而内网IP地址不同的DNS Doctoring记录，即可实现服务器的负载均衡。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">参数配置完成后，点击【确定】按钮完成DNS Doctoring记录的添加。</span></td></tr></table></div>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>常见问题FAQ</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Q1：为什么NGFW在直连情况下出现了访问不了登录界面的现象？ A：建议用户考虑如下故障原因并进行相应排查操作： 1）检查网线、电缆是否松动或连接不良。 2）检查网线是否连接在feth0口。如果连接在其他接口，检查是否开启了该接口的WebUI服务且该接口IP地址与管理主机的IP地址是否处于同一网段。 3）检查NGFW电源灯、状态灯和网卡指示灯显示是否" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic133.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="ref487725245.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><img class="nav1" src="hm_btn_navigate_next_d.png">
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">常见问题FAQ</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">Q1：为什么NGFW在直连情况下出现了访问不了登录界面的现象？</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">A：建议用户考虑如下故障原因并进行相应排查操作：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）检查网线、电缆是否松动或连接不良。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）检查网线是否连接在feth0口。如果连接在其他接口，检查是否开启了该接口的WebUI服务且该接口IP地址与管理主机的IP地址是否处于同一网段。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）检查NGFW电源灯、状态灯和网卡指示灯显示是否正常；若显示不正常，考虑是否存在硬件/系统故障，请联系天融信相关人员。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">4）考虑是否是突发状况导致，重启天融信防火墙系统以解决此类问题。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">Q2：为什么升级显示不成功？</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">A：建议用户考虑如下原因并进行相应排查操作：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）检查升级服务器的地址和其他基础信息是否存在问题，导致设备无法正常连接升级服务器。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）检查在配置升级文件时是否输入了正确的文件名称或选择了正确的升级包。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）检查升级过程进行到后期时是否存在突然断电的现象。升级过程进行到后期时突然断电会造成主系统损坏，此时管理员需要进入备份系统进行重新升级。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">Q3：配置空闲超时参数的作用？管理员该如何设置该参数？</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">A：空闲超时时间指管理员对NGFW进行管理的空闲超时时间，如果空闲时间过后管理员依旧没有对NGFW执行任何操作，该管理连接会自动中断。空闲时间的长度需要根据实际使用习惯进行配置，过长将对防火墙带来安全隐患；过短则会导致管理连接的频繁自动断开，影响管理员对防火墙的管理效果。空闲超时时间默认为180秒。 </span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">Q4：TCP超时时间对防火墙中已建立的TCP连接的作用？</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">A：TCP连接建立后，在空闲超时时间内若无相同五元组的TCP连接通过NGFW，则超时后NGFW会将该连接关闭；设置合理的TCP超时时间可避免无用连接一直占用防火墙资源。TCP超时时间的默认值为1800秒。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">Q5：UDP超时时间对防火墙中已建立的UDP连接的作用？</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">A：UDP连接建立后，在空闲超时时间若无相同五元组的UDP连接通过NGFW，则超时后NGFW会将该建立的连接删除。UDP连接超时时间默认为60秒。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">Q6：防火墙的连接完整性检测开关如何控制防火墙对连接的检测？</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">A：TCP连接完整性状态检测开关处于开启状态时，NGFW会跟踪TCP连接的状态，此时连接必须通过完整的三次握手NGFW才允许其建立连接，TCP连接经过四次结束握手或者收到RST数据包NGFW才终结其连接。对于一些特殊情况，如某些建立时没有经过NGFW，但建立后需要经过NGFW的TCP链接，则需要关闭状态检测开关，否则该种连接会因不符合NGFW的TCP连接完整性标准而被丢弃。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">Q7：非syn包建立连接开关有何作用？</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">A：对于TCP连接，该开关决定防火墙是否允许第一个报文不是SYN报文的连接建立新连接。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">Q8：防火墙是否支持分片重组功能？</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">A：防火墙通过开关控制是否对分片报文进行重组功能；分片重组开关开启情况下，防火墙接收到分片的报文时会将报文进行重组，否则直接以分片状态转发。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">Q9：TCP连接完整性开关开启情况下，不管对于何种报文均需通过四次结束握手防火墙才中断连接吗？</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">A：对于违反安全策略的TCP连接，如果防火墙开启了TCP Reset开关，不需通过四次握手防火墙就会主动中断连接。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

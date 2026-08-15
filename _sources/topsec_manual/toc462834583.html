@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>高可用性</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="NGFW通过高可用性功能，确保在NGFW通信线路或设备故障时，也能保障业务网络数据的正常运转。NGFW的高可用性模块支持4种工作模式：主备模式（AS，Active-to-Standby）、连接保护模式（SP，Session..." />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc462834581.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc462834581.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="toc462834584.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">高可用性</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">NGFW通过高可用性功能，确保在NGFW通信线路或设备故障时，也能保障业务网络数据的正常运转。NGFW的高可用性模块支持4种工作模式：主备模式（AS，Active-to-Standby）、连接保护模式（SP，Session Protect）、负载均衡模式（AA，Active-to-Active）和集群模式（cluster模式），这四种工作模式都通过心跳口同步配置信息、状态信息，确保在主设备故障时从设备能对用户完全透明地接替主设备工作。</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen">主备模式</span></p><p class="p_zhengwen"><span class="f_zhengwen">NGFW以主备模式部署时，需要由2台NGFW设备组成管理组；管理组中有一台主设备处于工作状态，另一台设备处于备份状态。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">主备模式由正常情况到故障情况的工作流量方向如下图所示。</span></p>
+<p class="p_picture"><img alt="system_63" style="margin:0;width:7.5729in;height:4.8229in;border:none" src="system_63.png"/></p>
+<p class="p_zhengwen_B"><span class="f_zhengwen_B">说明：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）正常情况下，主设备承担报文的处理和转发等任务，备设备处于热备状态，业务流量不经过备设备；主设备通过心跳口实时同步状态和配置信息到备设备。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）当主设备的软件或硬件（不包括心跳口）出现故障时，处于备份状态的NGFW B立即以用户完全透明的情况下接替主设备的工作。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）当主设备故障恢复时，会根据NGFW是否为抢占模式决定设备是否由备设备切换回主设备。管理组配置为抢占模式时，主设备故障恢复后，恢复原来的主设备为工作状态（此时为了防止因设备运行不稳定，导致其管理组中设备的角色频繁切换，需要配置适当的延迟时间，等待主设备工作状态稳定后再从备设备切换回主设备）。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">配置主备模式，相关配置包括：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">配置心跳口和管理口属性。心跳口和管理口的接口属性必须要勾选“非同步地址”选项，否则心跳口和管理口的IP地址信息会在设备配置同步时被对方覆盖。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">配置通信接口。注意，两台设备互为备份的接口必须配置相同的IP地址，才能达到业务备份的目的。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">配置高可用性相关参数，并启用高可用性功能。</span></p><p class="p_zhengwen_list"><span class="f_zhengwen_list">&nbsp;</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">负载均衡模式</span></p><p class="p_zhengwen"><span class="f_zhengwen">NGFW以负载均衡模式部署时，需由2个管理组组成，每个管理组中有一台主设备处于工作状态，另外一台设备处于备份状态。同一台NGFW设备可在不同的管理组中作为主设备或者从设备，例如NGFW设备可以在管理组1中作为主设备，在管理组2中作为从设备。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">负载均衡工作场景正常情况到故障情况的工作流量状态如下图所示。</span></p>
+<p class="p_picture"><img alt="system_64" style="margin:0;width:8.6250in;height:5.5417in;border:none" src="system_64.png"/></p>
+<p class="p_zhengwen_B"><span class="f_zhengwen_B">说明:</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）正常情况下，管理组的设备独立工作，各自承担报文的转发等任务，通过心跳口相互同步对方的连接信息，互为对方的备设备。 </span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）当其中一台设备的软件或硬件（不包括心跳口）出现故障时，处于同一管理组中的另外一台NGFW立即对用户完全透明的情况下接替故障设备的工作。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）当主设备故障恢复时，则根据NGFW是否为抢占模式，决定设备是否由备设备切换回主设备。管理组配置为抢占模式时，主设备故障恢复后，恢复原来的主设备为工作状态，为了防止因设备运行不稳定，导致其管理组中设备的角色频繁切换，需要配置适当的延迟时间，主设备工作稳定后再从备设备切换回主设备。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">配置负载均衡模式，相关配置包括：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">配置心跳口属性。心跳口和管理口的接口属性必须要勾选“非同步地址”选项。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">配置其他通信接口。互为备份的接口必须配置相同的IP地址。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">配置高可用性的相关参数，并启用高可用性功能。</span></p><p class="p_zhengwen_list"><span class="f_zhengwen_list">&nbsp;</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">连接保护模式</span></p><p class="p_zhengwen"><span class="f_zhengwen">在连接保护模式下，所有防火墙均处于工作状态并且在网络部署层面相互独立，不区分主备，流量状态如下图所示（连接保护模式最多支持配置8台设备）。</span></p>
+<p class="p_picture"><img alt="system_65" style="margin:0;width:5.8229in;height:5.7500in;border:none" src="system_65.png"/></p>
+<p style="line-height: 1.20; margin: 0 0 0 0.2500in;"><span style="color: #000000;">&nbsp;</span></p>
+<p class="p_zhengwen_B"><span class="f_zhengwen_B">说明：</span></p>
+<p class="p_zhengwen_list"><span class="f_zhengwen_list">1）当两台防火墙均正常工作时，由上下游的设备进行自由选路。如果内部网络在发送数据报文时，选择从NGFW A发送，在NGFW A上将建立数据报文的连接，此时若从网络中返回的数据报文选择从NGFW B上返回，在没有开启连接保护模式时，由于NGFW B上没有建立该网络连接，该报文将直接被丢弃；而在开启连接保护模式后，NGFW A会通过心跳口将连接信息同步到NGFW B上，将该连接的报文正常转发到内部网络。</span></p>
+<p class="p_zhengwen_list"><span class="f_zhengwen_list">2）当其中一台防火墙发生故障时，上下游设备经过协商后会将数据流通过另外的防火墙转发。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">NGFW工作在连接保护模式下支持透明和路由模式，连接保护模式下不需要添加管理组，只需配置本地和对端地址即可。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">配置连接保护模式，相关配置包括：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">配置所有接口属性。接口属性必须要勾选“非同步地址”选项，否则接口的IP地址信息会在设备运行状态同步时被对方覆盖。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">配置高可用性的相关参数，并启用高可用性功能。</span></p><p class="p_zhengwen_list"><span class="f_zhengwen_list">&nbsp;</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen">集群模式</span></p><p class="p_zhengwen"><span class="f_zhengwen">集群模式部署时，由两台或多台设备组成，其中一台设备处干active状态，其他设备属于standby状态。集群功能启用时，处于active状态的设备接收到达集群系统的所有流量，将接收到的流量根据负裁均衡算法分发到其他健康状态正常的standby设备，当active状态设备出现导常时，集群系统将会自动选举出新的active设备接替原active设备的工作，达到不间断业务的目的。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">主设备：集群中的分流机，监控组状态为ACTIVE。处理部分业务流量，以及根据分流策略分流流量到从设备。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">从设备：除主设备之外的设备，监控组状态为STANDBY。承担主设备分发的业务流量处理工作。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">集群部署图如下所示。</span></p>
+<p class="p_picture"><img alt="clip0086" style="margin:0;width:4.1146in;height:5.2292in;border:none" src="clip0086.png"/></p>
+<p style="line-height: 1.20; margin: 0 0 0 0.2500in;"><span style="color: #000000;">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">配置负载均衡模式，相关配置包括：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">配置心跳口属性。心跳口和管理口的接口属性必须要勾选“非同步地址”选项。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">配置业务接口地址。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">配置高可用性的相关参数，并启用高可用性功能。</span></p><p class="p_zhengwen_list"><span class="f_zhengwen_list">NGFW高可用的配置包括：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.5000in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.5938in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">高可用性相关功能必须使用心跳口交换状态监测及探测信息，NGFW上除管理口以外的以太网接口都可以做为心跳接口。</span></p><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">使用高可用性模块进行冗余备份时，两台防火墙的型号及软件版本必须一致，否则在其中一台故障时，无法保证将业务正常切换到另外一台设备。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list"><a href="toc462834584.html" class="topiclink">状态</a></span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list"><a href="topic15.html" class="topiclink">配置</a></span></p>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

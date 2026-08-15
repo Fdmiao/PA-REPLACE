@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>登录安全策略</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="管理员账户能够对NGFW进行管理与配置，因此为保证NGFW的安全性，管理员的登录会话必须设置一定的安全保护机制以防止非法人员窃取管理员账号。具备管理员模块读写权限的管理员可以通过配置管理员账号的密码复杂度、允许最大登录失败次数、最大在线数等账号保护机制，提高管理员账号的安全性。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic54.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic3.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic210.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">登录安全策略</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">管理员账户能够对NGFW进行管理与配置，因此为保证NGFW的安全性，管理员的登录会话必须设置一定的安全保护机制以防止非法人员窃取管理员账号。具备管理员模块读写权限的管理员可以通过配置管理员账号的密码复杂度、允许最大登录失败次数、最大在线数等账号保护机制，提高管理员账号的安全性。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">系统管理 &gt; 管理员 &gt; 登录安全策略</span><span class="f_step">，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0617" style="margin:0;width:9.3542in;height:17.1042in;border:none" src="clip0617.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">设置管理员账号安全保护机制。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）在设置管理员账号安全保护机制时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5729in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:top; width:0.8750in; height:0.2396in; background-color:#D9D9D9; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">&nbsp;</span></p>
+</th>
+<th style="vertical-align:top; width:1.8542in; height:0.2396in; background-color:#D9D9D9; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:top; width:7.0313in; height:0.2396in; background-color:#D9D9D9; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8750in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">认证方式</span></p>
+</td>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">单因子/双因子</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置管理员登录</span><span class="f_zhengwen">NGFW允许的</span><span class="f_table_content">认证方式。包括单因子（密码/证书）、双因子（密码+短信、密码+证书/密码+Ukey）。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="5"  style="vertical-align:middle; width:0.8750in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">密码策略</span></p>
+</td>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">密码复杂度</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">为适应管理员密码安全性、易用性的不同需求，NGFW提供密码复杂度的设置功能。</span></p>
+<p class="p_table_content"><span class="f_table_content">设置添加管理员时口令密码的复杂程度。可选项：高、中、低、自定义。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">高：密码长度不小于16个字节，必须包含大小写字母、数字和特殊英文字符，不包含自身信息(管理员名、描述)和空格、问号；</span></p>
+<p class="p_table_content"><span class="f_table_content">中：密码长度不小于12个字节，必须包含大小写字母和数字，不包含空格、问号；</span></p>
+<p class="p_table_content"><span class="f_table_content">低：密码长度不小于8个字节，不包含空格、问号；</span></p>
+<p class="p_table_content"><span class="f_table_content">自定义：可勾选密码需要包含的内容，制定密码复杂程度。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">历史密码策略</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">修改密码时，新密码不能与历史密码相同，历史密码的次数由配置决定。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">首次登录修改密码</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">为适应管理员密码安全性、易用性的不同需求，NGFW提供首次登录强制修改密码的设置功能。</span></p>
+<p class="p_table_content"><span class="f_table_content">勾选复选框表示首次登录系统会强制用户修改密码。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">强制修改密码周期</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否强制定期修改密码，可选择永不过期或自定义密码修改期限。单位：天；范围：1-365。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">密码过期前提醒</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">若选择了强制定期修改密码，可自定义设置密码过期前提醒。单位：天；范围：1-30。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="7"  style="vertical-align:middle; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">最大在线数设置</span></p>
+</td>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">最大在线数模式</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择最大在线数模式。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">共享模式：只允许修改全局最大在线数与同一账号最大在线数，WEB/SSH/TELNET最大在线数与全局最大在线数相同，</span></p>
+<p class="p_table_content"><span class="f_table_content">精细模式：全局、同一账号、WEB、SSH、TELNET最大在线数均可修改</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">全局</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置所有账号所有管理方式总计允许的最大在线连接数。单位：个；取值范围：1-128；默认值：100。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">同一账户</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设定使用同一管理员账号同时管理NGFW的最大连接数。单位：个；取值范围：1-128；默认值：10。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">WEB</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置管理员使用WEBUI界面方式同时管理NGFW的最大连接数。单位：个；取值范围：1-128；默认值：10。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">TELNET</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置管理员使用Telnet方式同时管理NGFW的最大连接数。单位：个；取值范围：1-128；默认值：10。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">SSH</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置所有管理员使用SSH方式同时管理NGFW的最大连接数。单位：个；取值范围：1-128；默认值：10。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">超出处理策略</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置超出在线登录人数的处置策略。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="4"  style="vertical-align:middle; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">登录策略</span></p>
+</td>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">登录失败重试次数</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置允许同一管理员连续尝试登录NGFW的最大失败次数。单位：次；取值范围：3-100；默认值：5。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">同一管理员登录失败次数超过最大失败次数后，NGFW的登录界面将被锁定一段时间。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">登录失败锁定时间</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置因管理员超过最大登录失败次数后仍未成功登录的锁定时间。单位：秒；取值范围：30-3600；默认值：60。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">失败锁定时间累加</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否开启登录失败锁定时间累加功能。</span></p>
+<p class="p_table_content"><span class="f_table_content">如登录失败后账号锁定时间设置为30秒。第一次登录失败，账号锁定时间为30秒，锁定结束后，第二次登录失败，账号锁定时间为60秒，根据登录失败重试次数累加。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.8542in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">登录验证码</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否开启登录界面验证码。勾选复选框表示开启，不勾选复选框表示不开启。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）参数设置完成后，点击【应用】按钮完成账号安全机制的配置。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

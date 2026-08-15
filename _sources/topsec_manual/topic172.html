@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>链路负载均衡</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="链路负载均衡功能中，用户访问的报文发送到设备后，设备会根据算法选择最佳的物理链路，将业务流量分发到该链路。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic66.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic66.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic173.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">链路负载均衡</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">链路负载均衡功能中，用户访问的报文发送到设备后，设备会根据算法选择最佳的物理链路，将业务流量分发到该链路。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">网络管理 &gt; 链路负载均衡 &gt; 链路负载均衡</span><span class="f_step">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">点击【添加】按钮，弹出窗口界面如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="链路负载均衡page" style="margin:0;width:7.8438in;height:5.9688in;border:none" src="hmfile_hash_2d34cb5d.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置链路负载均衡策略时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th colspan="2"  style="vertical-align:top; width:1.7500in; height:0.2396in; background-color:#C0C0C0; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:top; width:1.6875in; height:0.2396in; background-color:#C0C0C0; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">&nbsp;</span></p>
+</th>
+<th style="vertical-align:top; width:7.3125in; height:0.2396in; background-color:#C0C0C0; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="10"  style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">基本信息</span></p>
+</td>
+<td style="vertical-align:middle; width:0.7083in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td colspan="2"  style="vertical-align:middle; width:7.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">&nbsp;</span></p>
+<p class="p_table_content"><span class="f_table_content">必填项，设置链路负载均衡策略的名称。最多输入127个字符。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7083in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">启用</span></p>
+</td>
+<td colspan="2"  style="vertical-align:middle; width:7.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">&nbsp;</span></p>
+<p class="p_table_content"><span class="f_table_content">选择是否启用该负载均衡策略。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="6"  style="vertical-align:middle; width:0.7083in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">策略路由</span></p>
+</td>
+<td colspan="2"  style="vertical-align:middle; width:7.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">引用一条策略路由，命中该策略路由可以触发选路业务。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">链路池</span></p>
+</td>
+<td style="vertical-align:middle; width:7.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，选择已添加的链路池，主要用于设置负载均衡算法及链路信息。具体内容请参见 <a href="topic173.html" class="topiclink">链路池</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">会话保持</span></p>
+</td>
+<td style="vertical-align:middle; width:7.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否开启会话保持。若选择开启，则老化时间内所有相同IP的流量会选择相同的链路。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">会话保持超时时间</span></p>
+</td>
+<td style="vertical-align:middle; width:7.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置会话保持表的超时时间。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">过载保护</span></p>
+</td>
+<td style="vertical-align:middle; width:7.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否开启链路过载保护功能。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">跨运营商调度</span></p>
+</td>
+<td style="vertical-align:middle; width:7.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">当开启“过载保护”开关时，可选择是否开启跨运营商调度。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="2"  style="vertical-align:middle; width:0.7083in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">静态路由</span></p>
+</td>
+<td colspan="2"  style="vertical-align:middle; width:7.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置若干条静态等价路由，流量命中静态等价路由可以触发链路负载策略匹配，匹配成功可以触发选路业务。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:7.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置目的地址，当用作于静态路由时可填，配置策略路由时不填。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="4"  style="vertical-align:middle; width:1.0833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">高级配置</span></p>
+</td>
+<td style="vertical-align:middle; width:0.7083in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源区域</span></p>
+</td>
+<td colspan="2"  style="vertical-align:middle; width:7.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">&nbsp;</span></p>
+<p class="p_table_content"><span class="f_table_content">设置源区域对象。点击下拉框可以选择区域对象，关于区域的设置请参见 <a href="toc462736629.html" class="topiclink">区域</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7083in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源地址</span></p>
+</td>
+<td colspan="2"  style="vertical-align:middle; width:7.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">&nbsp;</span></p>
+<p class="p_table_content"><span class="f_table_content">设置源地址对象。点击【选择】可以添加地址对象，关于地址对象的设置请参见 <a href="toc448912165.html" class="topiclink">地址</a>。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：只有匹配此源地址的流量才会应用此链路负载均衡策略。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7083in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">时间</span></p>
+</td>
+<td colspan="2"  style="vertical-align:middle; width:7.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">&nbsp;</span></p>
+<p class="p_table_content"><span class="f_table_content">设置时间对象，点击【选择】可以添加时间对象，关于时间对象的设置请参见 <a href="toc448912168.html" class="topiclink">时间</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7083in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务</span></p>
+</td>
+<td colspan="2"  style="vertical-align:middle; width:7.3125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">&nbsp;</span></p>
+<p class="p_table_content"><span class="f_table_content">设置服务对象，点击【选择】可以添加服务对象，关于服务对象的设置请参见 <a href="toc448912172.html" class="topiclink">服务</a>。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">点击【确定】按钮，完成链路负载均衡的添加。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">移动策略。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）选中需要移动的策略，点击“移动”。</span></p>
+<p class="p_step_content"><span class="f_step_content">可选项为“之前”和“之后”。</span></p>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成策略的移动。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤5</span></td><td style="border:none;padding:0"><span class="f_step">其他。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">点击【编辑】按钮。可对所添加的出站策略进行编辑。</span></p>
+<p class="p_step_content"><span class="f_step_content">点击【删除】按钮，可对所勾选的策略批量删除。</span></p>
+<p class="p_step_content"><span class="f_step_content">点击【清空】按钮，可清空所有新增策略。</span></p>
+<p class="p_step_content"><span class="f_step_content">点击使能列“</span><img alt="开关开启icon" style="margin:0;width:0.2708in;height:0.1458in;border:none" src="hmfile_hash_8f34dfb3.png"/><span class="f_step_content">”图标，可对策略开启或关闭。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

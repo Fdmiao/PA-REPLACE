@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>VLAN</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="VLAN VLAN（Virtual Local Area Network，虚拟局域网）是一种从逻辑上将局域网细分的技术。一个VLAN即一个广播域；在二层网络中，同一VLAN互连互通，不同VLAN间相互隔离。要实现VLAN间的通信，需通过三层路由技术。..." />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic92.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic92.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="vlan.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">VLAN</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_classify"><span class="f_classify">VLAN</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">VLAN（Virtual Local Area Network，虚拟局域网）是一种从逻辑上将局域网细分的技术。一个VLAN即一个广播域；在二层网络中，同一VLAN互连互通，不同VLAN间相互隔离。要实现VLAN间的通信，需通过三层路由技术。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">VLAN划分不受物理位置限制，同一VLAN中的主机可以连接在同一交换机，也可连接在不同的交换机上。如下图所示，PC 1和PC 3，虽然都连接了Switch A，但是分别划分到了VLAN 1和VLAN 2中，所以PC 1和PC 3不能直接通信。</span></p>
+<p class="p_picture"><img alt="network_40" style="margin:0;width:5.4792in;height:4.9896in;border:none" src="network_40.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">VLAN虚接口是VLAN内所有设备对外通信的出口。其命名方式为“vlan.”加上四位VLAN的ID组成，如“vlan.0009”。</span></p>
+<p class="p_classify"><span class="f_classify">QinQ</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">NGFW可用的VLAN数量为4094个，为解除城域网中可用VLAN数量的限制瓶颈，NGFW支持在交换模式的接口上启用QinQ功能以扩充VLAN数量。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">QinQ（也称Stacked VLAN或Double VLAN）技术是对IEEE 802.1Q（即VLAN）的扩展，是IEEE在802.1ad标准中定义的。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">QinQ是一种简单的二层VPN隧道（VLAN-VPN）技术，QinQ报文共有2层的VLAN通过Tag，包括用户网络（私网）的内层VLAN Tag和运营商网络（公网）的外层VLAN Tag。在运营商网络接入端为私网报文封装外层VLAN Tag，报文携带两层VLAN Tag穿越公网。在公网中，报文只根据外层VLAN Tag进行传输，用户的私网VLAN Tag则作为报文中的数据部分来进行传输。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">通过该技术最多可以提供4094×4094个VLAN，用户可以规划私网VLAN ID，可以缓解日益紧缺的公网VLAN ID（4094个）资源，不会导致和公网VLAN ID冲突。QinQ技术为小型城域网或企业网提供一种较为简单的二层VPN解决方案。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">NGFW支持在交换模式的接口上启用QinQ功能。QinQ功能的基本原理如下图所示，当开启交换接口的QinQ功能后，接口接收到报文时，无论报文是否带有VLAN Tag，NGFW都会为该报文打上本端口缺省VLAN的VLAN Tag。这样，如果接收到的是已经带有VLAN Tag的报文，该报文就成为双Tag的报文；如果接收到的是不带VLAN Tag的报文，该报文就成为带有端口缺省VLAN Tag的报文。</span></p>
+<p class="p_picture"><img alt="network_39" style="margin:0;width:8.9063in;height:2.4479in;border:none" src="network_39.png"/></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

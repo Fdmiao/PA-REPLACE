@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>工作原理</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="天融信防火墙系统所使用的NGTOS操作系统平台是基于模块设计的高稳定性操作系统，通过调用防火墙模块、VPN模块、DDoS防御模块、入侵防御模块、防病毒模块、僵木蠕模块、高级威胁防护模块等等一系列功能模块，控制外部非信任网络（如Internet）对内部信任网络的访问行为、内部网络中不同区域之间的相互访问行为以及内网网络对外部非信任网络的访问行为，为网络构建全面" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc462736546.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc490041559.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="toc100644454.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">工作原理</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">天融信防火墙系统所使用的NGTOS操作系统平台是基于模块设计的高稳定性操作系统，通过调用防火墙模块、VPN模块、DDoS防御模块、入侵防御模块、防病毒模块、僵木蠕模块、高级威胁防护模块等等一系列功能模块，控制外部非信任网络（如Internet）对内部信任网络的访问行为、内部网络中不同区域之间的相互访问行为以及内网网络对外部非信任网络的访问行为，为网络构建全面的安全保护屏障。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">天融信防火墙系统处理数据包的基本过程如下图所示。</span></p>
+<p class="p_picture"><img alt="工作原理" style="margin:0;width:9.5104in;height:5.2708in;border:none" src="hmfile_hash_ed149364.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）接收处理</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">防火墙接收到数据报文后进行解析，如果该报文为分片数据报文且防火墙的分片重组功能为开启状态，则重组数据报文，并区分出报文类型（本地报文、广播报文、二层透明转发报文、路由转发报文）；如果接收的数据包为IPSec协议保护的报文，则除以上步骤外，还需进行IPSec解密。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）会话查询</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">对于新接收的报文，防火墙将根据报文包含的五元组查询本地会话表，判断该报文是否属于某个已经存在的会话。如果存在，报文将被直接转至3）处理；如果不存在，说明此报文属于一个新的会话，防火墙将调用DDoS防御模块检测报文是否合法。若检测结果为报文合法，会话表中会自动根据报文五元组信息创建一条新的会话记录。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）DNAT规则匹配</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">如果数据报文满足防火墙已配置的DNAT（目的地址转换）规则条件，天融信防火墙系统会将报文的目的IP地址/端口），转换为规则中预先设置的转换后IP地址/端口；反之则不进行地址转换。关于地址转换策略的设置具体请参见 <a href="toc450050602.html" class="topiclink">地址转换</a>。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">4）路由查询</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">报文类型为路由转发报文时，天融信防火墙会进行路由查询。针对新建连接，天融信防火墙会进行路由查询，并记录查询结果在会话表中；如果不是新建连接，则防火墙仅检查路由年龄是否变化（即路由是否发生变化），有变化时才查路由并重新确定下一跳，反之则不进行操作。若数据包经过了地址转换操作，防火墙将根据转换后的地址查询路由表。关于路由的设置具体请参见 <a href="ref487714854.html" class="topiclink">路由</a>。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">5）IPSec策略匹配</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">天融信防火墙会根据报文的源IP地址与目的IP地址匹配IPSec VPN策略中所保护的隧道子网，如果匹配成功，则记录信息，并在防火墙发送数据报文之前根据相应IPSec VPN策略加密数据报文。关于IPSec VPN的配置具体请参见 <a href="ipsec.html" class="topiclink">IPSec</a>。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">6）安全引擎匹配</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">安全引擎描述了防火墙能否允许符合相关条件的报文通过。防火墙接收到报文后，匹配安全引擎，根据安全引擎命中的规则所指定的操作（放行、阻断或其他已配置的操作）处理该报文。关于访问控制规则的设置具体请参见 <a href="toc462736651.html" class="topiclink">访问控制</a>。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">7）SNAT规则匹配</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">如果数据报文满足防火墙已配置的SNAT（源地址转换）规则条件，天融信防火墙会将接收的报文的源IP地址（或端口）转换为规则中预先设定转换后IP地址（或端口）；反之则不进行地址转换。关于地址转换策略的设置具体请参见 <a href="toc450050602.html" class="topiclink">地址转换</a>。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">8）发送前处理</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">对于待发送的IPSec VPN报文，系统将对其进行重新加密。IPSec VPN加密后的报文目的地址有可能改变，所以此时防火墙将重新查询路由表，确定发送数据报文的下一跳，然后根据下一跳将数据报文转发出去。对于非IPSEC VPN报文，防火墙会直接根据路由查询阶段查询到的下一跳转发报文。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

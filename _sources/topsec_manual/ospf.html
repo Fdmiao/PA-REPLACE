@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>OSPF</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="OSPF（Open Shortest Path..." />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc490041607.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc490041607.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="bgp.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">OSPF</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">OSPF（Open Shortest Path First）协议是一个基于链路状态的动态路由协议。在一个OSPF网络中，每一台路由器首先与自己的邻居建立邻接关系，然后向形成邻接关系的邻居发送链路状态通告（LSA）。LSA包含了所有的链路信息，每一个路由器收到LSA都会把这些通告记录在链路数据库中，并发送一个副本LSA给它的邻居。通过整个区域内的LSA泛洪，所有的路由器都会形成相同的链路状态数据库；当所有路由器链路状态数据库相同时，每个路由器会以自己为根，通过SPF算法计算出一个无环的拓扑，从而计算出自己到达系统内部可达的最佳路由。OSPF路由协议会把大规模的网络划分为多个小范围区域，以避免大规模网络带来的复杂的OSPF计算弊端，从而提高网络性能。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">网络管理 &gt; 路由 &gt; 动态路由</span><span class="f_step">。激活“OSPF”标签页,如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="network_109" style="margin:0;width:13.8646in;height:5.0521in;border:none" src="network_109.png"/></p>
+<p class="p_step_content"><span class="f_step_content">1）点击【启动】按钮即可启动OSPF进程。启动了OSPF进程后，才可以设置OSPF协议的相关参数。</span></p>
+<p class="p_step_content"><span class="f_step_content">2）点击【停止】按钮即可停止OSPF进程运行。</span></p>
+<p class="p_step_content"><span class="f_step_content">3）点击【重启】按钮，重新启动OSPF进程。当网络在当前运行的OSPF协议下出现某些不良状况，重启OSPF进程可以达到改善网络运行状况的目的；重启OSPF进程不会改变OSPF协议的参数配置。</span></p>
+<p class="p_step_content"><span class="f_step_content">4）点击【</span><span style="font-family: 宋体;">查看设置】</span><span class="f_step_content">按钮，弹出“查看”界面，可以查看OSPF路由协议的配置、接口、邻居和路由信息。</span></p>
+<p class="p_step_content"><span class="f_step_content">5）点击【清空配置】按钮，可以清空当前OSPF配置信息；进程开启或关闭时都可以进行配置信息的清空。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">设置路由ID。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">在“Router-ID”文本框中输入标识路由器身份的route-id，再点击【应用】按钮使设置生效。该项为必配项，因为route-id用于在OSPF协议中标识路由器，必须由管理员手动指定；route-id在网络中不可以重名，取值范围为0.0.0.1-255.255.255.255。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">路由重发布。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击【</span><span style="font-family: 宋体;">设置】</span><span class="f_step_content">按钮，进入重发布信息设置页面，如下图所示。</span></p>
+<p class="p_picture"><img alt="network_110" style="margin:0;width:6.3021in;height:6.0208in;border:none" src="network_110.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置OSPF路由重发布时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.1979in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.5104in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IPv4直连度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">表示允许将直连路由信息引入到OSPF路由中作为外部路由信息，并可在其后的文本框中设置路由引入后的metric值。取值范围：0-16777214。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IPv4静态度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">表示允许将静态的路由信息引入到OSPF路由中，并可在其后的文本框中设置路由引入后的metric值。取值范围：0-16777214。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">BGP度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">表示允许将BGP的路由信息引入到OSPF路由中，并可在其后的文本框中设置路由引入后的metric值。取值范围：0-16777214。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">RIP度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">表示允许将RIP的路由信息引入到OSPF路由中，并可在其后的文本框中设置路由引入后的metric值。取值范围：0-16777214。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">缺省度量值</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">表示允许将其他未提及种类的路由信息引入到OSPF路由中，并可在其后的文本框中设置缺省路由引入后的metric值。取值范围：0-16777214。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:1.1979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IPv4直连/IPv4静态/BGP/RIP重发布过滤</span></p>
+</td>
+<td style="vertical-align:middle; width:4.5104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置哪些路由不会被重发布到OSPF协议。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）勾选要重发布的路由类型，并设置度量值，表示将对路由表中的该类路由进行重发布，邻居引入该路由后将标记此处设置的数值。</span></p>
+<p class="p_step_content"><span class="f_step_content">3）点击【确定】按钮完成OSPF路由重发布度量值的设置，点击【取消】按钮撤销本次操作。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">设置区域。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）在“区域配置”页签处点击『添加』，进入“添加”界面，如下图所示。</span></p>
+<p class="p_picture"><img alt="network_111" style="margin:0;width:6.3542in;height:2.8125in;border:none" src="network_111.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置区域时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.8958in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.8125in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; height:0.3021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">区域ID</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; height:0.3021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，设置区域的ID号。取值范围：0-4294967295。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）路由器和路由器之间必须配置相同的OSPF区域，否则无法形成邻居。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）OSPF区域是基于路由器的接口划分的，而不是基于整台路由器划分。一台路由器可以属于单个区域，也可以属于多个区域。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">运行网段</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，输入运行OSPF协议的网段IP地址和掩码。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">区域设置</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置区域类型，可选项：无、末梢区域、完全末梢区域。</span></p>
+<p class="p_table_content"><span class="f_table_content">末梢区域：主要用于优化网络性能和减少路由表的大小。如企业的分支网络主要需求是访问总部网络和互联网，对外部网络的详细路由信息需求较少，则可将分支网络所在区域设置为末梢区域。</span></p>
+<p class="p_table_content"><span class="f_table_content">完全末梢区域：是末梢区域的一种扩展类型，旨在进一步减少区域内路由器需要处理的路由信息，从而优化网络性能和资源利用率。如物联网网络中，可将大量物联网设备联网区域设置为完全末梢区域。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_Normal" style="line-height: 1.20; margin: 0.0521in 0 0.0521in 0.5938in;">&nbsp;</p>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成区域的设置。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤5</span></td><td style="border:none;padding:0"><span class="f_step">设置接口。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）在“接口配置”页签处点击『添加』，进入“添加”界面，如下图所示。</span></p>
+<p class="p_picture"><img alt="network_112" style="margin:0;width:6.3125in;height:3.8125in;border:none" src="network_112.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置接口时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.8958in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.8125in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; height:0.3021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">接口名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; height:0.3021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">指定配置哪个接口的OSPF认证参数的属性。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">接口cost</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置接口cost值，取值范围：1-65535。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">dr优先级</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置该路由器成为DR的优先程度，数值越大，路由器成为DR的优先级越高。取值范围：0-255。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">网络类型</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">在下拉框中选择网络类型，可选项：广播、点对点。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">认证方式</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置通过该接口进行链路状态通告（LSA）互换时验证的方式。可选项：简单、MD5、不认证。</span></p>
+<p class="p_table_content"><span class="f_table_content">设置为“简单”时，NGFW使用基于文本的密码方式验证LSA。</span></p>
+<p class="p_table_content"><span class="f_table_content">设置为“MD5”时，NGFW使用MD5认证方式验证LSA。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）路由器之间必须配置相同的身份认证方式，否则无法形成邻居。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）认证方式为“简单”时，需配置接口采用明文认证时使用的口令；认证方式为“MD5”时，需配置接口采用MD5认证时的MD5认证口令和KEY ID。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成接口的设置。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤6</span></td><td style="border:none;padding:0"><span class="f_step">设置控制列表。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）在“接口配置”页签处点击『添加』，进入“添加”界面，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0098" style="margin:0;width:6.3542in;height:2.7917in;border:none" src="clip0098.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在设置控制列表时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.8958in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.8125in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; height:0.3021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">控制列表名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; height:0.3021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置控制列表名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">动作</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置允许/禁止引入的路由。可选项：禁用、允许。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">运行网段</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8125in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置网段地址。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮完成访问控制列表的配置。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

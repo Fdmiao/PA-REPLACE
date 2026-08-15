@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>代理策略</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="通过添加代理策略，将NGFW作为代理服务器，可对经过的加密流量进行解密，还原为明文流量，完成对其内容安全检查后，重新加密为加密流量发送给真正的服务器。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <img class="nav" src="hm_btn_navigate_prev_d.png" 
+        ><a href="ref487725245.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><img class="nav1" src="hm_btn_navigate_next_d.png">
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">代理策略</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">通过添加代理策略，将NGFW作为代理服务器，可对经过的加密流量进行解密，还原为明文流量，完成对其内容安全检查后，重新加密为加密流量发送给真正的服务器。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">配置代理策略的具体操作如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">安全策略 &gt; 解密 &gt; 代理策略</span><span class="f_step">，点击“</span><img alt="tianjiaicon" style="margin:0;width:0.4896in;height:0.2188in;border:none" src="tianjiaicon.png"/><span class="f_step">”，弹出“添加代理策略”对话框，界面如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="sslxiezaidailicelue01" style="margin:0;width:6.4583in;height:5.7292in;border:none" src="sslxiezaidailicelue01.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:2.4688in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:6.5833in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:2.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">解密类型</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置代理策略的解密类型，可选项：透明代理、服务器SSL解密。</span></p>
+<p class="p_table_content"><span class="f_table_content">透明代理：透明代理模式下，可以对客户端一侧的加密流量，解密还原为明文流量，经过安全引擎检测后，再加密为加密流量，发送服务器。</span></p>
+<p class="p_table_content"><span class="f_table_content">服务器SSL解密：服务器SSL解密模式下，可以对客户端一侧的加密流量，解密还原为明文流量，经过安全引擎检测后，直接以明文发给服务器。在保护服务器的同时，降低服务器的负载压力。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置代理策略的名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置代理策略的描述信息。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源地址</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置代理策略的源地址应当匹配的条件。点击下拉列表选择已设置好的地址对象，或者点击『添加』，新建地址对象，关于地址对象的配置请参见 <a href="toc448912165.html" class="topiclink">地址</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">解密区域</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置匹配代理策略的源区域应满足的条件。点击下拉列表选择已设置好的区域对象，或者点击『添加』，新建区域对象，关于区域对象的配置请参见 <a href="toc462736629.html" class="topiclink">区域</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">域名</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置代理策略匹配的域名，点击下拉列表选择已设置好的域名对象，或者点击『添加』，新建域名对象，关于域名对象的配置请参见 <a href="toc448912183.html" class="topiclink">域名</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的地址</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置代理策略的目的地址应当匹配的条件。点击下拉列表选择已设置好的地址对象，或者点击『添加』，新建地址对象，关于地址对象的配置请参见 <a href="toc448912165.html" class="topiclink">地址</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，设置代理策略匹配的服务，可选项：HTTPS、SMTP_over_SSL、POP3_over_SSL、IMAP_over_SSL、FTP_over_SSL_implicit。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">SSL客户端模板</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，选择代理策略的客户端，可选择“预置动态证书模板”或点击『添加』自定义添加SSL客户端模板，关于模板的添加具体请参见 <a href="sslxiezaidailimuban.html" class="topiclink">代理模板</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">SSL服务器模板</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必选项，当“解密类型”参数选择“透明代理”参数时，该参数可见，选择代理策略的服务器，点击下拉列表选择已设置好的SSL服务器模板，或者点击『添加』新建SSL服务器模板，关于模板的添加具体请参见 <a href="sslxiezaidailimuban.html" class="topiclink">代理模板</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:2.4688in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">状态</span></p>
+</td>
+<td style="vertical-align:middle; width:6.5833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置该代理策略的状态，可选项：开启、关闭。“</span><img alt="kaiguanon" style="margin:0;width:0.2917in;height:0.1771in;border:none" src="kaiguanon.png"/><span class="f_table_content">”表示开启。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_table"><span class="f_table">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">配置完成后点击【确定】按钮完成模板添加。</span></td></tr></table></div>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>静态隧道</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="IPSec VPN静态隧道通过IKE（Internet Key Exchange，因特网密钥交换）自动地进行安全联盟建立与密钥交换而自动建立。本节介绍如何配置静态隧道。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic177.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="ipsec.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic5.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">静态隧道</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">IPSec VPN静态隧道通过IKE（Internet Key Exchange，因特网密钥交换）自动地进行安全联盟建立与密钥交换而自动建立。本节介绍如何配置静态隧道。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">要使NGFW能与其他网关设备成功建立IPSec VPN隧道，需要先执行如下步骤：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">开放物理接口所属区域的IPSecVPN服务，请参见 <a href="topic177.html" class="topiclink">服务管理</a>。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">如果静态隧道采用证书认证方式，则需要在NGFW上导入对端设备的证书，请参见</span><span class="f_zhengwen"> <a href="ref483380791.html" class="topiclink">PKI</a>。</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">网络管理 &gt; IPSecVPN &gt; 静态隧道</span><span class="f_step">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">添加静态隧道。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击『添加』，弹出“添加静态隧道”窗口。如下图所示。</span></p>
+<p class="p_picture"><img alt="network_74" style="margin:0;width:9.3854in;height:8.4688in;border:none" src="network_74.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）配置静态隧道参数。</span></p>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_step_list">基本信息</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th colspan="3"  style="vertical-align:middle; width:2.7292in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:6.1563in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3"  style="vertical-align:middle; width:2.7292in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">隧道名称</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1563in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，配置静态隧道的名称。</span></p>
+<p class="p_table_content"><span class="f_table_content">隧道名称最多不能超过（中文13、英文40）个字符，并且不能包含除“-”或“_”之外的特殊字符。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="3"  style="vertical-align:middle; width:2.7292in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1563in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入静态隧道描述信息。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="3"  style="vertical-align:middle; width:2.7292in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">协议类型</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1563in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择隧道使用的协议类型。可选项：国际、国密1.0、国密1.1</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：选择“国密1.0”和“国密1.1”时，认证方式固定为“数字证书”；“IKE协商模式”固定为“主模式”。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="7"  style="vertical-align:middle; width:0.6771in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">认证方式</span></p>
+</td>
+<td colspan="2"  style="vertical-align:middle; width:2.4792in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">认证方式</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1563in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置进行隧道协商时的身份认证方式。“协议类型”选择“国际”，支持“预共享密钥”和“数字证书”两种认证方式；“协议类型”选择“国密1.0”或“国密1.1”，认证方式固定为“数字证书”。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">“预共享密钥”认证方式是指隧道两端的网关通过口令密码来确认对方身份，因此隧道两端必须配置相同的预共享密钥；“数字证书”认证方式是指隧道两端的网关通过网关证书来确认对方身份。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="4"  style="vertical-align:middle; width:1.6042in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">预共享密钥</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">预共享密钥</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1563in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，配置隧道两端用于确认对方身份的口令密码。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">当认证方式为“预共享密钥”时，必须配置该参数值。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">确认共享密钥</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1563in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">再次输入预共享密钥。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">当认证方式为“预共享密钥”时，必须配置该参数值。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">本地标识</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1563in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置用于本地VPN网关搜索共享密钥文件的索引，必须与隧道对端的“对方标识”保持一致。</span></p>
+<p class="p_table_content"><span class="f_table_content">填写格式：@XXX或XXX@XXX（XXX为字母或数字）。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">对端标识</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1563in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置用于对方VPN网关搜索共享密钥文件的索引。</span></p>
+<p class="p_table_content"><span class="f_table_content">当认证方式为“预共享密钥”时，需要手动输入对端标识，填写格式为：@XXX或XXX@XXX（XXX为字母或数字），且必须与隧道对端的“本地标识”保持一致。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="2"  style="vertical-align:middle; width:1.6042in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">数字证书</span></p>
+</td>
+<td style="vertical-align:middle; width:1.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">证书位置</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1563in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击【证书配置】在弹出的窗口中导入本机证书。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">对端标识</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1563in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">对端标识设置有两种方式：</span></p>
+<p class="p_table_content"><span class="f_table_content">方式一：手工输入对端网关证书中的“subject”字段值；方式二：点击【获取标识】按钮，选择管理主机存储的数字证书文件，自动获取对方的标识信息。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="3"  style="vertical-align:middle; width:2.7292in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">本端接口</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1563in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">在下拉框中选择NGFW与对端设备建立静态隧道使用的接口。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="3"  style="vertical-align:middle; width:2.7292in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">本地地址</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1563in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">在下拉框选择NGFW与对端设备建立静态隧道使用的IP地址，该接口地址用于与隧道对端设备进行通信。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="3"  style="vertical-align:middle; width:2.7292in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">对端地址</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1563in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置隧道对端设备与NGFW建立隧道使用的接口的IP地址，NGFW与隧道对端设备该地址进行通信。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">建立IPv4静态隧道时，本参数设置为IPv4地址，格式：x.x.x.x；建立IPv6静态隧道时，本参数设置为IPv6地址，格式：x:x:x:x:x:x:x:x。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="3"  style="vertical-align:middle; width:2.7292in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IKE协商模式</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1563in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置在IKE协商时采用的协商模式。</span></p>
+<p class="p_table_content"><span class="f_table_content">可选项：主模式、野蛮模式。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）主模式交换的消息为6个，占用更多的资源和时间。但它对身份信息的交换进行了加密，安全性比野蛮模式高。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）野蛮模式交换的消息为3个，占用资源少，协商速度快。它相对于主模式来说更灵活，能支持协商发起端为动态IP地址的情况。但它以明文的方式传输身份信息，安全性不及主模式。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="3"  style="vertical-align:middle; width:2.7292in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">主动发起隧道协商</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1563in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否主动发起隧道协商。</span></p>
+<p class="p_table_content"><span class="f_table_content">可选项：开启、关闭。选择“开启”，则该隧道本端主动发起协商；选择“关闭”，则隧道本端不主动发起协商。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">只要有一端设备配置了主动发起协商，隧道就可以自动进行协商；如果隧道两端设备均不主动发起协商，则可以通过点击“协商”图标手动发起协商。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_list"><span class="f_step_list">&nbsp;</span></p>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_step_list">待加密数据流</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.4167in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:3.6979in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.4167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源地址/源地址掩码</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置静态隧道保护的本地子网地址/掩码。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">本地子网与对方子网的数据报文通信时，通过该静态隧道对数据报文进行保护。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的地址/目的地址掩码</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置静态隧道保护的对端网关的子网地址/掩码。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">本地子网与对方子网的数据报文通信时，通过该静态隧道对数据报文进行保护。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">反向路由优先级</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IPsec SA建立后，NGFW自动生成到达IPsec VPN对端保护子网的静态路由，“反向路由优先级”参数用于配置自动生成的静态路由的优先级。如果路由转发表中有多条目的地址相同优先级不同的静态路由，优先级数值小的路由优先级更高。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）随IPsec SA的创建而自动生成的静态路由，随IPsec SA的删除而删除，选择 </span><span class="f_menu">网络管理 &gt; 路由 &gt; 静态路由</span><span class="f_table_content">，可查看自动生成的静态路由。IPv4静态路由优先级的取值范围：1~32,766，默认值：60 ；IPv6静态路由优先级的取值范围：257~32,766，默认值：2048。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）IPSec VPN静态隧道的“本端接口”设置为IPSec虚接口时，方可配置该参数。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_step_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_step_list">安全提议</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.4167in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:3.6979in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.4167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IKE SA协商重试次数</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置IKE协商不成功时的最大重试次数，超过该次数不再发起协商。</span></p>
+<p class="p_table_content"><span class="f_table_content">取值范围：1-100；默认值：3。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">ISAKMP-SA存活时间</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置IKE 安全联盟（SA）的生存时间，超过该时间则需要重新协商新的SA。</span></p>
+<p class="p_table_content"><span class="f_table_content">单位：秒；取值范围：1-86400秒；默认值：86400秒。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">ISAKMP-SA的安全政策属性</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">在进行IKE安全协商时需要指定ISAKMP-SA安全政策属性。</span></p>
+<p class="p_table_content"><span class="f_table_content">加密算法支持：3DES、AES、DES；校验算法支持：MD5、SHA1；DH交换值支持：DH1、DH2、DH5。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">一条静态隧道可以添加多个ISAKMP-SA安全政策属性。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">ESP加密算法</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">进行信息加密传输时，需要指定ESP加密算法提议列表，可选项随协议类型变化。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">ESP校验算法</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">进行信息加密传输时，需要指定ESP校验算法提议列表，可选项随协议类型变化。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">安全协议</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">定义对IP数据包提供何种保护，安全协议支持：ESP、AH、隧道模式。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">一条静态隧道可以设置多个IPSEC-SA的安全政策属性。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IPSec-SA存活时间</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IPSEC安全联盟的生存时间。</span></p>
+<p class="p_table_content"><span class="f_table_content">单位：秒；取值范围：1-260000；默认值：28800。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">DPD</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否启用对端失效检测功能（Dead peer detection），该功能用于检测VPN另一端网关是否失效。</span></p>
+<p class="p_table_content"><span class="f_table_content">可选项：启用、不启用；默认值：启用。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">DPD间隔</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置进行DPD查询的时间间隔，即经过该段时间间隔没有收到对端网关的IPSec报文，就进行一次DPD请求。</span></p>
+<p class="p_table_content"><span class="f_table_content">单位：秒；取值范围：1-3600；默认值：30。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4167in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">DPD超时时间</span></p>
+</td>
+<td style="vertical-align:middle; width:3.6979in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">等待对端网关DPD应答报文的超时时间，即：发送DPD请求报文后，如果超过此处设定的超时时间仍然没有收到对端网关正确的DPD应答报文，就表示对端网关不在线。</span></p>
+<p class="p_table_content"><span class="f_table_content">单位：秒；取值范围：1-28800；默认值：300。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">3）（可选）点击【恢复默认】按钮，配置的参数恢复系统出厂配置，点击【确定】按钮完成IPSec静态隧道的添加，此后，NGFW将自动进行IPSec VPN静态隧道的协商。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>案例六（子接口部署）</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="用户网络 &nbsp; 基本需求 1）防火墙各接口同时支持IPv4和IPv6地址。 2）学生或老师访问教育科研网的网站时，线路出口为CERNET，访问其他网站包括国外站点时，线路出口为电信出口。 3）学生在图书馆只允许访问图书馆网站 www.abc.com 。 IPv4/IPv6地址规划如下表所示。 设备/区域 IPv4/IPv6规划 设备/区域" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic149.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic30.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic130.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">案例六（子接口部署）</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen_B" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_B">用户网络</span></p><p class="p_picture"><img alt="NGFW20~1_img199" style="margin:0;width:10.4688in;height:6.9583in;border:none" src="hmfile_hash_3c7b316f.png"/></p>
+<p class="p_zhengwen_B"><span class="f_zhengwen_B">&nbsp;</span></p>
+<p class="p_zhengwen_B" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_B">基本需求</span></p><p class="p_zhengwen"><span class="f_zhengwen">1）防火墙各接口同时支持IPv4和IPv6地址。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）学生或老师访问教育科研网的网站时，线路出口为CERNET，访问其他网站包括国外站点时，线路出口为电信出口。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）学生在图书馆只允许访问图书馆网站 </span><span class="f_zhengwen" style="font-family: Arial,Helvetica,sans-serif;"><a href="http://www.abc.com" class="weblink">www.abc.com</a> </span><span class="f_zhengwen">。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">IPv4/IPv6地址规划如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.8958in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">设备/区域</span></p>
+</th>
+<th style="vertical-align:middle; width:2.0625in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">IPv4/IPv6规划</span></p>
+</th>
+<th style="vertical-align:middle; width:0.7292in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">设备/区域</span></p>
+</th>
+<th style="vertical-align:middle; width:2.0104in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">IPv4/IPv6规划</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">防火墙</span></p>
+</td>
+<td style="vertical-align:middle; width:2.0625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">feth0：</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv4：202.112.60.2/24</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv6：2001:dab::2/64</span></p>
+<p class="p_table_content"><span class="f_table_content">feth1：</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv4：202.1.1.2/24</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv6：2002::aaff::1/64</span></p>
+<p class="p_table_content"><span class="f_table_content">feth2：</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv4：192.168.30.1/24</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv6：2002:aaa6::1/64</span></p>
+<p class="p_table_content"><span class="f_table_content">feth3mv01：</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv4：192.168.16.1/24</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv6：2002:aaa1::1/64</span></p>
+<p class="p_table_content"><span class="f_table_content">feth3mv02：</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv4：192.168.20.1/24</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv6：2002:aaa2::1/64</span></p>
+<p class="p_table_content"><span class="f_table_content">feth3mv03：</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv4：192.168.25.1/24</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv6：2002:aaa3::1/64</span></p>
+</td>
+<td style="vertical-align:middle; width:0.7292in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">DMZ区</span></p>
+</td>
+<td style="vertical-align:middle; width:2.0104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">WEB服务器：</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv4：192.168.30.11/24</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv6：2002:aaa6::2/64</span></p>
+<p class="p_table_content"><span class="f_table_content">&nbsp;</span></p>
+<p class="p_table_content"><span class="f_table_content">DNS服务器：</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv4：192.168.30.12/24</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv6：2002:aaa6::3/64</span></p>
+<p class="p_table_content"><span class="f_table_content">&nbsp;</span></p>
+<p class="p_table_content"><span class="f_table_content">DB服务器：</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv4：192.168.30.13/24</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv6：2002:aaa6::4/64</span></p>
+<p class="p_table_content"><span class="f_table_content">&nbsp;</span></p>
+<p class="p_table_content"><span class="f_table_content">FTP服务器：</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv4：192.168.30.15/24</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv6：2002:aaa6::5/64</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">学生宿舍区</span></p>
+</td>
+<td style="vertical-align:middle; width:2.0625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IPv4：192.168.16.0/24</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv6：2002:aaa1::0/64</span></p>
+</td>
+<td style="vertical-align:middle; width:0.7292in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">图书馆区</span></p>
+</td>
+<td style="vertical-align:middle; width:2.0104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IPv4：192.168.25.0/24</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv6：2002:aaa3::0/64</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8958in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">教学楼</span></p>
+</td>
+<td style="vertical-align:middle; width:2.0625in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">IPv4：192.168.20.0/24</span></p>
+<p class="p_table_content"><span class="f_table_content">IPv6：2002:aaa2::0/64</span></p>
+</td>
+<td style="vertical-align:middle; width:0.7292in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">&nbsp;</span></p>
+</td>
+<td style="vertical-align:middle; width:2.0104in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">&nbsp;</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen_B" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_B">配置要点</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list">配置防火墙接口IP地址</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list">配置校内用户访问外网</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list">配置访问控制策略，只允许学生在图书馆访问图书馆网站 <a href="http://www.abc.com" class="weblink">www.abc.com</a></span></p><p class="p_zhengwen_list"><span class="f_zhengwen_list">&nbsp;</span></p>
+<p class="p_zhengwen_B" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_B">配置步骤</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list"><a href="topic130.html" class="topiclink">配置防火墙接口</a></span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list"><a href="topic131.html" class="topiclink">配置对象</a></span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list"><a href="topic132.html" class="topiclink">配置静态路由</a></span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list"><a href="snat.html" class="topiclink">配置SNAT</a></span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#252;</span><span class="f_zhengwen_list"><a href="acl2.html" class="topiclink">配置访问控制策略</a></span></p>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

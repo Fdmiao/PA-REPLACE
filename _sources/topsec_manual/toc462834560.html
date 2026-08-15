@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>配置维护</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="NGFW的配置信息保存在配置文件中，设备中可同时存在多个配置文件，但是同一时间只有一个生效。设备中存在以下几类配置信息。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc483382798.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc483382798.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic216.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">配置维护</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">NGFW的配置信息保存在配置文件中，设备中可同时存在多个配置文件，但是同一时间只有一个生效。设备中存在以下几类配置信息。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">出厂配置：设备在出厂时，带有基本功能的配置信息。配置文件损坏时，可使用出厂配置正常启动。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">启动配置：设备在启动时，自动加载的配置文件，如果设备未找到启动配置文件加载出厂配置。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_zhengwen_list">当前配置：设备当前正在运行的配置，包括设备的启动配置及管理员新增的配置信息。如果不保存当前配置，设备重启后，会丢失当前配置。</span></p><p class="p_zhengwen"><span class="f_zhengwen">系统支持配置文件的备份、替换和删除等功能，可大大降低管理员批量配置设备的工作量。另外，管理员可通过导入不同配置文件实现设备在不同网络中的配置，自由切换NGFW在网络环境中的功能，并可在设备配置出现问题时帮助管理员轻松将配置恢复到正常状态。</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen">配置管理</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_zhengwen">选择 </span><span class="f_menu">系统管理</span><span class="f_menu" style="font-family: 'Times New Roman',Times,Georgia,serif;"> </span><span class="f_zhengwen">&gt; </span><span class="f_zhengwen" style="font-weight: bold;">配置</span><span class="f_menu">维护</span><span class="f_zhengwen"> &gt; </span><span class="f_menu">配置维护</span><span class="f_zhengwen">，激活“配置管理”页签，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0309" style="margin:0;width:8.4583in;height:4.1875in;border:none" src="clip0309.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">加载配置。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">勾选指定配置文件，点击【加载配置】按钮，可加载更新该配置文件。当前配置的文件不可加载。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">自动保存配置</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">点击<img alt="clip0622" style="margin:0;width:0.3542in;height:0.3750in;border:none" src="clip0622.png"/>按钮，设置是否开启自动保存配置的功能，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0623" style="margin:0;width:3.3958in;height:1.6354in;border:none" src="clip0623.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_zhengwen_list">备份系统运行配置文件。</span></td></tr></table></div><p class="p_step_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_content">手动另存为</span></p><p class="p_step_content"><span class="f_step_content">1）勾选指定配置文件，点击“当前配置另存为”，弹窗如下图所示。</span></p>
+<p class="p_picture"><img alt="system_12" style="margin:0;width:6.7813in;height:1.8542in;border:none" src="system_12.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）输入另存的配置文件文件名和描述信息，再点击【确定】按钮，即可将系统当前运行配置文件备份到设备中。</span></p>
+<p class="p_step_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_content">自动备份</span></p><p class="p_step_content"><span class="f_step_content">1）点击“自动备份”，弹窗如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0310" style="margin:0;width:7.6250in;height:4.1563in;border:none" src="clip0310.png"/></p>
+<p class="p_step_content"><span class="f_step_content">设置是否启用配置备份功能，设置备份时间、备份数量，以及是否开启配置变化检测。自动备份功能默认开启。</span></p>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮，启用设置的自动备份功能。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤5</span></td><td style="border:none;padding:0"><span class="f_zhengwen_list">导入配置文件。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击“导入”，弹出“配置导入”窗口，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0311" style="margin:0;width:7.5625in;height:5.5833in;border:none" src="clip0311.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在导入配置文件时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.3750in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.3333in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.3750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">文件名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择配置文件。点击【上传】按钮，在管理主机中选择配置文件。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">导入后配置名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入导入后的配置文件名称，</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入配置文件的必要描述信息。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">导入类型</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择明文导入文件或者密文导入文件。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3750in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">替换当前的系统配置</span></p>
+</td>
+<td style="vertical-align:middle; width:4.3333in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">如果勾选“替换当前的系统配置”该项表示将该导入的配置文件作为系统的运行配置文件。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">HA启动时不允许该操作，勾选后可以正常导入文件，但不能替换当前配置。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）点击【确定】按钮，完成配置导入。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤6</span></td><td style="border:none;padding:0"><span class="f_zhengwen_list">导出配置文件。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）选择一个或多个系统中存储的配置文件，点击“导出”，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0312" style="margin:0;width:7.5938in;height:2.7604in;border:none" src="clip0312.png"/></p>
+<p class="p_step_content"><span class="f_step_content">2）输入导出文件名称，选择导出类型。点击【确定】按钮，完成将系统中存储的配置文件导出至管理主机中。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤7</span></td><td style="border:none;padding:0"><span class="f_zhengwen_list">恢复设备出厂配置。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">点击“恢复默认”，在弹出的提示窗口中，点击【确定】按钮，恢复出厂设置。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤8</span></td><td style="border:none;padding:0"><span class="f_zhengwen_list">配置信息查看</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">勾选指定配置文件，点击“配置信息查看”，在弹窗中查看该配置文件信息。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤9</span></td><td style="border:none;padding:0"><span class="f_zhengwen_list">配置对比</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">勾选两个配置文件，点击“配置对比”，在弹窗中查看两个配置文件的对比信息。</span></p>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen">整机配置</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step_content">选择 </span><span class="f_menu">系统管理 </span><span class="f_step_content">&gt; </span><span class="f_step_content" style="font-weight: bold;">配置</span><span class="f_menu">维护</span><span class="f_step_content"> &gt; </span><span class="f_menu">配置维护，</span><span class="f_menu" style="font-weight: normal;">激活“整机配置”页签，</span><span class="f_step_content">如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0313" style="margin:0;width:10.8125in;height:4.0000in;border:none" src="clip0313.png"/></p>
+<p class="p_step_content"><span class="f_step_content">整机配置即当前系统全部配置（不包括自动备份文件）。整机配置导入会替换当前系统全部已存盘配置，强烈建议在“整机配置导入”前先进行“整机配置导出”，避免当前系统配置丢失。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step_content">整机导入，选择“导入”，可导入配置信息，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0565" style="margin:0;width:7.5729in;height:5.1875in;border:none" src="clip0565.png"/></p>
+<p class="p_step_content"><span class="f_step_content">配置参数说明如下。 </span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.4583in; background-color:#D8D8D8; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:6.1354in; background-color:#D8D8D8; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.6667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">文件名称</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1354in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置上传文件，点击<img alt="clip0566" style="margin:0;width:0.2917in;height:0.2813in;border:none" src="clip0566.png"/>图标，选择本地文件上传到系统。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">导入后配置名称</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1354in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置导入后配置名称。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">输入少于64个字节的字符串。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1354in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置描述信息，不能输入&lt;&gt;\，少于256个字节。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">导入类型</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1354in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">可选项：明文、密文</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.6667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">替换当前配置</span></p>
+</td>
+<td style="vertical-align:middle; width:6.1354in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否替换当前配置，点击“是”，可设置是否覆盖根系统管理员。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">设置完成点击【确定】按钮，完成配置导入设置。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step_content">整机导出，选择“导出”，选择导出类型，可导出整机配置。</span></td></tr></table></div><p class="p_step"><span class="f_step">&nbsp;</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen">部分配置</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step_content">选择 </span><span class="f_menu">系统管理 </span><span class="f_step_content">&gt; </span><span class="f_step_content" style="font-weight: bold;">配置</span><span class="f_menu">维护</span><span class="f_step_content"> &gt; </span><span class="f_menu">配置维护，</span><span class="f_menu" style="font-weight: normal;">激活“部分配置”页签，</span><span class="f_step_content">如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0314" style="margin:0;width:7.4583in;height:2.2292in;border:none" src="clip0314.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">部分导入。</span><span class="f_step_content">选择“导入”，</span><span class="f_step">点击“</span><img alt="clip0069" style="margin:0;width:0.2708in;height:0.2292in;border:none" src="clip0069.png"/><span class="f_step">”，上传需要导入的部分配置文件。点击【确定】按钮，完成配置。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">部分导出。</span><span class="f_step_content">选择文件类型（基础对象，即 <a href="toc490041635.html" class="topiclink">资源管理</a> 章节的<a href="toc448912165.html" class="topiclink">地址</a>、<a href="toc448912172.html" class="topiclink">服务</a>、<a href="toc462736629.html" class="topiclink">区域</a>、<a href="topic2.html" class="topiclink">地区</a>、<a href="toc448912183.html" class="topiclink">域名</a>、<a href="toc448912175.html" class="topiclink">应用</a>和<a href="toc448912168.html" class="topiclink">时间</a> 对象，访问控制和NAT策略），点击【导出】按钮，导出相关配置文件。</span></td></tr></table></div>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

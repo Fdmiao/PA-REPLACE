@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>RADVD</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="IPv6网络中的主机自动获取IPv6地址技术分为两种，一种是有状态（stateful）地址自动配置，典型代表是DHCPv6，具体请参见 DHCPv6；一种是无状态（stateless）地址自动配置，典型代表是RADVD（Router Advertisement Daemon），具体请参见本章节。 " />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="ntp.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic214.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="toc490041616.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">RADVD</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">IPv6网络中的主机自动获取IPv6地址技术分为两种，一种是有状态（stateful）地址自动配置，典型代表是DHCPv6，具体请参见 <a href="ref485628558.html" class="topiclink">DHCPv6</a>；一种是无状态（stateless）地址自动配置，典型代表是RADVD（Router Advertisement Daemon），具体请参见本章节。 </span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">IPv6网络在有状态地址自动配置方式下，主要采用动态主机配置协议（DHCPv6），需要配备专门的DHCPv6服务器，网络接口通过客户机/服务器模式从DHCPv6服务器处得到地址配置信息，通过DHCPv6服务器获取的地址为完整的IPv6地址。在无状态地址自动配置方式下，只需防火墙启用RADVD功能，客户端主机即可通过接收防火墙宣告的IPv6地址前缀，再结合其自身的接口ID得到一个IPv6地址。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">以RADVD为代表的无状态地址自动配置不需要消耗很多机器资源，也不需要像DHCPv6那样维护本地数据库来记录地址分配状况，只是广播地址前缀，客户端主机收到广播的前缀后结合本地接口ID便可生成IPv6地址。这使得接入到IPv6网络中的主机，无需进行任何网络配置，只要其链路的路由设备支持RADVD功能，即可自动获取到局部或全局可路由的IPv6地址，与IPv6网络中的其他主机进行通信，实现了主机接入网络的即插即用。</span></p>
+<p class="p_zhengwen_B"><span class="f_classify">RADVD工作原理</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">主机通过防火墙的RADVD功能自动获取IPv6地址，包括如下三个过程：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）主机通过与防火墙交互RS和RA报文，获取防火墙RADVD功能宣告的前缀信息，并结合前缀和自身接口ID生成IPv6地址。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）主机向链路其他节点发送NS报文，验证地址唯一性。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）主机初始化接口，地址生效。</span></p>
+<p class="p_zhengwen_B"><span class="f_classify">报文交互过程</span></p>
+<p class="p_picture"><img alt="RADVD工作原理topo" style="margin:0;width:5.3958in;height:3.0000in;border:none" src="hmfile_hash_875d12ca.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">图中FF02::1为链路本地范围所有节点组播地址，FF02::2为链路本地范围所有路由设备组播地址。FE80::ABCD和FE80::EFCD为链路本地地址，链路本地地址的组成：FE80+接口ID。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）主机节点启用IPv6协议后，自动生成链路本地地址，发送RS报文，请求RADVD的前缀信息。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）RADVD收到RS报文后，发送单播RA报文，携带用于无状态地址自动配置的前缀信息1::/64。同时，RADVD也会周期性地发送组播RA报文。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）主机收到RA报文后，根据前缀信息和接口ID生成一个临时的全球单播地址1::ABCD。同时启动DAD，发送NS报文验证临时地址的唯一性，此时该地址处于临时状态。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">4）链路上的其他节点收到DAD的NS报文后，如果没有用户使用该地址，则丢弃报文，否则产生应答NS的NA报文。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">5）主机如果没有收到DAD的NA报文，说明地址是全局唯一的，则用该临时地址初始化接口，此时地址进入有效状态。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择</span><span class="f_step" style="color: #0070c0;"> </span><span class="f_menu">网络管理 &gt; RADVD</span><span class="f_step">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">启用/关闭RADVD。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">点击“启用/禁用”可切换RADVD功能的状态。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">添加RADVD。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击【添加】，弹出“添加”窗口，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0291" style="margin:0;width:7.6667in;height:5.1563in;border:none" src="clip0291.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在添加RADVD基本信息项时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.9167in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.1875in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明 </span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">网络接口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置RADVD通过哪个接口发送出去。此处配置的网络接口可以为路由模式接口、MAC子接口、VLAN虚接口及聚合接口，不支持TAG子接口、虚拟线模式接口、交换模式接口及VSYS虚接口。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">子网前缀</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，发送给客户端主机的前缀。子网前缀标识了客户端主机所连接的子网。只支持64位。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.9167in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">有效时间</span></p>
+</td>
+<td style="vertical-align:middle; width:4.1875in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置有效生命周期。默认值为1天。</span></p>
+<p class="p_table_content"><span class="f_table_content">当有效生命周期终止时，地址及它与接口的关联变成无效。一个无效的地址不能被用作通信的源地址，也不能被识别为目的地址。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<p class="p_step_content"><span class="f_step_content">2）激活“高级信息”页签，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0292" style="margin:0;width:7.6563in;height:5.3333in;border:none" src="clip0292.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在添加RADVD高级信息时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.3750in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:7.4896in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.3750in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">通告发送最大间隔</span></p>
+</td>
+<td style="vertical-align:middle; width:7.4896in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，配置定期发送路由通告消息（RA）的最大间隔时间。单位为秒（s），取值范围为4-1800，默认值为600。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3750in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">通过发送最小间隔</span></p>
+</td>
+<td style="vertical-align:middle; width:7.4896in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">可选项，配置定期发送路由通告消息（RA）的最小间隔时间。单位为秒（s），取值范围为1-max*0.75，默认值为max/3。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3750in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">可达时间</span></p>
+</td>
+<td style="vertical-align:middle; width:7.4896in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置可达时间。在客户端主机收到邻居的可达性确认后，可以假定在这段时间内邻居是可达的。单位为毫秒（ms），取值范围为0-3600000，默认值为0。0表示路由器没有作出规定。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3750in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">重传时间</span></p>
+</td>
+<td style="vertical-align:middle; width:7.4896in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，设置重新传输计时器，表示发送NS消息后开始计时，超出设定的时间后进行重传。单位为毫秒（ms），取值范围为0-4294967295，默认值为0。0表示路由器没有作出规定。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3750in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">跳转限制</span></p>
+</td>
+<td style="vertical-align:middle; width:7.4896in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项，配置跳数为报文转发时经过的路由器个数。取值范围为0-255，默认值为64。</span></p>
+<p class="p_table_content"><span class="f_table_content">当报文由路由设备转发时，跳数计数器会减1，如果跳数计数值达到0时，报文仍没有到达目的地，则该目的地被认为是不可达的，并且报文被丢弃。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3750in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">无状态地址配置</span></p>
+</td>
+<td style="vertical-align:middle; width:7.4896in; height:0.2396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否启用该无状态地址的配置。默认放行。</span></p>
+<p class="p_table_content"><span class="f_table_content">放行：主机接口能够自动生成直连路由，根据前缀自动配置IPv6地址；</span></p>
+<p class="p_table_content"><span class="f_table_content">禁止：主机接口能够自动生成直连路由，但不会自动配置IPv6地址。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">3）点击【确定】按钮完成RADVD项的添加。RADVD项添加完成后默认处于关闭状态。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

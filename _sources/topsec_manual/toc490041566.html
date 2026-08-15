@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>熟悉WEB管理界面</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="界面布局 WEB管理界面由一级标题栏、二级标题栏、页签、功能区、快捷操作区及工具条组成，如下图所示。 &nbsp;各个图标的说明如下： 图标 &nbsp;说明 &nbsp; 一页最多可显示的信息条数|显示第一页|显示上一页|显示第几页|显示下一页|显示最后一页|刷新当前页面数据 / &nbsp;点击“”可隐藏左侧导航菜单，图标切换为“”，点击“”可再次展示左侧导航菜单。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic142.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="ngfw2.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic14.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">熟悉WEB管理界面</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_B">界面布局</span></p><p class="p_zhengwen"><span class="f_zhengwen">WEB管理界面由一级标题栏、二级标题栏、页签、功能区、快捷操作区及工具条组成，如下图所示。</span></p>
+<p class="p_picture"><img alt="guanlijiemian" style="margin:0;width:15.2292in;height:7.2917in;border:none" src="guanlijiemian.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">各个图标的说明如下：</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th colspan="2"  style="vertical-align:middle; width:2.0000in; height:0.2396in; background-color:#D9D9D9; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">图标</span></p>
+</th>
+<th style="vertical-align:middle; width:6.6667in; height:0.2396in; background-color:#D9D9D9; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:2.0000in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="lianjibangzhuicon" style="margin:0;width:2.8021in;height:0.2604in;border:none" src="lianjibangzhuicon.png"/></p>
+</td>
+<td style="vertical-align:middle; width:6.6667in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">一页最多可显示的信息条数|显示第一页|显示上一页|显示第几页|显示下一页|显示最后一页|刷新当前页面数据</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:2.0000in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="img13" style="margin:0;width:0.3542in;height:0.2396in;border:none" src="img13.png"/><span class="f_table_content">/<img alt="bendigaojingicon" style="margin:0;width:0.2917in;height:0.2708in;border:none" src="bendigaojingicon.png"/></span></p>
+</td>
+<td style="vertical-align:middle; width:6.6667in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击“<img alt="bendigaojingicon" style="margin:0;width:0.2917in;height:0.2708in;border:none" src="bendigaojingicon.png"/>”可隐藏左侧导航菜单，图标切换为“<img alt="img13" style="margin:0;width:0.3542in;height:0.2396in;border:none" src="img13.png"/>”，点击“<img alt="img13" style="margin:0;width:0.3542in;height:0.2396in;border:none" src="img13.png"/>”可再次展示左侧导航菜单。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:2.0000in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="clip0190" style="margin:0;width:0.9167in;height:0.2708in;border:none" src="clip0190.png"/></p>
+</td>
+<td style="vertical-align:middle; width:6.6667in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击“<img alt="站点地图icon" style="margin:0;width:0.9167in;height:0.2708in;border:none" src="hmfile_hash_5f46a29a.png"/>”可展开导航菜单地图，点击菜单地图中菜单名称可直接访问对应界面。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:2.0000in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content">系统名称</p>
+</td>
+<td style="vertical-align:middle; width:6.6667in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">显示系统名称。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:2.0000in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="clip0136" style="margin:0;width:0.9063in;height:0.1979in;border:none" src="clip0136.png"/></p>
+</td>
+<td style="vertical-align:middle; width:6.6667in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">当前登录管理员。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:2.0000in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content">系统切换</p>
+</td>
+<td style="vertical-align:middle; width:6.6667in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击下拉列表可以切换系统。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="6"  style="vertical-align:middle; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="clip0134" style="margin:0;width:0.2604in;height:0.2292in;border:none" src="clip0134.png"/></p>
+</td>
+<td style="vertical-align:middle; width:1.0000in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">自动保存</span></p>
+</td>
+<td style="vertical-align:middle; width:6.6667in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">是否开启自动保存配置的功能。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0000in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="jiemian1" style="margin:0;width:0.2083in;height:0.2292in;border:none" src="jiemian1.png"/></p>
+</td>
+<td style="vertical-align:middle; width:6.6667in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">是否保存当前配置</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0000in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="天融信云logo" style="margin:0;width:0.3438in;height:0.2708in;border:none" src="hmfile_hash_f7099780.png"/></p>
+</td>
+<td style="vertical-align:middle; width:6.6667in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">实时展示防火墙与天融信云的连接状态。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0000in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="NGFW20~1_img12" style="margin:0;width:0.2396in;height:0.2188in;border:none" src="hmfile_hash_b2f70138.png"/></p>
+</td>
+<td style="vertical-align:middle; width:6.6667in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">CLI命令行管理界面。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0000in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="clip0135" style="margin:0;width:0.2292in;height:0.2188in;border:none" src="clip0135.png"/></p>
+</td>
+<td style="vertical-align:middle; width:6.6667in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">查看本地告警信息。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.0000in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="jiemina2" style="margin:0;width:0.2396in;height:0.2500in;border:none" src="jiemina2.png"/></p>
+</td>
+<td style="vertical-align:middle; width:6.6667in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击该图标可退出系统登录。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_B">常规操作</span></p><p class="p_zhengwen"><span class="f_zhengwen">管理页面中有很多图标作为功能配置操作的入口，下表对页面中出现的各类图标进行说明。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:top; width:0.8854in; height:0.2396in; background-color:#D9D9D9; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">图标</span></p>
+</th>
+<th style="vertical-align:top; width:0.6354in; height:0.2396in; background-color:#D9D9D9; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">名称</span></p>
+</th>
+<th style="vertical-align:top; width:6.6042in; height:0.2396in; background-color:#D9D9D9; padding:0.0417in; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="tubiaotianjia" style="margin:0;width:0.8646in;height:0.3021in;border:none" src="tubiaotianjia.png"/></p>
+</td>
+<td style="vertical-align:middle; width:0.6354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">添加</span></p>
+</td>
+<td style="vertical-align:middle; width:6.6042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击该图标，添加新条目。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="bianjiicon" style="margin:0;width:0.8125in;height:0.3021in;border:none" src="bianjiicon.png"/></p>
+</td>
+<td style="vertical-align:middle; width:0.6354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">编辑</span></p>
+</td>
+<td style="vertical-align:middle; width:6.6042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选中需要修改的条目，点击该图标即可对该条目重新进行编辑。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="tubiaoshanchu" style="margin:0;width:0.8125in;height:0.3125in;border:none" src="tubiaoshanchu.png"/></p>
+</td>
+<td style="vertical-align:middle; width:0.6354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">删除</span></p>
+</td>
+<td style="vertical-align:middle; width:6.6042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选中需要删除的条目，点击该图标即可将该条目删除。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="gengduoicon" style="margin:0;width:0.8438in;height:0.3229in;border:none" src="gengduoicon.png"/></p>
+</td>
+<td style="vertical-align:middle; width:0.6354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">更多</span></p>
+</td>
+<td style="vertical-align:middle; width:6.6042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击该图标可下滑出更多功能按钮，例如“清空”。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="tubiaoqiyong" style="margin:0;width:0.7813in;height:0.3125in;border:none" src="tubiaoqiyong.png"/></p>
+</td>
+<td style="vertical-align:middle; width:0.6354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">启用</span></p>
+</td>
+<td style="vertical-align:middle; width:6.6042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选中需要启用的条目，点击该图标即可启用该条目。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="tubiaojinyong" style="margin:0;width:0.7708in;height:0.3125in;border:none" src="tubiaojinyong.png"/></p>
+</td>
+<td style="vertical-align:middle; width:0.6354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">禁用</span></p>
+</td>
+<td style="vertical-align:middle; width:6.6042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选中需要禁用的条目，点击该图标即可禁用该条目，此时该配置项所在行变为深灰色。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; height:0.1458in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="NGFW20~1_img24" style="margin:0;width:0.7500in;height:0.2917in;border:none" src="hmfile_hash_ec2ac438.png"/></p>
+</td>
+<td style="vertical-align:middle; width:0.6354in; height:0.1458in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">移动</span></p>
+</td>
+<td style="vertical-align:middle; width:6.6042in; height:0.1458in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选中需要移动的条目，在弹出的对话框中，选中该条目移动的目的位置。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="NGFW20~1_img26" style="margin:0;width:0.7813in;height:0.3021in;border:none" src="hmfile_hash_2aee5094.png"/></p>
+</td>
+<td style="vertical-align:middle; width:0.6354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">克隆</span></p>
+</td>
+<td style="vertical-align:middle; width:6.6042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选中需要复制的条目，点击该图标即可复制该条目。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="tubiaodaoru" style="margin:0;width:0.8542in;height:0.3021in;border:none" src="tubiaodaoru.png"/></p>
+</td>
+<td style="vertical-align:middle; width:0.6354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">导入</span></p>
+</td>
+<td style="vertical-align:middle; width:6.6042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">点击该图标，在弹出的对话框中，配置导入信息，即可完成导入。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><img alt="tubiaodaochu" style="margin:0;width:0.8229in;height:0.2917in;border:none" src="tubiaodaochu.png"/></p>
+</td>
+<td style="vertical-align:middle; width:0.6354in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">导出</span></p>
+</td>
+<td style="vertical-align:middle; width:6.6042in; padding:0.0417in; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选中需要导出的条目，点击该图标，在弹出的对话框中，选择条目的保存地址，即可完成导出。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

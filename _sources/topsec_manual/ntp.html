@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>NTP</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="配置NTP服务的操作步骤如下： &nbsp;如果接口加入到了“独立管理”界面，该接口仅可用于管理接口，不可作为业务接口。配置独立管理接口NTP服务涉及功能包括：独立管理 和 本地服务，这两者相互依赖，任一功能模块没有开启NTP服务，NGFW的独立管理接口的NTP服务处于关闭状态。 开启独立管理接口NTP服务的具体配置：1）选择 网络管理 &gt; 接口 &gt; 独立管理，" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic215.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic214.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="toc490041624.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">NTP</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">配置NTP服务的操作步骤如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4688in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_table_content"><img alt="NGFW20~1_img3" style="margin:0;width:0.4479in;height:0.3958in;border:none" src="hmfile_hash_5bb5ff1e.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.6250in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">如果接口加入到了“独立管理”界面，该接口仅可用于管理接口，不可作为业务接口。配置独立管理接口NTP服务涉及功能包括：<a href="topic179.html" class="topiclink">独立管理</a> 和 <a href="topic214.html" class="topiclink">本地服务</a>，这两者相互依赖，任一功能模块没有开启NTP服务，NGFW的独立管理接口的NTP服务处于关闭状态。</span></p><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">开启独立管理接口NTP服务的具体配置：1）选择 </span><span class="f_menu">网络管理 &gt; 接口 &gt; 独立管理</span><span class="f_instruction">，编辑独立管理接口时勾选“本地访问控制”参数的NTP服务，详见 <a href="topic179.html" class="topiclink">独立管理</a>；2）选择 </span><span class="f_menu">系统管理 &gt; 本地服务</span><span class="f_instruction">，开启NTP服务，详见本节内容。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="line-height: 1.20; margin: 0.0521in 0 0.0521in 0.6250in;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> </span><span class="f_menu">系统管理 &gt; 本地服务 &gt; NTP</span><span class="f_step">，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0577" style="margin:0;width:9.9688in;height:8.2917in;border:none" src="clip0577.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:90%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:1.3646in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</td>
+<td style="vertical-align:middle; width:6.8542in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3646in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">NTP服务</span></p>
+</td>
+<td style="vertical-align:middle; width:6.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置启用或停用NTP服务。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3646in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">运行状态</span></p>
+</td>
+<td style="vertical-align:middle; width:6.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">显示NTP服务的运行状态。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3646in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">访问控制</span></p>
+</td>
+<td style="vertical-align:middle; width:6.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置NTP服务的访问控制规则，控制报文访问NGFW的NTP服务。可选项：管理口开放、精细控制。</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">管理口开放：对“MANAGE_AREA”区域开放NTP服务。有关“MANAGE_AREA”区域的设置详见 <a href="toc462736629.html" class="topiclink">区域</a>。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">精细控制：仅对满足区域、地址和每秒建立连接最大数目条件的连接开放NTP服务。</span></p><p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">本地访问控制功能实现的是控制报文访问NGFW本地的功能，它依据策略对访问NGFW本地的报文进行白名单过滤。对于访问NGFW本地的正向单播报文，仅有命中策略，才可访问NGFW，否则将被拦截。对于广播报文，则不会被本地访问控制功能处理和拦截，均可进入NGFW。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3646in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">精细控制</span></p>
+</td>
+<td style="vertical-align:middle; width:6.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">“访问控制”参数选择“精细控制”，显示该参数。</span></p>
+<p class="p_table_content"><span class="f_table_content">点击【添加】可添加精细控制策略配置框。NGFW支持配置多条精细控制策略，配置的多条策略的关系为逻辑“或”，单条策略中不同匹配项的关系为逻辑“与”。对于NTP服务请求，仅有命中策略方可放行，否则将被拦截。</span></p>
+<p class="p_table_content"><span class="f_table_content">精细控制配置项包括：策略名称、区域、地址、每秒建立连接最大数目。</span></p>
+<p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">策略名称：输入策略名称，用于区分不同策略。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">区域：开放NTP服务的区域。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">地址：允许与NTP建立NTP通信的主机的IP地址。</span></p><p class="p_table_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.0521in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_table_content">每秒建立连接最大数目：指NTP服务的报文访问NGFW时，每秒新建连接的最大数目。如果实际连接速率超过配置值，企图新建连接的报文将被拦截，并产生“告警”级别的日志，记录被拦截的报文。</span></p><p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">区域MANAGE_AREA表示管理域，地址IPv4_ANY表示所有IPv4地址，地址IPv6_ANY表示所有IPv6地址，地址GROUP_ADDRESS_ANY表示所有IP地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3646in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">从上层服务器同步时间</span></p>
+</td>
+<td style="vertical-align:middle; width:6.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">“是”表示周期性从上层时间服务器获取时间，同时为下层时间同步提供服务。若为下层时间同步提供服务，则下层的身份认证、上层服务密钥ID、上层服务器密钥值、服务器密钥加密方式必须与当前设置保持一致。“否”表示本地作为时间服务器，周期性的获取系统时间，同时为下层时间同步提供服务。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3646in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">上层时间服务器</span></p>
+</td>
+<td style="vertical-align:middle; width:6.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入上层服务器IPv4、IPv6地址或域名。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3646in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">身份认证</span></p>
+</td>
+<td style="vertical-align:middle; width:6.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">若上层时间服务器开启身份认证则选“是”，否则选“否”。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3646in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">上层服务器密钥ID</span></p>
+</td>
+<td style="vertical-align:middle; width:6.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器密钥ID由上层时间服务器提供。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3646in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">上层服务器密钥值</span></p>
+</td>
+<td style="vertical-align:middle; width:6.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器密钥值由上层时间服务器提供。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3646in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器密钥加密方式</span></p>
+</td>
+<td style="vertical-align:middle; width:6.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器密钥加密方式由上层时间服务器提供。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.3646in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">添加备选时间服务器</span></p>
+</td>
+<td style="vertical-align:middle; width:6.8542in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">勾选可添加备选时间服务器。</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">设置完成后点击【确定】按钮。</span></td></tr></table></div>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

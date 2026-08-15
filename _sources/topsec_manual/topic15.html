@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>配置</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="下面分别对NGFW的高可用性模块支持4种工作模式（主备模式、连接保护模式、负载均衡模式和集群模式）的相关配置进行介绍。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc462834584.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc462834583.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="ref487627830.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">配置</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">下面分别对NGFW的高可用性模块支持4种工作模式（主备模式、连接保护模式、负载均衡模式和集群模式）的相关配置进行介绍。</span></p>
+<p class="p_step"><span class="f_step">选择 </span><span class="f_menu">系统管理 &gt; 高可用性 &gt; 高可用性</span><span class="f_step">，</span><span class="f_step_content">激活“配置”页签。</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen">主备模式</span></p><p class="p_picture"><img alt="clip0574" style="margin:0;width:9.2083in;height:13.9167in;border:none" src="clip0574.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在配置NGFW在管理组中的属性时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.8854in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.8229in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">模式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择主备模式。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">心跳口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置同步主备设备工作状态的通信接口。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">本端IP</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置本端设备心跳口的IP地址。IP地址必须为心跳口上已经配置的IP地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">对端IP</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置对端设备心跳口的IP地址。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">对端IP地址和本地IP地址必须在同一子网内。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">链路探测</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否开启链路探测功能。NGFW即可根据IP探测的结果判定某条链路是否可用，确定是否开启主从链路/主从设备的切换进程。关于链路探测的配置请参见 <a href="ref487627830.html" class="topiclink">链路探测</a>。 </span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">监控角色</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置本机在管理组中所处的工作状态，可选项：主、备。</span></p>
+<p class="p_table_content"><span class="f_table_content">主：处于工作状态。</span></p>
+<p class="p_table_content"><span class="f_table_content">备：处于备份状态。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">虚拟ID</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项。设置NGFW通信接口（除心跳口以外）所属管理组的组号，该组号用于确定处于同一管理组的设备，取值范围：1-255。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">处于同一管理组的NGFW设备组ID需配置相同。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">主动抢占</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否开启“抢占”模式，即作为主设备的本机出现通信故障时，管理组中的其他设备担任主设备的角色，当本机的故障解除后，是否重新夺回主设备的地位。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">只有当主设备与从设备相比有明显的性能差异时，才需要配置主设备工作在“抢占”模式，否则，当原主设备恢复工作时主从设备的再次切换浪费系统资源。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">抢占延时</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置抢占的推迟时间，以防止本机运行不稳定而导致其管理组中设备的角色频繁切换。单位：秒；取值范围：1-120。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">所有接口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">从可用接口中选择接口添加到监控组。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）进入监控组的接口才受高可用性模块的控制，通过该类接口的流量会根据设备状态的不同而切换至管理组内的其他设备/本设备；不加入监控组的接口不会受高可用性模块的限制，和正常单机设备的接口一样可以随时使用。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）同一管理组中的设备，监控组配置的接口应相同。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">链路绑定设置</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置需要绑定的链路探测ID。</span></p>
+<p class="p_table_content"><span class="f_table_content">链路绑定主要用于识别和判断链路状态。未进行链路绑定时，系统只能通过接口状态来判定链路是否可用；绑定链路探测后，系统可以通过链路探测实时探测该条链路的传输状态。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">BFD绑定设置</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择已建立的BFD会话，利用BFD检测机制快速检测故障。关于BFD配置请参见 <a href="bfd.html" class="topiclink">BFD</a>。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.5208in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.5729in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">防火墙工作在主备模式时，只能添加一个管理组。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">点击【确定】按钮完成本机在管理组中角色属性的设置。</span></p>
+<p class="p_step"><span class="f_step">&nbsp;</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen">负载均衡模式</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">全局设置</span><span class="f_step" style="font-weight: bold;"> </span></td></tr></table></div><p class="p_picture"><img alt="clip0558" style="margin:0;width:8.0417in;height:5.0104in;border:none" src="clip0558.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.8854in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.8229in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">心跳口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置同步主备设备工作状态的通信接口。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">本端IP</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置本端设备心跳口的IP地址。IP地址必须为心跳口上已经配置的IP地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">对端IP</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置对端设备心跳口的IP地址。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">对端IP地址和本地IP地址必须在同一子网内。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">链路探测</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否开启链路探测功能。NGFW即可根据IP探测的结果判定某条链路是否可用，确定是否开启主从链路/主从设备的切换进程。关于链路探测的配置请参见 <a href="ref487627830.html" class="topiclink">链路探测</a>。 </span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">模式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择负载均衡模式。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">配置完成，点击【确定】按钮。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">配置监控组A/B</span><span class="f_step" style="font-weight: bold;"> </span></td></tr></table></div><p class="p_picture"><img alt="clip0575" style="margin:0;width:9.0313in;height:10.2188in;border:none" src="clip0575.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.8854in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.8229in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">监控角色</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置本机在A/B管理组中所处的工作状态，可选项：主、备。</span></p>
+<p class="p_table_content"><span class="f_table_content">主：处于工作状态。</span></p>
+<p class="p_table_content"><span class="f_table_content">备：处于备份状态。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">虚拟ID</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项。设置NGFW通信接口（除心跳口以外）所属管理组的组号，该组号用于确定处于同一管理组的设备，取值范围：1-255。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">处于同一管理组的NGFW设备组ID需配置相同。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">主动抢占</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否开启“抢占”模式，即作为主设备的本机出现通信故障时，管理组中的其他设备担任主设备的角色，当本机的故障解除后，是否重新夺回主设备的地位。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">只有当主设备与从设备相比有明显的性能差异时，才需要配置主设备工作在“抢占”模式，否则，当原主设备恢复工作时主从设备的再次切换浪费系统资源。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">抢占延时</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置抢占的推迟时间，以防止本机运行不稳定而导致其管理组中设备的角色频繁切换。单位：秒；取值范围：1-120。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">所有接口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">从可用接口中选择接口添加到监控组。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）进入监控组的接口才受高可用性模块的控制，通过该类接口的流量会根据设备状态的不同而切换至管理组内的其他设备/本设备；不加入监控组的接口不会受高可用性模块的限制，和正常单机设备的接口一样可以随时使用。</span></p>
+<p class="p_table_content"><span class="f_table_content">2）同一管理组中的设备，监控组配置的接口应相同。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">链路绑定设置</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置需要绑定的链路探测ID。</span></p>
+<p class="p_table_content"><span class="f_table_content">链路绑定主要用于识别和判断链路状态。未进行链路绑定时，系统只能通过接口状态来判定链路是否可用；绑定链路探测后，系统可以通过链路探测实时探测该条链路的传输状态。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">BFD绑定设置</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择已建立的BFD会话，利用BED检测机制快速检测故障。关于BFD配置请参见 <a href="bfd.html" class="topiclink">BFD</a>。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">点击【确定】按钮完成本机在A/B管理组中角色属性的设置。</span></p>
+<p class="p_step_content"><span class="f_step_content">&nbsp;</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen">连接保护模式</span></p><p class="p_picture"><img alt="clip0560" style="margin:0;width:7.6250in;height:5.4063in;border:none" src="clip0560.png"/></p>
+<p class="p_step_content"><span class="f_step_content">各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.8854in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.8229in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">模式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择链路保护模式。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">心跳口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置工作状态的通信接口。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">本端IP</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置本端设备心跳口的IP地址。IP地址必须为心跳口上已经配置的IP地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">对端IP</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置对端设备心跳口的IP地址。</span><span class="f_zhengwen">最多支持配置8台设备IP地址。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">对端IP地址和本地IP地址必须在同一子网内。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">点击【确定】按钮完成本机全局配置。</span></p>
+<p class="p_zhengwen" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen">集群模式</span></p><p class="p_picture"><img alt="clip0576" style="margin:0;width:10.8438in;height:8.7292in;border:none" src="clip0576.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在集群模式工作状态下，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:0.8854in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.8229in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">模式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择集群模式。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">心跳口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置本机工作状态的通信接口。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">本端IP</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置本端设备心跳口静态IP地址。IP地址必须为心跳口上已经配置的IP地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">链路探测</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否开启链路探测功能。NGFW即可根据IP探测的结果判定某条链路是否可用，确定是否开启主从链路/主从设备的切换进程。关于链路探测的配置请参见 <a href="ref487627830.html" class="topiclink">链路探测</a>。 </span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">负载均衡</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择是否开启负载均衡功能。</span></p>
+<p class="p_table_content"><span class="f_table_content">在开启负载均衡功能时，处于active状态的设备可将接收到的流量根据负裁均衡算法分散到其他健康状态正常的ctandhv设备进行外理。</span></p>
+<p class="p_table_content"><span class="f_table_content">rr：轮叫算法</span></p>
+<p class="p_table_content"><span class="f_table_content">src-ip：根据报文源IP进行hash</span></p>
+<p class="p_table_content"><span class="f_table_content">dst-ip：根据报文目的IP进行hash</span></p>
+<p class="p_table_content"><span class="f_table_content">src-dst-ip：根据报文源IP+目的IP进行hash</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">角色优先级</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置本机角色优先级，用于主设备选举，取值范围：0-9。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">虚拟ID</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置监控组ID号，该监控组内设备同一虚拟ID。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; height:0.3021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">负载均衡算法</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; height:0.3021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择负载分流算法，HA启动后修改，变更算法会导致丢包。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; height:0.3021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">主动抢占</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; height:0.3021in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置是否开启“抢占”模式，即作为主设备的本机出现通信故障时，管理组中的其他设备担任主设备的角色，当本机的故障解除后，是否重新夺回主设备的地位。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">只有当主设备与从设备相比有明显的性能差异时，才需要配置主设备工作在“抢占”模式，否则，当原主设备恢复工作时主从设备的再次切换浪费系统资源。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">抢占延迟</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置抢占的推迟时间，以防止本机运行不稳定而导致其管理组中设备的角色频繁切换。单位：秒；取值范围：1-120。</span></p>
+<p class="p_table_content"><span class="f_table_content">配置HA监控组抢占模式(可选配置，每个设备都可开启此配置，默认不开启)。主动抢占模式的开启/关闭，参见 <a href="toc462834584.html" class="topiclink">状态</a>。若集群中有设备配置抢占功能，则 ABCNGFW状态优先级相等的情况下，开启抢占的设备中，角色优先级最高的设备一定为主墙。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">所有接口</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置HA监控组接口，并在业务接口添加IP地址。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">因一些底层实现的原因，从设备上，监控口的业务IP不会生成相应的直连路由。所以，每个监控接口须配置 ha static ip 或相应路由，用于指导从设备从该接口转发业务报文。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">链路绑定设置</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置需要绑定的链路探测ID。</span></p>
+<p class="p_table_content"><span class="f_table_content">链路绑定主要用于识别和判断链路状态。未进行链路绑定时，系统只能通过接口状态来判定链路是否可用；绑定链路探测后，系统可以通过链路探测实时探测该条链路的传输状态。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.8854in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">BFD绑定设置</span></p>
+</td>
+<td style="vertical-align:middle; width:4.8229in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">选择已建立的BFD会话，利用BED检测机制快速检测故障。关于BFD配置请参见 <a href="bfd.html" class="topiclink">BFD</a>。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">点击【确定】按钮完成本机全局配置。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.5208in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.5729in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">监控组内所有设备虚拟ID要保持一致；</span></p><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">监控组接口名及同步地址要与对端保持一致。</span></p></td>
+</tr>
+</table>
+</div>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>规则库升级</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="为了应对网络中入侵手段、病毒类型和应用类型日益复杂多变的情况，天融信应用识别、入侵防御、URL过滤、APT防御、僵木蠕防御、病毒防御等引擎都会比较频繁的更新规则库文件。在天融信更新规则库后，为了使NGFW能识别和抵御新出现的安全威胁或者提高安全检测的准确性和效率，需要及时升级NGFW设备中的规则库文件。" />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic84.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc490041729.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic3.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">规则库升级</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">为了应对网络中入侵手段、病毒类型和应用类型日益复杂多变的情况，天融信应用识别、入侵防御、URL过滤、APT防御、僵木蠕防御、病毒防御等引擎都会比较频繁的更新规则库文件。在天融信更新规则库后，为了使NGFW能识别和抵御新出现的安全威胁或者提高安全检测的准确性和效率，需要及时升级NGFW设备中的规则库文件。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">NGFW支持三种规则库升级方式（自动升级、立即升级和本地升级），管理员可以根据需要选择合适的升级方式。</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">自动升级：支持管理员配置各类型规则库的自动升级策略，NGFW定时自动从天融信升级中心检查或者本地搭建的FTP/HTTP/</span><span class="f_table_content">HTTPS/SFTP/FTPS</span><span class="f_zhengwen_list">服务器获取规则库最新升级包，自动进行规则库升级。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">立即升级：管理员以手工方式触发NGFW立即从天融信升级中心或者本地搭建的FTP/HTTP/</span><span class="f_table_content">HTTPS/SFTP/FTPS</span><span class="f_zhengwen_list">服务器获取规则库最新升级包，立即进行规则库升级（立即升级与自动升级从相同的升级服务器获取规则库升级包）。当管理员发现网络上出现新的攻击方式、病毒或应用，升级中心已发布新的规则库，而此时未到设备的自动升级时间，可立即执行升级操作，及时升级规则库。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list">本地升级：当NGFW与Internet物理隔离，且没有部署升级服务器时，可以采用本地升级方式。升级前将需要升级的规则文件保存到管理主机，再通过WebUI登录到NGFW设备，选择规则文件进行升级。</span></p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">系统管理 &gt; 规则库升级</span><span class="f_step">，如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0337" style="margin:0;width:11.3125in;height:4.4792in;border:none" src="clip0337.png"/></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">升级规则库</span></td></tr></table></div><p class="p_step_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_content">自动升级</span></p><p class="p_step_content"><span class="f_step_content">1）点击“编辑”，在弹出的“编辑”对话框中，配置规则库自动升级策略。</span></p>
+<p class="p_picture"><img alt="clip0338" style="margin:0;width:6.8542in;height:3.3021in;border:none" src="clip0338.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在配置规则库自动升级策略时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5729in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4479in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.6667in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">配置规则库升级策略时，“服务器”参数选择“默认”，表示NGFW从天融信升级中心获取最新升级包进行规则库升级；“服务器”参数选择“自定义”，表示NGFW从自己部署的HTTP/FTP/</span><span class="f_table_content">HTTPS/SFTP/FTPS</span><span class="f_instruction">服务器中获取最新升级包进行规则库升级。如果“服务器”参数选择后者，需要在天融信发布新的规则库后，及时获取该最新发布的规则库并存放到HTTP/FTP/</span><span class="f_table_content">HTTPS/SFTP/FTPS</span><span class="f_instruction">服务器中，保证NGFW能及时升级天融信最新发布的规则库。</span></p></td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.4583in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:4.2500in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.4583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">显示自动更新规则库名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置规则文件升级的服务器类型。可选项：默认和自定义。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">方式</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置服务器为自定义时，该项可配置。设置自动更新方式。可选项：HTTP、HTTPS、FTP、SFTP和FTPS。</span></p>
+<p class="p_table_content"><span class="f_table_content">HTTP：从指定的URL地址下载规则文件。</span></p>
+<p class="p_table_content"><span class="f_table_content">HTTPS：从指定的URL地址下载规则文件。</span></p>
+<p class="p_table_content"><span class="f_table_content">FTP：从指定的FTP服务器地址下载规则文件。</span></p>
+<p class="p_table_content"><span class="f_table_content">SFTP：从指定的SFTP服务器地址下载规则文件。</span></p>
+<p class="p_table_content"><span class="f_table_content">FTPS：从指定的FTPS服务器地址下载规则文件。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置服务器为自定义且升级方式为FTP、SFTP和FTPS时需要配置该选项。输入FTP、SFTP和FTPS服务器的合法登录账号名称。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">密码</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置服务器为自定义且升级方式为为FTP、SFTP和FTPS时需要配置该选项。输入FTP、SFTP和FTPS服务器的合法登录账号名称对应的密码。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">更新时间</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置自动更新的时间间隔。可选择的更新间隔有：每月、每周、每日和每时。并可通过更新间隔下方的参数详细配置更新时间。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.4583in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器地址</span></p>
+</td>
+<td style="vertical-align:middle; width:4.2500in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置服务器为自定义时，该项为必填项。配置自动更新获取规则文件的服务器地址。</span></p>
+<p class="p_table_content"><span class="f_table_content">HTTP方式升级时，服务器地址为字符串类型，最大输入长度为64个字符，支持多个升级服务器地址，可点击右侧『＋』输入多个地址，最多支持5个服务器地址。格式为：域名形式或点分十进制形式X.X.X.X。</span></p>
+<p class="p_table_content"><span class="f_table_content">FTP方式升级时，字符串类型，最大输入长度为64个字符，支持多个服务器地址，可点击右侧『＋』输入多个地址，最多支持5个服务器地址。格式为：域名形式或点分十进制形式X.X.X.X。</span></p>
+<p class="p_table_content"><span class="f_table_content">HTTPS方式升级时，服务器地址为字符串类型，最大输入长度为64个字符，支持多个升级服务器地址，可点击右侧『＋』输入多个地址，最多支持5个服务器地址。格式为：域名形式或点分十进制形式X.X.X.X。</span></p>
+<p class="p_table_content"><span class="f_table_content">SFTP方式升级时，字符串类型，最大输入长度为64个字符，支持多个服务器地址，可点击右侧『＋』输入多个地址，最多支持5个服务器地址。格式为：域名形式或点分十进制形式X.X.X.X。</span></p>
+<p class="p_table_content"><span class="f_table_content">FTPS方式升级时，字符串类型，最大输入长度为64个字符，支持多个服务器地址，可点击右侧『＋』输入多个地址，最多支持5个服务器地址。格式为：域名形式或点分十进制形式X.X.X.X。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step_content">2）设置完成后，点击【确定】按钮，完成自动更新规则库策略配置。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4792in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_table_content" style="text-align: justify; line-height: 1.20; margin: 0 0 0 0;"><img alt="NGFW20~1_img4" style="margin:0;width:0.4583in;height:0.4583in;border:none" src="hmfile_hash_2747f8f3.png"/></p>
+</td>
+<td style="vertical-align:middle; width:12.6146in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">如果需要取消应用自动更新策略到规则文件，可选中需要禁用自动更新的规则库，点击“</span><img alt="clip0557" style="margin:0;width:1.1354in;height:0.2500in;border:none" src="clip0557.png"/><span class="f_instruction">”即可禁用自动更新。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_step_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_content">立即升级</span></p><p class="p_step_content"><span class="f_step_content">选择需立即升级的规则库，点击“</span><img alt="clip0339" style="margin:0;width:0.8854in;height:0.2500in;border:none" src="clip0339.png"/><span class="f_step_content">”或点击需升级规则库“操作”列的“</span><img alt="立即升级icon1" style="margin:0;width:0.5729in;height:0.2396in;border:none" src="hmfile_hash_35c77f0d.png"/><span class="f_step_content">”完成规则文件升级。</span></p>
+<p class="p_step_content" style="text-indent: 0; padding-left: 0.1354in; margin-left: 0.6042in;"><span style="display:inline-block;width:0.1354in;margin-left:-0.1354in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#216;</span><span class="f_step_content">本地升级</span></p><p class="p_step_content"><span class="f_step_content">1）勾选需本地升级的规则库，点击“</span><img alt="clip0340" style="margin:0;width:0.5833in;height:0.2396in;border:none" src="clip0340.png"/><span class="f_step_content">”，弹出“导入”窗口。</span></p>
+<p class="p_picture"><img alt="clip0341" style="margin:0;width:7.5625in;height:3.3854in;border:none" src="clip0341.png"/></p>
+<p class="p_step_content"><span class="f_step_content">点击“</span><img alt="clip0048" style="margin:0;width:0.2604in;height:0.2292in;border:none" src="clip0048.png"/><span class="f_step_content">”按钮，选择管理主机上保存的规则文件。</span></p>
+<p class="p_step_content"><span class="f_step_content">2）配置完成后，点击【确定】按钮，完成规则文件升级。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">（可选）禁用/启用规则库自动升级。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">配置完成自动升级规则后，升级规则默认为启用，如果需要禁止自动更新规则库，可点击【禁用自动升级】，此时界面对应的规则文件所在行显示为深灰色。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

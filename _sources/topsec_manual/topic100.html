@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>动态防护列表</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="DNS安全模块提供动态防护列表，供管理员配置和查看。 防护列表主要分为两类，动态表和静态表；其中静态表是由管理员手动编辑和配置的可信地址表，功能接近白名单，所有静态可信地址表中的IP地址不受DNS安全策略限制，支持删除操作；动态表是NGFW根据已配置的DNS安全策略动态生成的，功能接近动态黑名单，管理员只能进行删除，不能进行手动添加。..." />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic99.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="dns2.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="toc490041729.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">动态防护列表</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">DNS安全模块提供动态防护列表，供管理员配置和查看。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">防护列表主要分为两类，动态表和静态表；其中静态表是由管理员手动编辑和配置的可信地址表，功能接近白名单，所有静态可信地址表中的IP地址不受DNS安全策略限制，支持删除操作；动态表是NGFW根据已配置的DNS安全策略动态生成的，功能接近动态黑名单，管理员只能进行删除，不能进行手动添加。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">下面进行分别介绍。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step_content">选择 </span><span class="f_menu">安全策略 &gt; DNS安全 &gt; 动态防护列表</span><span class="f_step_content">，默认激活“动态非法地址表”页签，界面如下图所示。</span></td></tr></table></div><p class="p_picture"><img alt="clip0269" style="margin:0;width:9.0208in;height:3.1563in;border:none" src="clip0269.png"/></p>
+<p class="p_step_content"><span class="f_step_content">界面展示NGFW检测出的非法地址项（即命中配置的DNS服务端防护策略（且动作必须配置为黑名单）生成的数据），详细信息包括IP地址，对应的防护对象，该项剩余的老化时间等。点击非法地址所在项的“添加至静态白名单”、“添加至静态黑名单”和“误报处理”可以执行对应操作。界面上方为搜索区域，可以通过选择防护对象、输入IP地址进行筛选。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">查看动态非法域名表</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">激活“动态非法域名表”页签，界面如下图所示。</span></p>
+<p class="p_step_content"><img alt="clip0270" style="margin:0;width:10.0313in;height:4.3333in;border:none" src="clip0270.png"/></p>
+<p class="p_step_content"><span class="f_step_content">界面展示了NGFW检测出的非法域名项（即命中配置的DNS用户端防护策略（策略必须开启DGA检测）生成的表项），详细信息包括其检测攻击的模块来源、域名、拦截次数和剩余时间等；使用使能开关可以控制该非法域名项的状态。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">配置静态可信地址表</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">激活“静态可信地址表”，界面如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0271" style="margin:0;width:9.8125in;height:1.8542in;border:none" src="clip0271.png"/></p>
+<p class="p_step_content"><span class="f_step_content">点击“添加”，即可在弹出窗口中配置静态白名单项，界面如下图所示。</span></p>
+<p class="p_step_content"><img alt="clip0272" style="margin:0;width:6.3229in;height:2.4167in;border:none" src="clip0272.png"/></p>
+<p class="p_step_content"><span class="f_step_content">输入IP地址后点击【确定】即可保存相关配置，加入静态可信地址表的IP地址将不再受到检测，直接放行。</span></p>
+<p class="p_step_content"><span class="f_step_content">除此以外，点击【导入】可以批量导入.csv格式的白名单列表，点击【导出】可以导出当前配置。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

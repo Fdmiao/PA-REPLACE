@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>服务器映射</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="服务器映射即DNAT（Destination Network Address..." />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="toc398625675.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="toc450050602.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="anquancelue_nat_nat64.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">服务器映射</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen"><span class="f_zhengwen">服务器映射即DNAT（Destination Network Address Translation，目的地址转换），可以转换数据报文的目的IP地址。</span><span class="f_table_content">该种转换方式</span><span class="f_zhengwen">主要应用于公网用户访问使用私网IP地址的局域网资源；在此网络应用环境下，公网用户的数据报文通过局域网边界的NGFW时，NGFW会将数据包的目的IP地址转换为内网资源服务器真实的IP地址，从而实现公网用户成功访问内网资源的目的。</span></p>
+<p class="p_zhengwen_B"><span class="f_zhengwen_B">DNAT分类</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">为适应不同的应用场景，NGFW通过DNAT技术可实现的功能主要包括：1）静态映射；2）服务器负载均衡。具体如下：</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.5833in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:11.5833in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.5833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">静态映射</span></p>
+</td>
+<td style="vertical-align:middle; width:11.5833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">该种转换方式属于一对一映射，根据映射关系，转换报文的目的IP地址为特定IP地址。</span></p>
+<p class="p_table_content"><span class="f_table_content">如内网服务器通过公网IP地址对外提供服务，当用户通过服务器公网IP地址访问服务器时，NGFW可根据静态映射技术将用户数据包中的目的IP地址转换为服务器真实的IP地址，实现用户访问内网资源服务器。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">配置静态映射DNAT规则时，“目的地址”需配置为服务器对外提供服务的公网IP地址，“目的地址转换”需设置内网服务器真实的IP地址。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.5833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">服务器负载均衡</span></p>
+</td>
+<td style="vertical-align:middle; width:11.5833in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">该种转换方式会转换报文目的IP地址为地址池中的某个IP地址。</span></p>
+<p class="p_table_content"><span class="f_table_content">用户访问内网资源服务器时，NGFW通过结合服务器均衡组，将用户数据包中目的地址根据均衡组的负载均衡算法转换为均衡组中某个服务器的真实IP地址。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">配置服务器负载均衡DNAT规则时，“目的地址”需配置为均衡组服务器对外提供服务的IP地址，“目的地址转换”需配置特定均衡组，关于均衡组的配置具体请参见 <a href="toc448912182.html" class="topiclink">负载均衡</a>。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen_B"><span class="f_zhengwen_B">应用场景举例</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">NGFW部署于局域网和公网的边界，私网中有多台服务器通过公网IP地址对外提供相同服务，其网络拓扑结构如下图所示。需求：多台服务器能以负载分担的方式处理外网用户的请求。</span></p>
+<p class="p_picture"><img alt="dnat_01" style="margin:0;width:10.5938in;height:5.3646in;border:none" src="dnat_01.png"/></p>
+<p class="p_zhengwen"><span class="f_zhengwen">实现方案：配置服务器均衡组对象并结合DNAT规则，其中，服务器均衡组对象为多台服务器真实IP地址（均衡组对象），DNAT规则的“目的地址”配置为服务器组对外提供服务的公网IP地址，“目的地址转换为”引用服务器均衡组，其DNAT规则配置方法如上图“NAT规则”所示。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">用户访问以负载均衡方式提供服务的服务器时，NGFW处理数据流程如下：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">1）NGFW接收到用户访问均衡组的数据包后，会按顺序匹配NAT规则表，发现有匹配数据报文的DNAT规则则停止检索。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">2）根据成功匹配的DNAT规则，并依据均衡组的负载均衡算法，选择均衡组中某个服务器的真实IP地址替换用户请求包的目的IP地址，并创建会话，然后将用户请求报文转发至真实服务器。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">3）NGFW接收到服务器的响应报文后，根据步骤2）创建的会话表，将报文的源地址替换为转换前IP地址，然后将报文发送给用户。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">配置DNAT的具体操作如下：</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤1</span></td><td style="border:none;padding:0"><span class="f_step">选择 </span><span class="f_menu">安全策略 &gt; 地址转换 &gt; 服务器映射</span><span class="f_step">。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤2</span></td><td style="border:none;padding:0"><span class="f_step">配置地址转换。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击“</span><img alt="tubiaotianjia" style="margin:0;width:0.8646in;height:0.3021in;border:none" src="tubiaotianjia.png"/><span class="f_step_content">”，选择“普通映射”页签，弹出添加服务器映射规则窗口，如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0211" style="margin:0;width:7.0521in;height:8.9375in;border:none" src="clip0211.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在添加普通映射规则时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th colspan="2"  style="vertical-align:middle; width:1.4375in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:7.0313in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.4375in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项。不能输入!@#$%^&amp;+=1?1&lt;&gt;&#39;~空格，少于128字节。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.4375in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">状态</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">状态可选项：启用、禁用。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.4375in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入该规则的描述信息，不能输入&lt;&gt;\，少于128字节。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.4375in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源地址</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的源地址应满足的条件。</span></p>
+<p class="p_table_content"><span class="f_table_content">点击下拉列表选择已设置好的地址对象，或者点击『添加』，新建地址对象，关于地址对象的配置请参见 <a href="toc448912165.html" class="topiclink">地址</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.4375in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源端口</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的源端口应满足的条件。点击下拉列表选择已设置好的服务对象，或者点击『添加』，新建服务对象，关于服务对象的配置请参见 <a href="toc448912172.html" class="topiclink">服务</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.4375in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源区域</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的源区域应满足的条件。点击下拉列表选择已设置好的区域对象，或者点击『添加』，新建区域对象，关于区域对象的配置请参见 <a href="toc462736629.html" class="topiclink">区域</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.4375in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源VLAN</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的源VLAN应满足的条件。点击“+”选择已设置好的VLAN对象，或者点击『添加』，新建VLAN对象，关于VLAN对象的配置请参见 <a href="ref487724000.html" class="topiclink">VLAN</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.4375in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源角色</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的角色应满足的条件。点击“+”选择已设置好的角色对象，或者点击『添加』，新建角色对象，关于角色对象的配置请参见 <a href="topic75.html" class="topiclink">角色</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.4375in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的地址</span></p>
+</td>
+<td style="vertical-align:top; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的目的地址应当匹配的条件。点击下拉列表选择已设置好的地址对象，或者点击『添加』，新建地址对象，关于地址对象的配置请参见 <a href="toc448912165.html" class="topiclink">地址</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:middle; width:1.4375in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的端口</span></p>
+</td>
+<td style="vertical-align:top; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的目的端口应满足的条件。点击下拉列表选择已设置好的服务对象，或者点击『添加』，新建服务对象，关于服务对象的配置请参见 <a href="toc448912172.html" class="topiclink">服务</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="2"  style="vertical-align:middle; width:0.6667in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的转换</span></p>
+</td>
+<td style="vertical-align:middle; width:0.7396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的地址转换为</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置DNAT规则转换后的主机地址对象或者负载均衡组对象。关于地址对象的配置请参见 <a href="toc448912165.html" class="topiclink">地址</a>，关于负载均衡组的配置具体请参见 <a href="toc448912182.html" class="topiclink">负载均衡</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的端口转换为</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置转换后的服务端口，可以选择系统预定义的服务或用户自定义的服务。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">当目的地址转换规则仅需要做目的地址转换时，该参数可不做配置。</span></p>
+<p class="p_table_content"><span class="f_table_content">当目的地址转换规则需要做目的端口转换时，“目的地址转换”参数必须配置。</span></p>
+</td>
+</tr>
+<tr>
+<td rowspan="5"  style="vertical-align:middle; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">双向转换</span></p>
+</td>
+<td style="vertical-align:middle; width:0.7396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源地址转换</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">可选项。选择转换后的主机地址、地址组对象、子网对象、地址范围或区域对象。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）选择主机地址对象时，表示将源地址固定映射为某一合法IP地址；</span></p>
+<p class="p_table_content"><span class="f_table_content">2）选择地址范围和子网对象时，表示将源地址动态映射为某一网段或某一地址范围的地址；</span></p>
+<p class="p_table_content"><span class="f_table_content">3）选择区域对象时，表示将源地址转换为具有该区域的物理接口的地址（默认映射为端口的主地址），此时要求区域对象必须与物理接口绑定。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">sticky NAT</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源IP转换同一性开关。启动后，相同源IP的数据包经过地址转换后为其转换的源IP地址相同。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源端口转换方式</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">下拉框选项包括：优先使用原始源端口、随机转换源端口、不转换源端口。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">优先使用原始源端口：首先尝试使用源端口，如果源端口被占用，则转换为其他未被占用的端口。</span></p>
+<p class="p_table_content"><span class="f_table_content">随机转换源端口：随机转换源端口，转换后的源端口由系统内部确定。</span></p>
+<p class="p_table_content"><span class="f_table_content">不转换源端口：不转换源端口。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的地址转换为</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置DNAT规则转换后的主机地址对象或者负载均衡组对象。关于地址对象的配置请参见 <a href="toc448912165.html" class="topiclink">地址</a>，关于负载均衡组的配置具体请参见 <a href="toc448912182.html" class="topiclink">负载均衡</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:0.7396in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的端口转换为</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0313in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">设置转换后的服务端口，可以选择系统预定义的服务或用户自定义的服务。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">当目的地址转换规则仅需要做目的地址转换时，该参数可不做配置。</span></p>
+<p class="p_table_content"><span class="f_table_content">当目的地址转换规则需要做目的端口转换时，“目的地址转换”参数必须配置。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_step_content" style="margin: 0.0521in 0 0.0521in 0;"><span class="f_step_content">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.6042in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:middle; width:0.4583in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_label"><img alt="NGFW20~1_img2" style="margin:0;width:0.4479in;height:0.4479in;border:none" src="hmfile_hash_8ddbdae4.png"/></p>
+</td>
+<td style="vertical-align:middle; width:10.4375in; height:0.1458in; padding:0; border:solid thin #000000; border-right:none; border-left:none;"><p class="p_instruction" style="text-indent: 0; padding-left: 0.1667in; margin-left: 0.1771in;"><span style="display:inline-block;width:0.1667in;margin-left:-0.1667in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#178;</span><span class="f_instruction">如果在某一条DNAT规则中设置了多个条件，则数据包必须同时满足这些条件才认为成功匹配该规则，才根据规则相应的动作转换数据包的IP地址或端口。</span></p></td>
+</tr>
+</table>
+</div>
+<p class="p_step_content"><span class="f_step">2）点击【确定】按钮完成DNAT规则的配置。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤3</span></td><td style="border:none;padding:0"><span class="f_step">配置一对一转换。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">1）点击“</span><img alt="tubiaotianjia" style="margin:0;width:0.8646in;height:0.3021in;border:none" src="tubiaotianjia.png"/><span class="f_step_content">”，选择“一对一映射”页签，弹出添加服务器映射规则窗口， 如下图所示。</span></p>
+<p class="p_picture"><img alt="clip0212" style="margin:0;width:6.9063in;height:5.8125in;border:none" src="clip0212.png"/></p>
+<p class="p_step_content"><span class="f_step_content">在添加一对一转换规则时，各项参数的具体说明如下表所示。</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0.5938in;"><table style="width:85%; border:none; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:middle; width:1.1875in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">参数</span></p>
+</th>
+<th style="vertical-align:middle; width:7.0938in; height:0.2396in; background-color:#D9D9D9; padding:0; border:solid thin #000000;"><p class="p_table_header"><span class="f_table_header">说明</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:1.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">名称</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">必填项。不能输入!@#$%^&amp;+=1?1&lt;&gt;&#39;~空格，少于128字节。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">状态</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">状态可选项：启用、禁用。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">描述</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">输入该规则的描述信息，不能输入&lt;&gt;\，少于128字节。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源地址</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的源地址应满足的条件。</span></p>
+<p class="p_table_content"><span class="f_table_content">点击“+”选择已设置好的地址对象，或者点击『添加』，新建地址对象，关于地址对象的配置请参见 <a href="toc448912165.html" class="topiclink">地址</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的地址</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置数据报文的目的地址应当匹配的条件。点击“+”选择已设置好的地址对象，或者点击『添加』，新建地址对象，关于地址对象的配置请参见 <a href="toc448912165.html" class="topiclink">地址</a>。</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">目的地址转换为</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">配置DNAT规则转换后的主机地址对象，关于地址对象的配置请参见 <a href="toc448912165.html" class="topiclink">地址。</a></span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源地址转换</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">转换模式选择“双向转换”时，显示该参数。选择转换后的主机地址、地址范围对象或子网对象。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">1）选择主机地址对象时，表示将源地址固定映射为某一合法IP地址；</span></p>
+<p class="p_table_content"><span class="f_table_content">2）选择地址范围和子网对象时，表示将源地址动态映射为某一网段或某一地址范围的地址；</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle; width:1.1875in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">源端口转换方式</span></p>
+</td>
+<td style="vertical-align:middle; width:7.0938in; padding:0; border:solid thin #000000;"><p class="p_table_content"><span class="f_table_content">转换模式选择“双向转换”时，显示该参数。下拉框选项包括：强制转换、不做转换、使用源端口。</span></p>
+<p class="p_table_content"><span class="f_table_content">说明：</span></p>
+<p class="p_table_content"><span class="f_table_content">优先使用原始源端口：首先尝试使用源端口，如果源端口被占用，则转换为其他未被占用的端口。</span></p>
+<p class="p_table_content"><span class="f_table_content">随机转换源端口：随机转换源端口，转换后的源端口由系统内部确定。</span></p>
+<p class="p_table_content"><span class="f_table_content">不做转换源端口：不转换源端口。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤4</span></td><td style="border:none;padding:0"><span class="f_step">点击【确定】按钮完成DNAT规则的配置。</span></td></tr></table></div><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0.0521in 0 0.0521in 0;"><table cellpadding="0" cellspacing="0" style="border:none;border-spacing:0;padding:0;line-height: 1.80;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:0.6042in"><span class="f_step" style="font-weight: bold;">步骤5</span></td><td style="border:none;padding:0"><span class="f_step">配置不做转换。</span></td></tr></table></div><p class="p_step_content"><span class="f_step_content">该操作步骤与配置NoNAT转换的操作步骤相似，此处将不再一一赘述，详情请参见 <a href="toc398625675.html" class="topiclink">配置NoNAT转换</a>。</span></p>
+
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>

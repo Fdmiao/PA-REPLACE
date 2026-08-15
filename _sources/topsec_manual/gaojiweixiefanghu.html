@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>高级威胁防护</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=9" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="APT APT（Advanced Persistent Threat，高级持续性威胁）是一种以商业和政治为目的的网络犯罪类别，通常使用先进的攻击手段对特定目标进行长期持续性的网络攻击，具有长期经营与策划、高度隐蔽等特性。APT攻击不会追求短期的收益或单纯的破坏，而是以步步为营的渗透入侵策略，低调隐蔽地攻击每一个特定目标，不做其他多余活动来打草惊蛇。..." />
+   
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { 
+        margin:0; 
+        padding:0; 
+        background: #ffffff;
+      } 
+      #header { 
+        width:100%; 
+        position: fixed; 
+        top: 0; 
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.0625in 0;
+        background: #fff; 
+        z-index: 99;
+      } 
+      #headerhead {  
+        padding: 0.0625in;
+        min-height: 0.5in;
+        color: #000;
+        background: #D3D3D3; 
+	opacity: 0.95;
+	box-shadow: 1px 1px 3px #888888;
+      } 
+      #headernav {  
+	width: 0.833in;
+        height: 0.2708in;
+        margin: 0;
+        padding: 0;
+        float: right; 
+      } 
+      #content { 
+        margin-top: 3.125em;
+        padding: 0.375em;
+      }
+      img.nav { width: 0.2708in; height: 0.2708in; border: none; }
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-0.1146in; left:-0.1146in;}
+      #callout-icon-flag {display:block; position:absolute; top:-0.1146in; left:-0.0833in;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.crumbs { font-size: 10pt; color: #000; margin: 0 0 0.0625in 0 }      
+      p.crumbs a { text-decoration: none; color: #000 }      
+      #switchtoggles { width:100%; text-align: right; padding: 0 0.0208in 0 0; font-size: 10pt; } 
+      .sync-toc { color: #000; font-size: 10pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #000; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #000; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: 4em; padding-top: 4em }	  
+      
+   </style>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #header {
+              position: relative;
+      }
+      #headerhead {
+              background: none;
+	      color: #000;
+      }
+      #headernav {
+              display: none;
+      }
+      #switchtoggles {
+              display: none;
+      }
+      #content { 
+              margin-top: 0;
+      }
+     }
+   </style>   
+ 
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="header">
+
+   <div id="headerhead">  
+     <br />
+    
+     <div id="headernav"> 
+      
+     
+     <a href="topic11.html"
+        onmouseover="document.images.prev.src='hm_btn_navigate_prev_orange.png'" 
+        onmouseout="document.images.prev.src='hm_btn_navigate_prev.png'"
+        ><img class="nav" name="prev" src="hm_btn_navigate_prev.png" alt="Previous page"
+        ></a><a href="topic17123321.html"
+        onmouseover="document.images.main.src='hm_btn_navigate_top_orange.png'" 
+        onmouseout="document.images.main.src='hm_btn_navigate_top.png'"><img class="nav" name="main" src="hm_btn_navigate_top.png" alt="Return to chapter overview"
+        ></a><a href="topic203.html"
+        onmouseover="document.images.next.src='hm_btn_navigate_next_orange.png'" 
+        onmouseout="document.images.next.src='hm_btn_navigate_next.png'"><img class="nav" name="next" src="hm_btn_navigate_next.png" alt="Next page"
+        ></a>
+    
+    </div>
+  
+   <table >
+  <tbody>
+    <tr>
+      <th><a href="http://www.topsec.com.cn/index1.html" target="_blank">
+		<img src="logo35.png" alt="Topsec" width="35" height="35" style="border:none" title="Topsec" >
+		</a></th>
+      <th><h1 class="p_Heading1"><span class="f_Heading1">高级威胁防护</span></h1>
+</th>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  <br />
+  <div id="switchtoggles"></div>
+</div>  
+
+
+<div id="content">
+     <!--ZOOMRESTART-->
+     <p class="p_zhengwen_B"><span class="f_zhengwen_B">APT</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">APT（Advanced Persistent Threat，高级持续性威胁）是一种以商业和政治为目的的网络犯罪类别，通常使用先进的攻击手段对特定目标进行长期持续性的网络攻击，具有长期经营与策划、高度隐蔽等特性。APT攻击不会追求短期的收益或单纯的破坏，而是以步步为营的渗透入侵策略，低调隐蔽地攻击每一个特定目标，不做其他多余活动来打草惊蛇。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">典型的APT攻击过程，大约分为五步：</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">第一步，攻击者会盗用一个企业的供应商或者合作伙伴的账号，从而达到访问企业内网的目的；</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">第二步，攻击者利用自制的攻击工具，在企业的某一台服务器或PC上种下木马病毒；</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">第三步，该木马会在企业网络中不断渗透，寻找企业关键的数据库，盗取包括企业核心数据，员工ID、信用卡密码、手机号等重要信息；</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">第四步，通过FTP、邮件、甚至是更加隐秘的方式，不断地把这些数据发送给攻击者；</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">第五步，整个攻击过程大约持续数月，甚至是半年或一年。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">这五步相互关联，也就形成了APT攻击的“生命链条”。而其中最关键的当属第二步，即攻击者利用未知漏洞攻陷企业服务器或PC，该攻击方式隐蔽性强，传统的入侵防御系统、防病毒系统、以及web应用防火墙等均无法感知；而当攻击者完成“突破”之后，还要经历渗透（包括提权与迁移）、窃听、偷数据等过程，即APT攻击需要一定的持续时间。由此不难看出，如果能够打破APT攻击隐蔽性和持续性这两个特性，也就能斩断其“生命链条”，即可有效阻止APT攻击，而沙箱系统就具备这样的能力。</span></p>
+<p class="p_zhengwen_B"><span class="f_zhengwen_B">沙箱</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">沙箱为一些不可靠的程序提供试验而不影响系统运行的环境。对于基于未知漏洞的APT攻击，传统的基于签名的检测方式确实难以识别，而通过沙箱所打造的虚拟运行环境，我们即可通过其“行为”来判断一个文件或一个访问等是恶意的还是善意的，从而有效阻止APT攻击。举例来说，当一个文件在虚拟的沙箱中运行时，如果我们发现其修改了注册表、删除了文件，或是自身创造出了新的文件，亦或是试图访问恶意网站，并下载一些病毒和木马等等，那么即可确定这个文件是恶意的，即使我们现在没有其特征码，也可以防御它。与此同时，我们还可提取其“特征码”，在第一时间封堵这一未知威胁。</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">通过上述介绍我们不难看出，沙箱的确是目前阻止APT攻击的最有效方法之一，NGFW的APT功能则正是利用了沙箱的以上优点，根据沙箱中的检测结果，将风险文件的特征码记录到特征库中，以便在以后的扫描过程中利用记录的特征码识别APT攻击，并进行相应的处理。</span></p>
+<p class="p_zhengwen_B"><span class="f_zhengwen_B">NGFW实现防APT攻击原理</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">NGFW通过联动第三方沙箱，支持DGA检测、恶意加密流量检测、隐蔽信道检测、APT检测、扫描探测检测、暴力破解检测和弱口令检测。接下来以下方拓扑为例，介绍NGFW联动沙箱服务器防APT攻击的具体流程。</span></p>
+<p class="p_picture"><img alt="add_img31" style="margin:0;width:6.3021in;height:2.8750in;border:none" src="add_img31.png"/></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0;"><span class="f_zhengwen_list" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">1)</span><span class="f_zhengwen_list">用户访问服务器文件的流量经过NGFW时，如果该流量命中启用“高级威胁防护”攻击的访问控制规则（访问控制策略启用“高级威胁防护”操作请参见 <a href="toc462736651.html" class="topiclink">访问控制</a>），NGFW根据“APT工作模式（深度模式/智能模式）”，决定是否将文件发送给沙箱服务器。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0;"><span class="f_zhengwen_list" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">2)</span><span class="f_zhengwen_list">沙箱服务器接收到文件后，对文件进行APT检测并计算文件的MD5值，最后将文件的检测结果信息（MD5值。判定结果、发送时间）响应给NGFW。说明：恶意文件返回MD5值，正常文件不返回MD5值。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0;"><span class="f_zhengwen_list" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">3)</span><span class="f_zhengwen_list">NGFW接收到文件的APT检测信息后，将恶意文件MD5值与动态MD5库中的MD5值进行匹配，如果动态MD5库中无该MD5值，将恶意文件MD5值存储于动态MD5库中；如果动态MD5库中存在与该文件MD5值相同的MD5值，则不会重新存储。</span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.2083in; margin-left: 0;"><span class="f_zhengwen_list" style="display:inline-block;width:0.2083in;margin-left:-0.2083in">4)</span><span class="f_zhengwen_list">后续用户访问服务器文件经过NGFW时，NGFW计算文件的MD5值，并与动态MD5库进行比较。能够匹配成功则代表此文件为恶意文件，NGFW依据APT动作对用户访问APT攻击文件行为执行允许、告警或阻断动作。</span></p><p class="p_zhengwen"><span class="f_zhengwen">&nbsp;</span></p>
+<p class="p_zhengwen"><span class="f_zhengwen">高级威胁防护相关配置包括：</span></p>
+<p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list"><a href="topic203.html" class="topiclink">高级威胁防护策略</a></span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list"><a href="apt.html" class="topiclink">APT联动配置</a></span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list"><a href="md5.html" class="topiclink">MD5值查询</a></span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list"><a href="topic204.html" class="topiclink">白名单</a></span></p><p class="p_zhengwen_list" style="text-indent: 0; padding-left: 0.1979in; margin-left: 0;"><span style="display:inline-block;width:0.1979in;margin-left:-0.1979in;font-size:10pt;font-family:'Wingdings';font-style:normal;color:#000000;text-decoration:none;">&#108;</span><span class="f_zhengwen_list"><a href="topic205.html" class="topiclink">弱口令</a></span></p>
+     <!--ZOOMSTOP-->
+</div>
+<script>
+           var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+           if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+	   $(document).ready(function(){
+		   $(window).bind('resize', function() {
+				var y = $('#header').height();
+				$('#content').css('margin-top', y);
+				$('.hmanchor').css('margin-top', -y-20);
+				$('.hmanchor').css('padding-top', y+20);
+			});
+		   $(window).triggerHandler('resize');	
+		   $(window).triggerHandler('resize');	
+                   
+		});
+</script>
+
+<br />
+<br />
+<br />
+<hr />
+<p style="line-height:20px; font-size:14px;" align="center"><div style="line-height:20px; font-size:14px; font-family:Microsoft YaHei;"><center>  版权所有 &nbsp; 不得翻印 &copy 2025 <a href="http://www.topsec.com.cn" target="_blank" style="font-size:20px;" title="Topsec" ><img src="LOGO35101.png" width="92" height="32" style="border:none" alt="Topsec" title="Topsec" ></a>&nbsp;&nbsp;&nbsp;400-777-0777&nbsp;&nbsp; </center></div></p>
+</body>
+</html>
