@@ -1,0 +1,8 @@
+OK  | cc-st_vid11482-vr.pdf | 200 | 414,410B | application/pdf
+OK  | pa-3400-series-datasheet.pdf | 200 | 430,780B | application/pdf
+FAIL | pan-os-admin-12-1-en.pdf | 404 | 5,216B | text/html;charset=utf-8
+OK  | panos-12-1-new-features.html | 200 | 659,312B | text/html
+OK  | panos-certifications.html | 200 | 285,952B | text/html
+OK  | pa-ngfw-hardware.html | 200 | 1,087,550B | text/html;charset=utf-8
+OK  | topsec-topngfw-product.html | 200 | 254,620B | text/html;charset=UTF-8
+OK  | topsec-news-4441-cert.html | 200 | 233,679B | text/html;charset=UTF-8

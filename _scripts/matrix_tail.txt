@@ -1,0 +1,11 @@
+      0          1    2                    3    4    5    6    7    8    9    10   11
+112  103          G   信创      国产 CPU/操作系统平台适配  NaN  NaN  NaN  NaN  NaN  NaN  NaN  NaN
+113    H  H · 合规与生态  NaN                  NaN  NaN  NaN  NaN  NaN  NaN  NaN  NaN  NaN
+114  104          H   资质                销售许可证  NaN  NaN  NaN  NaN  NaN  NaN  NaN  NaN
+115  105          H   资质             等级保护相关资质  NaN  NaN  NaN  NaN  NaN  NaN  NaN  NaN
+116  106          H   资质             商用密码产品认证  NaN  NaN  NaN  NaN  NaN  NaN  NaN  NaN
+117  107          H   资质           信创目录/国产化适配  NaN  NaN  NaN  NaN  NaN  NaN  NaN  NaN
+118  108          H   资质          CC EAL 国际认证  NaN  NaN  NaN  NaN  NaN  NaN  NaN  NaN
+119  109          H   资质         FIPS 140-2/3  NaN  NaN  NaN  NaN  NaN  NaN  NaN  NaN
+120  110          H   准入      行业准入（金融/关基/运营商）  NaN  NaN  NaN  NaN  NaN  NaN  NaN  NaN
+121  111          H   生态  第三方生态认证（虚拟化/云市场/联动）  NaN  NaN  NaN  NaN  NaN  NaN  NaN  NaN
