@@ -20,12 +20,13 @@ def src_val(r,c):
             return src.cell(rng.min_row,rng.min_col).value
     return v
 
+NC=9
 rows=[]; dropped=Counter()
 for r in range(2, src.max_row+1):
-    row=[src_val(r,c) for c in range(1,9)]
+    row=[src_val(r,c) for c in range(1,NC+1)]
     if not any(str(x).strip() for x in row):
         continue
-    st=str(row[6]).strip()
+    st=str(row[7]).strip()
     if st in KEEP:
         rows.append(row)
     else:
@@ -45,12 +46,12 @@ else:
     old_max=1
 
 for r in range(1, ws.max_row+1):
-    for c in range(1,9):
+    for c in range(1,NC+1):
         ws.cell(r,c).value=None
     if r>1 and r in ws.row_dimensions:
         del ws.row_dimensions[r]
 
-headers=["一级需求","二级需求","三级需求","需求规格","优先级","交付/规划说明","状态","负责人"]
+headers=["一级需求","二级需求","三级需求","需求规格","对比依据（PA证据·天融信现状）","优先级","交付/规划说明","状态","负责人"]
 for c,h in enumerate(headers,1):
     ws.cell(1,c,h)
 for i,row in enumerate(rows,2):
@@ -61,14 +62,14 @@ thin=Side(style="thin", color="000000")
 border=Border(left=thin, right=thin, top=thin, bottom=thin)
 hdr_font=Font(name="等线", size=12, bold=True)
 hdr_align=Alignment(horizontal="center", vertical="center", wrap_text=True)
-for c in range(1,9):
+for c in range(1,NC+1):
     ws.cell(1,c).font=hdr_font
     ws.cell(1,c).alignment=hdr_align
 
-center_cols={1,2,5,7,8}
+center_cols={1,2,6,8,9}
 data_font=Font(name="等线", size=11)
 for r in range(2,ws.max_row+1):
-    for c in range(1,9):
+    for c in range(1,NC+1):
         cell=ws.cell(r,c)
         cell.font=data_font
         if c in center_cols:
@@ -91,14 +92,14 @@ def merge_runs(col, within_group=False):
 
 merge_runs(1)
 merge_runs(2)
-for col in (5,6,7,8):
+for col in (6,7,8,9):
     merge_runs(col, within_group=True)
 
 for r in range(1,ws.max_row+1):
-    for c in range(1,9):
+    for c in range(1,NC+1):
         ws.cell(r,c).border=border
 
-chars_per_line={3:24, 4:27}
+chars_per_line={3:24, 4:20, 5:26}
 for r in range(2,ws.max_row+1):
     max_lines=1
     for c,cpl in chars_per_line.items():
@@ -111,11 +112,11 @@ for r in range(2,ws.max_row+1):
     ws.row_dimensions[r].height=max(30, max_lines*15+6)
 ws.row_dimensions[1].height=20
 
-widths={"A":11.7,"B":19.7,"C":48,"D":55,"E":7.7,"F":20,"G":12,"H":9.7}
+widths={"A":11.7,"B":19.7,"C":40,"D":30,"E":62,"F":7.7,"G":18,"H":10,"I":9.7}
 for k,v in widths.items():
     ws.column_dimensions[k].width=v
 ws.freeze_panes="A2"
 
 wb.save(path)
 print("策略需求差异：保留", len(rows), "行 / 剔除", sum(dropped.values()), "行", dict(dropped))
-print("保留状态分布:", dict(Counter(str(r[6]) for r in rows)))
+print("保留状态分布:", dict(Counter(str(r[7]) for r in rows)))
